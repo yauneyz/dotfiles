@@ -24,7 +24,26 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 "This is for my Node templating engine
 Plug 'digitaltoad/vim-pug'
 
+"Let's get LaTeX
+Plug 'lervag/vimtex'
+
+"Better searching
+Plug 'junegunn/vim-pseudocl'
+Plug 'junegunn/vim-oblique'
+
 call plug#end()
+
+"LaTeX Setup
+let g:vimtex_view_method = 'zathura'
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+"let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
+"Coc Snippets Shortcut
+:nnoremap <leader>sn :CocCommand snippets.editSnippets<cr>
+
 
 "" Setup ale
 "let g:ale_fixers = {
@@ -216,3 +235,32 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+"Coc Snippets"
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+"End Snippets
+
+let g:coc_snippet_next = '<tab>'

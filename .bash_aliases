@@ -131,5 +131,8 @@ alias vd="cd ~/development/dragon/src"
 alias va="cd ~/development/acme/"
 alias v1="cd ~/development/acme/Volume1"
 alias vpy="cd ~/development/acme/PythonEssentials"
+alias vh="cd ~/development/acme/homework"
+alias vh1="cd ~/development/acme/homework/1"
+alias vh2="cd ~/development/acme/homework/2"
 alias vt="cd ~/development/research/tsunami"
 
