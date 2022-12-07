@@ -61,7 +61,10 @@ bindsym Mod1+Return exec i3-sensible-terminal
 bindsym Mod1+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym Mod1+d exec dmenu_run
+#bindsym Mod1+d exec dmenu_run # There also is the (new) i3-dmenu-desktop which only displays applications
+
+# Rofi over dmenu
+bindsym Mod1+d exec --no-startup-id rofi -show combi -run-command "i3-msg exec '{cmd}'" -show-icons
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -139,23 +142,23 @@ set $ws10 "10: Youtube Music"
 
 # Assign workspaces
 
-assign [class="Google-chrome"] $ws2
+#assign [class="Google-chrome"] $ws2
 assign [class="Spotify Premium"] $ws9
-assign [class="Postman"] $ws3
+assign [class="Postman"] $ws4
 assign [class="mongodb compass"] $ws4
 
 # Assign monitors
 
-workspace $ws1 output DP-3
-workspace $ws2 output DP-3
-workspace $ws3 output DP-3
-workspace $ws4 output DP-3
-workspace $ws5 output DP-3
-workspace $ws6 output DP-3
-workspace $ws7 output DP-3
-workspace $ws8 output DP-1
-workspace $ws9 output DP-1
-workspace $ws10 output DP-1
+workspace $ws1 output DP-2
+workspace $ws2 output DP-2
+workspace $ws3 output DP-2
+workspace $ws4 output DP-2
+workspace $ws5 output DP-2
+workspace $ws6 output DP-2
+workspace $ws7 output DP-2
+workspace $ws8 output HDMI-0
+workspace $ws9 output HDMI-0
+workspace $ws10 output HDMI-0
 
 
 # switch to workspace
@@ -216,11 +219,18 @@ mode "resize" {
 
 bindsym Mod1+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
+# Commented out because we use polybar instead
+
+## Start i3bar to display a workspace bar (plus the system information i3status
+## finds out, if available)
+#bar {
+				#status_command i3status
+#}
+
+#interactive screenshot by pressing printscreen
+bindsym Print exec gnome-screenshot -i
+#crop-area screenshot by pressing Mod + printscreen
+#bindsym $mod+Print exec gnome-screenshot -a
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
@@ -232,22 +242,32 @@ bar {
 #
 # Please remove the following exec line:
 #######################################################################
+# Launch applications simply
+
+bindsym Mod1+i exec firefox
+bindsym Mod1+b exec blueman-manager
+bindsym Mod1+p exec postman
+bindsym Mod1+c exec mongodb-compass
+bindsym Mod1+n exec nautilus
+bindsym Mod1+g exec gnome-control-center
+bindsym Mod1+m exec spotify
 
 # Get that sweet Alt+Tab behavior
 #
 bindsym Mod1+Tab workspace back_and_forth
 
-exec Gnome-terminal # This isn't assigned, but it will default open in 1
-exec google-chrome
-exec spotify
+
+# Start compton
+exec --no-startup-id compton
+
+exec_always xrandr --output DP-2 --mode 3840x2160 --primary --panning 0x0 --output HDMI-0 --mode 3840x2160 --rotate right --right-of DP-2
 
 # Get wallpaper
-exec_always feh --bg-scale ~/Pictures/Wallpapers/blaziken_lucario.jpg
+exec_always feh  --bg-scale ~/Pictures/Wallpapers/Halo-3-ODST-4k.jpg --bg-scale ~/Pictures/Wallpapers/milky_way.jpg
 
-exec_always xrandr --output DP-1 --mode 1680x1050 --pos 0x0 --rotate normal --output DP-3 --primary --scale 0.5x0.5 --mode 3840x2160 --right-of-DP-1
-# This is the line that will get the sizes right, there just is unpleaseant overlap when scaling comes in. Who knew
-#exec_always xrandr --output DP-1 --mode 1680x1050 --pos 0x0 --scale 2x2 --rotate normal --output DP-3 --primary --mode 3840x2160 --right-of-DP-1#--pos 1680x0 --rotate normal
 
+# Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Todo commands
 # command to easily move my browser to my terminal window, or move it to my second monitor, along with a good way to move it back when I'm done

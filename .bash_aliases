@@ -50,9 +50,9 @@ alias shell="python manage.py shell"
 # Python Aliases
 
 
-alias python="python3"
+alias ca="conda activate anaconda"
+alias cda="conda deactivate"
 alias p="python"
-alias pip="pip3"
 alias pt="python -m unittest"
 alias db="psql emerald"
 alias debug="python -m pdb manage.py runserver"
@@ -62,6 +62,7 @@ alias ph="git push heroku master"
 alias po="git push origin master"
 alias req="pip install -r requirements.txt"
 alias run="python manage.py runserver"
+alias coverage="pytest --cov-report html --cov"
 
 # SASS Aliases
 
@@ -83,6 +84,7 @@ alias ga="git add *"
 alias gc="git commit -m"
 alias gl="git log --abbrev-commit --pretty=oneline"
 alias gd="git diff"
+alias gz="git push origin Zac"
 
 # Run that thing that lets you get colors
 alias colors="sh ~/.colors.sh"
@@ -99,10 +101,13 @@ alias valias="vim ~/.bash_aliases"
 alias vbrc="vim ~/.zshrc_zac"
 alias vxb="vim ~/dotfiles/.Xresources"
 alias vv="vim ~/.config/nvim/init.vim"
+alias plugin="cd ~/.config/nvim/ftplugin"
+alias vswap="cd ~/.local/share/nvim/swap"
 
 # Node Shortcuts
 alias npmd="npm install --save-dev"
 alias ns="npm run start"
+alias nd="npm run develop"
 alias ni="npm run inspect"
 alias vp="vim package.json"
 
@@ -113,26 +118,56 @@ alias sbrc="source ~/.bashrc"
 alias salias="source ~/.bash_aliases"
 alias zbrc="source ~/.zshrc"
 alias xb="xrdb ~/.Xresources"
-alias rng="ranger"
 alias change_keyboard="sudo dpkg-reconfigure keyboard-configuration"
-alias urxvt="urxvt -pixmap 'find /home/zac/dotfiles/images/Generation II - Johto -name '249.png'"
 alias mc="mongodb-compass"
 alias pm="postman"
+alias chrome="google-chrome-stable"
+alias jl="jupyter lab"
+alias at="alacritty-themes"
 
 # Opening config files
 alias ii="vim ~/.i3/config"
+alias pbar="vim ~/.config/polybar/config"
 
 # Directory Aliases
-alias vc="cd ~/development/backend/src"
-alias vs="cd ~/development/strange/src"
-alias vg="cd ~/development/gatsby/packages/gatsby/src"
-alias vrs="cd ~/development/react-slack-clone/src"
-alias vd="cd ~/development/dragon/src"
 alias va="cd ~/development/acme/"
 alias v1="cd ~/development/acme/Volume1"
-alias vpy="cd ~/development/acme/PythonEssentials"
 alias vh="cd ~/development/acme/homework"
 alias vh1="cd ~/development/acme/homework/1"
 alias vh2="cd ~/development/acme/homework/2"
-alias vt="cd ~/development/research/tsunami"
+alias l3="cd ~/development/acme/lab_3"
+alias l4="cd ~/development/acme/lab_4"
+alias q="cd ~/development/Q/"
+alias vs="vim ~/development/Q/server.js"
+alias qu="cd ~/development/Q/client/src"
+alias qb="cd ~/development/Q/server"
+alias bio="cd ~/development/research/biocheck/biocheck"
+alias net="cd ~/development/netflix-clone/src/"
+alias e="cd ~/development/techEd/"
+alias eb="cd ~/development/techEd/server"
+alias eu="cd ~/development/techEd/client/src"
+alias nfl="cd ~/development/nfl-predictor"
+alias pr="cd ~/development/acme/637/homework"
 
+# Shortcuts to edit files
+alias vA="vim ~/development/Q/client/src/App.js"
+alias vS="vim ~/development/Q/server.js"
+alias vn="vim notes"
+
+# Shortcut for viewing source
+alias modules="cd /home/zac/.local/lib/python3.8/site-packages"
+
+# C alias
+#alias m="make && ./create"
+
+# Application shortcuts
+alias rg="ranger"
+alias t="tmux"
+alias ex="exit"
+
+# Heroku
+alias ph="git push heroku master"
+alias ho="heroku open"
+alias hl="heroku local"
+
+alias smi="nvidia-smi"
