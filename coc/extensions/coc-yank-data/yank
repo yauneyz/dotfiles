@@ -1,0 +1,1144 @@
+228159b7fb6a78da0a6abb751cb9a126|file:///home/zac/development/acme/541/hw/7Ai.tex|46|2|v|latex
+	\big(\sum_{k=1}^{n} h_k^{\frac{5}{4}}\big)^{\frac{4}{5}}
+1356051a324c5ce42c61a1a674b964e9|file:///home/zac/development/acme/541/hw/7Ai.tex|49|25|v|latex
+	\frac{}{}
+7a50422935e96b15a7c97f462aac3389|file:///home/zac/development/acme/541/hw/7Ai.tex|41|52|v|latex
+	(\sum_{k=1}^{n} a_k^5)^{\frac{1}{5}}
+f46021e117dae3755ee831a47257e02a|file:///home/zac/development/acme/541/hw/7Ai.tex|64|1|V|latex
+	 \sum_{k=1}^{n} \frac{1}{n^{\frac{9}{5}}} a_k \le (\sum_{k=1}^{n} a_k^5)^{\frac{1}{5}}
+fe1961cb18a93562195543358d054670|file:///home/zac/development/acme/541/hw/7Ai.tex|63|1|V|latex
+	\[
+	 \sum_{k=1}^{n} \frac{1}{n^{\frac{9}{5}}} a_k \le (\sum_{k=1}^{n} a_k^5)^{\frac{1}{5}}
+	\]
+62a004930c9ba42ae6e8ecf9bf242455|file:///home/zac/development/acme/541/hw/7Ai.tex|67|17|v|latex
+	\frac{1}{n^{\frac{9}{5}}}
+b53adb2ad3e38734e7b8510612c51b63|file:///home/zac/development/acme/541/hw/7Ai.tex|66|1|V|latex
+	\[
+	 \big(\frac{1}{n^{\frac{4}{5}}}\sum_{k=1}^{n}a_k\big)^5   \le \sum_{k=1}^{n} a_k^5
+	\]
+cc7f62d906b873480ba119114255f2d8|file:///home/zac/development/acme/541/hw/7Ai.tex|70|7|v|latex
+	\frac{1}{n^{\frac{4}{5}}}
+27abf3c3c0ceec6fce6416dc3fcf1951|file:///home/zac/development/acme/541/hw/7Ai.tex|70|14|v|latex
+	\frac{4}{5}
+9307dc7eea2271a608bae724e5ef575f|file:///home/zac/development/acme/541/hw/7Ai.tex|69|1|V|latex
+	\[
+	 \frac{1}{n^{4}}\big(\sum_{k=1}^{n}a_k\big)^5   \le \sum_{k=1}^{n} a_k^5
+	\]
+1f99be8e4c297ab7aadf3b446749ce45|file:///home/zac/development/acme/541/hw/7Ai.tex|73|2|v|latex
+	\frac{1}{n^{4}}
+d2f181819d91ce1a9af6b3d1ac2944cc|file:///home/zac/development/acme/510/hw/L27.tex|40|23|v|latex
+	\norm{x}^2
+89e26352f632fec9ea70fd0be0c9c2fc|file:///home/zac/development/acme/510/hw/L27.tex|43|455|v|latex
+	orthonormal
+0248e3562c7912f26ce661ddcbdbc9d4|file:///home/zac/development/acme/541/hw/7Aii.tex|42|32|v|latex
+	\sup_X(|f|)
+43687e93d6964fdd2c53c57ec70e7f0a|file:///home/zac/development/acme/541/hw/7Aii.tex|42|1|V|latex
+	Let $T = \{ x \in X : |f(x)| = \norm{f}_\infty$. By the 
+2462d7ecfb2241fd5d14021971be877d|file:///home/zac/development/acme/541/hw/7Aii.tex|43|1|V|latex
+		\[
+		
+1c52ff6553900172d14b9b242a64e817|file:///home/zac/development/acme/541/hw/7Aii.tex|43|1|V|latex
+		\] 
+e4c8e3eaf4eb3c940bf697e70c2c3d12|file:///home/zac/development/acme/541/hw/7Aii.tex|44|26|v|latex
+	= \big(\sum_{A \in P} \sup_A (|f|^p)\big)^\frac{1}{p}
+018323f38788e5dc598d1289ccde109a|file:///home/zac/development/acme/541/hw/7Aii.tex|47|6|v|latex
+	big(\sum_{A \in P} 
+01a63383c3dbb05c73ef1af131ef494b|file:///home/zac/development/acme/541/hw/7Aii.tex|47|5|v|latex
+	\sup_A (|f|^p)\big)^\frac{1}{p}
+83fbf75a73bfc01667c33375116ce4c7|file:///home/zac/development/acme/541/hw/7Aii.tex|53|2|v|latex
+	\lim_{p \to \infty} \norm{f}_p
+214d69f4312b7b950f938f16267cdc5b|file:///home/zac/development/acme/541/hw/7Aii.tex|63|2|v|latex
+	\big(\int |f|^p \big)^\frac{1}{p}
+7965bf0b86cc57254c40468ecb50d033|file:///home/zac/development/acme/541/hw/7Aii.tex|61|26|v|latex
+	choose $g$ such that $g$ zeros out all sets of 
+32f0dd40fb843ac933d82eb8be261d0d|file:///home/zac/development/acme/541/hw/7Aii.tex|64|9|v|latex
+	x \in 
+ae91de76bee5ca4157da78081aaed992|file:///home/zac/development/acme/541/hw/7Aii.tex|70|54|v|latex
+	\big(\int |f|^p-|g|^p \big)^\frac{1}{p} \le (\mu(X)\sup_X (|f|-|g|)^p)^\frac{1}{p}
+b24ff1dc3c57055809079a9f4793eb67|file:///home/zac/development/acme/541/hw/7Aii.tex|40|1|V|latex
+	\int |fh| _p
+d160e9d13f8cb05b0738098e59e668a0|file:///home/zac/development/acme/541/hw/7Aii.tex|40|2|V|latex
+		\\sigmau
+7231fa806691800f095133f6fb720d82|file:///home/zac/development/acme/541/hw/7Aii.tex|40|40|v|latex
+	\sum
+21c053636588b44a68a4548a48c27e87|file:///home/zac/development/acme/541/hw/7Aii.tex|40|2|v|latex
+	\sum_{A \in P} \mu(A)\sup_A(|fh|)
+aa7a8bc23fda75cc99a45c9c33fea493|file:///home/zac/development/acme/541/hw/7Aii.tex|38|1|V|latex
+	For $p=1$, choose a partition $P$.
+	\[
+		\sum_{A \in P} \mu(A)\sup_A(|fh|) \le \big(\sum_{A \in P} \mu(A)\sup_A(|f|)\big)\big(\sum_{A \in P} \mu(A)\sup_A(|f|)\big)
+	\]
+3ce28ebea2795e6101a422559ef7aa3d|file:///home/zac/development/acme/541/hw/7Aii.tex|40|32|v|latex
+	\mu(X
+6f9f0a1230cde03f37f4c4da2fc49686|file:///home/zac/development/acme/541/hw/7Aii.tex|39|45|V|latex
+	By the monotonicity of the Lesbegue Integral,
+9ef40fdf922a0107e2b9332fc4a993e3|file:///home/zac/development/acme/541/hw/7Aii.tex|40|16|v|latex
+	\int |fh|
+a40982561f1d98d786b302220cfc8ebb|file:///home/zac/development/acme/541/hw/7Aii.tex|38|30|V|latex
+	If $p=1$, the $p'=\infty$ and if $p=\infty$, $p'=1$. Both cases are the same, just $f$ and $h$ switch roles. Then without loss of generality, let $p=1$:
+bf4c54ed753a31c1d44b48b8cae5a52c|file:///home/zac/development/acme/541/hw/7Aii.tex|38|6|v|latex
+	$p=1,p'=\infty$
+6ba9a92186c2c3625d57214d3d983b4f|file:///home/zac/development/acme/541/hw/7Aii.tex|49|17|v|latex
+	$p=\infty,p'=1$
+977a86867d69b93f6f2f16a450ea04bb|file:///home/zac/development/acme/541/hw/7Aii.tex|39|1|V|latex
+	\[
+		\norm{fh}_1 = \int |fh|
+	\]
+	By the monotonicity of the Lesbegue Integral,
+	\[
+	\int |fh| \le \sup(|f|)\int|h|
+	\]
+	\[
+		= \norm{f}_\infty \norm{h}_1
+	\]
+3cc08917ddc85d2108c1b11a8bdb3572|file:///home/zac/development/acme/541/hw/7Aii.tex|57|12|v|latex
+	_\infty
+d78f91393de284a619403dfded63d31b|file:///home/zac/development/acme/541/hw/7Aii.tex|37|1|V|latex
+	Lemma
+27855f93249e4e7489726b894453eae8|file:///home/zac/development/acme/541/hw/7Aii.tex|88|1|V|latex
+	For the other direction, define a function $g$ meant to zero out $|f|$ on sets of measure zero:
+	\[
+	g(x) = \begin{cases}
+		|f| & \{x \in X : \mu(\{z \in X: |f(z)| > |f(x)| = 0\})\}\\
+		0 & \text{otherwise}
+	\end{cases}
+	\]
+	Then because $\norm{g}_\infty = 0$ and by Minkowski's Inequality we have
+	\[
+		\norm{f}_\infty = \norm{f}_\infty - \norm{g}_\infty
+	\]
+d8bb5e763704ccb7e2ffe3ba70dd0c4b|file:///home/zac/development/acme/541/hw/7Aii.tex|90|48|v|latex
+	\sup_X (|f|-|g|)
+7ef24c55a5bd92c5d90ba8c9b79d792f|file:///home/zac/development/acme/541/hw/7Aii.tex|85|1|V|latex
+		\lim_{p \to \infty} \norm{f}_p \ge \norm{f}_\infty
+b2d102445c3516dc04933ab11a9c7841|file:///home/zac/development/acme/541/hw/7Aii.tex|99|1|V|latex
+	\[
+		\lim_{p \to \infty} \norm{f}_p \le \norm{f}_\infty
+	\] 
+4246dd778f9002beb17c4cb5cb72c842|file:///home/zac/development/acme/541/hw/7Aii.tex|51|4|v|latex
+	\mu(X)
+0d4e941d8c3e060f17c78db790b4cb36|file:///home/zac/development/acme/541/hw/7Aii.tex|57|4|v|latex
+	$\norm{f}_1=\infty$
+1a01026550fc09552679beaf671c910d|file:///home/zac/development/acme/541/hw/7Aii.tex|64|17|v|latex
+	\sup(|f|)
+6e91419117ed9c8d5b2c82752642a374|file:///home/zac/development/acme/541/hw/7Aii.tex|74|6|v|latex
+	\sup(|h|)
+fef7d3dbe48341ad6b765dde2e8e7041|file:///home/zac/development/acme/541/hw/7Aii.tex|57|52|V|latex
+	If $\norm{f}_1=\infty$ or $\norm{h}_1=\infty$, then 
+8acdb0cf3b0856aff47d8bfb3aa91a87|file:///home/zac/development/acme/541/hw/7Aii.tex|78|84|V|latex
+	If $\norm{f}_1=\infty$ or $\norm{h}_1=\infty$, then this inequality is true because 
+0bd9bba525540d8eda419f7a85aa3847|file:///home/zac/development/acme/541/hw/7Aii.tex|104|14|v|latex
+	$|f|^p = |f^p|$
+1ddbc40e0c8e4a7112964f31efbed81d|file:///home/zac/development/acme/541/hw/7Aii.tex|104|13|V|latex
+	then because 
+badf1ebb4ce2d6141dd05741cab0a737|file:///home/zac/development/acme/541/hw/7Aii.tex|81|227|v|latex
+	that same interval
+7a5425734a540717434d9866761d2714|file:///home/zac/development/acme/541/hw/7Aii.tex|85|6|V|latex
+	If $\norm{f}_\infty$ is the maximum value that $|f|$ attains on a set of non-zero measure, then $\norm{f}_\infty^p$ will be the max value that $|f|^p$ attains on sets of nonzero measure.
+81e53ba6093c5e4630cbe055197b4f8e|file:///home/zac/development/acme/541/hw/7Aii.tex|86|13|V|latex
+	\nobreakspace
+73fa5a4ec72fe5c999c140e727bf44c4|file:///home/zac/development/acme/510/hw/L28.tex|37|80|v|latex
+	up to a minus sign. However, due to instability of the algorithm, continued iteration will actually cause $A^{(k)}$to change such that the diagonal does not converge to the correct eigenvalues, at least that is what happened when I tried it on my computer.
+cc3f9fc82dc0f96de31386c4e6c74d81|file:///home/zac/development/acme/510/hw/L28.tex|44|160|v|latex
+	Then a variant of the same rotation can be used to zero out the superdiagonal element, due to the symmetry. 
+62e53b1c83deef0dfefc4bc4e16c60ba|file:///home/zac/development/acme/510/hw/L28.tex|37|488|v|latex
+	because symmetry dictates that all of the columns of $A$ have the same norm, and the eigenvalues are the norms of the columns of $A$.
+f8a8d0811981b94d4c18cd4073f60725|file:///home/zac/development/acme/510/hw/L28.tex|37|623|v|latex
+	But a
+a37414a63b9b3de4702b4842465227f9|file:///home/zac/development/acme/510/hw/L28.tex|39|233|v|latex
+	have the same modulus
+a5b4b95e5bf1e6aa491b5636b01e073a|file:///home/zac/development/acme/541/hw/7B.tex|40|181|v|latex
+	p \ge 1
+209d792b7574e7730c15613457c4783e|file:///home/zac/development/acme/541/hw/7B.tex|40|99|v|latex
+	 for any value of $1\le p\le \infty$,
+ea934ffcdd7ba1f3b54c0050c4149c8c|file:///home/zac/development/acme/541/hw/7B.tex|40|112|v|latex
+	harmonic
+a8306d1b6314332dadf9836a5b9ef589|file:///home/zac/development/acme/541/hw/7B.tex|40|386|v|latex
+	with any countable subset
+48789edb1cccdc55ce7b73612b76b10f|file:///home/zac/development/acme/541/hw/7B.tex|40|448|v|latex
+	the countable subset
+33b6bc09d498e8921e40122c0415510e|file:///home/zac/development/acme/541/hw/7B.tex|40|483|v|latex
+	the sequence
+905be57cefa7df8239c310922276d044|file:///home/zac/development/acme/541/hw/7B.tex|42|118|v|latex
+	for $\epsilon>0$ 
+18556bcddc689eed3946d11da496e450|file:///home/zac/development/acme/541/hw/7B.tex|42|258|v|latex
+	but such that, and set $a_k = 0$ when $k\ge N$. Then
+e79f69e2d44d03bf147db75defe9f3f3|file:///home/zac/development/acme/541/hw/7B.tex|42|454|v|latex
+	no more
+e308b4e4eae0c83c75cfb7426ceb15a4|file:///home/zac/development/acme/541/hw/7B.tex|42|679|v|latex
+	it's closure must equal $\ell^p$
+144e3430ea7f3a4c147ab8b5f5fc8b43|file:///home/zac/development/acme/541/hw/7B.tex|40|211|v|latex
+	countable
+d1d6750be4ee3c71f5e6978b4a4e906a|file:///home/zac/development/acme/541/hw/7B.tex|42|690|v|latex
+	\overline{S} 
+7afa88c2877d79e6a8a190b360edfcd6|file:///home/zac/development/acme/541/hw/7B.tex|42|690|v|latex
+	\subset 
+cf157125d659de309e454f695aaa10dc|file:///home/zac/development/acme/541/hw/7B.tex|42|860|v|latex
+	$\overline{S}=\ell^p$.
+e4be799026a4aebc2a86f109f189e0a2|file:///home/zac/development/acme/541/hw/7B.tex|49|26|v|latex
+	, so we are working with the harmonic sequence. 
+2a281a34b096448ad1abe23a1018bf59|file:///home/zac/development/acme/510/hw/L30Jacobi.tex|38|31|v|latex
+	largest 
+fa9924d967f053a1ce174a6eabb44abb|file:///home/zac/development/acme/510/hw/L30Jacobi.tex|38|6|v|latex
+	each off-diagonal
+6ae0811088f98de90b7daa10f7a713ca|file:///home/zac/development/acme/541/hw/9Aii.tex|41|1|v|latex
+	|\nu(\E_1)|+|\nu(E_2)|+\ldots + |\nu(E_n)|
+053303c718d067df2fa340eef7f38e91|file:///home/zac/dotfiles/coc/ultisnips/tex.snippets|263|1|V|snippets
+	snippet "mu" "mu" riA
+	\mu
+	endsnippet
+895b870c3ee1a29785e00dbf81625886|file:///home/zac/development/acme/541/hw/9Aii.tex|39|62|v|latex
+	 \not \in R^+$ for some $E \in S$. Then
+d8a1aaea8dc35a1657382874d0c8cc7f|file:///home/zac/development/acme/541/hw/9Aii.tex|39|62|v|latex
+	 \not \in R^+
+00522c5ec2bf9b7282ffcc958db2c306|file:///home/zac/development/acme/541/hw/9Aii.tex|39|67|v|latex
+	not real and positive 
+2cf37a9703226e2361cee1ddd73daecd|file:///home/zac/development/acme/541/hw/9Aii.tex|41|2|v|latex
+	|\nu(X \setminus E)| + |\nu(E)|
+7ced45aac63f2c7c45fd2489a62effb1|file:///home/zac/development/acme/541/hw/9Aii.tex|44|4|v|latex
+	|\nu(X)+|\nu(E)||
+85ff38de18d80d1820e4a8d9e15a00ab|file:///home/zac/development/acme/541/hw/9Aii.tex|41|36|v|latex
+	|\nu(X)-\nu(E)|+|\nu(E)|
+06e46af4ffbdb2afb10c2ffd275f0156|file:///home/zac/development/acme/541/hw/9Aii.tex|52|83|v|latex
+	\numbers
+24ed44c1d86c77935861f60eda7164ea|file:///home/zac/dotfiles/coc/ultisnips/tex.snippets|41|1|V|snippets
+	global !p
+	def math():
+	    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+	
+	def comment():
+	    return vim.eval('vimtex#syntax#in_comment()') == '1'
+	
+	def env(name):
+	    [x,y] = vim.eval("vimtex#env#is_inside('" + name + "')")
+	    return x != '0' and x != '0'
+	
+	endglobal
+	
+	# Font Manipulation
+	snippet bf "Bold font"
+	\mathbf{$1}$2
+	endsnippet
+	
+	snippet par "Paragraph"
+	\paragraph{$1}$2
+	endsnippet
+	
+	snippet box "Box"
+	`!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
+	│ $1 │
+	`!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
+	$0
+	endsnippet
+	
+	snippet mk "Math" wA
+	$${1}$$2
+	endsnippet
+	
+	snippet dm "Math" wA
+	\[
+	$1
+	\] $0
+	endsnippet
+	
+	snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+	`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+	endsnippet    snip.rv = ''
+	`$2
+	endsnippet
+	
+	snippet '([A-Za-z])(\d)' "auto subscript" wrA
+	`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+	endsnippet
+	
+	snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
+	`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+	endsnippet
+	
+	snippet // "Fraction" iA
+	\\frac{$1}{$2}$0
+	endsnippet
+	
+	snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
+	\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+	endsnippet
+	
+	priority 1000
+	snippet '^.*\)/' "() Fraction" wrA
+	`!p
+	stripped = match.string[:-1]
+	depth = 0
+	i = len(stripped) - 1
+	while True:
+		if stripped[i] == ')': depth += 1
+		if stripped[i] == '(': depth -= 1
+		if depth == 0: break;
+		i -= 1
+	snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
+	`{$1}$0
+	endsnippet
+	
+	snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
+	\vec{`!p snip.rv=match.group(1)`}
+	endsnippet
+	
+	snippet "(\\?\w+)(\.\.)" "Math-mode postfix" riA
+	$`!p snip.rv=match.group(1)`$
+	endsnippet
+	
+	context "math()"
+	priority 10
+	snippet "hat" "hat" riA
+	\hat{$1}$0
+	endsnippet
+	
+	snippet sum "summation"
+	\sum_{$1}^{$2}
+	endsnippet
+	
+	snippet ooo "infinity" riA
+	\infty
+	endsnippet
+	
+	snippet enum "Enumerate"
+	\begin{enumerate}
+	\item$1
+	\end{enumerate}$2
+	endsnippet
+	
+	context "math()"
+	snippet "matrix" "Matrix" riA
+	\begin{bmatrix}
+	$1
+	\end{bmatrix}$2
+	endsnippet
+	
+	context "math()"
+	snippet "cases" "Piecewise function" riA
+	\begin{cases}
+	$1
+	\end{cases}$2
+	endsnippet
+	
+	#snippet subs "Subsection"
+	
+	priority 300
+	context "math()"
+	snippet dint "integral" wA
+	\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}} $0
+	endsnippet
+	
+	context "math()"
+	snippet lim "limit" wA
+	\lim_{$1 \to $2}$0
+	endsnippet
+	
+	context "math()"
+	snippet "ip" "inner product" ri
+	\ip{$1}{$2}$0
+	endsnippet
+	
+	context "math()"
+	snippet "sqrt" "Square Root" riA
+	\sqrt{$1}$0
+	endsnippet
+	
+	context "math()"
+	snippet "bin" "choose" riA
+	\binom{$1}{$2}$0
+	endsnippet
+	
+	context "math()"
+	snippet "tran" "Transpose" riA
+	^\intercal
+	endsnippet
+	
+	context "math()"
+	snippet "delta" "Delta" riA
+	\delta
+	endsnippet
+	
+	context "math()"
+	snippet "eps" "Epsilon" riA
+	\epsilon
+	endsnippet
+	
+	context "math()"
+	snippet "rho" "Rho" riA
+	\rho
+	endsnippet
+	
+	context "math()"
+	snippet "pi" "Pi" riA
+	\pi
+	endsnippet
+	
+	context "math()"
+	snippet "phi" "Phi" riA
+	\phi
+	endsnippet
+	
+	context "math()"
+	snippet "psi" "Psi" riA
+	\psi
+	endsnippet
+	
+	context "math()"
+	snippet "phi" "Phi" riA
+	\phi
+	endsnippet
+	
+	context "math()"
+	snippet "lambda" "lambda" riA
+	\lambda
+	endsnippet
+	
+	context "math()"
+	snippet "alpha" "alpha" riA
+	\alpha
+	endsnippet
+	
+	context "math()"
+	snippet "beta" "beta" riA
+	\beta
+	endsnippet
+	
+	context "math()"
+	snippet "gamma" "gamma" riA
+	\gamma
+	endsnippet
+	
+	context "math()"
+	snippet "omega" "omega" riA
+	\omega
+	endsnippet
+	
+	context "math()"
+	snippet "Omega" "Omega" riA
+	\Omega
+	endsnippet
+	
+	context "math()"
+	snippet "sigma" "sigma" riA
+	\sigma
+	endsnippet
+	
+	context "math()"
+	snippet "mu" "mu" riA
+	\mu
+	endsnippet
+	
+	snippet "nu" "nu" riA
+	\nu
+	endsnippet
+	
+	context "math()"
+	snippet "scr" "Math Script" riA
+	\mathscr{$1}$0
+	endsnippet
+	
+	context "math()"
+	snippet "cal" "Math Calligraphy" riA
+	\mathcal{$1}$0
+	endsnippet
+	
+	context "math()"
+	snippet "bb" "Math Blackboard" riA
+	\mathbb{$1}$0
+	endsnippet
+	
+	context "math()"
+	snippet "inv" "Inverse" riA
+	^{-1}
+	endsnippet
+	
+	context "math()"
+	snippet "varp" "varphi" riA
+	\varphi
+	endsnippet
+	
+	context "math()"
+	snippet "cases" "Piecewise" riA
+	\begin{cases}
+		$1
+	\end{cases}$0
+	endsnippet
+	
+	context "math()"
+	snippet "par" "Partial Derivative" riA
+	\partial
+	endsnippet
+	
+	context "math()"
+	snippet "smooth" "Smooth function" riA
+	C^\infty
+	endsnippet
+	
+	snippet "tex" "Anki Latex" i
+	\($1\)$0
+	endsnippet
+	
+	context "math()"
+	snippet "scrA" "Math Scr" riA
+	\mathscr{A}
+	endsnippet
+6e63f7dcab3633d0d8de0210b9396984|file:///home/zac/dotfiles/coc/ultisnips/latex.snippets|247|1|V|snippets
+	context "math()"
+f3380d9a57510591efe03831b85ad2af|file:///home/zac/development/acme/541/hw/9Aii.tex|46|1|v|latex
+	we can assume that $\nu(X)>0$ because otherwise we can't have $|\nu|(X)=\nu(X)$.
+4a4f703a41d4e1881f1d20249efbbcb5|file:///home/zac/development/acme/541/hw/9Aii.tex|46|1|v|latex
+	 Then t
+0d29c2b161427dfbaa4e50c3d85d4882|file:///home/zac/development/acme/541/hw/9Aii.tex|39|81|v|latex
+	and $\nu(X)\ge0$
+c834850d7532a8c9c7a1196fdd531363|file:///home/zac/development/acme/541/hw/9Aii.tex|52|29|v|latex
+	and $\nu(X)>0$
+3ff278eb828df81a58a08dd017d92132|file:///home/zac/development/acme/541/hw/9Aii.tex|56|85|v|latex
+	be an
+71e88e2065aa7c6937ec862db632a091|file:///home/zac/development/acme/541/hw/9Aii.tex|50|72|V|latex
+	which contradicts our assumptions. Therefore we can't have $\nu(E) < 0$.
+cd7904943f3221b2e25a4eac050df9bf|file:///home/zac/development/acme/541/hw/9Aii.tex|73|88|v|latex
+	$\nu$ is a complex measure, it must also be finite, with $\nu(X)<\infty$.
+3bd85cde5aa80b41796c57de998f67f4|file:///home/zac/development/acme/541/hw/9Aii.tex|73|268|v|latex
+	symmetry dictates that all of the columns of $A$ have the same norm, and the eigenvalues are the norms of the columns of $A$.
+8351701f99016b866c4df5fe02da75a0|file:///home/zac/development/acme/541/hw/9Aii.tex|76|25|v|latex
+	Then b
+286c04f75eb87db778003342e7ca37fc|file:///home/zac/development/acme/541/hw/9Aii.tex|78|1|v|latex
+	\sum_{k=1}^{N} |\nu(E_k)|
+178d51026dbd6d8bb32b7749ab888930|file:///home/zac/development/acme/541/hw/9Aii.tex|80|202|v|latex
+	sets
+bef99584217af744e404ed44a33af589|file:///home/zac/development/acme/541/hw/9Aii.tex|80|21|v|latex
+	series
+e9eb98569885991fd73839f76f07dac0|file:///home/zac/development/acme/541/hw/9Aii.tex|73|98|v|latex
+	 Then because $\nu$ is a complex measure, it must also be finite, with $\nu(E) \le \nu(X)<\infty$. Then the series $ \sum_{k=1}^{\infty}|\nu(E_k)|$ must converge because because if it didn't then for any 
+3f671de1f5caa3e3a2480cf0cbf17be1|file:///home/zac/development/acme/541/hw/9Aii.tex|73|103|v|latex
+	serires
+df10605f4c6ab1a3fb990ef4a6ac3770|file:///home/zac/development/acme/510/hw/L30b.tex|39|1|V|latex
+	\[
+		p^{(1)}(x) = 1-x
+	\] 
+95253cbb5441b9f2a0337535264ea97e|file:///home/zac/development/acme/510/hw/L30b.tex|45|1|V|latex
+	\[
+	\]
+ac02435f1faf48dce2053fb8bdc101c8|file:///home/zac/development/acme/510/hw/L30b.tex|42|1|V|latex
+	\[
+		p^{(2)}(x) = (1-x)p^{(1)}(x)-(1)^2p^{(0)}(x) = x^2-2x
+	\]
+0814096ad33a0a7327e29f49110af064|file:///home/zac/development/acme/510/hw/L30b.tex|46|49|v|latex
+	x^2-2x
+eb7c8d06b8d00276018ff0aeb20f6697|file:///home/zac/development/acme/510/hw/L30b.tex|45|1|V|latex
+	\[
+		p^{(3)}(x) = (2-x)p^{(2)}(x)-(1)^2p^{(1)}(x) = -x^3+4x^2-3x-1
+	\]
+b62d9974f88c094966c615c7b7804a97|file:///home/zac/development/acme/541/hw/9ai.tex|37|1|V|latex
+	\inft
+e27a1cb2d5e603669b980049680aa141|file:///home/zac/development/acme/541/hw/9ai.tex|39|1|V|latex
+	$\\mu$
+07617f9d8fe48b4a7b3f523d6730eef0|file:///home/zac/development/acme/541/hw/9ai.tex|39|4|V|latex
+	$\mu$
+9efb3f365aacb1f8e661d2123211a48c|file:///home/zac/development/acme/541/hw/9ai.tex|41|1|V|latex
+		1+i & x=a\\
+b54dc50419b0bcae104ed2249bc388f8|file:///home/zac/development/acme/541/hw/9ai.tex|38|1|V|latex
+	This is false. Let $X = \{a,b,c,d\}$ and $\mu$ be defined as
+	\[
+	\mu(x) = \begin{cases}
+		1+i & x=a\\
+		1-i & x=b\\
+		-1+i & x=c\\
+		-1-i & x=d\\
+	\end{cases}
+	\]
+41df38feab81ee1ac06d6fe0b6b4ea1b|file:///home/zac/development/acme/541/hw/9ai.tex|38|40|v|latex
+	\{\emptyset,\{$
+dc969b55d611ec0fdd0149dacbfaa70c|file:///home/zac/development/acme/541/hw/9ai.tex|42|1|V|latex
+		-2 & x=a\\
+3f7f2ba8f156b48218a01b1546e0753c|file:///home/zac/development/acme/541/hw/9ai.tex|56|16|v|latex
+	the principle that $\mu$ is a mea
+528f7c888225242f04c06f20e79f86f3|file:///home/zac/development/acme/541/hw/9ai.tex|58|165|v|latex
+	 assume the range of $\nu$ is contained in $$
+656d29efc726e972e90941e7369f4b13|file:///home/zac/development/acme/541/hw/9ai.tex|62|1|V|latex
+	\[
+	 = |\sum_{i=1}^{\infty}\nu(E_i)|
+	\] 
+cde4cc1c189725263c3b867472fd4209|file:///home/zac/development/acme/541/hw/9ai.tex|70|1|V|latex
+	Then if each $\nu(E_i)$ is positive, the absolute value is irrelevant
+919b314f59866a85f49d4173536d3c3b|file:///home/zac/development/acme/541/hw/9ai.tex|65|21|V|latex
+	Then if the range of 
+83d4af7a8e5b550df6898e6667a6368d|file:///home/zac/development/acme/541/hw/9ai.tex|69|35|v|latex
+	$\range(\nu) \subset (-\infty,0]$
+16fb9fe8e5b24cd572b5df98fbb6e031|file:///home/zac/development/acme/541/hw/9ai.tex|69|93|v|latex
+	(-\infty
+8b8ab63aac65dcc55314828f8b512ff7|file:///home/zac/development/acme/541/hw/9ai.tex|71|2|v|latex
+	\sum_{i=1}^{\infty}|\nu(E_i)|
+0ab8ed0190be6ce130a830b530a7f7b0|file:///home/zac/development/acme/541/hw/9ai.tex|71|34|v|latex
+	\sum_{i=1}^{\infty}-\nu(E_i)
+73c88cd8f334c4d42b4666345a6dcdb0|file:///home/zac/development/acme/541/hw/9ai.tex|71|66|v|latex
+	\sum_{i=1}^{\infty}\nu(E_i)
+f829d6c6814355d2a4188c08316e3f53|file:///home/zac/development/acme/541/hw/9ai.tex|65|1|V|latex
+	\[
+	 = \sum_{i=1}^{\infty}|\nu(E_i)|
+	\]
+f0d1092db6b0e0ba1223bc64918375de|file:///home/zac/development/acme/541/hw/9aiii.tex|48|185|v|latex
+	= |mu|
+9563b757c8cd9ca8d8eaff8435f61a23|file:///home/zac/development/acme/541/hw/9aiii.tex|52|1|V|latex
+	(a) If we have disjoint sets in $\mathcal{S}$ $b \in E_b, c \in E_c$, then 
+7ed9abff4dafd78d08e616c899412e92|file:///home/zac/development/acme/541/hw/9aiii.tex|52|77|v|latex
+	\infty
+b3127068b02277d0c42006901187b39d|file:///home/zac/development/acme/541/hw/9aiii.tex|54|16|v|latex
+	|(\delta_b+\delta_c)(E_k)|
+b6f3c62082b5c2ac022dea3041baacb5|file:///home/zac/development/acme/541/hw/9aiii.tex|55|1|V|latex
+		2 & i=j=k\\
+634deaeeb6d5edfe89497be6cadc6493|file:///home/zac/development/acme/541/hw/9aiii.tex|56|1|V|latex
+		1 i=j\ne k\\
+b4168c13e99ec73b364cd9152ed8ab49|file:///home/zac/development/acme/541/hw/9aiii.tex|48|264|v|latex
+	|\mu(A)|+|\mu(B)|\}<|\mu|(X)
+fea087517c26fadd409bd4b9dc642555|file:///home/zac/dotfiles/.i3/config|250|70|v|conf
+	normal
+7c4f29407893c334a6cb7a87bf045c0d|file:///home/zac/dotfiles/.i3/config|250|70|v|conf
+	right
+f79d7c1c557ef6ab7c73c1a22f0118ea|file:///home/zac/dotfiles/.i3/config|250|89|v|conf
+	--primary
+5f3b5827496b53e8f2397f74490eaba9|file:///home/zac/dotfiles/.i3/config|250|108|v|conf
+	0.5x0.5 
+1da95ea41f31908303beb97d2570eee1|file:///home/zac/dotfiles/.i3/config|250|61|v|conf
+	--rotate left
+2297fff26176c2efe6f7af6c15b57191|file:///home/zac/dotfiles/.i3/config|250|34|v|conf
+	--scale 1.5x1.5
+7634df9b9b94d634548fe507eae2f5be|file:///home/zac/dotfiles/.i3/config|250|97|v|conf
+	0.9x0.9
+1c9c262f0efed31bde3f0bc7a8f36cfe|file:///home/zac/dotfiles/.i3/config|245|96|v|conf
+	yvetal-xerneas
+1d6f721c1b1afce46d0d9db224df00a2|file:///home/zac/development/acme/541/cards.tex|76|32|v|latex
+	$\nu$ be
+a6afe718cc76f530cf4c39416029b759|file:///home/zac/development/acme/541/cards.tex|78|154|v|latex
+	 nny
+e390bd9325ef1df9cc079b45ce59be26|file:///home/zac/development/acme/541/hw/9Bi.tex|38|3|V|latex
+	\[
+	\mu \ll \nu
+	\]
+4dd5bfaaa06b1920a98915d081141866|file:///home/zac/development/acme/541/hw/9Bi.tex|38|1|V|latex
+	(i) $\Rightarrow$ (ii)
+ceeab4a8c625656b94d17f80968a2805|file:///home/zac/development/acme/541/hw/9Bi.tex|40|10|v|latex
+	\sup\{|v(E_1)|+\ldots + |v(E_n)|\}
+567904efe9e64d9faf3e41ef402cb568|file:///home/zac/development/acme/541/hw/9Bi.tex|49|1|v|latex
+	where
+952aede240a72f2f83a805a71f97204a|file:///home/zac/development/acme/541/hw/9Bi.tex|39|1|V|latex
+	\[
+	|v|(E) = \sup\{|v(E_1)|+\ldots + |v(E_n)|\}
+	\]
+	\[
+	 = \sup\{|v(E_1 \cap A)|+\ldots + |v(E_n \cap A)|\}
+	\]
+	\[
+	 = |v|(E \cap A)
+	\]
+29ce221d63587bc70f0f101226a3cbbf|file:///home/zac/development/acme/541/hw/9Bi.tex|64|10|v|latex
+	\Re \nu(E) + \Im \nu(E)
+1f6e5670eaf31ab8eb431c817922e559|file:///home/zac/development/acme/541/hw/9Bi.tex|62|60|v|latex
+	appriximation
+1ffb2f21879156c602211898ad412fd6|file:///home/zac/development/acme/541/hw/9Bi.tex|38|1|V|latex
+	(a) $\Rightarrow$ (b)
+00e81999976d5c6ddf89864a432a5dca|file:///home/zac/development/acme/541/hw/9Bi.tex|38|23|v|latex
+	Let $A,B$ be as given by the assumption of (a)
+226876fbff1aeab835b49264dad8a088|file:///home/zac/development/acme/541/hw/9Bi.tex|88|40|v|latex
+	 Then assume there exists $E$
+589f0b4642d5b1bd0870b87b541df1a6|file:///home/zac/development/acme/541/hw/9Bi.tex|90|14|v|latex
+	|\nu(E)|
+8ed11aa0e1a8e4ef5151f34179114be3|file:///home/zac/development/acme/541/hw/9Bi.tex|77|252|v|latex
+	 with (a) we have
+6f399d863f7fb301a6e910f2d826c767|file:///home/zac/development/acme/541/hw/9Bi.tex|39|22|v|latex
+	\bigcup_{i=1}^n (E \cap A)_i = E \cap A
+59b0488a56f6bb24dc25a5e7912c5753|file:///home/zac/development/acme/541/hw/9Bi.tex|41|1|v|latex
+	\big(\bigcup_{i=1}^n E_i\big)
+771a8513c7444129a374704ee216b64b|file:///home/zac/development/acme/541/hw/9Bi.tex|41|6|v|latex
+	\bigcup_{i=1}^n E_i
+a96297992e44504dbc0c15fa9bd638a4|file:///home/zac/development/acme/541/hw/9Bi.tex|41|36|v|latex
+	\big(\bigcup_{i=1}^n A_i)
+89ca70bf2ee17089c1a6abfa69cf81b1|file:///home/zac/development/acme/541/hw/9Bi.tex|69|1|V|latex
+	Remember both sides!
+d90036d1ed042d0c25b721a4847be1fa|file:///home/zac/development/acme/541/hw/9Bi.tex|69|65|v|latex
+	 then $$
+797003271492ce2169d79f6d1b6c680f|file:///home/zac/development/acme/541/hw/9Bi.tex|69|82|v|latex
+	ot \in S
+8a14fc9f34d0487b771ec98244227cbf|file:///home/zac/development/acme/541/hw/9Bi.tex|70|3|V|latex
+	\[
+	|\nu|(E)=|\nu(E)| = |\nu(E \cap B)|
+	\]
+3606e99376acafbe9e9f40a3736a92fa|file:///home/zac/development/acme/541/hw/9Bi.tex|75|1|v|latex
+	\mu(E) = 
+4ad26b24a9ff6f0d1ba55a1b11b3b71b|file:///home/zac/development/acme/541/hw/9Bi.tex|74|1|V|latex
+	\[
+	\mu(E \cap B) = \mu(E)
+	\]
+e422e71a3f74af3d0e73bfdefa8881b2|file:///home/zac/development/acme/541/hw/9Bi.tex|77|1|V|latex
+	\[
+	\nu(E \cap B) = \nu(E)
+	\]
+717909e9bdcf77e81d68a12f999f196c|file:///home/zac/development/acme/541/hw/9Bi.tex|82|15|v|latex
+	= \nu(E)
+0525fd12f5b7f7c0c6def0ace66e685a|file:///home/zac/development/acme/541/hw/9Bi.tex|82|1|V|latex
+	\nu(E \cap B) = \Re \nu(E \cap B) + \Im \nu(E \cap B)
+fbc9c5bcc21caafcb7ed81bb53d60532|file:///home/zac/development/acme/541/hw/9Bi.tex|85|6|v|latex
+	 \cap B
+8857a794155108092e7db88b4fae512e|file:///home/zac/development/acme/541/hw/9Bi.tex|82|17|v|latex
+	\Re \nu(E \cap B) + \Im \nu(E \cap B)
+21c4395f150a3cd5e8be6cc98f192aaa|file:///home/zac/development/acme/541/hw/9Bi.tex|77|1|V|latex
+	\[
+	\nu(E \cap A) = \nu(E)
+	\]
+57a8dfe890ae25df3284719b97ce95d6|file:///home/zac/development/acme/541/hw/9Bi.tex|88|27|v|latex
+	\Re \nu(E \cap A) + \Im \nu(E \cap A)
+bd0d7a03162108298dc4bf44fdcddfa9|file:///home/zac/development/acme/541/hw/9Bi.tex|92|1|V|latex
+	\Re \nu (E) = \Re \nu (E \cap A)
+2f0c3d956d8e17accbdab0cc7644d1bf|file:///home/zac/development/acme/541/hw/9Bi.tex|71|24|v|latex
+	|\nu(E \cap A)| = |\nu|(E \cap A)
+f6f7bb525d13aca0b1056e12bc08f898|file:///home/zac/development/acme/541/hw/9Bi.tex|74|1|v|latex
+	|\nu(E \cap A)|
+b13ff8ae57d95989b7be18fffa9cb4c8|file:///home/zac/development/acme/541/hw/9Bi.tex|71|22|v|latex
+	= |\nu(E \cap A)| = |\nu|(E \cap A)
+dd11844a2f85b1fffbaa9f6bf1597e6f|file:///home/zac/development/acme/541/hw/9Bi.tex|71|13|v|latex
+	|\nu(E)| 
+e919e36a38c1f1eb8e86cc6ba5af458e|file:///home/zac/development/acme/541/hw/9Bii.tex|38|1|V|latex
+	Obviously 
+8b036e14751447202c96fbdf744e6157|file:///home/zac/development/acme/541/hw/9Bii.tex|40|1|V|latex
+	Obvioulsy this 
+9a69abc6e9f3d11d47a0c452dcf41e87|file:///home/zac/development/acme/541/hw/9Bii.tex|52|1|V|latex
+		 1 & x=a\\
+daf31151fc9184007899a9758c30dce5|file:///home/zac/development/acme/541/hw/9Bii.tex|51|1|V|latex
+	 \mu(x) = \begin{cases}
+		 1 & x=a\\
+		 \infty & x=b\\
+	 \end{cases}
+	\]
+167105af2c79a6ce0dc5e2983275bc14|file:///home/zac/development/acme/541/hw/9Bii.tex|68|1|v|latex
+	becuse n
+e88872446027c10e58bc8813c6b1199f|file:///home/zac/development/acme/541/hw/9Bii.tex|45|51|v|latex
+	$\mathcal{M}_F(\mathcal{S})$
+0efe750163e6ebd839bc37d5b0923f02|file:///home/zac/development/acme/541/hw/9Bii.tex|45|64|v|latex
+	\mathcal{M}_F(\mathcal{S})
+88e307509a99b2761994172a162bfaa9|file:///home/zac/development/acme/541/hw/9Bii.tex|45|188|v|latex
+	v \not \ll \mu
+265b922dc4330e38988041e6254cbb18|file:///home/zac/development/acme/541/hw/9Bii.tex|45|203|v|latex
+	Each
+e0918029de961fb9533ccf55ecfa2492|file:///home/zac/development/acme/510/hw/L32.tex|42|5|v|latex
+	\bo(
+ac38f90230fe8cf892794e50801b2cd5|file:///home/zac/development/acme/510/hw/L32.tex|53|20|v|latex
+	\bo(m^{\log_2 7 + o(1)})
+154cf95f1060dd147624eed55e07de3f|file:///home/zac/development/acme/510/hw/L32.tex|53|62|v|latex
+	 + o(1)
+beaf44cf920866faf4e9c3b41aa5192a|file:///home/zac/development/acme/510/hw/L32.tex|47|1|V|latex
+	Because addition and subtraction is asymptotically cheaper than multiplication, this can be rewritten as
+	\[
+	f(n) = (7+ o(1))^n
+	\]
+	which with $m=2^n$ leads to
+	\[
+		\bo([7+o(1)]^n] = \bo(m^{\log_2 7 + o(1)}) = \bo(m^{\log_2 7})
+	\]
+	
+	Note: I could not have done this part without help from Wikipedia and YouTube, although I got a pretty good start by working on it by myself. I was able to figure out the first line, just getting that into $\log_2 7$ form was a little tricky.
+9ffbd4ab038857173bc3043e82615f1b|file:///home/zac/development/acme/510/hw/L32.tex|49|12|V|latex
+	Note that wi
+cfd47b199ff4832b318dec33b621e5ad|file:///home/zac/development/acme/510/hw/L32.tex|42|84|v|latex
+	 and $g(n)$ be the number of operations for additions and subtractions. 
+c7da4e089d98e2b178f17900ff51ba74|file:///home/zac/.config/polybar/launch.sh|12|23|V|sh
+	polybar bar2 2>&1 | tee -a /tmp/polybar2.log & disown
+fa85cca91963d8f301e34247048fca39|file:///home/zac/.config/polybar/launch.sh|11|9|v|sh
+	bar1
+f8d06a7320b81e2560e1eb5bba35b35a|file:///home/zac/dotfiles/.i3/config|254|29|V|conf
+	# Launch applications simply
+	
+	bindsym Mod1+i exec firefox
+	bindsym Mod1+b exec blueman-manager
+	bindsym Mod1+p exec postman
+	bindsym Mod1+c exec mongodb-compass
+	bindsym Mod1+n exec nautilus
+	bindsym Mod1+g exec gnome-control-center
+	bindsym Mod1+m exec spotify
+9182a0f4f34bb9c361d39ec7a02a5d3a|file:///home/zac/.config/polybar/config|58|16|v|dosini
+	bspwm 
+1afbdd62ff735c4eae689d1a7bfafa88|file:///home/zac/.config/polybar/config|60|44|v|dosini
+	pulseaudio 
+846623cbc459e7591bf64cf76065fca5|file:///home/zac/.config/polybar/config|60|74|v|dosini
+	tery 
+6967dcbca443001ab4e3b76396517552|file:///home/zac/.config/polybar/config|115|1|V|dosini
+	[module/bspwm]
+	type = internal/bspwm
+	
+	label-focused = %index%
+	label-focused-background = ${colors.background-alt}
+	label-focused-underline= ${colors.primary}
+	label-focused-padding = 2
+	
+	label-occupied = %index%
+	label-occupied-padding = 2
+	
+	label-urgent = %index%!
+	label-urgent-background = ${colors.alert}
+	label-urgent-padding = 2
+	
+	label-empty = %index%
+	label-empty-foreground = ${colors.foreground-alt}
+	label-empty-padding = 2
+	
+	; Separator in between workspaces
+	; label-separator = |
+e9be6077c8d510532b6deee0a5998c91|file:///home/zac/.config/polybar/config|60|28|v|dosini
+	xbacklight alsa xkeyboard 
+9c2930a52a02e5f55f02f66c69f85b1c|file:///home/zac/.config/polybar/config|60|39|v|dosini
+	wlan 
+eef438f7e448aa48c1f8db568d27b591|file:///home/zac/.config/polybar/config|60|43|v|dosini
+	temperature
+80da937d00d0eefbc4ad3a94403dba87|file:///home/zac/.config/polybar/config|165|1|V|dosini
+	
+	[module/xbacklight]
+	type = internal/xbacklight
+	
+	format = <label> <bar>
+	label = BL
+	
+	bar-width = 10
+	bar-indicator = |
+	bar-indicator-foreground = #fff
+	bar-indicator-font = 2
+	bar-fill = ─
+	bar-fill-font = 2
+	bar-fill-foreground = #9f78e1
+	bar-empty = ─
+	bar-empty-font = 2
+	bar-empty-foreground = ${colors.foreground-alt}
+	
+	[module/backlight-acpi]
+	inherit = module/xbacklight
+	type = internal/backlight
+	card = intel_backlight
+	
+faa4da2b54fb567e13ebfdfabed967d2|file:///home/zac/.config/polybar/config|153|1|V|dosini
+	[module/mpd]
+	type = internal/mpd
+	format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+	
+	icon-prev = 
+	icon-stop = 
+	icon-play = 
+	icon-pause = 
+	icon-next = 
+	
+	label-song-maxlen = 25
+	label-song-ellipsis = true
+0a9b94063781b5192074c38582ceb969|file:///home/zac/.config/polybar/config|166|10|v|dosini
+	percentage_used
+979cdf9ea531debf92f16b0e7b570461|file:///home/zac/.config/polybar/config|222|1|V|dosini
+	[module/pulseaudio]
+	type = internal/pulseaudio
+	
+	format-volume = <label-volume> <bar-volume>
+	label-volume = VOL %percentage%%
+	label-volume-foreground = ${root.foreground}
+	
+	label-muted = 🔇 muted
+	label-muted-foreground = #666
+	
+	bar-volume-width = 10
+	bar-volume-foreground-0 = #55aa55
+	bar-volume-foreground-1 = #55aa55
+	bar-volume-foreground-2 = #55aa55
+	bar-volume-foreground-3 = #55aa55
+	bar-volume-foreground-4 = #55aa55
+	bar-volume-foreground-5 = #f5a70a
+	bar-volume-foreground-6 = #ff5555
+	bar-volume-gradient = false
+	bar-volume-indicator = |
+	bar-volume-indicator-font = 2
+	bar-volume-fill = ─
+	bar-volume-fill-font = 2
+	bar-volume-empty = ─
+	bar-volume-empty-font = 2
+	bar-volume-empty-foreground = ${colors.foreground-alt}
+	
+	[module/alsa]
+	type = internal/alsa
+	
+	format-volume = <label-volume> <bar-volume>
+	label-volume = VOL
+	label-volume-foreground = ${root.foreground}
+	
+	format-muted-prefix = " "
+	format-muted-foreground = ${colors.foreground-alt}
+	label-muted = sound muted
+	
+	bar-volume-width = 10
+	bar-volume-foreground-0 = #55aa55
+	bar-volume-foreground-1 = #55aa55
+	bar-volume-foreground-2 = #55aa55
+	bar-volume-foreground-3 = #55aa55
+	bar-volume-foreground-4 = #55aa55
+	bar-volume-foreground-5 = #f5a70a
+	bar-volume-foreground-6 = #ff5555
+	bar-volume-gradient = false
+	bar-volume-indicator = |
+	bar-volume-indicator-font = 2
+	bar-volume-fill = ─
+	bar-volume-fill-font = 2
+	bar-volume-empty = ─
+	bar-volume-empty-font = 2
+	bar-volume-empty-foreground = ${colors.foreground-alt}
+	
+	[module/battery]
+	type = internal/battery
+	battery = BAT0
+	adapter = ADP1
+	full-at = 98
+	
+	format-charging = <animation-charging> <label-charging>
+	format-charging-underline = #ffb52a
+	
+	format-discharging = <animation-discharging> <label-discharging>
+	format-discharging-underline = ${self.format-charging-underline}
+	
+	format-full-prefix = " "
+	format-full-prefix-foreground = ${colors.foreground-alt}
+	format-full-underline = ${self.format-charging-underline}
+	
+	ramp-capacity-0 = 
+	ramp-capacity-1 = 
+	ramp-capacity-2 = 
+	ramp-capacity-foreground = ${colors.foreground-alt}
+	
+	animation-charging-0 = 
+	animation-charging-1 = 
+	animation-charging-2 = 
+	animation-charging-foreground = ${colors.foreground-alt}
+	animation-charging-framerate = 750
+	
+	animation-discharging-0 = 
+	animation-discharging-1 = 
+	animation-discharging-2 = 
+	animation-discharging-foreground = ${colors.foreground-alt}
+	animation-discharging-framerate = 750
+754a58362b107f9d9ff410f6660d55d8|file:///home/zac/.config/polybar/config|220|9|v|dosini
+	%date% 
+8f7e9cfb619018bc32f658fe5f7971a5|file:///home/zac/dotfiles/.i3/config|64|1|V|conf
+	bindsym Mod1+d exec dmenu_run # There also is the (new) i3-dmenu-desktop which only displays applications
+f9441daafd253fd4c9367dab67b4e2c0|file:///home/zac/dotfiles/.i3/config|67|16|v|conf
+	exec dmenu_run
+b978ddb2bda75c35cc43337fa9cb1ce6|file:///home/zac/dotfiles/.i3/config|67|55|v|conf
+	drun
+ff2364a0be3d20e46cc69efb36afe9a5|file:///home/zac/dotfiles/.i3/config|68|14|v|conf
+	space
+dd822ea291172aaa10d3e03fc05c13ad|file:///home/zac/dotfiles/.i3/config|67|1|V|conf
+	bindsym Mod1+d rofi -combi-modi window,drun,ssh -show combi
+d87eec908a898d76f7fcb5bca9fe3b05|file:///home/zac/dotfiles/.i3/config|67|46|V|conf
+	bindsym $mod+d exec --no-startup-id rofi -show combi -run-command "i3-msg exec '{cmd}'" -show-icons
+	# There also is the (new) i3-dmenu-desktop which only displays applications
+b1e236a47d72e88036214d97b38e8c72|file:///home/zac/dotfiles/.i3/config|67|9|v|conf
+	$mod
+0e87c1212a698494dcdb198af3e0eb2f|file:///home/zac/development/acme/510/hw/L36.tex|47|2|v|latex
+	partial
+516ed335c27f522f52c049960bc4026f|file:///home/zac/development/acme/510/hw/L36.tex|42|10|v|latex
+	\frac{x ^\intercal T_n x}{x ^\intercal x}x
+aeaf098702c878c387692af04622cba2|file:///home/zac/development/acme/510/hw/L36.tex|41|1|V|latex
+	\[
+		T_n x = \frac{x ^\intercal T_n x}{x ^\intercal x}x
+	\]
+861e17e17c019c1b993cea649702caf6|file:///home/zac/development/acme/510/hw/L36.tex|38|25|V|latex
+	Let $x \in \mathcal{K}_n$. Then:
+388416646e535b63c957e713f6fce0fa|file:///home/zac/dotfiles/.i3/config|159|23|v|conf
+	DP-2
+92408bef833ed8b0c4dbcbad4464ae73|file:///home/zac/dotfiles/.i3/config|265|29|v|conf
+	DP-2 --mode 1680x1050
+c78555f2b19742559c80f271bcec36fa|file:///home/zac/dotfiles/.i3/config|265|36|v|conf
+	--pos 0x0 
+a4b85c82490d036e6e89c264966c8085|file:///home/zac/dotfiles/.i3/config|260|96|v|conf
+	milky_way
+66b7fd7ceaf7fa7b2be2638b4c53cd3c|file:///home/zac/dotfiles/.i3/config|260|50|v|conf
+	Rayquaza.png
+827066ccc6ddb2e1f3032718d0a10653|file:///home/zac/dotfiles/.i3/config|265|20|v|conf
+	--output HDMI-0 --mode 3840x2160
+3318bc583ec3eba70e591929b32b8e17|file:///home/zac/dotfiles/.i3/config|265|62|v|conf
+	--left-of HDMI-0
+76efdc70eb686c891b08d9fbbb75d1f3|file:///home/zac/dotfiles/.i3/config|265|105|v|conf
+	HDMI-0
+811882fecd5c7618d7099ebbd39ea254|file:///home/zac/dotfiles/.i3/config|265|97|v|conf
+	left
+43d119f0b275294975da45a9f96b1eea|file:///home/zac/dotfiles/.i3/config|265|44|v|conf
+	 --mode 3840x2160
+c128a131df2e6e6d02ab3b5e53d21929|file:///home/zac/development/acme/510/hw/L36.tex|37|1|V|latex
+	$\Rightarrow$
+	Let $x \in \mathcal{K}_n$. Then let $c$ be a Ritz value at step $n$. By (27.2) this means that
+	\[
+		T_n x = \frac{x ^\intercal T_n x}{x ^\intercal x}x
+	\]
+	
+	Then let $x$ be the eigenvector of $T_n$ corresponding to $c$, and we get
+	\[
+	\nabla r(x) = c x - c x = 0
+	\]
+	
+	which means the gradient is zero, so $c$ is a stationary point of $r(x)$.
+	
+	$\Leftarrow$ Let $c$ be a stationary point of $r(x)$, meaning \[\nabla r(x)= \frac{2}{x ^\intercal x}(T_nx-\frac{x ^\intercal T_n x}{x ^\intercal x}x)=0\]
+	
+	when $x$ is the vector such that $r(x)=c$, and thus $T_nx =cx$, so $c$ is a Ritz value. Then we have
+	\[
+		T_n x = \frac{x ^\intercal T_n x}{x ^\intercal x}x
+	\]
+	
+	which means that $T_nx$ is just a constant multiple of $x$, and thus $x$ must lie in the range of $T_n$, which is equivalent to $\mathcal{K}_n$
+a15e61a2f3af1994990f54f4cfbad2be|file:///home/zac/development/acme/510/hw/L36.tex|36|65|v|latex
+	alue.
+ab61a41c6c470b2f8d16297a8be0e53b|file:///home/zac/development/acme/510/hw/L36.tex|38|14|v|latex
+	2 Q_n
+a14f49e8311a170ffb188a9de8ea2690|file:///home/zac/development/acme/510/hw/L36.tex|44|17|v|latex
+	\frac{2 Q_n^*}{x ^\intercal x}(Ax- \frac{x ^\intercal A x}{x ^\intercal x}x)
+be5c3590ea9112a783e37181b1894a1b|file:///home/zac/development/acme/510/hw/L36.tex|47|68|v|latex
+	\intercal 
+042f05600cb6492bee9ad0bdd659ac2c|file:///home/zac/development/acme/510/hw/L36.tex|46|1|V|latex
+	\[
+	 = \frac{2 Q_n^*}{y ^\intercal y}(AQ_n y- \frac{y ^\intercal Q_n^* A Q_n y}{y ^\intercal y}Q_n y)
+	\]
+52a0846042777e1eedf542a3d756c0b0|file:///home/zac/development/acme/510/hw/L36.tex|47|12|v|latex
+	Q_n^*
+7e3fbd776cd92efa7d541adb5bafe080|file:///home/zac/development/acme/510/hw/L36.tex|50|11|v|latex
+	 Q_n^*
+7517ed9e50da13f78b40d7fab78cd3ff|file:///home/zac/development/acme/510/hw/L36.tex|50|29|v|latex
+	AQ_n
+973ccf8d9db6be02bb817074db3105c0|file:///home/zac/development/acme/510/hw/L36.tex|50|55|v|latex
+	Q_n^* A Q_n
+39b0fa4477c9d5966361e1ba6466278b|file:///home/zac/development/acme/510/hw/L36.tex|59|33|v|latex
+	$lamdba$
+97dedc69eb85fe6054a75852a86c5fdf|file:///home/zac/development/acme/510/hw/L36.tex|61|74|v|latex
+	could show that it must be an eigenvalue of $T_n$. If
+642bbf81353c0de40d1bc46c47ace1ca|file:///home/zac/development/acme/510/hw/L36.tex|65|15|V|latex
+	for some scalar
+2ea0b1e4154715700bf6a7113702dc03|file:///home/zac/development/acme/510/hw/L36.tex|70|1|V|latex
+	\[
+		Q_n^* T_n Q_n = \lambda x
+	\] 
+b78913e47933a41677a9ea3cef1a3d2c|file:///home/zac/development/acme/510/hw/L36.tex|74|2|v|latex
+	Q_n^* 
+b0997b21b70bc49dbd7d9034e41a8706|file:///home/zac/development/acme/510/hw/L36.tex|61|28|v|latex
+	a value $\lambda$ were a stationary value,
+c74c734b61a9021afe5c495711056119|file:///home/zac/development/acme/510/hw/L36.tex|61|18|v|latex
+	knew that 
+1e49651a5442e61046e88db66e08d2e9|file:///home/zac/dotfiles/.i3/config|260|102|v|conf
+	8B-OneX-Chief-4K.jpg
+f0593ec4d2f7cd8fc9f68ac96270c3c2|file:///home/zac/dotfiles/.i3/config|265|34|v|conf
+	--mode 3840x2160
+4808063acab6c9b17ded8e2e5d06317f|file:///home/zac/development/acme/510/hw/L37.tex|40|46|v|latex
+	alpha_k
+a18a37889cd8b0875d23dfb9763abd11|file:///home/zac/development/acme/510/hw/L37.tex|40|12|v|latex
+	(x-\alpha)^2
+ed51fe9ab68a65c0dd84a74096c7ea86|file:///home/zac/development/acme/510/hw/L37.tex|40|25|v|latex
+	\Prod_{k=1}^{n-2}(x-\lambda_k)
+d48a5cda4bc91670bf431856c381ab40|file:///home/zac/development/acme/510/hw/L37.tex|44|4|V|latex
+	Then
+cc2e7018ac219b9eedc2f130d2c650a8|file:///home/zac/development/acme/510/hw/L37.tex|40|58|v|latex
+	(x-\alpha)^2 Z(x)
+a6bfa17a45e18e13dd0ddd1efb061eb9|file:///home/zac/development/acme/510/hw/L37.tex|45|2|v|latex
+	\int_{(-1,1)} q_{n+1}Z(x) dx
+ca02bfec239636567f7ff835b53bc4af|file:///home/zac/development/acme/510/hw/L37.tex|45|46|v|latex
+	q_{n+1}Z(x) dx 
+cbe494d6ca81e9a6011615b1bc348b53|file:///home/zac/dotfiles/.i3/config|260|17|v|conf
+	--bg-scale ~/Pictures/Wallpapers/Halo-3-ODST-4k.jpg --bg-scale
+b2c9534ced1a2d7a637382deafaa491f|file:///home/zac/dotfiles/.i3/config|259|16|V|conf
+	# Get wallpaper
+	exec_always feh ~/Pictures/Wallpapers/milky_way.jpg --bg-scale ~/Pictures/Wallpapers/Halo-3-ODST-4k.jpg --bg-scale
+2865053b25f5daf8d1025975b13579f8|file:///home/zac/dotfiles/.i3/config|266|17|v|conf
+	~/Pictures/Wallpapers/milky_way.jpg 
+40eb1152e99a92deb56f816b096f7cae|file:///home/zac/dotfiles/.i3/config|266|65|v|conf
+	~/Pictures/Wallpapers/Halo-3-ODST-4k.jpg 
+c150693e74bb2673e252ec0fd58138f8|file:///home/zac/dotfiles/.i3/config|266|17|v|conf
+	--bg-scale ~/Pictures/Wallpapers/milky_way.jpg 
+334c4a4c42fdb79d7ebc3e73b517e6f8|file:///home/zac/.config/alacritty/alacritty.yml|58|16|v|yaml
+	none
+b7ca860c7b05fe4a7f0710aaaf5ea4a5|file:///home/zac/.config/compton/compton.conf|41|1|V|conf
+	  "80:class_g = 'URxvt'",
+b326b5062b2f0e69046810717534cb09|file:///home/zac/.config/compton/compton.conf|88|37|v|conf
+	true
+2aecdbc96ecdc21e11e2e961d682feaf|file:///home/zac/.config/compton/compton.conf|42|1|V|conf
+		"80:class_g = 'gedit'"
+44f54e4683222c15b1c21f73068aa038|file:///home/zac/.config/compton/compton.conf|42|17|V|conf
+		"80:class_g = 'gedit'",
+33b6f838f6232e225e01c03673929ad3|file:///home/zac/.config/compton/compton.conf|42|1|V|conf
+		"80:class_g = 'Gedit'"
+7043823fba9880ff41ec158e2a61a5e1|file:///home/zac/.config/compton/compton.conf|43|17|v|conf
+	Gedit
+06a4e49f1027b8bab4ccdae222eaa3ae|file:///home/zac/development/gpt/config.json|3|2265|v|json
+	Data": {}
+87006a7dc12877d356ce4d503ef9d072|file:///home/zac/development/gpt/config.json|1|1|V|json
+	{
+		"Authroization": "<API_KEY>",
+		"session_token": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..neyJWCUVmUj_XMee.VXhK2AcZaxudFz2XMe1OcI-g93mleB3uFAYtN0yOPaCn7geFQjJiNXV0NwXN-nySxGoEFjetzYVC1voGYoPIv-CFuL_UtE4fZ258v862pQI61qU-IIuMzGiPofnVl8XEeEQTvcb9e055yznf8GWiHqzYq5ei9oEZRXPZy8ravxVkzOgEVEwp4WIBWC0FU3YfiP3Ev3ZfqYTFI-emsBbUa2C76b4uOsyTxkNt6SMaxViEQ42tvIGyybagZcuqucFAsEdGDOLPpVblS9PLHKEcaXNCk0aSBr7V0lqZ8y5RyugUWK0W-I6ni5NbOBueSEnVXMFGVJz5NAIgb53TBs9qsTgNo69neYojYdw8-MLzWDycu4VaLDddN_5N9DaKQHVEUMa_1v8buDwUS-TJB-GgZ9qb12xJqXB99k9_i3oW6xH5SR19KlZkNOVznZfoA7YQXi2DNnmu8Ioyh57LvzGajWMHP1wJtSK7U4vrndn5x9nR1ufAG8w9Nb5QQY1-a9ZFMNuVzeVRbtEG8r_swpfxl81cUUvZubU3XDpNfOk6Q7-85c2NXhO6PzqJTnjg3zoU94jsxg5awBrZ1_54WNtLTxP53khsBbtbGRd3UKZdOYgJLdtGAc9oz9MNsZM096vTXMmB8ldnWgHHlUlW9SI1RCPTkE_V5zRnIz6T-_nXxbVqgq9P5z8bZmSFwVSkzu81--VrtQYomLQJNc240GPx7GokRAHRaKSt8NfSfvG6t3u11QFEQ_fbs44rZo2TTHt5P1UcE05rNJSn8qd_ceAhN160cKpOY3kmwMQXT_svaOg9PsdmUif4Yv7bDBnujQi3WtHcXKYuaTGgzny7cRY95TwUEG-Q9Ph5dKwiUKKMv0jDkLJZbNffiWrMgP_Y9aUQuSnLBm_KEsPmQIDP0c3AdCkbK90zjrEMxyrtcbs6Z9W3S9EH5OrG0tsvzzGseWaNfvYDHVe9HBQ0TlOKnUWWWfPOYB8z-YbaBgC9Ikq9FPtndwrYxU9ueYPEzpIlqqbF5YcYW40KsOQ-75clKImHIUWbW29Isho6WcmIYuhBDiTKqD3jzwKTUiumFodv0ajeYls9r7cvrP9MNJLaKGgdBoGhz2T7hbUY_cq1aM7tZ3eVnJ7ndDwNzHn35v85sHzO1KtqoAYa0qyd7gN_TFP12JJ2wTW-et4za9BWgT0aBjlmMGj40D-5ZjcofbzUH71XsEiCfPPoExko759-dthJP1qifi7bXFUt-CH9sNrtQmJXTODcjqDoYh9wfQANiogjf6KhZuNtVLAKjwRMyyZHVlWuyH8PSpKEv8w8E37Uzc2xMmo0ghoyxT76N4N-7nWxXPOdpaKjfKqezkt9UoRFBmZlEJTJkWWT_kpKZ1pkxn2nwpsiouBMTeLjeB3u-tOO6UtTqa6BqGOB8Xv1H4YledifBJcmJE7l80-FXgCx_TSyuP8t_kKjjO7QfUfslb7Y5JMMPc_6nH-ggdRgiQnAypy0mtKkcMW2jkW94sgyOU2Ou3BeBo_vbOZ7esM2k_qnHPzJXrKAe1BwjfrIFIAj2jFwngstuQE-2I7SGjJkOcHoXXAtUZBljgmzZTRGr-oFZXkKONp-FCTiajBdUe-PmP5-YygapN193_w9UWg5LqTUa6LCkOXq5Crhg76MElFVS0o-rK-vUXPHQ5kcAEnvNgcgV7K5ZzNS5_OI_6vy1r94o8SQpP-uFZurGA3zX1h0F1xJInjYlcHI7u3whTg7lHBCUV3ocwEoFZeIb_ZrFeItwOMIOdisXfeMrEV6C-a321rYAVV_ZYT8dtaU7bp3NpVjCTxCePmjMa8yy_Nw96T62SA6ReTdokQJYa0NjnGccD0Q2avf2vly61lkxVOcjdKJFf5d-VRNk2Sk2veevLbUz--Qi2B5X5n1UGeGAnO-k38X4nbIAi1n6bD_GEb9D_OdZcXcwG6lLWeqBdlY3zPsN2o6eODEp-lsdFX-U8Ph56zELCtJKYMEIdBSE4bkicvm-gMmV2oahlflsBOKNxegwj_mWef3pffyApvp6oU2uuCpZMb5GewQ1iNmEe2vqUMwGh6AFoJmSyBYtSIz5iDKFQtLzJZY5V9eYcEsmOuYGLrxn6_ILsN_nMcNqTQ2CnTer5jNZ9Db8l4ghYtqdBQBlO4DA8Ju.7IsFoVM2gpN9FwFSWx4j9g"
+	}
+303d49f55924ea3c8a6b1c5fbc534a9f|file:///home/zac/development/gpt/config.json|3|23|v|json
+	<SESSION_TOKEN>
+9151d0764d4a67cb353e23e60dcf69d2|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|63|28|V|python
+	            print("Pokemon")
+a060327d7a5752c8916ec338b29617a9|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|64|13|v|python
+	pritn
+4cfecbe69979fee844cc5245e4de4786|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|63|13|V|python
+	            print("Pokemon")
+	            print("woew")
+b71f010f8c305b2b089e94d622e646b1|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|64|13|V|python
+	            # Get the response
+c02cedf59e57027dbcc008b8bd99c667|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|67|45|V|python
+	            print(chatbot.get_chat_response())
+aa992ec78f4dbc792230dfadafbd6def|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|1|38|V|python
+	from revChatGPT.revChatGPT import Chatbot
+	import json
+f7b44cfafd5c52223d5498196c8a2e7b|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|66|65|v|python
+	stream
+f0124ba11fad05a529aa376826b656c6|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|27|V|python
+	            print(list(response))
+bb368ec59608cf7c8b8530874020cd62|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|27|V|python
+	            print("buffer")
+ef638314b13ba4f51c23680548c20f33|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|19|v|python
+	respone
+43051042f95b627738772caaaff15831|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|33|V|python
+	            print(list(response)[-2].data.content.parts[0])
+0c4f209efec781119b5096a3fcdac50c|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|68|31|V|python
+	                print("ROCKET")
+755895fa27f302353b0e3048d31cfd16|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|63|19|V|python
+	                print("content start")
+6e780d887d92e1f906db2244ceaa2d62|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|30|V|python
+	            for r in response:
+	                print("ChatGPT:", r)
+bd342ee6c7548633883ae3701a1e1803|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|44|V|python
+	            print("Test", list(response)[-1])
+b466d853d4fd5208ad6e7b52ba521274|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|37|16|V|python
+	        pudb.set_trace()
+d06ca71736656d83284aaa2f56fc2fad|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|77|39|V|python
+	            message = response["message"]["content"]["parts"][0]
+d1fc8eaf36937be0c3ba8cfe0a2c1bfe|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|70|17|v|python
+	response
+9e61563e910a10155b9f4a92430944f0|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|74|13|V|python
+	            response = json.loads(response)
+4a5fd5ae36ec7e48fd8fdc439aa15918|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|69|13|V|python
+	            print(response)
+e70c4df10ef0983b9c8c31bd06b2a2c3|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|83|13|v|python
+	return
+8bba0d3ef9f196e5d4a22c19fe246fd6|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|82|13|V|python
+	            answer = 
+59065b54645e56569cb84936deae0345|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|26|V|python
+	            list(response)
+1dc8c8bed1645cd4e98304e57ac5b190|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|34|1|V|python
+	        # print("YES")
+	        # print("Inside")
+826457efb362e8bd5b3a9e4c345f9f09|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|85|20|V|python
+	            pudb.set_trace()
+bd8de534f9c2693247612ed3d51a521a|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|69|13|V|python
+	            print(response["message"])
+0d00c1817e8c82f836899758cefc23a7|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|70|13|V|python
+	            # print("ChatGPT: " + response)
+51e0b153476c8059d160f0648ef39c98|file:///home/zac/development/gpt/config.json|1|20|v|json
+	eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL2F1dGgiOnsidXNlcl9pZCI6InVzZXItZ0xNamg2NHpmbkx0RzFHaTl2NzZ1NDJHIn0sImlzcyI6Imh0dHBzOi8vYXV0aDAub3BlbmFpLmNvbS8iLCJzdWIiOiJhdXRoMHw2MmViZDUxOTljNmM2ZGU1NjExNzJiNzEiLCJhdWQiOlsiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS92MSIsImh0dHBzOi8vb3BlbmFpLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzAyMjIyMzMsImV4cCI6MTY3MDIzNjYzMywiYXpwIjoiVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEciLCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIG1vZGVsLnJlYWQgbW9kZWwucmVxdWVzdCBvcmdhbml6YXRpb24ucmVhZCBvZmZsaW5lX2FjY2VzcyJ9.KBojyk3DK1NquRuBJDqVzYNxWe3AlPQFfOq6ivIj8vyy5nxRCMeDlRPPhiX_KXEtyhY90pqaEnxnVG1tUV-bIJxQmeBoaNkuvsz5bcGfAg0OVlwcX3jSVeYwP5MU8i33h0RcmlC7mo1VxhJDd1P-hnbO-H1cJHYWYzudOr4cX44ulBEYOe25K64yzMNbaAd0nbGqO7gsCpisPJYUcCRq889HT4sxol5EkBBKeG2ol8eLLtuqNNtGnNNQH18C_cm-iGTnEldHEI0hwN6LzSSSOOIDwe-2APOo_TlHzIWreL5mZ49hbFHI45BLJujpAjp1aj_o7yT_lGXTLEpH2dwVKw
+9cd8a2455b1839ff98ef70c05b9b5983|file:///home/zac/development/gpt/config.json|1|3|v|json
+	Authorization
+4246e2c243b2d58a58713760ab2515e8|file:///home/zac/development/gpt/config.json|1|997|v|json
+	, "session_token": null
+b0c80ff6ab8d9078a842ccca669c0ac6|file:///home/zac/development/gpt/config.json|1|1|V|json
+	{"Authorization": "", "session_token": null}
+2f96a56c6fd89c1b716528a2514db963|file:///home/zac/development/gpt/config.json|2|14|v|json
+	<EMAIL>
+27cdce9a2e309780baa9382c74aad69e|file:///home/zac/development/gpt/config.json|3|18|v|json
+	<PASSWORD>

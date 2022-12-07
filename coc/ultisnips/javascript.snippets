@@ -1,0 +1,74 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet cl
+console.log($1);$0
+endsnippet
+
+snippet ncomp
+import React from "react";
+import { connect } from "react-redux";
+
+class $1 extends React.Component {
+  render() {
+		$0
+	}
+}
+
+const mapStateToProps = (_state, _ownProps) => {
+  return {};
+};
+
+export default connect(mapStateToProps, {})($1);
+endsnippet
+
+snippet fcomp
+function $1{
+	return(
+		<div>
+			$0
+		</div>
+	)
+}
+endsnippet
+
+snippet istyle
+import styled from "styled-components"
+endsnippet
+
+snippet istate
+import React, { useState } from 'react';
+endsnippet
+
+snippet scomp
+const $1 = styled.$2\`
+	$0
+\`;
+endsnippet
+
+snippet jc "Leave a comment in jsx"
+{/* $0 */}
+endsnippet

@@ -8,4 +8,5 @@ ln -sv ~/dotfiles/.p10k.zsh ~
 ln -sv ~/dotfiles/.tmux.conf ~
 ln -sv ~/dotfiles/.vimrc ~
 ln -sv ~/dotfiles/.zshrc ~
-ln -sv ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
+ln -sv ~/dotfiles//nvim/ ~/.config/
+ln -sv ~/dotfiles/coc ~/.config/

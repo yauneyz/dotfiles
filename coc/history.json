@@ -1,0 +1,26 @@
+{
+  "commands": {
+    "%2Fhome%2Fzac%2Fdotfiles": [
+      "e"
+    ],
+    "%2Fhome%2Fzac%2Fdevelopment%2Facme%2Fhomework%2F1": [
+      "e"
+    ]
+  },
+  "diagnostics": {
+    "%2Fhome%2Fzac%2Fdevelopment%2Facme%2Fhomework%2F2": [
+      " + k"
+    ],
+    "%2Fhome%2Fzac%2Fdevelopment%2Facme%2Fhomework%2F1": [
+      " kkj",
+      " "
+    ]
+  },
+  "extensions": {
+    "%2Fhome%2Fzac": [
+      "p",
+      "py",
+      "py::"
+    ]
+  }
+}
