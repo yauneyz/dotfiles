@@ -1,5 +1,6 @@
 {
 	"diagnostic.displayByAle": true,
 	"python.analysis.typeCheckingMode": "off",
-	"javascript.suggestionActions.enabled": false
+	"javascript.suggestionActions.enabled": false,
+	"jedi.executable.command": "jedi-language-server"
 }

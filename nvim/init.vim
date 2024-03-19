@@ -14,14 +14,18 @@ Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'mattn/emmet-vim'
 "Plug 'unblevable/quick-scope'
-"Plug 'sirver/ultisnips' /taking this one out because I need tab to be
-"unmapped
+
+"Snippets
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'iberianpig/ranger-explorer.vim'
+Plug 'kblin/vim-fountain'
 nnoremap <silent><Leader>n :RangerOpenCurrentFile<CR>
 nnoremap <silent><Leader>c :RangerOpenCurrentDir<CR>
 nnoremap <silent><Leader>f :RangerOpenProjectRootDir<CR>
@@ -127,7 +131,7 @@ set splitright
 :highlight Pmenu ctermbg=gray guibg=gray
 
 " Use the right python
-let g:python3_host_prog = '/usr/bin/python3'
+let g:python3_host_prog = '/opt/homebrew/bin/python3.11'
 
 "Smartf
 "" press <esc> to cancel.
@@ -142,8 +146,9 @@ augroup Smartf
 augroup end
 
 let g:copilot_filetypes = {
-			\ 'tex': v:false,
-			\}
+			\			 'tex': v:false,
+			\				'fountain': v:false,
+			\			}
 
 "COC
 source ~/.config/nvim/config/coc.vim
