@@ -15,13 +15,8 @@
 
 (package-initialize)
 
-;; (when (memq window-system '(mac ns x))
-;; (exec-path-from-shell-initialize)
-
-;; Set path
-(add-to-list 'exec-path "/Users/yauneyz/.nvm/versions/node/v19.2.0/bin/")
-(add-to-list 'exec-path "/Users/yauneyz/Library/Fonts")
-(add-to-list 'exec-path "/Users/yauneyz/.tools/")
+(when (memq window-system '(mac ns x))
+	(exec-path-from-shell-initialize))
 
 (unless package-archive-contents
  (package-refresh-contents))
@@ -207,8 +202,13 @@
   (setq projectile-project-search-path '("~/development/"))
   :config (projectile-mode)
   (evil-define-key 'normal 'global (kbd "<leader>p") 'projectile-command-map)
-  (add-to-list 'projectile-globally-ignored-files ".clj-kondo/*")
+  (add-to-list 'projectile-globally-ignored-directories ".clj-kondo")
   (setq projectile-mode-line "Projectile"))
+
+(with-eval-after-load 'projectile
+  (add-to-list 'projectile-globally-ignored-directories ".clj-kondo"))
+
+
 
 
 
@@ -223,7 +223,107 @@
 
 ;; Treemacs
 (use-package treemacs
-  :defer t)
+  :ensure t
+  :defer t
+  :init
+  (with-eval-after-load 'winum
+    (define-key winum-keymap (kbd "M-0") #'treemacs-select-window))
+  :config
+  (progn
+    (setq treemacs-collapse-dirs                   (if treemacs-python-executable 3 0)
+          treemacs-deferred-git-apply-delay        0.5
+          treemacs-directory-name-transformer      #'identity
+          treemacs-display-in-side-window          t
+          treemacs-eldoc-display                   'simple
+          treemacs-file-event-delay                2000
+          treemacs-file-extension-regex            treemacs-last-period-regex-value
+          treemacs-file-follow-delay               0.2
+          treemacs-file-name-transformer           #'identity
+          treemacs-follow-after-init               t
+          treemacs-expand-after-init               t
+          treemacs-find-workspace-method           'find-for-file-or-pick-first
+          treemacs-git-command-pipe                ""
+          treemacs-goto-tag-strategy               'refetch-index
+          treemacs-header-scroll-indicators        '(nil . "^^^^^^")
+          treemacs-hide-dot-git-directory          t
+          treemacs-indentation                     2
+          treemacs-indentation-string              " "
+          treemacs-is-never-other-window           nil
+          treemacs-max-git-entries                 5000
+          treemacs-missing-project-action          'ask
+          treemacs-move-forward-on-expand          nil
+          treemacs-no-png-images                   nil
+          treemacs-no-delete-other-windows         t
+          treemacs-project-follow-cleanup          nil
+          treemacs-persist-file                    (expand-file-name ".cache/treemacs-persist" user-emacs-directory)
+          treemacs-position                        'left
+          treemacs-read-string-input               'from-child-frame
+          treemacs-recenter-distance               0.1
+          treemacs-recenter-after-file-follow      nil
+          treemacs-recenter-after-tag-follow       nil
+          treemacs-recenter-after-project-jump     'always
+          treemacs-recenter-after-project-expand   'on-distance
+          treemacs-litter-directories              '("/node_modules" "/.venv" "/.cask")
+          treemacs-project-follow-into-home        nil
+          treemacs-show-cursor                     nil
+          treemacs-show-hidden-files               t
+          treemacs-silent-filewatch                nil
+          treemacs-silent-refresh                  nil
+          treemacs-sorting                         'alphabetic-asc
+          treemacs-select-when-already-in-treemacs 'move-back
+          treemacs-space-between-root-nodes        t
+          treemacs-tag-follow-cleanup              t
+          treemacs-tag-follow-delay                1.5
+          treemacs-text-scale                      nil
+          treemacs-user-mode-line-format           nil
+          treemacs-user-header-line-format         nil
+          treemacs-wide-toggle-width               70
+          treemacs-width                           35
+          treemacs-width-increment                 1
+          treemacs-width-is-initially-locked       t
+          treemacs-workspace-switch-cleanup        nil)
+
+    ;; The default width and height of the icons is 22 pixels. If you are
+    ;; using a Hi-DPI display, uncomment this to double the icon size.
+    ;;(treemacs-resize-icons 44)
+
+    (treemacs-follow-mode t)
+    (treemacs-filewatch-mode t)
+    (treemacs-fringe-indicator-mode 'always)
+    (when treemacs-python-executable
+      (treemacs-git-commit-diff-mode t))
+
+    (pcase (cons (not (null (executable-find "git")))
+                 (not (null treemacs-python-executable)))
+      (`(t . t)
+       (treemacs-git-mode 'deferred))
+      (`(t . _)
+       (treemacs-git-mode 'simple)))
+
+    (treemacs-hide-gitignored-files-mode nil))
+  :bind
+  (:map global-map
+        ("M-0"       . treemacs-select-window)
+        ("C-x t 1"   . treemacs-delete-other-windows)
+        ("C-x t t"   . treemacs)
+        ("C-x t d"   . treemacs-select-directory)
+        ("C-x t B"   . treemacs-bookmark)
+        ("C-x t C-t" . treemacs-find-file)
+        ("C-x t M-t" . treemacs-find-tag)))
+
+(use-package treemacs-evil
+  :after (treemacs evil))
+
+(use-package treemacs-projectile
+  :after (treemacs projectile))
+
+(use-package treemacs-icons-dired
+  :hook (dired-mode . treemacs-icons-dired-enable-once))
+
+;(use-package treemacs-magit
+  ;:after (treemacs magit)
+  ;:ensure t)
+
 
 ;; Command Log
 (use-package command-log-mode)
@@ -256,6 +356,10 @@
   :config
   (lsp-enable-which-key-integration t)
   (evil-define-key 'normal 'global (kbd "<leader>l") lsp-command-map))
+
+;;; Jedi
+;(use-package lsp-jedi
+  ;:ensure t)
 
 ;; LSP UI
 (use-package lsp-ui
@@ -294,6 +398,12 @@
   (setq cider-completion-system 'ivy)
   (setq cider-repl-display-help-banner nil))
 
+;; After every save, run cider-format-buffer if in clojure-mode
+(add-hook 'before-save-hook
+	  (lambda ()
+	    (when (eq major-mode 'clojure-mode)
+	      (cider-format-buffer))))
+
 ;; Python
 (use-package python-mode
   :mode "\\.py\\'"
@@ -327,13 +437,16 @@
   :hook (after-init . doom-modeline-mode))
 
 ;; =========== Copilot  ===================
-(install-if-necessary 'editorconfig)
-(install-if-necessary 'jsonrpc)
+;(install-if-necessary 'editorconfig)
+;(install-if-necessary 'jsonrpc)
+(use-package editorconfig)
+(use-package jsonrpc)
+
 (use-package copilot
-  :quelpa (copilot :fetcher github
-                   :repo "copilot-emacs/copilot.el"
-                   :branch "main"
-                   :files ("dist" "*.el")))
+	:quelpa (copilot :fetcher github
+									 :repo "copilot-emacs/copilot.el"
+									 :branch "main"
+									 :files ("dist" "*.el")))
 (add-hook 'prog-mode-hook 'copilot-mode)
 (evil-define-key 'insert 'global (kbd "<tab>") 'copilot-accept-completion)
 ;; Make sure TAB isn't bound to anything else
@@ -377,8 +490,14 @@
 ; Slurp and barf on parentheses and brackets
 
 
+;; In evil normal mode, gd will go to definition
+(evil-define-key 'normal 'global (kbd "gd") 'lsp-find-definition)
+(evil-define-key 'normal 'global (kbd "gl") 'lsp-find-references)
+
 ;; Turn off read-only mode
 (read-only-mode 0)
+
+(setq lsp-pylsp-plugins-autopep8-enabled t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -389,10 +508,12 @@
    '("da75eceab6bea9298e04ce5b4b07349f8c02da305734f7c0c8c6af7b5eaa9738" default))
  '(helm-minibuffer-history-key "M-p")
  '(package-selected-packages
-   '(winum which-key rainbow-delimiters quelpa-use-package python-mode paredit magit lsp-ui lsp-ivy ivy-rich helpful helm-lsp fzf flycheck exec-path-from-shell evil-nerd-commenter evil-collection elscreen doom-themes doom-modeline dap-mode counsel-projectile copilot company-box command-log-mode cider all-the-icons)))
+   '(exec-path-from-shell winum which-key rainbow-delimiters quelpa-use-package python-mode paredit magit lsp-ui lsp-ivy ivy-rich helpful helm-lsp fzf flycheck evil-nerd-commenter evil-collection elscreen doom-themes doom-modeline dap-mode counsel-projectile company-box command-log-mode cider all-the-icons)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+;; set red background
+;(set-face-attribute 'default nil :background "#1f1f1f")
