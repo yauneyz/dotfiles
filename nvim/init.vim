@@ -16,8 +16,10 @@ Plug 'mattn/emmet-vim'
 "Plug 'unblevable/quick-scope'
 
 "Snippets
-Plug 'sirver/ultisnips'
+"Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
+" Disable CoC snippets
+let g:coc_snippet_enable = 'false'
 
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -39,8 +41,14 @@ Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'peitalin/vim-jsx-typescript'
 "Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
+"Debugger
+"Plug 'puremourning/vimspector'
+
 "This is for my Node templating engine
 "Plug 'digitaltoad/vim-pug'
+
+
+
 
 "Let's get LaTeX
 Plug 'lervag/vimtex'

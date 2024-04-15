@@ -134,6 +134,34 @@ $1
 \end{bmatrix}$2
 endsnippet
 
+snippet "figmk" "Create a figure" riA
+\begin{figure}
+\includegraphics[]{$1.pdf}
+\caption{$2}
+\label{fig:$1}
+\end{figure}
+$0
+endsnippet
+
+snippet "figsns" "Side by side figures" riA
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+	\centering
+	\includegraphics[]{$1.pdf}
+	\captionof{figure}{$2}
+	\label{fig:$1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+	\centering
+	\includegraphics[]{$3.pdf}
+	\captionof{figure}{$4}
+	\label{fig:$3}
+\end{minipage}
+\end{figure}
+$0
+endsnippet
+
 context "math()"
 snippet "cases" "Piecewise function" riA
 \begin{cases}
@@ -303,4 +331,8 @@ endsnippet
 context "math()"
 snippet "scrA" "Math Scr" riA
 \mathscr{A}
+endsnippet
+
+snippet "lbl" "Label" riA
+\label{fig:$1}$0
 endsnippet

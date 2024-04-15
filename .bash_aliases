@@ -2,7 +2,7 @@
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
-alias tt="gio trash"
+#alias rm="gio trash"
 set -o noclobber
 
 # 2.2) Listing, directories, and motion
@@ -101,6 +101,7 @@ alias valias="vim ~/.bash_aliases"
 alias vbrc="vim ~/.zshrc_zac"
 alias vxb="vim ~/dotfiles/.Xresources"
 alias vv="vim ~/.config/nvim/init.vim"
+alias ee="vim ~/dotfiles/init.el"
 alias plugin="cd ~/.config/nvim/ftplugin"
 alias vswap="cd ~/.local/share/nvim/swap"
 
@@ -113,7 +114,7 @@ alias vp="vim package.json"
 
 # Misc Aliases
 alias vpn="sudo purevpn-pptp"
-alias slp="xset dpms force off"
+alias slp="sleep 3; xset dpms force off"
 alias sbrc="source ~/.bashrc"
 alias salias="source ~/.bash_aliases"
 alias zbrc="source ~/.zshrc"
@@ -148,6 +149,12 @@ alias eb="cd ~/development/techEd/server"
 alias eu="cd ~/development/techEd/client/src"
 alias nfl="cd ~/development/nfl-predictor"
 alias pr="cd ~/development/acme/637/homework"
+alias res="cd ~/development/research"
+alias grc="cd ~/development/research/gradientconditioning"
+alias thesis="cd ~/development/research/thesis/src"
+alias draft="cd ~/development/research/thesis/draft"
+alias p3="cd ~/development/acme/CS\ 674/Project\ 3"
+alias rp="cd ~/development/acme/522/random_pruning"
 
 # Shortcuts to edit files
 alias vA="vim ~/development/Q/client/src/App.js"
@@ -170,4 +177,11 @@ alias ph="git push heroku master"
 alias ho="heroku open"
 alias hl="heroku local"
 
+# Screenplay
+alias mkft="screenplain ~/development/screenplay/markov/markov.fountain ~/development/screenplay/markov/markov.pdf"
+
+# Useful
 alias smi="nvidia-smi"
+alias chat="./chat -m ggml-alpaca-13b-q4.bin -c 2048 -n 2048"
+alias audio="pkill pulseaudio"
+alias forget="rm -f models/* results/* diffs/*"

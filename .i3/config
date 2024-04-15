@@ -129,16 +129,19 @@ bindsym Mod1+minus scratchpad show
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Terminals"
-set $ws2 "2: Broswer"
+set $ws1 "1"
+set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9: Spotify"
-set $ws10 "10: Youtube Music"
+set $ws9 "9"
+set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
+set $ws13 "13"
 
 # Assign workspaces
 
@@ -156,10 +159,12 @@ workspace $ws4 output DP-2
 workspace $ws5 output DP-2
 workspace $ws6 output DP-2
 workspace $ws7 output DP-2
-workspace $ws8 output HDMI-0
-workspace $ws9 output HDMI-0
-workspace $ws10 output HDMI-0
-
+workspace $ws8 output DP-0
+workspace $ws9 output DP-0
+workspace $ws10 output DP-0
+workspace $ws11 output HDMI-0
+workspace $ws12 output HDMI-0
+workspace $ws13 output HDMI-0
 
 # switch to workspace
 bindsym Mod1+1 workspace number $ws1
@@ -172,6 +177,9 @@ bindsym Mod1+7 workspace number $ws7
 bindsym Mod1+8 workspace number $ws8
 bindsym Mod1+9 workspace number $ws9
 bindsym Mod1+0 workspace number $ws10
+bindsym Mod1+u workspace number $ws11
+bindsym Mod1+o workspace number $ws12
+bindsym Mod1+p workspace number $ws13
 
 # move focused container to workspace
 bindsym Mod1+Shift+1 move container to workspace number $ws1
@@ -184,6 +192,9 @@ bindsym Mod1+Shift+7 move container to workspace number $ws7
 bindsym Mod1+Shift+8 move container to workspace number $ws8
 bindsym Mod1+Shift+9 move container to workspace number $ws9
 bindsym Mod1+Shift+0 move container to workspace number $ws10
+bindsym Mod1+Shift+u move container to workspace number $ws11
+bindsym Mod1+Shift+o move container to workspace number $ws12
+bindsym Mod1+Shift+p move container to workspace number $ws13
 
 # reload the configuration file
 bindsym Mod1+Shift+c reload
@@ -246,7 +257,7 @@ bindsym Print exec gnome-screenshot -i
 
 bindsym Mod1+i exec firefox
 bindsym Mod1+b exec blueman-manager
-bindsym Mod1+p exec postman
+#bindsym Mod1+p exec postman
 bindsym Mod1+c exec mongodb-compass
 bindsym Mod1+n exec nautilus
 bindsym Mod1+g exec gnome-control-center
@@ -260,10 +271,14 @@ bindsym Mod1+Tab workspace back_and_forth
 # Start compton
 exec --no-startup-id compton
 
-exec_always xrandr --output DP-2 --mode 3840x2160 --primary --panning 0x0 --output HDMI-0 --mode 3840x2160 --rotate right --right-of DP-2
+exec_always xrandr \
+		--output DP-0 --mode 3840x2160 --rotate left --left-of DP-2 --panning 0x0 \
+		--output DP-2 --primary --mode 3840x2160 \
+		--output HDMI-0 --mode 3840x2160 --rotate right --right-of DP-2
+#exec_always xrandr --output DP-2 --mode 3840x2160 --primary --panning 0x0 --output HDMI-0 --mode 3840x2160 --rotate right --right-of DP-2 --output DP-0 --mode 3840x2160 --rotate left --left-of DP-2
 
 # Get wallpaper
-exec_always feh  --bg-scale ~/Pictures/Wallpapers/Halo-3-ODST-4k.jpg --bg-scale ~/Pictures/Wallpapers/milky_way.jpg
+exec_always feh --bg-scale ~/Pictures/Wallpapers/space.jpg --bg-scale ~/Pictures/Wallpapers/space_portrait.jpg --bg-scale ~/Pictures/Wallpapers/wave.jpg # Right monitor
 
 
 # Polybar

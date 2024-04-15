@@ -1,1144 +1,623 @@
-228159b7fb6a78da0a6abb751cb9a126|file:///home/zac/development/acme/541/hw/7Ai.tex|46|2|v|latex
-	\big(\sum_{k=1}^{n} h_k^{\frac{5}{4}}\big)^{\frac{4}{5}}
-1356051a324c5ce42c61a1a674b964e9|file:///home/zac/development/acme/541/hw/7Ai.tex|49|25|v|latex
-	\frac{}{}
-7a50422935e96b15a7c97f462aac3389|file:///home/zac/development/acme/541/hw/7Ai.tex|41|52|v|latex
-	(\sum_{k=1}^{n} a_k^5)^{\frac{1}{5}}
-f46021e117dae3755ee831a47257e02a|file:///home/zac/development/acme/541/hw/7Ai.tex|64|1|V|latex
-	 \sum_{k=1}^{n} \frac{1}{n^{\frac{9}{5}}} a_k \le (\sum_{k=1}^{n} a_k^5)^{\frac{1}{5}}
-fe1961cb18a93562195543358d054670|file:///home/zac/development/acme/541/hw/7Ai.tex|63|1|V|latex
+9d1cba36ef0de5e089dc55367eed19e5|file:///home/zac/development/research/thesis/draft/thesis.tex|476|10|v|latex
+	Layer-wise sparsity levels resulting from pruning ResNet50 with a variety of methods. ResNet50 layers are divided into two different groups, convolutional layers and shortcut layers. The x-axis represents increasing depth within the network. We can see that "coherence\_best" and "magnitude\_worst" severely pruned the early layers, which is likely responsible for the lesser performance of the resulting networks.
+8a54498b46a627952fab3896f91cd5f4|file:///home/zac/development/research/thesis/draft/thesis.tex|482|148|v|latex
+	convolutional layers and shortcut layers
+021bf6b2d77bf3d8bb5d4089a9a58af0|file:///home/zac/development/research/thesis/draft/thesis.tex|482|271|v|latex
+	We can see that "coherence\_best" and "magnitude\_worst" severely pruned the early layers, which is likely responsible for the lesser performance of the resulting networks.}
+87bfda183c4f851a101e97bbb1bbace7|file:///home/zac/development/research/thesis/draft/thesis.tex|490|83|v|latex
+	Layers
+3a584b57cf978fe356e941792e274410|file:///home/zac/development/research/thesis/draft/thesis.tex|490|176|v|latex
+	meaning layers with parameters that ranked higher in "importance" were pruned less than "unimportant" layers.
+729fccc149500efa0cb31a12e6e341f5|file:///home/zac/development/research/thesis/draft/thesis.tex|490|10|v|latex
+	Results for pruning ResNet50 to 10\% sparsity using various techniques. As opposed to Figure \ref{fig:pruned_resnet}, layers were pruned uniformly to 10\% sparsity, which corrected the poor performance of the "coherence\_best" mask.
+d53410e0224382ff99153246a679f83b|file:///home/zac/development/research/thesis/draft/thesis.tex|496|115|v|latex
+	resnet
+2c3bcb7e01dff47d5a4beb240381f464|file:///home/zac/development/research/thesis/draft/thesis.tex|496|166|v|latex
+	, which corrected the poor performance of the "coherence\_best" mask.
+ae7617dad8dd8819ac9afbdc2bf10a6b|file:///home/zac/development/research/thesis/draft/todo|49|11|V|
+	Captions on each image in 5 & 7
+	Analysis & Conclusion
+cf24c584ff5dd144533e283c12d25ab3|file:///home/zac/development/research/thesis/draft/todo|49|11|V|
+	Captions on each image in 5 & 7
+3c766af11bb75432e6181daaf4e52058|file:///home/zac/development/research/thesis/draft/thesis.tex|506|99|v|latex
+	value of the 
+c475929c0705e83ae00ac81f800eded2|file:///home/zac/development/research/thesis/draft/thesis.tex|506|95|v|latex
+	the usefulness of gradient coherence as a metric
+c9e825f4641cd3bec0ba01a0c2d67755|file:///home/zac/development/research/thesis/draft/thesis.tex|506|85|v|latex
+	validated
+d062f20cfe96a4fbfd41e87fd18305a6|file:///home/zac/development/research/thesis/draft/thesis.tex|506|85|v|latex
+	further established that coherence behaves differently  
+d8eb87629476878cb0ec2349ae109cde|file:///home/zac/development/research/thesis/draft/thesis.tex|506|327|v|latex
+	drawing
+4d36782e299e7ba6142da88b2a1df7b5|file:///home/zac/development/research/thesis/draft/thesis.tex|509|2|v|latex
+	emph
+099cbda6d10dc5fe15e843a82df9b91f|file:///home/zac/development/research/thesis/draft/thesis.tex|511|46|v|latex
+	did in fact
+3cddbb8f43a4e074e2c2ce3e8622f43e|file:///home/zac/development/research/thesis/draft/thesis.tex|511|1|v|latex
+	While
+db7432a1941282b206103390b5de19f1|file:///home/zac/development/research/thesis/draft/thesis.tex|511|159|v|latex
+	the real or random 
+bbd08f483048016bb67db291cd20b109|file:///home/zac/development/research/thesis/draft/thesis.tex|511|277|v|latex
+	is this true when
+c1230b547f75b91cd9d32be8c98347d9|file:///home/zac/development/research/thesis/draft/thesis.tex|511|374|v|latex
+	with fully tra
+a94ce62511f9d494d655fc995823b502|file:///home/zac/development/research/thesis/draft/thesis.tex|511|400|v|latex
+	trianed
+f7ffea19be83c0f29b57bb5247d9638d|file:///home/zac/development/research/thesis/draft/thesis.tex|511|461|v|latex
+	a function of mo 
+9b281a5b940628c524c051db3411b312|file:///home/zac/development/research/thesis/draft/thesis.tex|511|511|v|latex
+	but rather
+8d966b2253a917086c8604959e152243|file:///home/zac/development/research/thesis/draft/thesis.tex|514|12|v|latex
+	high
+3e444980b6b976553c9aa1a98f7a5a43|file:///home/zac/development/research/thesis/draft/thesis.tex|514|220|v|latex
+	reinforce
+ac15dd302601bdac753596694ac78093|file:///home/zac/development/research/thesis/draft/thesis.tex|514|226|v|latex
+	experimental
+b82c91e2103d0a495c099f0a12f66363|file:///home/zac/development/research/thesis/draft/thesis.tex|514|253|v|latex
+	fact
+cf5ef37547efc193e8861e30768b5874|file:///home/zac/development/research/thesis/draft/thesis.tex|516|23|v|latex
+	different when 
+fee0d35a6ab7adbbb93f3f25e8516ca4|file:///home/zac/development/research/thesis/draft/thesis.tex|516|35|v|latex
+	distributed more 
+46f834e271c5730a7dca0e790d5b2f5c|file:///home/zac/development/research/thesis/draft/thesis.tex|517|1|V|latex
+	Instead o
+8ec8b237570136752ca034e807f9c005|file:///home/zac/development/research/thesis/draft/thesis.tex|519|8|v|latex
+	connectino betw
+5d1206d9b53b01c4bd7c84325fc5ef5a|file:///home/zac/development/research/thesis/draft/thesis.tex|515|90|v|latex
+	Figures \ref{fig:diffs_resnet} and \ref{fig:diffs_vit}
+31eafc2e81745d583dcebd51161d1a81|file:///home/zac/development/research/thesis/draft/thesis.tex|519|206|v|latex
+	We will offer some speculation as to why this is the case: 
+31fe0adf5529d0a0877d7c5e3766645f|file:///home/zac/development/research/thesis/draft/thesis.tex|519|215|v|latex
+	pesssi
+22d9fd04d5c29545dc056faf9a828379|file:///home/zac/development/research/thesis/draft/thesis.tex|519|210|v|latex
+	most cr
+ff9870d7d5765cf145276636ec7c95ff|file:///home/zac/development/research/thesis/draft/thesis.tex|519|538|v|latex
+	Max coherence epochs are 
+5227703ddd74afef57c7c96be8c66b86|file:///home/zac/development/research/thesis/draft/thesis.tex|519|598|v|latex
+	settles down when 
+c185ddac8b5a8f5aa23c5b80bc12d214|file:///home/zac/development/research/thesis/draft/thesis.tex|519|691|v|latex
+	training
+afacdb0a401ccdf6b48551bbc00e8a74|file:///home/zac/development/research/thesis/draft/thesis.tex|519|678|v|latex
+	large
+1057daf6d976cf355e0283d7290662ef|file:///home/zac/development/research/thesis/draft/thesis.tex|519|828|v|latex
+	diffs are ac
+439aebb86240eb2ff71dff0235895d89|file:///home/zac/development/research/thesis/draft/thesis.tex|519|860|v|latex
+	meausre
+3ced50da7ee32cb2aaf727f4cd098891|file:///home/zac/development/research/thesis/draft/thesis.tex|519|918|v|latex
+	 This might expa
+4b303e98b7be6de7fac24b19f3fa8ba2|file:///home/zac/development/research/thesis/draft/thesis.tex|517|87|v|latex
+	analogy
+192fd36a2381a32a22ebccc8cfe1df68|file:///home/zac/development/research/thesis/draft/thesis.tex|517|76|v|latex
+	making the link be
+16659c88cc972f08942dfd22526c31b5|file:///home/zac/development/research/thesis/draft/thesis.tex|521|32|v|latex
+	higher in networks with more parameters, but this rule is not strict
+5a3b59822122b957b4fe54e3f3c06bda|file:///home/zac/development/research/thesis/draft/thesis.tex|523|43|v|latex
+	shows
+d7082253900b28e083b0922a5499dec8|file:///home/zac/development/research/thesis/draft/thesis.tex|523|220|v|latex
+	The existence of the second
+d4db20b2db87d4d665369671128b9da9|file:///home/zac/development/research/thesis/draft/thesis.tex|523|235|v|latex
+	is pre
+8cc8c7169d508693fc841cb9034c21c9|file:///home/zac/development/research/thesis/draft/thesis.tex|523|336|v|latex
+	The second peak is a mystery 
+363be2229e23b980f383d63a15338335|file:///home/zac/development/research/thesis/draft/thesis.tex|535|66|V|latex
+	% Why are diffs small when coherence is high, section 3 width 2500
+6d762af1da6190caecd4906563bca65d|file:///home/zac/development/research/thesis/draft/thesis.tex|517|9|v|latex
+	Diffs
+c7ebf60783f74aa3b7d1012e1d4bb3e6|file:///home/zac/development/research/thesis/draft/thesis.tex|517|9|v|latex
+	 measured 
+4cf12aa004c992c45f5ddced18268534|file:///home/zac/development/research/thesis/draft/thesis.tex|519|220|v|latex
+	s seem to narr
+b9fbc8cd5b58b815b1b80a578f05a381|file:///home/zac/development/research/thesis/draft/thesis.tex|517|111|V|latex
+	\textbf{Just because a network achieves higher max coherence, that doesn't mean that the diffs will be larger}
+	
+	Figure \ref{fig:linear_diffs} shows that even though the width 2500 network has higher max coherence (as seen in Figure \ref{fig:linear_coherence_results}), the diffs are generally narrower than the other. In fact, diff distributions seem to narrow with the width of the network.
+c06e46cc92467498ba5f3701c1520238|file:///home/zac/development/research/thesis/draft/thesis.tex|525|41|v|latex
+	higherer
+b93db188572fc4d76cce5660f3823b0a|file:///home/zac/development/research/thesis/draft/thesis.tex|525|97|v|latex
+	mean
+9af3018c3af19acaa267b29c018250d8|file:///home/zac/development/research/thesis/draft/thesis.tex|529|1|V|latex
+	% Diffs seem to be a messy proxy for coherence - certainly not perfect; we know some of their characteristics
+ee297972fb18b2587dcf7b82415b5ab2|file:///home/zac/development/research/thesis/draft/thesis.tex|530|30|v|latex
+	significantly
+97ed2f3e761f65b49a2ea45253762c84|file:///home/zac/development/research/thesis/draft/thesis.tex|531|1|V|latex
+	The existn e
+d2165ee2216a8629b2741c99899778cf|file:///home/zac/development/research/thesis/draft/thesis.tex|531|17|v|latex
+	pruned_linear_results
+3ea6ad54b862a36837297d2faa6bcbfb|file:///home/zac/development/research/thesis/draft/thesis.tex|531|1|V|latex
+	Figure \ref{fig:pruned_linear_generalization_gap} shows that the dense network had the worst generalization, followed by magnit
+666df2f48cd16f38212c093999248769|file:///home/zac/development/research/thesis/draft/thesis.tex|531|1|v|latex
+	Figure
+f6e1591c5d676deab387db1f189b5145|file:///home/zac/development/research/thesis/draft/thesis.tex|531|65|v|latex
+	shows that the dense network had the worst generalization, followed by magnit
+d438ab6301571e66a1bf93c50e57ef04|file:///home/zac/development/research/thesis/draft/thesis.tex|531|77|v|latex
+	 coherence
+2d2dee7af60385a060eae7f556845a8b|file:///home/zac/development/research/thesis/draft/thesis.tex|531|125|v|latex
+	diff
+fb7e68e275c31e550a500541d0896cf5|file:///home/zac/development/research/thesis/draft/thesis.tex|531|157|v|latex
+	bets
+094e30ce1f8f59e115cdc0ed66a99c0a|file:///home/zac/development/research/thesis/draft/thesis.tex|531|153|v|latex
+	the be 
+d79f3d7588e8c563318107b7c945c699|file:///home/zac/development/research/thesis/draft/thesis.tex|531|1|V|latex
+	The results found in \ref{fig:pruned_linear_generalization_gap} suggest that coherence pruning might generalize better than magnitude pruning. However, the fact that random pruning generalizes so well calls this into question. If random pruning does well, then could it be the case that coherence pruning simply does a better job of approximating random pruning and thus generalizes better?
+74409f763e0be0add016cc41e4f993fe|file:///home/zac/development/research/thesis/draft/thesis.tex|531|127|v|latex
+	lack
+a79bfce4dbcb72d6e55d997981ba4831|file:///home/zac/development/research/thesis/draft/thesis.tex|531|55|v|latex
+	for the results
+8d0bd951897fdbc5c5ec4d737322535a|file:///home/zac/development/research/thesis/draft/thesis.tex|531|294|v|latex
+	this smaller generalization gap is actually performed 
+a3316d7601571d0fceabf7ccd3f74fa4|file:///home/zac/development/research/thesis/draft/thesis.tex|531|345|v|latex
+	higher test accuary and lower training 
+dcffd0ba43765cadd3cceb1f6b97d428|file:///home/zac/development/research/thesis/draft/thesis.tex|531|400|v|latex
+	the exact
+f870bc9c8ab9bdbb7d7e3535c8534c62|file:///home/zac/development/research/thesis/draft/thesis.tex|529|30|v|latex
+	perform and
+5bf4689821e4b226f699bc002ee87c19|file:///home/zac/development/research/thesis/draft/thesis.tex|529|84|v|latex
+	. Among pruning methods, coherence pruning may generalize better than magnitude pruning.
+acfbfd284d916ceea4d78e790fece1b1|file:///home/zac/development/research/thesis/draft/thesis.tex|533|38|V|latex
+	As for coherence and magnitude pruning
+6317a75354d74be1e2548cc9b6f60da3|file:///home/zac/development/research/thesis/draft/thesis.tex|534|9|v|latex
+	Scaling the size of the parent 
+c05f6c233521207f6fe311afef550c3c|file:///home/zac/development/research/thesis/draft/thesis.tex|534|13|v|latex
+	performance
+f70cf526b32d5c73a944d9850b898355|file:///home/zac/development/research/thesis/draft/thesis.tex|534|13|v|latex
+	generalization
+ebe49a025c73ffcefe31bb759ddc7365|file:///home/zac/development/research/thesis/draft/thesis.tex|535|1|V|latex
+	The journey of 
+d1a3b0a174faef4b1daa78645a6fb875|file:///home/zac/development/research/thesis/draft/thesis.tex|535|129|v|latex
+	they are 
+185be049b3e1fa0ecad8a242a9c4460e|file:///home/zac/development/research/thesis/draft/thesis.tex|535|224|v|latex
+	This points to 
+479529ad09cc603016dcd5c9619a07ce|file:///home/zac/development/research/thesis/draft/thesis.tex|535|261|v|latex
+	and yet small models
+1b20e9021b3a16b059287caddc7862f6|file:///home/zac/development/research/thesis/draft/thesis.tex|535|364|v|latex
+	building
+a6228432c84d84dc89ffcc89e418ba1f|file:///home/zac/development/research/thesis/draft/thesis.tex|535|397|v|latex
+	then leverage that spend 
+625b4990c02e3a2506f52c858c90844d|file:///home/zac/development/research/thesis/draft/thesis.tex|538|67|V|latex
+	% Scaling law for parent network size vs pruned network performance
+3e96e59a8c116790a82e162215257c1e|file:///home/zac/development/research/thesis/draft/thesis.tex|537|1|V|latex
+	% Magnitude pruning might be good, but it really isn't that much better than magnitude worst, so do we actually understand pruning nearly as well as we would like to think we do?
+270a679029e78cb636dea0196b12a900|file:///home/zac/development/research/thesis/draft/thesis.tex|549|1|V|latex
+	% Pruning by iteratively pushing both the parent size and the sparsity ratio, almost like a grid search
+6234c641c4eb475f138ab321bb027c0c|file:///home/zac/development/research/thesis/draft/thesis.tex|537|1|V|latex
+	% Random pruning is really strong, but we already knew that
+a231c665079e561fb2acbcc3028f9397|file:///home/zac/development/research/thesis/draft/thesis.tex|537|87|v|latex
+	much compu
+fdbf95f97eda75bbad0851b0138aaaed|file:///home/zac/development/research/thesis/draft/thesis.tex|538|11|V|latex
+	% Early mag
+db8d866e6e1cfb4c0a3a909c3021d685|file:///home/zac/development/research/thesis/draft/thesis.tex|538|80|v|latex
+	particulalry
+0fcf484173ae3fa80060d97efdf4aa07|file:///home/zac/development/research/thesis/draft/thesis.tex|538|188|v|latex
+	large model p
+e95594c16b1319a7ae3d8943d84852ff|file:///home/zac/development/research/thesis/draft/thesis.tex|538|328|v|latex
+	 when masking
+657e0e4ded391b1afdc0be70f37c8a14|file:///home/zac/development/research/thesis/draft/thesis.tex|538|627|v|latex
+	tn the world
+35341b6b7e526f5448c83aed8ceecc8a|file:///home/zac/development/research/thesis/draft/thesis.tex|544|22|v|latex
+	 and Conclusion
+ac67ede5a84eb5a1add7ff4440e9a485|file:///home/zac/development/research/thesis/draft/thesis.tex|540|700|v|latex
+	required
+8a70a06bceafa5fa71d2fec214279084|file:///home/zac/development/research/thesis/draft/thesis.tex|540|831|v|latex
+	there is  
+48488cd6efa29e723cb4cfe52eeee62c|file:///home/zac/development/research/thesis/draft/thesis.tex|540|836|v|latex
+	there is a use for chooseing
+1c0a6d7b66409e8ec948e429b924493d|file:///home/zac/development/research/thesis/draft/thesis.tex|540|874|v|latex
+	cheapen
+9ecf00e0c7cf10e958f3f9bfb05f1885|file:///home/zac/development/research/thesis/draft/thesis.tex|541|1|V|latex
+	% Coherence-based pruning works sometimes, not others; It is useful because it can be calculated much earlier in the training process than magnitude pruning can
+	% Random pruning works well for the larger networks, coherence and magnitude pruning work better for the smaller networks
+9ee43a1877e6cc6ac576f62a7ddc75c2|file:///home/zac/development/research/thesis/draft/thesis.tex|542|10|v|latex
+	Further Work
+b50204e17c0a475d3d65191e029fdf1d|file:///home/zac/development/research/thesis/draft/thesis.tex|548|20|V|latex
+	\section{Conclusion}
+5ac83d1a2ca4774fd7b13f2b031d9b72|file:///home/zac/development/research/thesis/draft/thesis.tex|543|15|v|latex
+	 gaussian trained networks
+7a4ad2d593ff69d9add096aca6390201|file:///home/zac/development/research/thesis/draft/thesis.tex|543|72|v|latex
+	 Are diffs actually related to coherence?
+632539a7aff73982dd4275b59db70604|file:///home/zac/development/research/thesis/draft/thesis.tex|544|1|V|latex
+	According to the
+a367ed62e9d2353a3336d431fa4da763|file:///home/zac/development/research/thesis/draft/thesis.tex|544|1|V|latex
+	According 
+1a7c429a04afab44908f95aad56a8f61|file:///home/zac/development/research/thesis/draft/thesis.tex|544|315|v|latex
+	the diffs should av
+98b6fe7226036a6c8e305fa0f0931450|file:///home/zac/development/research/thesis/draft/thesis.tex|545|18|v|latex
+	linear_diffs
+7206ac544e81775d2b2b9785d2f62df9|file:///home/zac/development/research/thesis/draft/thesis.tex|548|42|v|latex
+	the diffs for the
+21582c6c30be1217322cdb9aebaf4a59|file:///home/zac/development/research/thesis/draft/thesis.tex|548|174|v|latex
+	that
+39e3f0f901a9fe6dee45c57aa68ef181|file:///home/zac/development/research/thesis/draft/thesis.tex|548|377|v|latex
+	confirmation
+224f8f3388906e750f00a119f1b669b2|file:///home/zac/development/research/thesis/draft/thesis.tex|552|1|V|latex
+	Follwing on from the previous question, we can see that
+a7dd12b1dab17d25467b0b0a4c8d4a92|file:///home/zac/development/research/thesis/draft/thesis.tex|552|103|v|latex
+	show
+753aaff4bc02463cb8baa7239737767e|file:///home/zac/development/research/thesis/draft/thesis.tex|552|103|v|latex
+	illustrate a problem:  
+b843aeab2f4af34d45919ff306483015|file:///home/zac/development/research/thesis/draft/thesis.tex|552|136|v|latex
+	combine to show that even when width is large and g
+f65eab92c31d06e5201959728fdb004b|file:///home/zac/development/research/thesis/draft/thesis.tex|552|285|v|latex
+	Our present hypothesis is that 
+c7ce59a327a1ce705b3b17689b3b3710|file:///home/zac/development/research/thesis/draft/thesis.tex|552|366|v|latex
+	it was only 
+1c6448e6f6c5b4e8fc3cff784d8eefc5|file:///home/zac/development/research/thesis/draft/thesis.tex|552|532|v|latex
+	separaete
+6ff6f4ce3e2c53ea8dc3994317422df3|file:///home/zac/development/research/thesis/draft/thesis.tex|552|658|v|latex
+	caus
+ce48d05ae821b673f327b785134dd0ee|file:///home/zac/development/research/thesis/draft/thesis.tex|552|646|v|latex
+	increase has some other   
+c8cff1007ff94c2b9047a7f2b9854a3b|file:///home/zac/development/research/thesis/draft/thesis.tex|552|636|v|latex
+	coherence must have some other cause that is 
+23a58bf9274bedb19375e527a0744fa9|file:///home/zac/development/research/thesis/draft/thesis.tex|554|58|v|latex
+	with
+7ddf32e17a6ac5ce04a8ecbf782ca509|file:///home/zac/development/research/thesis/draft/thesis.tex|559|14|v|latex
+	random
+f0471e1a1521e5cfd90065e3fb6c84dd|file:///home/zac/development/research/thesis/draft/thesis.tex|559|14|v|latex
+	 pru
+97cef678a604b2eb359c283ce0d0ef10|file:///home/zac/development/research/thesis/draft/thesis.tex|559|50|v|latex
+	calls into question the efficacy of all our our pruning methods
+29a359f53144a07c1ac856cfe110c273|file:///home/zac/development/research/thesis/draft/thesis.tex|559|133|v|latex
+	or their singular
+edbc7c8a05de26537cd92d8c3abc26c4|file:///home/zac/development/research/thesis/draft/thesis.tex|559|378|v|latex
+	climbs a 
+0ac115651ba50d99353110bfb2eab7ce|file:///home/zac/development/research/thesis/draft/thesis.tex|559|401|v|latex
+	random pruning
+99608ab617d2d6cb7bf481c859d1daaa|file:///home/zac/development/research/thesis/draft/thesis.tex|559|352|v|latex
+	IMP only works because it finds the best of many 
+7a725117989b4b9f4ece7db85a68e90d|file:///home/zac/development/research/thesis/draft/thesis.tex|559|344|v|latex
+	Perhaps we don't know enough to 
+db82206b1d49042d1a710e9c88c21d36|file:///home/zac/development/research/thesis/draft/thesis.tex|562|355|v|latex
+	best
+bb3ccd5881d651448ded1dac904054ac|file:///home/zac/development/research/thesis/draft/thesis.tex|566|153|v|latex
+	information
+c45c619af575332a0f463f095da30bb7|file:///home/zac/development/research/thesis/draft/thesis.tex|566|331|v|latex
+	mask resulting 
+39463837fe39a2821406b5c72712f23f|file:///home/zac/development/research/thesis/draft/thesis.tex|566|392|v|latex
+	throu
+632a2406bbcbcd553eec45ac14b40a0a|file:///home/zac/development/research/thesis/draft/thesis.tex|566|456|v|latex
+	after
+4b66e130fb5bacad33e57724e8b22bb7|file:///home/zac/development/research/thesis/draft/thesis.tex|566|487|v|latex
+	If it varies indefinitely  
+effcae83d1f216d7c88a17df5b1f2db4|file:///home/zac/development/research/thesis/draft/thesis.tex|566|487|v|latex
+	This que
+776c391f9d1f66c48abbe8a6f84aea1a|file:///home/zac/development/research/thesis/draft/thesis.tex|566|636|v|latex
+	just use
+6cddb7353e699051a384686b6b3ff1e2|file:///home/zac/development/research/thesis/draft/thesis.tex|566|661|v|latex
+	derived
+5fe05153b77725154d13c7675a99c675|file:///home/zac/development/research/thesis/draft/thesis.tex|573|21|v|latex
+	transformer
+606c261e2f9a232a25a1bba84ae6a300|file:///home/zac/development/research/thesis/draft/thesis.tex|573|163|v|latex
+	This is an interesting question. 
+16217e5d20122def84dfb2efe39015c0|file:///home/zac/development/research/thesis/draft/thesis.tex|576|1|V|latex
+	All of these exper
+f220edafc56339e53320a7d69e504b77|file:///home/zac/development/research/thesis/draft/thesis.tex|577|217|v|latex
+	Do the gains
+0eccef1fe0100f85b12e6eabe08eaff6|file:///home/zac/development/research/thesis/draft/thesis.tex|577|313|v|latex
+	dense
+fa2299269f88c8979207bf48c9fcca2e|file:///home/zac/development/research/thesis/draft/thesis.tex|577|480|v|latex
+	\frac{LLMs}{}
+81611531cb3f61d954f2aa38baf2f2a4|file:///home/zac/development/research/thesis/draft/thesis.tex|33|10|V|latex
+	%% This file contains the theorem definitions and custom commands that I commonly use
+	%% they may be changed, the reference to the file removed, etc. Or, if you like, you
+	%% may use them as well.
+	%\input{thsiscfg}
+db9235482937945af21be83fe0d568e8|file:///home/zac/development/research/thesis/draft/thesis.tex|45|1|V|latex
+		We show how it is possible to take mask out 90\% of the parameters in a network and get a sub-network that is just as good as the original one. The method for doing this requires only one additional epoch of computation. It is done by tracking the sum of the sign of the gradient over one epoch of training, and then pruning the weights for the absolute value of the associated gradient sign sum is smallest. We compare this to random and magnitude based methods and find that for layerwise pruning, our method is superior even though it does not require additional training. We find that for the InceptionV3 network our method is able to prune 90\% of the parameters without a loss in accuracy.
+72eb3202c2c3cd0583a8a264b45a01f3|file:///home/zac/development/research/thesis/draft/todo|49|1|v|
+	Analysis & 
+70759d2c34e4f35201b80bfab11ed121|file:///home/zac/development/research/thesis/draft/thesis.tex|46|1|V|latex
+	%The paragraphs of the abstract should be indented. This is part of the template, but in case it doesn't work, you'll need to but a \qquad at the front of the first paragraph.
+4315ec6a2181c4f76e0419c05f4e77d9|file:///home/zac/development/research/thesis/draft/thesis.tex|99|1|V|latex
+	%This idea fits well with \citet{arpit_closer_nodate}, where they showed that many samples (the "easy" ones) are consistently classified correctly from early in training while the "hard" samples are learned later in the training. One use of the coherence metric is that it allows us to distinguish between these two regimes.
+1e9bc6f45e2ff8d3500606b710be2de2|file:///home/zac/development/research/thesis/draft/thesis.tex|98|1|V|latex
+	% NEEDS CITATION
+69ce7546b8231f2aa01adb5aafbb2e20|file:///home/zac/development/research/thesis/draft/thesis.tex|215|528|v|latex
+	paramters
+de1f2e295c4a2fb110b70a26532a6c06|file:///home/zac/development/research/thesis/draft/thesis.tex|227|513|v|latex
+	learing
+21ffce5b8a6cc8cc6a41448dd69623c9|file:///home/zac/development/research/thesis/draft/thesis.tex|319|163|v|latex
+	params
+bebd00d7fe69da1178578ff16abb5ecf|file:///home/zac/development/research/thesis/draft/thesis.tex|327|63|v|latex
+	trainin
+3ce0846f51dae2d9a75afbc1132b86d7|file:///home/zac/development/research/thesis/draft/thesis.tex|360|299|v|latex
+	multile
+5f101a6ac50aa3fd31a2ed613f35bbde|file:///home/zac/development/research/thesis/draft/thesis.tex|360|366|v|latex
+	backpropogating
+782ba26376bbde3fd635e8e868960314|file:///home/zac/development/research/thesis/draft/thesis.tex|367|360|v|latex
+	signifcantly
+60a4490ce61c0f88766f8e7e783ea2c9|file:///home/zac/development/research/thesis/draft/thesis.tex|378|247|v|latex
+	ohter
+e7f07dd2f18f824d8b5695a5f9f44ebd|file:///home/zac/development/research/thesis/draft/thesis.tex|410|196|v|latex
+	scrach
+e3eb16afdbabab150c5da0ade825a14d|file:///home/zac/development/research/thesis/draft/thesis.tex|428|786|v|latex
+	the 
+24d1792f6fd07997908abd5ddc6e4acb|file:///home/zac/development/research/thesis/draft/thesis.tex|434|132|v|latex
+	strenth
+7130819122f5ac29087f51a76e658de9|file:///home/zac/development/research/thesis/draft/thesis.tex|439|115|v|latex
+	sparsities
+f8c9a6c4a75ca426b9bcf2214f73c745|file:///home/zac/development/research/thesis/draft/thesis.tex|441|383|v|latex
+	parametrs
+5db4ba2abb52668c2e51831b5d38494d|file:///home/zac/development/research/thesis/draft/thesis.tex|551|417|v|latex
+	significanly
+bb6dbb9fde5abe9b673200d2e7f59636|file:///home/zac/development/research/thesis/draft/thesis.tex|570|1|v|latex
+	Coherence
+c02ff48f3c4c738c6e07c59cb91dccd6|file:///home/zac/development/research/thesis/draft/thesis.tex|570|167|v|latex
+	Diffs, on the other hand
+334ea1c685078bfd7b3a6ec5a17f135a|file:///home/zac/development/research/thesis/draft/thesis.tex|570|215|v|latex
+	there is some
+b5e2986d9b50163c960855276166cff7|file:///home/zac/development/research/thesis/draft/thesis.tex|570|219|v|latex
+	correla
+0419a53837d3419adcb95070025b8317|file:///home/zac/development/research/thesis/draft/thesis.tex|570|216|v|latex
+	may be an approximation to coherence
+c672edfc00c20c9b3c8bfed894a9e7df|file:///home/zac/development/research/thesis/draft/thesis.tex|570|308|v|latex
+	Linear pruning 
+509832f8b7ce5593107221303fc3f93c|file:///home/zac/development/research/thesis/draft/thesis.tex|570|307|v|latex
+	 Coherence mysteriously rises as network width rises. Pruned linear networks
+69576d7fe95d2adb024e414c52980deb|file:///home/zac/development/research/thesis/draft/thesis.tex|577|1|V|latex
+	%% Choose your bibliography style. Some options: plain, unsrt, abbrev etc.
+	%\bibliographystyle{plain}
+	%\bibliographystyle{unsrt}
+63ec83fcda5fa16998099a365d61a52e|file:///home/zac/development/research/thesis/draft/thesis.tex|580|85|V|latex
+	%% If you want to include an index, this prints the index at this location. You must
+	%% have \makeindex uncommented in the preamble
+1ddf3c6e13377ccf51f43d0d26d25763|file:///home/zac/development/research/thesis/draft/thesis.tex|580|11|V|latex
+	\printindex
+efc0939aad9129682781a99dbbf6edbe|file:///home/zac/development/research/thesis/draft/thesis.tex|574|1|V|latex
+	Trying to prune
+aa5d20d3d097dd5a4754026d119821db|file:///home/zac/development/research/thesis/draft/thesis.tex|574|1|V|latex
+	For more x
+657f8b8da628ef83cf69101b6817150a|file:///home/zac/development/research/thesis/draft/thesis.tex|574|23|v|latex
+	help
+f058c15dc1afa5d0d7fd5621f21aefc8|file:///home/zac/development/research/thesis/draft/thesis.tex|574|88|v|latex
+	While there are
+8d8391fcc8148ac2628972ad541ad057|file:///home/zac/development/research/thesis/draft/thesis.tex|574|178|v|latex
+	reas
+996be9c40a9133265b965c3e5ea3bd17|file:///home/zac/development/research/thesis/draft/thesis.tex|574|178|v|latex
+	good results
+60ee3c8947195dd5f21abb1d64c89f3d|file:///home/zac/development/research/thesis/draft/thesis.tex|574|167|v|latex
+	models had 
+90e750718e5b82b1d211e0c2fe3a9dd3|file:///home/zac/development/research/thesis/draft/thesis.tex|574|167|v|latex
+	found performance
+983d5382e6ad3e3c0d2afb9148ab5a6e|file:///home/zac/development/research/thesis/draft/thesis.tex|576|1|V|latex
+	A lot of work needs to be done in the fu
+180856becb9ad5a75deaea3c44431ff3|file:///home/zac/development/research/thesis/draft/thesis.tex|576|98|v|latex
+	arose in their place
+68145452161edec7ff04b4289f5a22da|file:///home/zac/development/research/thesis/draft/thesis.tex|576|130|v|latex
+	intersction of 
+a6daad2f29decd1e94a592164d34183a|file:///home/zac/development/research/thesis/draft/thesis.tex|576|173|v|latex
+	remain
+af5946446853a63a577b6b7fe8d72cbf|file:///home/zac/development/research/thesis/draft/thesis.tex|576|190|v|latex
+	fertile field for future development
+0b7fc2310b6fb16fb02deaa8a62f157d|file:///home/zac/development/research/thesis/draft/thesis.tex|576|173|v|latex
+	promises to be a 
+111d59d8f358544ab22f48cdd0be99ff|file:///home/zac/development/research/thesis/draft/thesis.tex|64|1|V|latex
+	One of the 
+6357d3551190ec7e79371a8570121d3a|file:///home/zac/development/research/thesis/draft/thesis.tex|64|1|V|latex
+	There are
+81a264547e1f29ca505d89903d933160|file:///home/zac/development/research/thesis/draft/thesis.tex|64|157|v|latex
+	gradient coh
+1a39f4f8a8512ad197caf8f69afe0a5d|file:///home/zac/development/research/thesis/draft/thesis.tex|64|192|v|latex
+	investigate the properties of these coherent gradients.
+03488dc1f4f1a658d13e6ef1e0d37d59|file:///home/zac/development/research/thesis/draft/thesis.tex|64|210|v|latex
+	impact on current 
+0cbc6611f5540bd0809a388dc95a615b|file:///home/zac/development/research/thesis/draft/thesis.tex|63|1|V|latex
+	Test
+4ce967e9d3a2d96fefeeeeff7a669812|file:///home/zac/development/research/thesis/draft/thesis.tex|64|25|v|latex
+	follow a par
+a424ee75698d4806be715d067928cee5|file:///home/zac/development/research/thesis/draft/thesis.tex|64|1|V|latex
+	The ideas in this paper 
+eea17a65ec72c9c84fcd8dfd52671849|file:///home/zac/development/research/thesis/draft/thesis.tex|64|106|v|latex
+	begain b
+3cbb4fc6fc843790f7cc6de44ce1cd43|file:///home/zac/development/research/thesis/draft/thesis.tex|64|186|v|latex
+	indicate
+027e9972538e183e279efde4b4c942e4|file:///home/zac/development/research/thesis/draft/thesis.tex|64|340|v|latex
+	Follo
+8a5502c92444c625c27e6adc7a9b6442|file:///home/zac/development/research/thesis/draft/thesis.tex|64|340|v|latex
+	This led to the idea that 
+37d45fb37476fd3275c0cc3a366dac74|file:///home/zac/development/research/thesis/draft/thesis.tex|64|340|v|latex
+	A poor understanding of 
+dcc1abc2dfe7cda875a9be745b0c2dc4|file:///home/zac/development/research/thesis/draft/thesis.tex|64|342|v|latex
+	misguided
+cae5302965e74ae09bfb6d390003afe2|file:///home/zac/development/research/thesis/draft/thesis.tex|64|434|v|latex
+	us to the 
+9959ae8ef7e171147370f69775c9916e|file:///home/zac/development/research/thesis/draft/thesis.tex|64|551|v|latex
+	letting neural networks
+5b7990ea1e65ed76d5262573ac0a8831|file:///home/zac/development/research/thesis/draft/thesis.tex|64|598|v|latex
+	led to a study of the 
+405aaff66082ffe7231d7c1f79926c17|file:///home/zac/development/research/thesis/draft/thesis.tex|64|710|v|latex
+	nature
+d850f04cdb48312a9be171e214c0b4ee|file:///home/zac/development/research/thesis/draft/thesis.tex|64|789|v|latex
+	there
+5d5a992d86282c9ba65bac797fa0f96c|file:///home/zac/development/research/thesis/draft/thesis.tex|64|789|v|latex
+	 are certainly interest
+3e11ca2215bada5ab235ee73e4ff7cd0|file:///home/zac/development/research/thesis/draft/thesis.tex|64|7|v|latex
+	networks
+d5b4a9a5a6b50466e8837c3cd98c3442|file:///home/zac/development/research/thesis/draft/thesis.tex|64|38|v|latex
+	seen
+5ae7fb3197b6fd8c723c7766a5680e2e|file:///home/zac/development/research/thesis/draft/thesis.tex|64|165|v|latex
+	Many
+c83fa94bd1d522276a32f81682a43d29|file:///home/zac/development/research/thesis/draft/thesis.tex|64|171|v|latex
+	discoveries
+4ab8710d781ba5b13aaf561cafd896b7|file:///home/zac/development/research/thesis/draft/thesis.tex|64|193|v|latex
+	made
+4a931512ce65bdc9ca6808adf92d8783|file:///home/zac/development/research/thesis/draft/thesis.tex|64|286|v|latex
+	tools
+f0e64971512e95da43f42767853568ca|file:///home/zac/development/research/thesis/draft/thesis.tex|64|332|v|latex
+	This is why  
+a1ef9a07608bff79100fa309ca0f418a|file:///home/zac/development/research/thesis/draft/thesis.tex|64|368|v|latex
+	undertook
+5d6326a2f4e5c5a84765a9d46262f0c0|file:///home/zac/development/research/thesis/draft/thesis.tex|64|379|v|latex
+	develop the theory behind  
+7c66df3e9e55c6f821fdc3925baea8e4|file:///home/zac/development/research/thesis/draft/thesis.tex|64|612|v|latex
+	is of
+806d8370a72f4ed8a7a60da812dac8b2|file:///home/zac/development/research/thesis/draft/thesis.tex|64|616|v|latex
+	repeatedly
+a822c6f5cf867e0c9c311c1669acf19a|file:///home/zac/development/research/thesis/draft/thesis.tex|64|648|v|latex
+	this meant empirical study 
+15187c065b89bf525f661025af3cdb94|file:///home/zac/development/research/thesis/draft/thesis.tex|64|797|v|latex
+	exposing some hol
+a290724b5f8b7e5417e4db876ba7fb25|file:///home/zac/development/research/thesis/draft/thesis.tex|64|797|v|latex
+	providing some 
+3bd5c103140bfcd65067d16cb9bab514|file:///home/zac/development/research/thesis/draft/thesis.tex|64|839|v|latex
+	study of
+df547e45e4808296e568dcf010a4e6a2|file:///home/zac/development/research/thesis/draft/thesis.tex|64|866|v|latex
+	investig
+eefc6fcfae34167ced4e4c526023d3ff|file:///home/zac/development/research/thesis/draft/thesis.tex|46|21|v|latex
+	%Keywords need to be as close to the bottom of the page as possible without moving to a new page.
+63edc982f6469f3c206d8850f2109955|file:///home/zac/development/research/thesis/draft/thesis.tex|53|600|v|latex
+	additinoal
+d94d24c658d2363c6a98d6fd475a900b|file:///home/zac/development/research/thesis/draft/thesis.tex|55|303|v|latex
+	end result
+f1ed88ef56f6c8f680b331079531d75b|file:///home/zac/development/research/thesis/draft/thesis.tex|45|39|v|latex
+	phenomenon a
+1ad86fbaf8f6f71e6ae0a297cc82f437|file:///home/zac/development/research/thesis/draft/thesis.tex|45|64|v|latex
+	it is similar to 
+54d0ed31283867e61abbfaafa1f04e24|file:///home/zac/development/research/thesis/draft/thesis.tex|45|91|v|latex
+	similar to 
+8739f1f6cae2d255325e0525c24ead7d|file:///home/zac/development/research/thesis/draft/thesis.tex|45|68|v|latex
+	coherent gradients are in fact different
+7455cdf3a433c60318c9243b472a767f|file:///home/zac/development/research/thesis/draft/thesis.tex|45|176|v|latex
+	search for 
+e4f70c75a93eecb10ca503566d9832ae|file:///home/zac/development/research/thesis/draft/thesis.tex|45|176|v|latex
+	investigate
+9a932b3cb396238423eb2f33ec17d6aa|file:///home/zac/development/research/thesis/draft/thesis.tex|45|335|v|latex
+	linear
+d877b5620b83c6dc9153e161f8e6f958|file:///home/zac/development/research/thesis/draft/thesis.tex|45|449|v|latex
+	equally
+4d6ecffd87d7be4fa6be5b03ed7f6c8d|file:///home/zac/development/research/thesis/draft/thesis.tex|45|449|v|latex
+	equivalently sized de 
+239e1e51ceef4837d2f055c95bd22164|file:///home/zac/development/research/thesis/draft/thesis.tex|45|705|v|latex
+	ViT and
+b0b12f622ee36d1708276f4a65737583|file:///home/zac/development/research/thesis/draft/thesis.tex|45|754|v|latex
+	is in some
+d64c2afc88cb19454209f7be284e66de|file:///home/zac/development/research/thesis/draft/thesis.tex|45|760|v|latex
+	 cases
+ca960f125ced23f977c8c322a75195e0|file:///home/zac/development/research/thesis/draft/todo|49|11|V|
+	Conclusion
+	Introduction and Abstract
+5df23b3cb22ac596ace5028a231d2c6b|file:///home/zac/development/research/thesis/draft/todo|52|1|V|
+	Let pruned large model results have both models on the same plot, to look better
+	Pruned result tables look better
+2c2b655a970d7de6dd07bcee9de4c5a4|file:///home/zac/development/research/thesis/draft/todo|66|1|V|
+	Spell check
+49ff5f710086893da8586416fc94bed5|file:///home/zac/development/research/thesis/draft/todo|57|23|V|
+	Mathematical arguments?
+17f30ca52c9751b26b7f7f7b9605fb73|file:///home/zac/development/research/thesis/draft/thesis.tex|572|509|v|latex
+	they also respond diff
+525452a1d867c88fc020f5d6902eb5da|file:///home/zac/development/research/thesis/draft/Thesis.bib|20|1|V|bib
+		year = {2022},
+92a2b5cb9c6906035c2864fa225e1940|file:///home/zac/development/research/thesis/draft/Thesis.bib|2|2|v|bib
+	article
+098f6bcd4621d373cade4e832627b4f6|file:///home/zac/development/research/thesis/draft/thesis.tex|392|828|v|latex
+	test
+df3b6296db607a8b273016a47f751bc6|file:///home/zac/development/research/thesis/draft/thesis.tex|392|856|v|latex
+	it might
+ad88adbdac50799a3bc8c02b217c6f76|file:///home/zac/development/research/thesis/draft/thesis.tex|392|866|v|latex
+	might
+7c8966b25284a42cf6711e4f229f2de6|file:///home/zac/development/research/thesis/draft/thesis.tex|392|856|v|latex
+	coherence if coherence d
+31c183e25071a6c3e8505db7ab6fbe69|file:///home/zac/development/research/thesis/draft/todo|53|1|V|
+	Nelson thesis?
+	- probably in the analysis/conclusion
+	- also where we look at width vs coherence
+5b33d6248cc12a0fd383b9b624ba242d|file:///home/zac/development/research/thesis/draft/thesis.tex|157|21|v|latex
+	\mathbb{E}_{z \in \mathcal{D}}
+512da3ce222723529544189cae4af9f5|file:///home/zac/development/research/thesis/draft/thesis.tex|157|27|v|latex
+	\mathbb{E}_{z \in \mathcal{D}}[\nabla f(z)]
+0fd5f03a9ffcc1e19b9a40857919e71e|file:///home/zac/development/research/thesis/draft/thesis.tex|157|76|v|latex
+	\nabla f(z)
+90bf31a669796c0042e32bae61dff4ae|file:///home/zac/development/research/thesis/draft/thesis.tex|157|72|v|latex
+	{4}%
+964f7c8b3e405cb596430e4bfcebc442|file:///home/zac/development/research/thesis/draft/thesis.tex|157|120|v|latex
+	{5}%
+a2d9350b2a939515ac07b149d7fd34ef|file:///home/zac/development/research/thesis/draft/thesis.tex|157|70|v|latex
+	}{5}%
+480d2175ca0d4de3481e65466fceaa78|file:///home/zac/development/research/thesis/draft/thesis.tex|156|2|V|latex
 	\[
-	 \sum_{k=1}^{n} \frac{1}{n^{\frac{9}{5}}} a_k \le (\sum_{k=1}^{n} a_k^5)^{\frac{1}{5}}
+		\text{coherence} = \frac{\mathbb{E}_{z \in \mathcal{D}}[\nabla f(z)] \cdot \mathbb{E}_{z \in \mathcal{D}}[\nabla f(z)]}{\mathbb{E}_{z \in \mathcal{D}}[\nabla f(z) \dot \nabla f(z)]}
 	\]
-62a004930c9ba42ae6e8ecf9bf242455|file:///home/zac/development/acme/541/hw/7Ai.tex|67|17|v|latex
-	\frac{1}{n^{\frac{9}{5}}}
-b53adb2ad3e38734e7b8510612c51b63|file:///home/zac/development/acme/541/hw/7Ai.tex|66|1|V|latex
-	\[
-	 \big(\frac{1}{n^{\frac{4}{5}}}\sum_{k=1}^{n}a_k\big)^5   \le \sum_{k=1}^{n} a_k^5
-	\]
-cc7f62d906b873480ba119114255f2d8|file:///home/zac/development/acme/541/hw/7Ai.tex|70|7|v|latex
-	\frac{1}{n^{\frac{4}{5}}}
-27abf3c3c0ceec6fce6416dc3fcf1951|file:///home/zac/development/acme/541/hw/7Ai.tex|70|14|v|latex
-	\frac{4}{5}
-9307dc7eea2271a608bae724e5ef575f|file:///home/zac/development/acme/541/hw/7Ai.tex|69|1|V|latex
-	\[
-	 \frac{1}{n^{4}}\big(\sum_{k=1}^{n}a_k\big)^5   \le \sum_{k=1}^{n} a_k^5
-	\]
-1f99be8e4c297ab7aadf3b446749ce45|file:///home/zac/development/acme/541/hw/7Ai.tex|73|2|v|latex
-	\frac{1}{n^{4}}
-d2f181819d91ce1a9af6b3d1ac2944cc|file:///home/zac/development/acme/510/hw/L27.tex|40|23|v|latex
-	\norm{x}^2
-89e26352f632fec9ea70fd0be0c9c2fc|file:///home/zac/development/acme/510/hw/L27.tex|43|455|v|latex
-	orthonormal
-0248e3562c7912f26ce661ddcbdbc9d4|file:///home/zac/development/acme/541/hw/7Aii.tex|42|32|v|latex
-	\sup_X(|f|)
-43687e93d6964fdd2c53c57ec70e7f0a|file:///home/zac/development/acme/541/hw/7Aii.tex|42|1|V|latex
-	Let $T = \{ x \in X : |f(x)| = \norm{f}_\infty$. By the 
-2462d7ecfb2241fd5d14021971be877d|file:///home/zac/development/acme/541/hw/7Aii.tex|43|1|V|latex
-		\[
-		
-1c52ff6553900172d14b9b242a64e817|file:///home/zac/development/acme/541/hw/7Aii.tex|43|1|V|latex
-		\] 
-e4c8e3eaf4eb3c940bf697e70c2c3d12|file:///home/zac/development/acme/541/hw/7Aii.tex|44|26|v|latex
-	= \big(\sum_{A \in P} \sup_A (|f|^p)\big)^\frac{1}{p}
-018323f38788e5dc598d1289ccde109a|file:///home/zac/development/acme/541/hw/7Aii.tex|47|6|v|latex
-	big(\sum_{A \in P} 
-01a63383c3dbb05c73ef1af131ef494b|file:///home/zac/development/acme/541/hw/7Aii.tex|47|5|v|latex
-	\sup_A (|f|^p)\big)^\frac{1}{p}
-83fbf75a73bfc01667c33375116ce4c7|file:///home/zac/development/acme/541/hw/7Aii.tex|53|2|v|latex
-	\lim_{p \to \infty} \norm{f}_p
-214d69f4312b7b950f938f16267cdc5b|file:///home/zac/development/acme/541/hw/7Aii.tex|63|2|v|latex
-	\big(\int |f|^p \big)^\frac{1}{p}
-7965bf0b86cc57254c40468ecb50d033|file:///home/zac/development/acme/541/hw/7Aii.tex|61|26|v|latex
-	choose $g$ such that $g$ zeros out all sets of 
-32f0dd40fb843ac933d82eb8be261d0d|file:///home/zac/development/acme/541/hw/7Aii.tex|64|9|v|latex
-	x \in 
-ae91de76bee5ca4157da78081aaed992|file:///home/zac/development/acme/541/hw/7Aii.tex|70|54|v|latex
-	\big(\int |f|^p-|g|^p \big)^\frac{1}{p} \le (\mu(X)\sup_X (|f|-|g|)^p)^\frac{1}{p}
-b24ff1dc3c57055809079a9f4793eb67|file:///home/zac/development/acme/541/hw/7Aii.tex|40|1|V|latex
-	\int |fh| _p
-d160e9d13f8cb05b0738098e59e668a0|file:///home/zac/development/acme/541/hw/7Aii.tex|40|2|V|latex
-		\\sigmau
-7231fa806691800f095133f6fb720d82|file:///home/zac/development/acme/541/hw/7Aii.tex|40|40|v|latex
-	\sum
-21c053636588b44a68a4548a48c27e87|file:///home/zac/development/acme/541/hw/7Aii.tex|40|2|v|latex
-	\sum_{A \in P} \mu(A)\sup_A(|fh|)
-aa7a8bc23fda75cc99a45c9c33fea493|file:///home/zac/development/acme/541/hw/7Aii.tex|38|1|V|latex
-	For $p=1$, choose a partition $P$.
-	\[
-		\sum_{A \in P} \mu(A)\sup_A(|fh|) \le \big(\sum_{A \in P} \mu(A)\sup_A(|f|)\big)\big(\sum_{A \in P} \mu(A)\sup_A(|f|)\big)
-	\]
-3ce28ebea2795e6101a422559ef7aa3d|file:///home/zac/development/acme/541/hw/7Aii.tex|40|32|v|latex
-	\mu(X
-6f9f0a1230cde03f37f4c4da2fc49686|file:///home/zac/development/acme/541/hw/7Aii.tex|39|45|V|latex
-	By the monotonicity of the Lesbegue Integral,
-9ef40fdf922a0107e2b9332fc4a993e3|file:///home/zac/development/acme/541/hw/7Aii.tex|40|16|v|latex
-	\int |fh|
-a40982561f1d98d786b302220cfc8ebb|file:///home/zac/development/acme/541/hw/7Aii.tex|38|30|V|latex
-	If $p=1$, the $p'=\infty$ and if $p=\infty$, $p'=1$. Both cases are the same, just $f$ and $h$ switch roles. Then without loss of generality, let $p=1$:
-bf4c54ed753a31c1d44b48b8cae5a52c|file:///home/zac/development/acme/541/hw/7Aii.tex|38|6|v|latex
-	$p=1,p'=\infty$
-6ba9a92186c2c3625d57214d3d983b4f|file:///home/zac/development/acme/541/hw/7Aii.tex|49|17|v|latex
-	$p=\infty,p'=1$
-977a86867d69b93f6f2f16a450ea04bb|file:///home/zac/development/acme/541/hw/7Aii.tex|39|1|V|latex
-	\[
-		\norm{fh}_1 = \int |fh|
-	\]
-	By the monotonicity of the Lesbegue Integral,
-	\[
-	\int |fh| \le \sup(|f|)\int|h|
-	\]
-	\[
-		= \norm{f}_\infty \norm{h}_1
-	\]
-3cc08917ddc85d2108c1b11a8bdb3572|file:///home/zac/development/acme/541/hw/7Aii.tex|57|12|v|latex
-	_\infty
-d78f91393de284a619403dfded63d31b|file:///home/zac/development/acme/541/hw/7Aii.tex|37|1|V|latex
-	Lemma
-27855f93249e4e7489726b894453eae8|file:///home/zac/development/acme/541/hw/7Aii.tex|88|1|V|latex
-	For the other direction, define a function $g$ meant to zero out $|f|$ on sets of measure zero:
-	\[
-	g(x) = \begin{cases}
-		|f| & \{x \in X : \mu(\{z \in X: |f(z)| > |f(x)| = 0\})\}\\
-		0 & \text{otherwise}
-	\end{cases}
-	\]
-	Then because $\norm{g}_\infty = 0$ and by Minkowski's Inequality we have
-	\[
-		\norm{f}_\infty = \norm{f}_\infty - \norm{g}_\infty
-	\]
-d8bb5e763704ccb7e2ffe3ba70dd0c4b|file:///home/zac/development/acme/541/hw/7Aii.tex|90|48|v|latex
-	\sup_X (|f|-|g|)
-7ef24c55a5bd92c5d90ba8c9b79d792f|file:///home/zac/development/acme/541/hw/7Aii.tex|85|1|V|latex
-		\lim_{p \to \infty} \norm{f}_p \ge \norm{f}_\infty
-b2d102445c3516dc04933ab11a9c7841|file:///home/zac/development/acme/541/hw/7Aii.tex|99|1|V|latex
-	\[
-		\lim_{p \to \infty} \norm{f}_p \le \norm{f}_\infty
-	\] 
-4246dd778f9002beb17c4cb5cb72c842|file:///home/zac/development/acme/541/hw/7Aii.tex|51|4|v|latex
-	\mu(X)
-0d4e941d8c3e060f17c78db790b4cb36|file:///home/zac/development/acme/541/hw/7Aii.tex|57|4|v|latex
-	$\norm{f}_1=\infty$
-1a01026550fc09552679beaf671c910d|file:///home/zac/development/acme/541/hw/7Aii.tex|64|17|v|latex
-	\sup(|f|)
-6e91419117ed9c8d5b2c82752642a374|file:///home/zac/development/acme/541/hw/7Aii.tex|74|6|v|latex
-	\sup(|h|)
-fef7d3dbe48341ad6b765dde2e8e7041|file:///home/zac/development/acme/541/hw/7Aii.tex|57|52|V|latex
-	If $\norm{f}_1=\infty$ or $\norm{h}_1=\infty$, then 
-8acdb0cf3b0856aff47d8bfb3aa91a87|file:///home/zac/development/acme/541/hw/7Aii.tex|78|84|V|latex
-	If $\norm{f}_1=\infty$ or $\norm{h}_1=\infty$, then this inequality is true because 
-0bd9bba525540d8eda419f7a85aa3847|file:///home/zac/development/acme/541/hw/7Aii.tex|104|14|v|latex
-	$|f|^p = |f^p|$
-1ddbc40e0c8e4a7112964f31efbed81d|file:///home/zac/development/acme/541/hw/7Aii.tex|104|13|V|latex
-	then because 
-badf1ebb4ce2d6141dd05741cab0a737|file:///home/zac/development/acme/541/hw/7Aii.tex|81|227|v|latex
-	that same interval
-7a5425734a540717434d9866761d2714|file:///home/zac/development/acme/541/hw/7Aii.tex|85|6|V|latex
-	If $\norm{f}_\infty$ is the maximum value that $|f|$ attains on a set of non-zero measure, then $\norm{f}_\infty^p$ will be the max value that $|f|^p$ attains on sets of nonzero measure.
-81e53ba6093c5e4630cbe055197b4f8e|file:///home/zac/development/acme/541/hw/7Aii.tex|86|13|V|latex
-	\nobreakspace
-73fa5a4ec72fe5c999c140e727bf44c4|file:///home/zac/development/acme/510/hw/L28.tex|37|80|v|latex
-	up to a minus sign. However, due to instability of the algorithm, continued iteration will actually cause $A^{(k)}$to change such that the diagonal does not converge to the correct eigenvalues, at least that is what happened when I tried it on my computer.
-cc3f9fc82dc0f96de31386c4e6c74d81|file:///home/zac/development/acme/510/hw/L28.tex|44|160|v|latex
-	Then a variant of the same rotation can be used to zero out the superdiagonal element, due to the symmetry. 
-62e53b1c83deef0dfefc4bc4e16c60ba|file:///home/zac/development/acme/510/hw/L28.tex|37|488|v|latex
-	because symmetry dictates that all of the columns of $A$ have the same norm, and the eigenvalues are the norms of the columns of $A$.
-f8a8d0811981b94d4c18cd4073f60725|file:///home/zac/development/acme/510/hw/L28.tex|37|623|v|latex
-	But a
-a37414a63b9b3de4702b4842465227f9|file:///home/zac/development/acme/510/hw/L28.tex|39|233|v|latex
-	have the same modulus
-a5b4b95e5bf1e6aa491b5636b01e073a|file:///home/zac/development/acme/541/hw/7B.tex|40|181|v|latex
-	p \ge 1
-209d792b7574e7730c15613457c4783e|file:///home/zac/development/acme/541/hw/7B.tex|40|99|v|latex
-	 for any value of $1\le p\le \infty$,
-ea934ffcdd7ba1f3b54c0050c4149c8c|file:///home/zac/development/acme/541/hw/7B.tex|40|112|v|latex
-	harmonic
-a8306d1b6314332dadf9836a5b9ef589|file:///home/zac/development/acme/541/hw/7B.tex|40|386|v|latex
-	with any countable subset
-48789edb1cccdc55ce7b73612b76b10f|file:///home/zac/development/acme/541/hw/7B.tex|40|448|v|latex
-	the countable subset
-33b6bc09d498e8921e40122c0415510e|file:///home/zac/development/acme/541/hw/7B.tex|40|483|v|latex
-	the sequence
-905be57cefa7df8239c310922276d044|file:///home/zac/development/acme/541/hw/7B.tex|42|118|v|latex
-	for $\epsilon>0$ 
-18556bcddc689eed3946d11da496e450|file:///home/zac/development/acme/541/hw/7B.tex|42|258|v|latex
-	but such that, and set $a_k = 0$ when $k\ge N$. Then
-e79f69e2d44d03bf147db75defe9f3f3|file:///home/zac/development/acme/541/hw/7B.tex|42|454|v|latex
-	no more
-e308b4e4eae0c83c75cfb7426ceb15a4|file:///home/zac/development/acme/541/hw/7B.tex|42|679|v|latex
-	it's closure must equal $\ell^p$
-144e3430ea7f3a4c147ab8b5f5fc8b43|file:///home/zac/development/acme/541/hw/7B.tex|40|211|v|latex
-	countable
-d1d6750be4ee3c71f5e6978b4a4e906a|file:///home/zac/development/acme/541/hw/7B.tex|42|690|v|latex
-	\overline{S} 
-7afa88c2877d79e6a8a190b360edfcd6|file:///home/zac/development/acme/541/hw/7B.tex|42|690|v|latex
-	\subset 
-cf157125d659de309e454f695aaa10dc|file:///home/zac/development/acme/541/hw/7B.tex|42|860|v|latex
-	$\overline{S}=\ell^p$.
-e4be799026a4aebc2a86f109f189e0a2|file:///home/zac/development/acme/541/hw/7B.tex|49|26|v|latex
-	, so we are working with the harmonic sequence. 
-2a281a34b096448ad1abe23a1018bf59|file:///home/zac/development/acme/510/hw/L30Jacobi.tex|38|31|v|latex
-	largest 
-fa9924d967f053a1ce174a6eabb44abb|file:///home/zac/development/acme/510/hw/L30Jacobi.tex|38|6|v|latex
-	each off-diagonal
-6ae0811088f98de90b7daa10f7a713ca|file:///home/zac/development/acme/541/hw/9Aii.tex|41|1|v|latex
-	|\nu(\E_1)|+|\nu(E_2)|+\ldots + |\nu(E_n)|
-053303c718d067df2fa340eef7f38e91|file:///home/zac/dotfiles/coc/ultisnips/tex.snippets|263|1|V|snippets
-	snippet "mu" "mu" riA
-	\mu
-	endsnippet
-895b870c3ee1a29785e00dbf81625886|file:///home/zac/development/acme/541/hw/9Aii.tex|39|62|v|latex
-	 \not \in R^+$ for some $E \in S$. Then
-d8a1aaea8dc35a1657382874d0c8cc7f|file:///home/zac/development/acme/541/hw/9Aii.tex|39|62|v|latex
-	 \not \in R^+
-00522c5ec2bf9b7282ffcc958db2c306|file:///home/zac/development/acme/541/hw/9Aii.tex|39|67|v|latex
-	not real and positive 
-2cf37a9703226e2361cee1ddd73daecd|file:///home/zac/development/acme/541/hw/9Aii.tex|41|2|v|latex
-	|\nu(X \setminus E)| + |\nu(E)|
-7ced45aac63f2c7c45fd2489a62effb1|file:///home/zac/development/acme/541/hw/9Aii.tex|44|4|v|latex
-	|\nu(X)+|\nu(E)||
-85ff38de18d80d1820e4a8d9e15a00ab|file:///home/zac/development/acme/541/hw/9Aii.tex|41|36|v|latex
-	|\nu(X)-\nu(E)|+|\nu(E)|
-06e46af4ffbdb2afb10c2ffd275f0156|file:///home/zac/development/acme/541/hw/9Aii.tex|52|83|v|latex
-	\numbers
-24ed44c1d86c77935861f60eda7164ea|file:///home/zac/dotfiles/coc/ultisnips/tex.snippets|41|1|V|snippets
-	global !p
-	def math():
-	    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
-	
-	def comment():
-	    return vim.eval('vimtex#syntax#in_comment()') == '1'
-	
-	def env(name):
-	    [x,y] = vim.eval("vimtex#env#is_inside('" + name + "')")
-	    return x != '0' and x != '0'
-	
-	endglobal
-	
-	# Font Manipulation
-	snippet bf "Bold font"
-	\mathbf{$1}$2
-	endsnippet
-	
-	snippet par "Paragraph"
-	\paragraph{$1}$2
-	endsnippet
-	
-	snippet box "Box"
-	`!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
-	│ $1 │
-	`!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
-	$0
-	endsnippet
-	
-	snippet mk "Math" wA
-	$${1}$$2
-	endsnippet
-	
-	snippet dm "Math" wA
-	\[
-	$1
-	\] $0
-	endsnippet
-	
-	snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
-	`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
-	endsnippet    snip.rv = ''
-	`$2
-	endsnippet
-	
-	snippet '([A-Za-z])(\d)' "auto subscript" wrA
-	`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
-	endsnippet
-	
-	snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
-	`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
-	endsnippet
-	
-	snippet // "Fraction" iA
-	\\frac{$1}{$2}$0
-	endsnippet
-	
-	snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wrA
-	\\frac{`!p snip.rv = match.group(1)`}{$1}$0
-	endsnippet
-	
-	priority 1000
-	snippet '^.*\)/' "() Fraction" wrA
-	`!p
-	stripped = match.string[:-1]
-	depth = 0
-	i = len(stripped) - 1
-	while True:
-		if stripped[i] == ')': depth += 1
-		if stripped[i] == '(': depth -= 1
-		if depth == 0: break;
-		i -= 1
-	snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
-	`{$1}$0
-	endsnippet
-	
-	snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
-	\vec{`!p snip.rv=match.group(1)`}
-	endsnippet
-	
-	snippet "(\\?\w+)(\.\.)" "Math-mode postfix" riA
-	$`!p snip.rv=match.group(1)`$
-	endsnippet
-	
-	context "math()"
-	priority 10
-	snippet "hat" "hat" riA
-	\hat{$1}$0
-	endsnippet
-	
-	snippet sum "summation"
-	\sum_{$1}^{$2}
-	endsnippet
-	
-	snippet ooo "infinity" riA
-	\infty
-	endsnippet
-	
-	snippet enum "Enumerate"
-	\begin{enumerate}
-	\item$1
-	\end{enumerate}$2
-	endsnippet
-	
-	context "math()"
-	snippet "matrix" "Matrix" riA
-	\begin{bmatrix}
-	$1
-	\end{bmatrix}$2
-	endsnippet
-	
-	context "math()"
-	snippet "cases" "Piecewise function" riA
-	\begin{cases}
-	$1
-	\end{cases}$2
-	endsnippet
-	
-	#snippet subs "Subsection"
-	
-	priority 300
-	context "math()"
-	snippet dint "integral" wA
-	\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}} $0
-	endsnippet
-	
-	context "math()"
-	snippet lim "limit" wA
-	\lim_{$1 \to $2}$0
-	endsnippet
-	
-	context "math()"
-	snippet "ip" "inner product" ri
-	\ip{$1}{$2}$0
-	endsnippet
-	
-	context "math()"
-	snippet "sqrt" "Square Root" riA
-	\sqrt{$1}$0
-	endsnippet
-	
-	context "math()"
-	snippet "bin" "choose" riA
-	\binom{$1}{$2}$0
-	endsnippet
-	
-	context "math()"
-	snippet "tran" "Transpose" riA
-	^\intercal
-	endsnippet
-	
-	context "math()"
-	snippet "delta" "Delta" riA
-	\delta
-	endsnippet
-	
-	context "math()"
-	snippet "eps" "Epsilon" riA
-	\epsilon
-	endsnippet
-	
-	context "math()"
-	snippet "rho" "Rho" riA
-	\rho
-	endsnippet
-	
-	context "math()"
-	snippet "pi" "Pi" riA
-	\pi
-	endsnippet
-	
-	context "math()"
-	snippet "phi" "Phi" riA
-	\phi
-	endsnippet
-	
-	context "math()"
-	snippet "psi" "Psi" riA
-	\psi
-	endsnippet
-	
-	context "math()"
-	snippet "phi" "Phi" riA
-	\phi
-	endsnippet
-	
-	context "math()"
-	snippet "lambda" "lambda" riA
-	\lambda
-	endsnippet
-	
-	context "math()"
-	snippet "alpha" "alpha" riA
-	\alpha
-	endsnippet
-	
-	context "math()"
-	snippet "beta" "beta" riA
-	\beta
-	endsnippet
-	
-	context "math()"
-	snippet "gamma" "gamma" riA
-	\gamma
-	endsnippet
-	
-	context "math()"
-	snippet "omega" "omega" riA
-	\omega
-	endsnippet
-	
-	context "math()"
-	snippet "Omega" "Omega" riA
-	\Omega
-	endsnippet
-	
-	context "math()"
-	snippet "sigma" "sigma" riA
-	\sigma
-	endsnippet
-	
-	context "math()"
-	snippet "mu" "mu" riA
-	\mu
-	endsnippet
-	
-	snippet "nu" "nu" riA
-	\nu
-	endsnippet
-	
-	context "math()"
-	snippet "scr" "Math Script" riA
-	\mathscr{$1}$0
-	endsnippet
-	
-	context "math()"
-	snippet "cal" "Math Calligraphy" riA
-	\mathcal{$1}$0
-	endsnippet
-	
-	context "math()"
-	snippet "bb" "Math Blackboard" riA
-	\mathbb{$1}$0
-	endsnippet
-	
-	context "math()"
-	snippet "inv" "Inverse" riA
-	^{-1}
-	endsnippet
-	
-	context "math()"
-	snippet "varp" "varphi" riA
-	\varphi
-	endsnippet
-	
-	context "math()"
-	snippet "cases" "Piecewise" riA
-	\begin{cases}
-		$1
-	\end{cases}$0
-	endsnippet
-	
-	context "math()"
-	snippet "par" "Partial Derivative" riA
-	\partial
-	endsnippet
-	
-	context "math()"
-	snippet "smooth" "Smooth function" riA
-	C^\infty
-	endsnippet
-	
-	snippet "tex" "Anki Latex" i
-	\($1\)$0
-	endsnippet
-	
-	context "math()"
-	snippet "scrA" "Math Scr" riA
-	\mathscr{A}
-	endsnippet
-6e63f7dcab3633d0d8de0210b9396984|file:///home/zac/dotfiles/coc/ultisnips/latex.snippets|247|1|V|snippets
-	context "math()"
-f3380d9a57510591efe03831b85ad2af|file:///home/zac/development/acme/541/hw/9Aii.tex|46|1|v|latex
-	we can assume that $\nu(X)>0$ because otherwise we can't have $|\nu|(X)=\nu(X)$.
-4a4f703a41d4e1881f1d20249efbbcb5|file:///home/zac/development/acme/541/hw/9Aii.tex|46|1|v|latex
-	 Then t
-0d29c2b161427dfbaa4e50c3d85d4882|file:///home/zac/development/acme/541/hw/9Aii.tex|39|81|v|latex
-	and $\nu(X)\ge0$
-c834850d7532a8c9c7a1196fdd531363|file:///home/zac/development/acme/541/hw/9Aii.tex|52|29|v|latex
-	and $\nu(X)>0$
-3ff278eb828df81a58a08dd017d92132|file:///home/zac/development/acme/541/hw/9Aii.tex|56|85|v|latex
-	be an
-71e88e2065aa7c6937ec862db632a091|file:///home/zac/development/acme/541/hw/9Aii.tex|50|72|V|latex
-	which contradicts our assumptions. Therefore we can't have $\nu(E) < 0$.
-cd7904943f3221b2e25a4eac050df9bf|file:///home/zac/development/acme/541/hw/9Aii.tex|73|88|v|latex
-	$\nu$ is a complex measure, it must also be finite, with $\nu(X)<\infty$.
-3bd85cde5aa80b41796c57de998f67f4|file:///home/zac/development/acme/541/hw/9Aii.tex|73|268|v|latex
-	symmetry dictates that all of the columns of $A$ have the same norm, and the eigenvalues are the norms of the columns of $A$.
-8351701f99016b866c4df5fe02da75a0|file:///home/zac/development/acme/541/hw/9Aii.tex|76|25|v|latex
-	Then b
-286c04f75eb87db778003342e7ca37fc|file:///home/zac/development/acme/541/hw/9Aii.tex|78|1|v|latex
-	\sum_{k=1}^{N} |\nu(E_k)|
-178d51026dbd6d8bb32b7749ab888930|file:///home/zac/development/acme/541/hw/9Aii.tex|80|202|v|latex
-	sets
-bef99584217af744e404ed44a33af589|file:///home/zac/development/acme/541/hw/9Aii.tex|80|21|v|latex
-	series
-e9eb98569885991fd73839f76f07dac0|file:///home/zac/development/acme/541/hw/9Aii.tex|73|98|v|latex
-	 Then because $\nu$ is a complex measure, it must also be finite, with $\nu(E) \le \nu(X)<\infty$. Then the series $ \sum_{k=1}^{\infty}|\nu(E_k)|$ must converge because because if it didn't then for any 
-3f671de1f5caa3e3a2480cf0cbf17be1|file:///home/zac/development/acme/541/hw/9Aii.tex|73|103|v|latex
-	serires
-df10605f4c6ab1a3fb990ef4a6ac3770|file:///home/zac/development/acme/510/hw/L30b.tex|39|1|V|latex
-	\[
-		p^{(1)}(x) = 1-x
-	\] 
-95253cbb5441b9f2a0337535264ea97e|file:///home/zac/development/acme/510/hw/L30b.tex|45|1|V|latex
-	\[
-	\]
-ac02435f1faf48dce2053fb8bdc101c8|file:///home/zac/development/acme/510/hw/L30b.tex|42|1|V|latex
-	\[
-		p^{(2)}(x) = (1-x)p^{(1)}(x)-(1)^2p^{(0)}(x) = x^2-2x
-	\]
-0814096ad33a0a7327e29f49110af064|file:///home/zac/development/acme/510/hw/L30b.tex|46|49|v|latex
-	x^2-2x
-eb7c8d06b8d00276018ff0aeb20f6697|file:///home/zac/development/acme/510/hw/L30b.tex|45|1|V|latex
-	\[
-		p^{(3)}(x) = (2-x)p^{(2)}(x)-(1)^2p^{(1)}(x) = -x^3+4x^2-3x-1
-	\]
-b62d9974f88c094966c615c7b7804a97|file:///home/zac/development/acme/541/hw/9ai.tex|37|1|V|latex
-	\inft
-e27a1cb2d5e603669b980049680aa141|file:///home/zac/development/acme/541/hw/9ai.tex|39|1|V|latex
-	$\\mu$
-07617f9d8fe48b4a7b3f523d6730eef0|file:///home/zac/development/acme/541/hw/9ai.tex|39|4|V|latex
-	$\mu$
-9efb3f365aacb1f8e661d2123211a48c|file:///home/zac/development/acme/541/hw/9ai.tex|41|1|V|latex
-		1+i & x=a\\
-b54dc50419b0bcae104ed2249bc388f8|file:///home/zac/development/acme/541/hw/9ai.tex|38|1|V|latex
-	This is false. Let $X = \{a,b,c,d\}$ and $\mu$ be defined as
-	\[
-	\mu(x) = \begin{cases}
-		1+i & x=a\\
-		1-i & x=b\\
-		-1+i & x=c\\
-		-1-i & x=d\\
-	\end{cases}
-	\]
-41df38feab81ee1ac06d6fe0b6b4ea1b|file:///home/zac/development/acme/541/hw/9ai.tex|38|40|v|latex
-	\{\emptyset,\{$
-dc969b55d611ec0fdd0149dacbfaa70c|file:///home/zac/development/acme/541/hw/9ai.tex|42|1|V|latex
-		-2 & x=a\\
-3f7f2ba8f156b48218a01b1546e0753c|file:///home/zac/development/acme/541/hw/9ai.tex|56|16|v|latex
-	the principle that $\mu$ is a mea
-528f7c888225242f04c06f20e79f86f3|file:///home/zac/development/acme/541/hw/9ai.tex|58|165|v|latex
-	 assume the range of $\nu$ is contained in $$
-656d29efc726e972e90941e7369f4b13|file:///home/zac/development/acme/541/hw/9ai.tex|62|1|V|latex
-	\[
-	 = |\sum_{i=1}^{\infty}\nu(E_i)|
-	\] 
-cde4cc1c189725263c3b867472fd4209|file:///home/zac/development/acme/541/hw/9ai.tex|70|1|V|latex
-	Then if each $\nu(E_i)$ is positive, the absolute value is irrelevant
-919b314f59866a85f49d4173536d3c3b|file:///home/zac/development/acme/541/hw/9ai.tex|65|21|V|latex
-	Then if the range of 
-83d4af7a8e5b550df6898e6667a6368d|file:///home/zac/development/acme/541/hw/9ai.tex|69|35|v|latex
-	$\range(\nu) \subset (-\infty,0]$
-16fb9fe8e5b24cd572b5df98fbb6e031|file:///home/zac/development/acme/541/hw/9ai.tex|69|93|v|latex
-	(-\infty
-8b8ab63aac65dcc55314828f8b512ff7|file:///home/zac/development/acme/541/hw/9ai.tex|71|2|v|latex
-	\sum_{i=1}^{\infty}|\nu(E_i)|
-0ab8ed0190be6ce130a830b530a7f7b0|file:///home/zac/development/acme/541/hw/9ai.tex|71|34|v|latex
-	\sum_{i=1}^{\infty}-\nu(E_i)
-73c88cd8f334c4d42b4666345a6dcdb0|file:///home/zac/development/acme/541/hw/9ai.tex|71|66|v|latex
-	\sum_{i=1}^{\infty}\nu(E_i)
-f829d6c6814355d2a4188c08316e3f53|file:///home/zac/development/acme/541/hw/9ai.tex|65|1|V|latex
-	\[
-	 = \sum_{i=1}^{\infty}|\nu(E_i)|
-	\]
-f0d1092db6b0e0ba1223bc64918375de|file:///home/zac/development/acme/541/hw/9aiii.tex|48|185|v|latex
-	= |mu|
-9563b757c8cd9ca8d8eaff8435f61a23|file:///home/zac/development/acme/541/hw/9aiii.tex|52|1|V|latex
-	(a) If we have disjoint sets in $\mathcal{S}$ $b \in E_b, c \in E_c$, then 
-7ed9abff4dafd78d08e616c899412e92|file:///home/zac/development/acme/541/hw/9aiii.tex|52|77|v|latex
-	\infty
-b3127068b02277d0c42006901187b39d|file:///home/zac/development/acme/541/hw/9aiii.tex|54|16|v|latex
-	|(\delta_b+\delta_c)(E_k)|
-b6f3c62082b5c2ac022dea3041baacb5|file:///home/zac/development/acme/541/hw/9aiii.tex|55|1|V|latex
-		2 & i=j=k\\
-634deaeeb6d5edfe89497be6cadc6493|file:///home/zac/development/acme/541/hw/9aiii.tex|56|1|V|latex
-		1 i=j\ne k\\
-b4168c13e99ec73b364cd9152ed8ab49|file:///home/zac/development/acme/541/hw/9aiii.tex|48|264|v|latex
-	|\mu(A)|+|\mu(B)|\}<|\mu|(X)
-fea087517c26fadd409bd4b9dc642555|file:///home/zac/dotfiles/.i3/config|250|70|v|conf
-	normal
-7c4f29407893c334a6cb7a87bf045c0d|file:///home/zac/dotfiles/.i3/config|250|70|v|conf
-	right
-f79d7c1c557ef6ab7c73c1a22f0118ea|file:///home/zac/dotfiles/.i3/config|250|89|v|conf
-	--primary
-5f3b5827496b53e8f2397f74490eaba9|file:///home/zac/dotfiles/.i3/config|250|108|v|conf
-	0.5x0.5 
-1da95ea41f31908303beb97d2570eee1|file:///home/zac/dotfiles/.i3/config|250|61|v|conf
-	--rotate left
-2297fff26176c2efe6f7af6c15b57191|file:///home/zac/dotfiles/.i3/config|250|34|v|conf
-	--scale 1.5x1.5
-7634df9b9b94d634548fe507eae2f5be|file:///home/zac/dotfiles/.i3/config|250|97|v|conf
-	0.9x0.9
-1c9c262f0efed31bde3f0bc7a8f36cfe|file:///home/zac/dotfiles/.i3/config|245|96|v|conf
-	yvetal-xerneas
-1d6f721c1b1afce46d0d9db224df00a2|file:///home/zac/development/acme/541/cards.tex|76|32|v|latex
-	$\nu$ be
-a6afe718cc76f530cf4c39416029b759|file:///home/zac/development/acme/541/cards.tex|78|154|v|latex
-	 nny
-e390bd9325ef1df9cc079b45ce59be26|file:///home/zac/development/acme/541/hw/9Bi.tex|38|3|V|latex
-	\[
-	\mu \ll \nu
-	\]
-4dd5bfaaa06b1920a98915d081141866|file:///home/zac/development/acme/541/hw/9Bi.tex|38|1|V|latex
-	(i) $\Rightarrow$ (ii)
-ceeab4a8c625656b94d17f80968a2805|file:///home/zac/development/acme/541/hw/9Bi.tex|40|10|v|latex
-	\sup\{|v(E_1)|+\ldots + |v(E_n)|\}
-567904efe9e64d9faf3e41ef402cb568|file:///home/zac/development/acme/541/hw/9Bi.tex|49|1|v|latex
+bac4f06fdca35437bea4e788bdbce44c|file:///home/zac/development/research/thesis/draft/thesis.tex|155|1|V|latex
+	To calculate coherence for a network $f$ and dataset $\mathcal{D}$, we use the equation
+fac9375224ddeeb4f02b6f3a77a267ec|file:///home/zac/development/research/thesis/draft/thesis.tex|155|5|v|latex
+	final calc
+592d015debf192e057cbc2ce93696961|file:///home/zac/development/research/thesis/draft/thesis.tex|155|117|v|latex
+	becaue the
+a6dd56e1d8a8a1e615bb9e9488d6136f|file:///home/zac/development/research/thesis/draft/thesis.tex|155|195|v|latex
+	Using 
+070effdab06d37738f98b3265e475947|file:///home/zac/development/research/thesis/draft/thesis.tex|155|197|v|latex
+	calculate 
+c78179beb949ea33f7746ba6c1707ed3|file:///home/zac/development/research/thesis/draft/thesis.tex|155|240|v|latex
+	 product
+53d8f4d1e2b5be0d0abfde443f017359|file:///home/zac/development/research/thesis/draft/thesis.tex|155|283|v|latex
+	itself
+29100bdafc9c033ac7d1c681a568699f|file:///home/zac/development/research/thesis/draft/thesis.tex|155|383|v|latex
+	This measurement is 
+c7a80d2307e031516b116945ce650bf6|file:///home/zac/development/research/thesis/draft/thesis.tex|155|449|v|latex
+	accross
+e704ee666f738ba95dcb780cb5329f78|file:///home/zac/development/research/thesis/draft/thesis.tex|410|12|V|latex
+	When pruning
+104fb92bb038c046ea1241cf8cfee388|file:///home/zac/development/research/thesis/draft/thesis.tex|408|498|v|latex
+	so that
+17e61901a20068274a6c4de421370650|file:///home/zac/development/research/thesis/draft/thesis.tex|408|488|v|latex
+	skipping batch norm layers, downsampling layers, 
+567904efe9e64d9faf3e41ef402cb568|file:///home/zac/development/research/thesis/draft/thesis.tex|408|607|v|latex
 	where
-952aede240a72f2f83a805a71f97204a|file:///home/zac/development/acme/541/hw/9Bi.tex|39|1|V|latex
-	\[
-	|v|(E) = \sup\{|v(E_1)|+\ldots + |v(E_n)|\}
-	\]
-	\[
-	 = \sup\{|v(E_1 \cap A)|+\ldots + |v(E_n \cap A)|\}
-	\]
-	\[
-	 = |v|(E \cap A)
-	\]
-29ce221d63587bc70f0f101226a3cbbf|file:///home/zac/development/acme/541/hw/9Bi.tex|64|10|v|latex
-	\Re \nu(E) + \Im \nu(E)
-1f6e5670eaf31ab8eb431c817922e559|file:///home/zac/development/acme/541/hw/9Bi.tex|62|60|v|latex
-	appriximation
-1ffb2f21879156c602211898ad412fd6|file:///home/zac/development/acme/541/hw/9Bi.tex|38|1|V|latex
-	(a) $\Rightarrow$ (b)
-00e81999976d5c6ddf89864a432a5dca|file:///home/zac/development/acme/541/hw/9Bi.tex|38|23|v|latex
-	Let $A,B$ be as given by the assumption of (a)
-226876fbff1aeab835b49264dad8a088|file:///home/zac/development/acme/541/hw/9Bi.tex|88|40|v|latex
-	 Then assume there exists $E$
-589f0b4642d5b1bd0870b87b541df1a6|file:///home/zac/development/acme/541/hw/9Bi.tex|90|14|v|latex
-	|\nu(E)|
-8ed11aa0e1a8e4ef5151f34179114be3|file:///home/zac/development/acme/541/hw/9Bi.tex|77|252|v|latex
-	 with (a) we have
-6f399d863f7fb301a6e910f2d826c767|file:///home/zac/development/acme/541/hw/9Bi.tex|39|22|v|latex
-	\bigcup_{i=1}^n (E \cap A)_i = E \cap A
-59b0488a56f6bb24dc25a5e7912c5753|file:///home/zac/development/acme/541/hw/9Bi.tex|41|1|v|latex
-	\big(\bigcup_{i=1}^n E_i\big)
-771a8513c7444129a374704ee216b64b|file:///home/zac/development/acme/541/hw/9Bi.tex|41|6|v|latex
-	\bigcup_{i=1}^n E_i
-a96297992e44504dbc0c15fa9bd638a4|file:///home/zac/development/acme/541/hw/9Bi.tex|41|36|v|latex
-	\big(\bigcup_{i=1}^n A_i)
-89ca70bf2ee17089c1a6abfa69cf81b1|file:///home/zac/development/acme/541/hw/9Bi.tex|69|1|V|latex
-	Remember both sides!
-d90036d1ed042d0c25b721a4847be1fa|file:///home/zac/development/acme/541/hw/9Bi.tex|69|65|v|latex
-	 then $$
-797003271492ce2169d79f6d1b6c680f|file:///home/zac/development/acme/541/hw/9Bi.tex|69|82|v|latex
-	ot \in S
-8a14fc9f34d0487b771ec98244227cbf|file:///home/zac/development/acme/541/hw/9Bi.tex|70|3|V|latex
-	\[
-	|\nu|(E)=|\nu(E)| = |\nu(E \cap B)|
-	\]
-3606e99376acafbe9e9f40a3736a92fa|file:///home/zac/development/acme/541/hw/9Bi.tex|75|1|v|latex
-	\mu(E) = 
-4ad26b24a9ff6f0d1ba55a1b11b3b71b|file:///home/zac/development/acme/541/hw/9Bi.tex|74|1|V|latex
-	\[
-	\mu(E \cap B) = \mu(E)
-	\]
-e422e71a3f74af3d0e73bfdefa8881b2|file:///home/zac/development/acme/541/hw/9Bi.tex|77|1|V|latex
-	\[
-	\nu(E \cap B) = \nu(E)
-	\]
-717909e9bdcf77e81d68a12f999f196c|file:///home/zac/development/acme/541/hw/9Bi.tex|82|15|v|latex
-	= \nu(E)
-0525fd12f5b7f7c0c6def0ace66e685a|file:///home/zac/development/acme/541/hw/9Bi.tex|82|1|V|latex
-	\nu(E \cap B) = \Re \nu(E \cap B) + \Im \nu(E \cap B)
-fbc9c5bcc21caafcb7ed81bb53d60532|file:///home/zac/development/acme/541/hw/9Bi.tex|85|6|v|latex
-	 \cap B
-8857a794155108092e7db88b4fae512e|file:///home/zac/development/acme/541/hw/9Bi.tex|82|17|v|latex
-	\Re \nu(E \cap B) + \Im \nu(E \cap B)
-21c4395f150a3cd5e8be6cc98f192aaa|file:///home/zac/development/acme/541/hw/9Bi.tex|77|1|V|latex
-	\[
-	\nu(E \cap A) = \nu(E)
-	\]
-57a8dfe890ae25df3284719b97ce95d6|file:///home/zac/development/acme/541/hw/9Bi.tex|88|27|v|latex
-	\Re \nu(E \cap A) + \Im \nu(E \cap A)
-bd0d7a03162108298dc4bf44fdcddfa9|file:///home/zac/development/acme/541/hw/9Bi.tex|92|1|V|latex
-	\Re \nu (E) = \Re \nu (E \cap A)
-2f0c3d956d8e17accbdab0cc7644d1bf|file:///home/zac/development/acme/541/hw/9Bi.tex|71|24|v|latex
-	|\nu(E \cap A)| = |\nu|(E \cap A)
-f6f7bb525d13aca0b1056e12bc08f898|file:///home/zac/development/acme/541/hw/9Bi.tex|74|1|v|latex
-	|\nu(E \cap A)|
-b13ff8ae57d95989b7be18fffa9cb4c8|file:///home/zac/development/acme/541/hw/9Bi.tex|71|22|v|latex
-	= |\nu(E \cap A)| = |\nu|(E \cap A)
-dd11844a2f85b1fffbaa9f6bf1597e6f|file:///home/zac/development/acme/541/hw/9Bi.tex|71|13|v|latex
-	|\nu(E)| 
-e919e36a38c1f1eb8e86cc6ba5af458e|file:///home/zac/development/acme/541/hw/9Bii.tex|38|1|V|latex
-	Obviously 
-8b036e14751447202c96fbdf744e6157|file:///home/zac/development/acme/541/hw/9Bii.tex|40|1|V|latex
-	Obvioulsy this 
-9a69abc6e9f3d11d47a0c452dcf41e87|file:///home/zac/development/acme/541/hw/9Bii.tex|52|1|V|latex
-		 1 & x=a\\
-daf31151fc9184007899a9758c30dce5|file:///home/zac/development/acme/541/hw/9Bii.tex|51|1|V|latex
-	 \mu(x) = \begin{cases}
-		 1 & x=a\\
-		 \infty & x=b\\
-	 \end{cases}
-	\]
-167105af2c79a6ce0dc5e2983275bc14|file:///home/zac/development/acme/541/hw/9Bii.tex|68|1|v|latex
-	becuse n
-e88872446027c10e58bc8813c6b1199f|file:///home/zac/development/acme/541/hw/9Bii.tex|45|51|v|latex
-	$\mathcal{M}_F(\mathcal{S})$
-0efe750163e6ebd839bc37d5b0923f02|file:///home/zac/development/acme/541/hw/9Bii.tex|45|64|v|latex
-	\mathcal{M}_F(\mathcal{S})
-88e307509a99b2761994172a162bfaa9|file:///home/zac/development/acme/541/hw/9Bii.tex|45|188|v|latex
-	v \not \ll \mu
-265b922dc4330e38988041e6254cbb18|file:///home/zac/development/acme/541/hw/9Bii.tex|45|203|v|latex
-	Each
-e0918029de961fb9533ccf55ecfa2492|file:///home/zac/development/acme/510/hw/L32.tex|42|5|v|latex
-	\bo(
-ac38f90230fe8cf892794e50801b2cd5|file:///home/zac/development/acme/510/hw/L32.tex|53|20|v|latex
-	\bo(m^{\log_2 7 + o(1)})
-154cf95f1060dd147624eed55e07de3f|file:///home/zac/development/acme/510/hw/L32.tex|53|62|v|latex
-	 + o(1)
-beaf44cf920866faf4e9c3b41aa5192a|file:///home/zac/development/acme/510/hw/L32.tex|47|1|V|latex
-	Because addition and subtraction is asymptotically cheaper than multiplication, this can be rewritten as
-	\[
-	f(n) = (7+ o(1))^n
-	\]
-	which with $m=2^n$ leads to
-	\[
-		\bo([7+o(1)]^n] = \bo(m^{\log_2 7 + o(1)}) = \bo(m^{\log_2 7})
-	\]
+ff40cfb74aa6e143154e78b0723d6b88|file:///home/zac/development/research/thesis/draft/thesis.tex|408|607|v|latex
+	 the weights are far few
+bba7f98ee1c6953d2f76a5efa9e4b8e9|file:///home/zac/development/research/thesis/draft/thesis.tex|408|646|v|latex
+	more to adjust the weights
+a6df2a5f26de562837a5b7f68ed4bcaa|file:///home/zac/development/research/thesis/draft/thesis.tex|408|605|v|latex
+	, which are very small layers that serve 
+a318ab2b459f0c73057018a2fb05b29b|file:///home/zac/development/research/thesis/draft/todo|53|1|V|
+	How do we compute coherence? We don't multiply by the number of items
+	- just make sure that I define my calculation well
 	
-	Note: I could not have done this part without help from Wikipedia and YouTube, although I got a pretty good start by working on it by myself. I was able to figure out the first line, just getting that into $\log_2 7$ form was a little tricky.
-9ffbd4ab038857173bc3043e82615f1b|file:///home/zac/development/acme/510/hw/L32.tex|49|12|V|latex
-	Note that wi
-cfd47b199ff4832b318dec33b621e5ad|file:///home/zac/development/acme/510/hw/L32.tex|42|84|v|latex
-	 and $g(n)$ be the number of operations for additions and subtractions. 
-c7da4e089d98e2b178f17900ff51ba74|file:///home/zac/.config/polybar/launch.sh|12|23|V|sh
-	polybar bar2 2>&1 | tee -a /tmp/polybar2.log & disown
-fa85cca91963d8f301e34247048fca39|file:///home/zac/.config/polybar/launch.sh|11|9|v|sh
-	bar1
-f8d06a7320b81e2560e1eb5bba35b35a|file:///home/zac/dotfiles/.i3/config|254|29|V|conf
-	# Launch applications simply
+	Pruning techniques:
+	- defining each mask
+	- no words
+787a88b437a18682cfb6dde2547c60fa|file:///home/zac/development/research/thesis/draft/todo|53|1|V|
+	-----------------------------------------------
+e27ebf74de6e1f2a1df53b9890efa193|file:///home/zac/development/research/thesis/draft/thesis.tex|69|797|v|latex
+	exposing
+1105ad154e979f9c7e84a717d60ff563|file:///home/zac/development/research/thesis/draft/thesis.tex|115|60|v|latex
+	It demonstrates that training ResNet50 on real and random data yields meaningful differences in coherence measurement, even though the network can drive training loss near zero in both cases. Specifically, coherence is high on real data and low on random data.
+413729ee0d2b8cb1594a4fcda53854b9|file:///home/zac/development/research/thesis/draft/thesis.tex|119|170|v|latex
+	on a net
+369b93b5c7aa1f9c37c6a30d3df387bd|file:///home/zac/development/research/thesis/draft/thesis.tex|119|266|v|latex
+	 This
+d341f39101d011c2f345726034795328|file:///home/zac/development/research/thesis/draft/thesis.tex|119|287|v|latex
+	The network that
+60686ae524e6d65dc12bb1be47b204ee|file:///home/zac/development/research/thesis/draft/thesis.tex|115|114|v|latex
+	CIFAR-10
+fa0660fcb76de1e68ad582bc1df4c8ae|file:///home/zac/development/research/thesis/draft/thesis.tex|119|388|v|latex
+	This difference in behavior in real and random datasets may pont
+eb80f462e211378eabc26619d0ea710a|file:///home/zac/development/research/thesis/draft/thesis.tex|119|444|v|latex
+	cannot occur on 
+e8a1c318689be76a228136a6006f07ce|file:///home/zac/development/research/thesis/draft/thesis.tex|119|670|v|latex
+	it is generalizing as opposed to 
+2e18a1c6baa77e7d180f86195731a851|file:///home/zac/development/research/thesis/draft/thesis.tex|138|73|V|latex
+		\item We examine the patterns of activations when networks process data.
+a0221658c4250d25c5940c6b18ce1342|file:///home/zac/development/research/thesis/draft/thesis.tex|138|23|v|latex
+	neural network pruning from the perspective of varying the parent network size while keeping the pruning ratio constant, which is the reverse of the way it is usually done.
+bc9f7d99c97f6d76d78d201ab8dc0374|file:///home/zac/development/research/thesis/draft/thesis.tex|138|130|v|latex
+	 We also introduce coherence-based pruning methods using diffs.
+42aa49c0d7dbcb48d24549aa678bc7c6|file:///home/zac/development/research/thesis/draft/thesis.tex|139|1|V|latex
+		\item We analyze the structure of pruned networks and compare their activation patterns to the unpruned networks
+73d5342eba070f636ac3246f319bf77f|file:///home/zac/development/research/thesis/draft/thesis.tex|222|573|v|latex
+	section
+dd20d5e041ad2f093c8f4234cdee37ea|file:///home/zac/.bash_aliases|103|1|V|sh
+	alias vv="vim ~/.config/nvim/init.vim"
+53d6aeb99314b91adfd5bfd4b227589b|file:///home/zac/.bash_aliases|104|17|v|sh
+	.config/nvim/init.vim
+4e18228891cd89a248f5978ad627582c|file:///home/zac/dotfiles/nvim/init.vim|48|1|V|vim
+	"Disable ultisnips in CoC 
+66c360f3a0693807cc26ac945fa92e82|file:///home/zac/dotfiles/nvim/config/coc.vim|173|1|V|vim
 	
-	bindsym Mod1+i exec firefox
-	bindsym Mod1+b exec blueman-manager
-	bindsym Mod1+p exec postman
-	bindsym Mod1+c exec mongodb-compass
-	bindsym Mod1+n exec nautilus
-	bindsym Mod1+g exec gnome-control-center
-	bindsym Mod1+m exec spotify
-9182a0f4f34bb9c361d39ec7a02a5d3a|file:///home/zac/.config/polybar/config|58|16|v|dosini
-	bspwm 
-1afbdd62ff735c4eae689d1a7bfafa88|file:///home/zac/.config/polybar/config|60|44|v|dosini
-	pulseaudio 
-846623cbc459e7591bf64cf76065fca5|file:///home/zac/.config/polybar/config|60|74|v|dosini
-	tery 
-6967dcbca443001ab4e3b76396517552|file:///home/zac/.config/polybar/config|115|1|V|dosini
-	[module/bspwm]
-	type = internal/bspwm
-	
-	label-focused = %index%
-	label-focused-background = ${colors.background-alt}
-	label-focused-underline= ${colors.primary}
-	label-focused-padding = 2
-	
-	label-occupied = %index%
-	label-occupied-padding = 2
-	
-	label-urgent = %index%!
-	label-urgent-background = ${colors.alert}
-	label-urgent-padding = 2
-	
-	label-empty = %index%
-	label-empty-foreground = ${colors.foreground-alt}
-	label-empty-padding = 2
-	
-	; Separator in between workspaces
-	; label-separator = |
-e9be6077c8d510532b6deee0a5998c91|file:///home/zac/.config/polybar/config|60|28|v|dosini
-	xbacklight alsa xkeyboard 
-9c2930a52a02e5f55f02f66c69f85b1c|file:///home/zac/.config/polybar/config|60|39|v|dosini
-	wlan 
-eef438f7e448aa48c1f8db568d27b591|file:///home/zac/.config/polybar/config|60|43|v|dosini
-	temperature
-80da937d00d0eefbc4ad3a94403dba87|file:///home/zac/.config/polybar/config|165|1|V|dosini
-	
-	[module/xbacklight]
-	type = internal/xbacklight
-	
-	format = <label> <bar>
-	label = BL
-	
-	bar-width = 10
-	bar-indicator = |
-	bar-indicator-foreground = #fff
-	bar-indicator-font = 2
-	bar-fill = ─
-	bar-fill-font = 2
-	bar-fill-foreground = #9f78e1
-	bar-empty = ─
-	bar-empty-font = 2
-	bar-empty-foreground = ${colors.foreground-alt}
-	
-	[module/backlight-acpi]
-	inherit = module/xbacklight
-	type = internal/backlight
-	card = intel_backlight
-	
-faa4da2b54fb567e13ebfdfabed967d2|file:///home/zac/.config/polybar/config|153|1|V|dosini
-	[module/mpd]
-	type = internal/mpd
-	format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-	
-	icon-prev = 
-	icon-stop = 
-	icon-play = 
-	icon-pause = 
-	icon-next = 
-	
-	label-song-maxlen = 25
-	label-song-ellipsis = true
-0a9b94063781b5192074c38582ceb969|file:///home/zac/.config/polybar/config|166|10|v|dosini
-	percentage_used
-979cdf9ea531debf92f16b0e7b570461|file:///home/zac/.config/polybar/config|222|1|V|dosini
-	[module/pulseaudio]
-	type = internal/pulseaudio
-	
-	format-volume = <label-volume> <bar-volume>
-	label-volume = VOL %percentage%%
-	label-volume-foreground = ${root.foreground}
-	
-	label-muted = 🔇 muted
-	label-muted-foreground = #666
-	
-	bar-volume-width = 10
-	bar-volume-foreground-0 = #55aa55
-	bar-volume-foreground-1 = #55aa55
-	bar-volume-foreground-2 = #55aa55
-	bar-volume-foreground-3 = #55aa55
-	bar-volume-foreground-4 = #55aa55
-	bar-volume-foreground-5 = #f5a70a
-	bar-volume-foreground-6 = #ff5555
-	bar-volume-gradient = false
-	bar-volume-indicator = |
-	bar-volume-indicator-font = 2
-	bar-volume-fill = ─
-	bar-volume-fill-font = 2
-	bar-volume-empty = ─
-	bar-volume-empty-font = 2
-	bar-volume-empty-foreground = ${colors.foreground-alt}
-	
-	[module/alsa]
-	type = internal/alsa
-	
-	format-volume = <label-volume> <bar-volume>
-	label-volume = VOL
-	label-volume-foreground = ${root.foreground}
-	
-	format-muted-prefix = " "
-	format-muted-foreground = ${colors.foreground-alt}
-	label-muted = sound muted
-	
-	bar-volume-width = 10
-	bar-volume-foreground-0 = #55aa55
-	bar-volume-foreground-1 = #55aa55
-	bar-volume-foreground-2 = #55aa55
-	bar-volume-foreground-3 = #55aa55
-	bar-volume-foreground-4 = #55aa55
-	bar-volume-foreground-5 = #f5a70a
-	bar-volume-foreground-6 = #ff5555
-	bar-volume-gradient = false
-	bar-volume-indicator = |
-	bar-volume-indicator-font = 2
-	bar-volume-fill = ─
-	bar-volume-fill-font = 2
-	bar-volume-empty = ─
-	bar-volume-empty-font = 2
-	bar-volume-empty-foreground = ${colors.foreground-alt}
-	
-	[module/battery]
-	type = internal/battery
-	battery = BAT0
-	adapter = ADP1
-	full-at = 98
-	
-	format-charging = <animation-charging> <label-charging>
-	format-charging-underline = #ffb52a
-	
-	format-discharging = <animation-discharging> <label-discharging>
-	format-discharging-underline = ${self.format-charging-underline}
-	
-	format-full-prefix = " "
-	format-full-prefix-foreground = ${colors.foreground-alt}
-	format-full-underline = ${self.format-charging-underline}
-	
-	ramp-capacity-0 = 
-	ramp-capacity-1 = 
-	ramp-capacity-2 = 
-	ramp-capacity-foreground = ${colors.foreground-alt}
-	
-	animation-charging-0 = 
-	animation-charging-1 = 
-	animation-charging-2 = 
-	animation-charging-foreground = ${colors.foreground-alt}
-	animation-charging-framerate = 750
-	
-	animation-discharging-0 = 
-	animation-discharging-1 = 
-	animation-discharging-2 = 
-	animation-discharging-foreground = ${colors.foreground-alt}
-	animation-discharging-framerate = 750
-754a58362b107f9d9ff410f6660d55d8|file:///home/zac/.config/polybar/config|220|9|v|dosini
-	%date% 
-8f7e9cfb619018bc32f658fe5f7971a5|file:///home/zac/dotfiles/.i3/config|64|1|V|conf
-	bindsym Mod1+d exec dmenu_run # There also is the (new) i3-dmenu-desktop which only displays applications
-f9441daafd253fd4c9367dab67b4e2c0|file:///home/zac/dotfiles/.i3/config|67|16|v|conf
-	exec dmenu_run
-b978ddb2bda75c35cc43337fa9cb1ce6|file:///home/zac/dotfiles/.i3/config|67|55|v|conf
-	drun
-ff2364a0be3d20e46cc69efb36afe9a5|file:///home/zac/dotfiles/.i3/config|68|14|v|conf
-	space
-dd822ea291172aaa10d3e03fc05c13ad|file:///home/zac/dotfiles/.i3/config|67|1|V|conf
-	bindsym Mod1+d rofi -combi-modi window,drun,ssh -show combi
-d87eec908a898d76f7fcb5bca9fe3b05|file:///home/zac/dotfiles/.i3/config|67|46|V|conf
-	bindsym $mod+d exec --no-startup-id rofi -show combi -run-command "i3-msg exec '{cmd}'" -show-icons
-	# There also is the (new) i3-dmenu-desktop which only displays applications
-b1e236a47d72e88036214d97b38e8c72|file:///home/zac/dotfiles/.i3/config|67|9|v|conf
-	$mod
-0e87c1212a698494dcdb198af3e0eb2f|file:///home/zac/development/acme/510/hw/L36.tex|47|2|v|latex
-	partial
-516ed335c27f522f52c049960bc4026f|file:///home/zac/development/acme/510/hw/L36.tex|42|10|v|latex
-	\frac{x ^\intercal T_n x}{x ^\intercal x}x
-aeaf098702c878c387692af04622cba2|file:///home/zac/development/acme/510/hw/L36.tex|41|1|V|latex
-	\[
-		T_n x = \frac{x ^\intercal T_n x}{x ^\intercal x}x
-	\]
-861e17e17c019c1b993cea649702caf6|file:///home/zac/development/acme/510/hw/L36.tex|38|25|V|latex
-	Let $x \in \mathcal{K}_n$. Then:
-388416646e535b63c957e713f6fce0fa|file:///home/zac/dotfiles/.i3/config|159|23|v|conf
-	DP-2
-92408bef833ed8b0c4dbcbad4464ae73|file:///home/zac/dotfiles/.i3/config|265|29|v|conf
-	DP-2 --mode 1680x1050
-c78555f2b19742559c80f271bcec36fa|file:///home/zac/dotfiles/.i3/config|265|36|v|conf
-	--pos 0x0 
-a4b85c82490d036e6e89c264966c8085|file:///home/zac/dotfiles/.i3/config|260|96|v|conf
-	milky_way
-66b7fd7ceaf7fa7b2be2638b4c53cd3c|file:///home/zac/dotfiles/.i3/config|260|50|v|conf
-	Rayquaza.png
-827066ccc6ddb2e1f3032718d0a10653|file:///home/zac/dotfiles/.i3/config|265|20|v|conf
-	--output HDMI-0 --mode 3840x2160
-3318bc583ec3eba70e591929b32b8e17|file:///home/zac/dotfiles/.i3/config|265|62|v|conf
-	--left-of HDMI-0
-76efdc70eb686c891b08d9fbbb75d1f3|file:///home/zac/dotfiles/.i3/config|265|105|v|conf
-	HDMI-0
-811882fecd5c7618d7099ebbd39ea254|file:///home/zac/dotfiles/.i3/config|265|97|v|conf
-	left
-43d119f0b275294975da45a9f96b1eea|file:///home/zac/dotfiles/.i3/config|265|44|v|conf
-	 --mode 3840x2160
-c128a131df2e6e6d02ab3b5e53d21929|file:///home/zac/development/acme/510/hw/L36.tex|37|1|V|latex
-	$\Rightarrow$
-	Let $x \in \mathcal{K}_n$. Then let $c$ be a Ritz value at step $n$. By (27.2) this means that
-	\[
-		T_n x = \frac{x ^\intercal T_n x}{x ^\intercal x}x
-	\]
-	
-	Then let $x$ be the eigenvector of $T_n$ corresponding to $c$, and we get
-	\[
-	\nabla r(x) = c x - c x = 0
-	\]
-	
-	which means the gradient is zero, so $c$ is a stationary point of $r(x)$.
-	
-	$\Leftarrow$ Let $c$ be a stationary point of $r(x)$, meaning \[\nabla r(x)= \frac{2}{x ^\intercal x}(T_nx-\frac{x ^\intercal T_n x}{x ^\intercal x}x)=0\]
-	
-	when $x$ is the vector such that $r(x)=c$, and thus $T_nx =cx$, so $c$ is a Ritz value. Then we have
-	\[
-		T_n x = \frac{x ^\intercal T_n x}{x ^\intercal x}x
-	\]
-	
-	which means that $T_nx$ is just a constant multiple of $x$, and thus $x$ must lie in the range of $T_n$, which is equivalent to $\mathcal{K}_n$
-a15e61a2f3af1994990f54f4cfbad2be|file:///home/zac/development/acme/510/hw/L36.tex|36|65|v|latex
-	alue.
-ab61a41c6c470b2f8d16297a8be0e53b|file:///home/zac/development/acme/510/hw/L36.tex|38|14|v|latex
-	2 Q_n
-a14f49e8311a170ffb188a9de8ea2690|file:///home/zac/development/acme/510/hw/L36.tex|44|17|v|latex
-	\frac{2 Q_n^*}{x ^\intercal x}(Ax- \frac{x ^\intercal A x}{x ^\intercal x}x)
-be5c3590ea9112a783e37181b1894a1b|file:///home/zac/development/acme/510/hw/L36.tex|47|68|v|latex
-	\intercal 
-042f05600cb6492bee9ad0bdd659ac2c|file:///home/zac/development/acme/510/hw/L36.tex|46|1|V|latex
-	\[
-	 = \frac{2 Q_n^*}{y ^\intercal y}(AQ_n y- \frac{y ^\intercal Q_n^* A Q_n y}{y ^\intercal y}Q_n y)
-	\]
-52a0846042777e1eedf542a3d756c0b0|file:///home/zac/development/acme/510/hw/L36.tex|47|12|v|latex
-	Q_n^*
-7e3fbd776cd92efa7d541adb5bafe080|file:///home/zac/development/acme/510/hw/L36.tex|50|11|v|latex
-	 Q_n^*
-7517ed9e50da13f78b40d7fab78cd3ff|file:///home/zac/development/acme/510/hw/L36.tex|50|29|v|latex
-	AQ_n
-973ccf8d9db6be02bb817074db3105c0|file:///home/zac/development/acme/510/hw/L36.tex|50|55|v|latex
-	Q_n^* A Q_n
-39b0fa4477c9d5966361e1ba6466278b|file:///home/zac/development/acme/510/hw/L36.tex|59|33|v|latex
-	$lamdba$
-97dedc69eb85fe6054a75852a86c5fdf|file:///home/zac/development/acme/510/hw/L36.tex|61|74|v|latex
-	could show that it must be an eigenvalue of $T_n$. If
-642bbf81353c0de40d1bc46c47ace1ca|file:///home/zac/development/acme/510/hw/L36.tex|65|15|V|latex
-	for some scalar
-2ea0b1e4154715700bf6a7113702dc03|file:///home/zac/development/acme/510/hw/L36.tex|70|1|V|latex
-	\[
-		Q_n^* T_n Q_n = \lambda x
-	\] 
-b78913e47933a41677a9ea3cef1a3d2c|file:///home/zac/development/acme/510/hw/L36.tex|74|2|v|latex
-	Q_n^* 
-b0997b21b70bc49dbd7d9034e41a8706|file:///home/zac/development/acme/510/hw/L36.tex|61|28|v|latex
-	a value $\lambda$ were a stationary value,
-c74c734b61a9021afe5c495711056119|file:///home/zac/development/acme/510/hw/L36.tex|61|18|v|latex
-	knew that 
-1e49651a5442e61046e88db66e08d2e9|file:///home/zac/dotfiles/.i3/config|260|102|v|conf
-	8B-OneX-Chief-4K.jpg
-f0593ec4d2f7cd8fc9f68ac96270c3c2|file:///home/zac/dotfiles/.i3/config|265|34|v|conf
-	--mode 3840x2160
-4808063acab6c9b17ded8e2e5d06317f|file:///home/zac/development/acme/510/hw/L37.tex|40|46|v|latex
-	alpha_k
-a18a37889cd8b0875d23dfb9763abd11|file:///home/zac/development/acme/510/hw/L37.tex|40|12|v|latex
-	(x-\alpha)^2
-ed51fe9ab68a65c0dd84a74096c7ea86|file:///home/zac/development/acme/510/hw/L37.tex|40|25|v|latex
-	\Prod_{k=1}^{n-2}(x-\lambda_k)
-d48a5cda4bc91670bf431856c381ab40|file:///home/zac/development/acme/510/hw/L37.tex|44|4|V|latex
-	Then
-cc2e7018ac219b9eedc2f130d2c650a8|file:///home/zac/development/acme/510/hw/L37.tex|40|58|v|latex
-	(x-\alpha)^2 Z(x)
-a6bfa17a45e18e13dd0ddd1efb061eb9|file:///home/zac/development/acme/510/hw/L37.tex|45|2|v|latex
-	\int_{(-1,1)} q_{n+1}Z(x) dx
-ca02bfec239636567f7ff835b53bc4af|file:///home/zac/development/acme/510/hw/L37.tex|45|46|v|latex
-	q_{n+1}Z(x) dx 
-cbe494d6ca81e9a6011615b1bc348b53|file:///home/zac/dotfiles/.i3/config|260|17|v|conf
-	--bg-scale ~/Pictures/Wallpapers/Halo-3-ODST-4k.jpg --bg-scale
-b2c9534ced1a2d7a637382deafaa491f|file:///home/zac/dotfiles/.i3/config|259|16|V|conf
-	# Get wallpaper
-	exec_always feh ~/Pictures/Wallpapers/milky_way.jpg --bg-scale ~/Pictures/Wallpapers/Halo-3-ODST-4k.jpg --bg-scale
-2865053b25f5daf8d1025975b13579f8|file:///home/zac/dotfiles/.i3/config|266|17|v|conf
-	~/Pictures/Wallpapers/milky_way.jpg 
-40eb1152e99a92deb56f816b096f7cae|file:///home/zac/dotfiles/.i3/config|266|65|v|conf
-	~/Pictures/Wallpapers/Halo-3-ODST-4k.jpg 
-c150693e74bb2673e252ec0fd58138f8|file:///home/zac/dotfiles/.i3/config|266|17|v|conf
-	--bg-scale ~/Pictures/Wallpapers/milky_way.jpg 
-334c4a4c42fdb79d7ebc3e73b517e6f8|file:///home/zac/.config/alacritty/alacritty.yml|58|16|v|yaml
-	none
-b7ca860c7b05fe4a7f0710aaaf5ea4a5|file:///home/zac/.config/compton/compton.conf|41|1|V|conf
-	  "80:class_g = 'URxvt'",
-b326b5062b2f0e69046810717534cb09|file:///home/zac/.config/compton/compton.conf|88|37|v|conf
-	true
-2aecdbc96ecdc21e11e2e961d682feaf|file:///home/zac/.config/compton/compton.conf|42|1|V|conf
-		"80:class_g = 'gedit'"
-44f54e4683222c15b1c21f73068aa038|file:///home/zac/.config/compton/compton.conf|42|17|V|conf
-		"80:class_g = 'gedit'",
-33b6f838f6232e225e01c03673929ad3|file:///home/zac/.config/compton/compton.conf|42|1|V|conf
-		"80:class_g = 'Gedit'"
-7043823fba9880ff41ec158e2a61a5e1|file:///home/zac/.config/compton/compton.conf|43|17|v|conf
-	Gedit
-06a4e49f1027b8bab4ccdae222eaa3ae|file:///home/zac/development/gpt/config.json|3|2265|v|json
-	Data": {}
-87006a7dc12877d356ce4d503ef9d072|file:///home/zac/development/gpt/config.json|1|1|V|json
-	{
-		"Authroization": "<API_KEY>",
-		"session_token": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..neyJWCUVmUj_XMee.VXhK2AcZaxudFz2XMe1OcI-g93mleB3uFAYtN0yOPaCn7geFQjJiNXV0NwXN-nySxGoEFjetzYVC1voGYoPIv-CFuL_UtE4fZ258v862pQI61qU-IIuMzGiPofnVl8XEeEQTvcb9e055yznf8GWiHqzYq5ei9oEZRXPZy8ravxVkzOgEVEwp4WIBWC0FU3YfiP3Ev3ZfqYTFI-emsBbUa2C76b4uOsyTxkNt6SMaxViEQ42tvIGyybagZcuqucFAsEdGDOLPpVblS9PLHKEcaXNCk0aSBr7V0lqZ8y5RyugUWK0W-I6ni5NbOBueSEnVXMFGVJz5NAIgb53TBs9qsTgNo69neYojYdw8-MLzWDycu4VaLDddN_5N9DaKQHVEUMa_1v8buDwUS-TJB-GgZ9qb12xJqXB99k9_i3oW6xH5SR19KlZkNOVznZfoA7YQXi2DNnmu8Ioyh57LvzGajWMHP1wJtSK7U4vrndn5x9nR1ufAG8w9Nb5QQY1-a9ZFMNuVzeVRbtEG8r_swpfxl81cUUvZubU3XDpNfOk6Q7-85c2NXhO6PzqJTnjg3zoU94jsxg5awBrZ1_54WNtLTxP53khsBbtbGRd3UKZdOYgJLdtGAc9oz9MNsZM096vTXMmB8ldnWgHHlUlW9SI1RCPTkE_V5zRnIz6T-_nXxbVqgq9P5z8bZmSFwVSkzu81--VrtQYomLQJNc240GPx7GokRAHRaKSt8NfSfvG6t3u11QFEQ_fbs44rZo2TTHt5P1UcE05rNJSn8qd_ceAhN160cKpOY3kmwMQXT_svaOg9PsdmUif4Yv7bDBnujQi3WtHcXKYuaTGgzny7cRY95TwUEG-Q9Ph5dKwiUKKMv0jDkLJZbNffiWrMgP_Y9aUQuSnLBm_KEsPmQIDP0c3AdCkbK90zjrEMxyrtcbs6Z9W3S9EH5OrG0tsvzzGseWaNfvYDHVe9HBQ0TlOKnUWWWfPOYB8z-YbaBgC9Ikq9FPtndwrYxU9ueYPEzpIlqqbF5YcYW40KsOQ-75clKImHIUWbW29Isho6WcmIYuhBDiTKqD3jzwKTUiumFodv0ajeYls9r7cvrP9MNJLaKGgdBoGhz2T7hbUY_cq1aM7tZ3eVnJ7ndDwNzHn35v85sHzO1KtqoAYa0qyd7gN_TFP12JJ2wTW-et4za9BWgT0aBjlmMGj40D-5ZjcofbzUH71XsEiCfPPoExko759-dthJP1qifi7bXFUt-CH9sNrtQmJXTODcjqDoYh9wfQANiogjf6KhZuNtVLAKjwRMyyZHVlWuyH8PSpKEv8w8E37Uzc2xMmo0ghoyxT76N4N-7nWxXPOdpaKjfKqezkt9UoRFBmZlEJTJkWWT_kpKZ1pkxn2nwpsiouBMTeLjeB3u-tOO6UtTqa6BqGOB8Xv1H4YledifBJcmJE7l80-FXgCx_TSyuP8t_kKjjO7QfUfslb7Y5JMMPc_6nH-ggdRgiQnAypy0mtKkcMW2jkW94sgyOU2Ou3BeBo_vbOZ7esM2k_qnHPzJXrKAe1BwjfrIFIAj2jFwngstuQE-2I7SGjJkOcHoXXAtUZBljgmzZTRGr-oFZXkKONp-FCTiajBdUe-PmP5-YygapN193_w9UWg5LqTUa6LCkOXq5Crhg76MElFVS0o-rK-vUXPHQ5kcAEnvNgcgV7K5ZzNS5_OI_6vy1r94o8SQpP-uFZurGA3zX1h0F1xJInjYlcHI7u3whTg7lHBCUV3ocwEoFZeIb_ZrFeItwOMIOdisXfeMrEV6C-a321rYAVV_ZYT8dtaU7bp3NpVjCTxCePmjMa8yy_Nw96T62SA6ReTdokQJYa0NjnGccD0Q2avf2vly61lkxVOcjdKJFf5d-VRNk2Sk2veevLbUz--Qi2B5X5n1UGeGAnO-k38X4nbIAi1n6bD_GEb9D_OdZcXcwG6lLWeqBdlY3zPsN2o6eODEp-lsdFX-U8Ph56zELCtJKYMEIdBSE4bkicvm-gMmV2oahlflsBOKNxegwj_mWef3pffyApvp6oU2uuCpZMb5GewQ1iNmEe2vqUMwGh6AFoJmSyBYtSIz5iDKFQtLzJZY5V9eYcEsmOuYGLrxn6_ILsN_nMcNqTQ2CnTer5jNZ9Db8l4ghYtqdBQBlO4DA8Ju.7IsFoVM2gpN9FwFSWx4j9g"
-	}
-303d49f55924ea3c8a6b1c5fbc534a9f|file:///home/zac/development/gpt/config.json|3|23|v|json
-	<SESSION_TOKEN>
-9151d0764d4a67cb353e23e60dcf69d2|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|63|28|V|python
-	            print("Pokemon")
-a060327d7a5752c8916ec338b29617a9|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|64|13|v|python
-	pritn
-4cfecbe69979fee844cc5245e4de4786|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|63|13|V|python
-	            print("Pokemon")
-	            print("woew")
-b71f010f8c305b2b089e94d622e646b1|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|64|13|V|python
-	            # Get the response
-c02cedf59e57027dbcc008b8bd99c667|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|67|45|V|python
-	            print(chatbot.get_chat_response())
-aa992ec78f4dbc792230dfadafbd6def|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|1|38|V|python
-	from revChatGPT.revChatGPT import Chatbot
-	import json
-f7b44cfafd5c52223d5498196c8a2e7b|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|66|65|v|python
-	stream
-f0124ba11fad05a529aa376826b656c6|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|27|V|python
-	            print(list(response))
-bb368ec59608cf7c8b8530874020cd62|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|27|V|python
-	            print("buffer")
-ef638314b13ba4f51c23680548c20f33|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|19|v|python
-	respone
-43051042f95b627738772caaaff15831|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|33|V|python
-	            print(list(response)[-2].data.content.parts[0])
-0c4f209efec781119b5096a3fcdac50c|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|68|31|V|python
-	                print("ROCKET")
-755895fa27f302353b0e3048d31cfd16|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|63|19|V|python
-	                print("content start")
-6e780d887d92e1f906db2244ceaa2d62|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|30|V|python
-	            for r in response:
-	                print("ChatGPT:", r)
-bd342ee6c7548633883ae3701a1e1803|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|44|V|python
-	            print("Test", list(response)[-1])
-b466d853d4fd5208ad6e7b52ba521274|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|37|16|V|python
-	        pudb.set_trace()
-d06ca71736656d83284aaa2f56fc2fad|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|77|39|V|python
-	            message = response["message"]["content"]["parts"][0]
-d1fc8eaf36937be0c3ba8cfe0a2c1bfe|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|70|17|v|python
-	response
-9e61563e910a10155b9f4a92430944f0|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|74|13|V|python
-	            response = json.loads(response)
-4a5fd5ae36ec7e48fd8fdc439aa15918|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|69|13|V|python
-	            print(response)
-e70c4df10ef0983b9c8c31bd06b2a2c3|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|83|13|v|python
-	return
-8bba0d3ef9f196e5d4a22c19fe246fd6|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|82|13|V|python
-	            answer = 
-59065b54645e56569cb84936deae0345|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|68|26|V|python
-	            list(response)
-1dc8c8bed1645cd4e98304e57ac5b190|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|34|1|V|python
-	        # print("YES")
-	        # print("Inside")
-826457efb362e8bd5b3a9e4c345f9f09|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/revChatGPT.py|85|20|V|python
-	            pudb.set_trace()
-bd8de534f9c2693247612ed3d51a521a|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|69|13|V|python
-	            print(response["message"])
-0d00c1817e8c82f836899758cefc23a7|file:///home/zac/.local/lib/python3.8/site-packages/revChatGPT/__main__.py|70|13|V|python
-	            # print("ChatGPT: " + response)
-51e0b153476c8059d160f0648ef39c98|file:///home/zac/development/gpt/config.json|1|20|v|json
-	eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL2F1dGgiOnsidXNlcl9pZCI6InVzZXItZ0xNamg2NHpmbkx0RzFHaTl2NzZ1NDJHIn0sImlzcyI6Imh0dHBzOi8vYXV0aDAub3BlbmFpLmNvbS8iLCJzdWIiOiJhdXRoMHw2MmViZDUxOTljNmM2ZGU1NjExNzJiNzEiLCJhdWQiOlsiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS92MSIsImh0dHBzOi8vb3BlbmFpLmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2NzAyMjIyMzMsImV4cCI6MTY3MDIzNjYzMywiYXpwIjoiVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEciLCJzY29wZSI6Im9wZW5pZCBlbWFpbCBwcm9maWxlIG1vZGVsLnJlYWQgbW9kZWwucmVxdWVzdCBvcmdhbml6YXRpb24ucmVhZCBvZmZsaW5lX2FjY2VzcyJ9.KBojyk3DK1NquRuBJDqVzYNxWe3AlPQFfOq6ivIj8vyy5nxRCMeDlRPPhiX_KXEtyhY90pqaEnxnVG1tUV-bIJxQmeBoaNkuvsz5bcGfAg0OVlwcX3jSVeYwP5MU8i33h0RcmlC7mo1VxhJDd1P-hnbO-H1cJHYWYzudOr4cX44ulBEYOe25K64yzMNbaAd0nbGqO7gsCpisPJYUcCRq889HT4sxol5EkBBKeG2ol8eLLtuqNNtGnNNQH18C_cm-iGTnEldHEI0hwN6LzSSSOOIDwe-2APOo_TlHzIWreL5mZ49hbFHI45BLJujpAjp1aj_o7yT_lGXTLEpH2dwVKw
-9cd8a2455b1839ff98ef70c05b9b5983|file:///home/zac/development/gpt/config.json|1|3|v|json
-	Authorization
-4246e2c243b2d58a58713760ab2515e8|file:///home/zac/development/gpt/config.json|1|997|v|json
-	, "session_token": null
-b0c80ff6ab8d9078a842ccca669c0ac6|file:///home/zac/development/gpt/config.json|1|1|V|json
-	{"Authorization": "", "session_token": null}
-2f96a56c6fd89c1b716528a2514db963|file:///home/zac/development/gpt/config.json|2|14|v|json
-	<EMAIL>
-27cdce9a2e309780baa9382c74aad69e|file:///home/zac/development/gpt/config.json|3|18|v|json
-	<PASSWORD>
+	" Disable ultisnips in CoCG
+c8e40c2ee5fcfc458520ffadc7788026|file:///home/zac/dotfiles/nvim/config/coc.vim|173|27|V|vim
+	snippets.ultisnips.enable: false
+a0e2e9aa7e15b5afe36d4aeba35e4a6f|file:///home/zac/dotfiles/nvim/init.vim|49|1|V|vim
+	>>>>>>> Stashed changes
+0fff0363e05fc6120d104e30db17e736|file:///home/zac/dotfiles/nvim/init.vim|44|1|V|vim
+	<<<<<<< Updated upstream
+	=======
