@@ -16,10 +16,8 @@ Plug 'mattn/emmet-vim'
 "Plug 'unblevable/quick-scope'
 
 "Snippets
-"Plug 'sirver/ultisnips'
+Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
-" Disable CoC snippets
-let g:coc_snippet_enable = 'false'
 
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -139,7 +137,7 @@ set splitright
 :highlight Pmenu ctermbg=gray guibg=gray
 
 " Use the right python
-let g:python3_host_prog = '/opt/homebrew/bin/python3.11'
+"let g:python3_host_prog = '/opt/homebrew/bin/python3.11'
 
 "Smartf
 "" press <esc> to cancel.

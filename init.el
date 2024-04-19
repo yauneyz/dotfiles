@@ -15,8 +15,8 @@
 
 (package-initialize)
 
-(when (memq window-system '(mac ns x))
-	(exec-path-from-shell-initialize))
+;(when (memq window-system '(mac ns x))
+	;(exec-path-from-shell-initialize))
 
 (unless package-archive-contents
  (package-refresh-contents))

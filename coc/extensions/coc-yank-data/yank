@@ -1,208 +1,3 @@
-9d1cba36ef0de5e089dc55367eed19e5|file:///home/zac/development/research/thesis/draft/thesis.tex|476|10|v|latex
-	Layer-wise sparsity levels resulting from pruning ResNet50 with a variety of methods. ResNet50 layers are divided into two different groups, convolutional layers and shortcut layers. The x-axis represents increasing depth within the network. We can see that "coherence\_best" and "magnitude\_worst" severely pruned the early layers, which is likely responsible for the lesser performance of the resulting networks.
-8a54498b46a627952fab3896f91cd5f4|file:///home/zac/development/research/thesis/draft/thesis.tex|482|148|v|latex
-	convolutional layers and shortcut layers
-021bf6b2d77bf3d8bb5d4089a9a58af0|file:///home/zac/development/research/thesis/draft/thesis.tex|482|271|v|latex
-	We can see that "coherence\_best" and "magnitude\_worst" severely pruned the early layers, which is likely responsible for the lesser performance of the resulting networks.}
-87bfda183c4f851a101e97bbb1bbace7|file:///home/zac/development/research/thesis/draft/thesis.tex|490|83|v|latex
-	Layers
-3a584b57cf978fe356e941792e274410|file:///home/zac/development/research/thesis/draft/thesis.tex|490|176|v|latex
-	meaning layers with parameters that ranked higher in "importance" were pruned less than "unimportant" layers.
-729fccc149500efa0cb31a12e6e341f5|file:///home/zac/development/research/thesis/draft/thesis.tex|490|10|v|latex
-	Results for pruning ResNet50 to 10\% sparsity using various techniques. As opposed to Figure \ref{fig:pruned_resnet}, layers were pruned uniformly to 10\% sparsity, which corrected the poor performance of the "coherence\_best" mask.
-d53410e0224382ff99153246a679f83b|file:///home/zac/development/research/thesis/draft/thesis.tex|496|115|v|latex
-	resnet
-2c3bcb7e01dff47d5a4beb240381f464|file:///home/zac/development/research/thesis/draft/thesis.tex|496|166|v|latex
-	, which corrected the poor performance of the "coherence\_best" mask.
-ae7617dad8dd8819ac9afbdc2bf10a6b|file:///home/zac/development/research/thesis/draft/todo|49|11|V|
-	Captions on each image in 5 & 7
-	Analysis & Conclusion
-cf24c584ff5dd144533e283c12d25ab3|file:///home/zac/development/research/thesis/draft/todo|49|11|V|
-	Captions on each image in 5 & 7
-3c766af11bb75432e6181daaf4e52058|file:///home/zac/development/research/thesis/draft/thesis.tex|506|99|v|latex
-	value of the 
-c475929c0705e83ae00ac81f800eded2|file:///home/zac/development/research/thesis/draft/thesis.tex|506|95|v|latex
-	the usefulness of gradient coherence as a metric
-c9e825f4641cd3bec0ba01a0c2d67755|file:///home/zac/development/research/thesis/draft/thesis.tex|506|85|v|latex
-	validated
-d062f20cfe96a4fbfd41e87fd18305a6|file:///home/zac/development/research/thesis/draft/thesis.tex|506|85|v|latex
-	further established that coherence behaves differently  
-d8eb87629476878cb0ec2349ae109cde|file:///home/zac/development/research/thesis/draft/thesis.tex|506|327|v|latex
-	drawing
-4d36782e299e7ba6142da88b2a1df7b5|file:///home/zac/development/research/thesis/draft/thesis.tex|509|2|v|latex
-	emph
-099cbda6d10dc5fe15e843a82df9b91f|file:///home/zac/development/research/thesis/draft/thesis.tex|511|46|v|latex
-	did in fact
-3cddbb8f43a4e074e2c2ce3e8622f43e|file:///home/zac/development/research/thesis/draft/thesis.tex|511|1|v|latex
-	While
-db7432a1941282b206103390b5de19f1|file:///home/zac/development/research/thesis/draft/thesis.tex|511|159|v|latex
-	the real or random 
-bbd08f483048016bb67db291cd20b109|file:///home/zac/development/research/thesis/draft/thesis.tex|511|277|v|latex
-	is this true when
-c1230b547f75b91cd9d32be8c98347d9|file:///home/zac/development/research/thesis/draft/thesis.tex|511|374|v|latex
-	with fully tra
-a94ce62511f9d494d655fc995823b502|file:///home/zac/development/research/thesis/draft/thesis.tex|511|400|v|latex
-	trianed
-f7ffea19be83c0f29b57bb5247d9638d|file:///home/zac/development/research/thesis/draft/thesis.tex|511|461|v|latex
-	a function of mo 
-9b281a5b940628c524c051db3411b312|file:///home/zac/development/research/thesis/draft/thesis.tex|511|511|v|latex
-	but rather
-8d966b2253a917086c8604959e152243|file:///home/zac/development/research/thesis/draft/thesis.tex|514|12|v|latex
-	high
-3e444980b6b976553c9aa1a98f7a5a43|file:///home/zac/development/research/thesis/draft/thesis.tex|514|220|v|latex
-	reinforce
-ac15dd302601bdac753596694ac78093|file:///home/zac/development/research/thesis/draft/thesis.tex|514|226|v|latex
-	experimental
-b82c91e2103d0a495c099f0a12f66363|file:///home/zac/development/research/thesis/draft/thesis.tex|514|253|v|latex
-	fact
-cf5ef37547efc193e8861e30768b5874|file:///home/zac/development/research/thesis/draft/thesis.tex|516|23|v|latex
-	different when 
-fee0d35a6ab7adbbb93f3f25e8516ca4|file:///home/zac/development/research/thesis/draft/thesis.tex|516|35|v|latex
-	distributed more 
-46f834e271c5730a7dca0e790d5b2f5c|file:///home/zac/development/research/thesis/draft/thesis.tex|517|1|V|latex
-	Instead o
-8ec8b237570136752ca034e807f9c005|file:///home/zac/development/research/thesis/draft/thesis.tex|519|8|v|latex
-	connectino betw
-5d1206d9b53b01c4bd7c84325fc5ef5a|file:///home/zac/development/research/thesis/draft/thesis.tex|515|90|v|latex
-	Figures \ref{fig:diffs_resnet} and \ref{fig:diffs_vit}
-31eafc2e81745d583dcebd51161d1a81|file:///home/zac/development/research/thesis/draft/thesis.tex|519|206|v|latex
-	We will offer some speculation as to why this is the case: 
-31fe0adf5529d0a0877d7c5e3766645f|file:///home/zac/development/research/thesis/draft/thesis.tex|519|215|v|latex
-	pesssi
-22d9fd04d5c29545dc056faf9a828379|file:///home/zac/development/research/thesis/draft/thesis.tex|519|210|v|latex
-	most cr
-ff9870d7d5765cf145276636ec7c95ff|file:///home/zac/development/research/thesis/draft/thesis.tex|519|538|v|latex
-	Max coherence epochs are 
-5227703ddd74afef57c7c96be8c66b86|file:///home/zac/development/research/thesis/draft/thesis.tex|519|598|v|latex
-	settles down when 
-c185ddac8b5a8f5aa23c5b80bc12d214|file:///home/zac/development/research/thesis/draft/thesis.tex|519|691|v|latex
-	training
-afacdb0a401ccdf6b48551bbc00e8a74|file:///home/zac/development/research/thesis/draft/thesis.tex|519|678|v|latex
-	large
-1057daf6d976cf355e0283d7290662ef|file:///home/zac/development/research/thesis/draft/thesis.tex|519|828|v|latex
-	diffs are ac
-439aebb86240eb2ff71dff0235895d89|file:///home/zac/development/research/thesis/draft/thesis.tex|519|860|v|latex
-	meausre
-3ced50da7ee32cb2aaf727f4cd098891|file:///home/zac/development/research/thesis/draft/thesis.tex|519|918|v|latex
-	 This might expa
-4b303e98b7be6de7fac24b19f3fa8ba2|file:///home/zac/development/research/thesis/draft/thesis.tex|517|87|v|latex
-	analogy
-192fd36a2381a32a22ebccc8cfe1df68|file:///home/zac/development/research/thesis/draft/thesis.tex|517|76|v|latex
-	making the link be
-16659c88cc972f08942dfd22526c31b5|file:///home/zac/development/research/thesis/draft/thesis.tex|521|32|v|latex
-	higher in networks with more parameters, but this rule is not strict
-5a3b59822122b957b4fe54e3f3c06bda|file:///home/zac/development/research/thesis/draft/thesis.tex|523|43|v|latex
-	shows
-d7082253900b28e083b0922a5499dec8|file:///home/zac/development/research/thesis/draft/thesis.tex|523|220|v|latex
-	The existence of the second
-d4db20b2db87d4d665369671128b9da9|file:///home/zac/development/research/thesis/draft/thesis.tex|523|235|v|latex
-	is pre
-8cc8c7169d508693fc841cb9034c21c9|file:///home/zac/development/research/thesis/draft/thesis.tex|523|336|v|latex
-	The second peak is a mystery 
-363be2229e23b980f383d63a15338335|file:///home/zac/development/research/thesis/draft/thesis.tex|535|66|V|latex
-	% Why are diffs small when coherence is high, section 3 width 2500
-6d762af1da6190caecd4906563bca65d|file:///home/zac/development/research/thesis/draft/thesis.tex|517|9|v|latex
-	Diffs
-c7ebf60783f74aa3b7d1012e1d4bb3e6|file:///home/zac/development/research/thesis/draft/thesis.tex|517|9|v|latex
-	 measured 
-4cf12aa004c992c45f5ddced18268534|file:///home/zac/development/research/thesis/draft/thesis.tex|519|220|v|latex
-	s seem to narr
-b9fbc8cd5b58b815b1b80a578f05a381|file:///home/zac/development/research/thesis/draft/thesis.tex|517|111|V|latex
-	\textbf{Just because a network achieves higher max coherence, that doesn't mean that the diffs will be larger}
-	
-	Figure \ref{fig:linear_diffs} shows that even though the width 2500 network has higher max coherence (as seen in Figure \ref{fig:linear_coherence_results}), the diffs are generally narrower than the other. In fact, diff distributions seem to narrow with the width of the network.
-c06e46cc92467498ba5f3701c1520238|file:///home/zac/development/research/thesis/draft/thesis.tex|525|41|v|latex
-	higherer
-b93db188572fc4d76cce5660f3823b0a|file:///home/zac/development/research/thesis/draft/thesis.tex|525|97|v|latex
-	mean
-9af3018c3af19acaa267b29c018250d8|file:///home/zac/development/research/thesis/draft/thesis.tex|529|1|V|latex
-	% Diffs seem to be a messy proxy for coherence - certainly not perfect; we know some of their characteristics
-ee297972fb18b2587dcf7b82415b5ab2|file:///home/zac/development/research/thesis/draft/thesis.tex|530|30|v|latex
-	significantly
-97ed2f3e761f65b49a2ea45253762c84|file:///home/zac/development/research/thesis/draft/thesis.tex|531|1|V|latex
-	The existn e
-d2165ee2216a8629b2741c99899778cf|file:///home/zac/development/research/thesis/draft/thesis.tex|531|17|v|latex
-	pruned_linear_results
-3ea6ad54b862a36837297d2faa6bcbfb|file:///home/zac/development/research/thesis/draft/thesis.tex|531|1|V|latex
-	Figure \ref{fig:pruned_linear_generalization_gap} shows that the dense network had the worst generalization, followed by magnit
-666df2f48cd16f38212c093999248769|file:///home/zac/development/research/thesis/draft/thesis.tex|531|1|v|latex
-	Figure
-f6e1591c5d676deab387db1f189b5145|file:///home/zac/development/research/thesis/draft/thesis.tex|531|65|v|latex
-	shows that the dense network had the worst generalization, followed by magnit
-d438ab6301571e66a1bf93c50e57ef04|file:///home/zac/development/research/thesis/draft/thesis.tex|531|77|v|latex
-	 coherence
-2d2dee7af60385a060eae7f556845a8b|file:///home/zac/development/research/thesis/draft/thesis.tex|531|125|v|latex
-	diff
-fb7e68e275c31e550a500541d0896cf5|file:///home/zac/development/research/thesis/draft/thesis.tex|531|157|v|latex
-	bets
-094e30ce1f8f59e115cdc0ed66a99c0a|file:///home/zac/development/research/thesis/draft/thesis.tex|531|153|v|latex
-	the be 
-d79f3d7588e8c563318107b7c945c699|file:///home/zac/development/research/thesis/draft/thesis.tex|531|1|V|latex
-	The results found in \ref{fig:pruned_linear_generalization_gap} suggest that coherence pruning might generalize better than magnitude pruning. However, the fact that random pruning generalizes so well calls this into question. If random pruning does well, then could it be the case that coherence pruning simply does a better job of approximating random pruning and thus generalizes better?
-74409f763e0be0add016cc41e4f993fe|file:///home/zac/development/research/thesis/draft/thesis.tex|531|127|v|latex
-	lack
-a79bfce4dbcb72d6e55d997981ba4831|file:///home/zac/development/research/thesis/draft/thesis.tex|531|55|v|latex
-	for the results
-8d0bd951897fdbc5c5ec4d737322535a|file:///home/zac/development/research/thesis/draft/thesis.tex|531|294|v|latex
-	this smaller generalization gap is actually performed 
-a3316d7601571d0fceabf7ccd3f74fa4|file:///home/zac/development/research/thesis/draft/thesis.tex|531|345|v|latex
-	higher test accuary and lower training 
-dcffd0ba43765cadd3cceb1f6b97d428|file:///home/zac/development/research/thesis/draft/thesis.tex|531|400|v|latex
-	the exact
-f870bc9c8ab9bdbb7d7e3535c8534c62|file:///home/zac/development/research/thesis/draft/thesis.tex|529|30|v|latex
-	perform and
-5bf4689821e4b226f699bc002ee87c19|file:///home/zac/development/research/thesis/draft/thesis.tex|529|84|v|latex
-	. Among pruning methods, coherence pruning may generalize better than magnitude pruning.
-acfbfd284d916ceea4d78e790fece1b1|file:///home/zac/development/research/thesis/draft/thesis.tex|533|38|V|latex
-	As for coherence and magnitude pruning
-6317a75354d74be1e2548cc9b6f60da3|file:///home/zac/development/research/thesis/draft/thesis.tex|534|9|v|latex
-	Scaling the size of the parent 
-c05f6c233521207f6fe311afef550c3c|file:///home/zac/development/research/thesis/draft/thesis.tex|534|13|v|latex
-	performance
-f70cf526b32d5c73a944d9850b898355|file:///home/zac/development/research/thesis/draft/thesis.tex|534|13|v|latex
-	generalization
-ebe49a025c73ffcefe31bb759ddc7365|file:///home/zac/development/research/thesis/draft/thesis.tex|535|1|V|latex
-	The journey of 
-d1a3b0a174faef4b1daa78645a6fb875|file:///home/zac/development/research/thesis/draft/thesis.tex|535|129|v|latex
-	they are 
-185be049b3e1fa0ecad8a242a9c4460e|file:///home/zac/development/research/thesis/draft/thesis.tex|535|224|v|latex
-	This points to 
-479529ad09cc603016dcd5c9619a07ce|file:///home/zac/development/research/thesis/draft/thesis.tex|535|261|v|latex
-	and yet small models
-1b20e9021b3a16b059287caddc7862f6|file:///home/zac/development/research/thesis/draft/thesis.tex|535|364|v|latex
-	building
-a6228432c84d84dc89ffcc89e418ba1f|file:///home/zac/development/research/thesis/draft/thesis.tex|535|397|v|latex
-	then leverage that spend 
-625b4990c02e3a2506f52c858c90844d|file:///home/zac/development/research/thesis/draft/thesis.tex|538|67|V|latex
-	% Scaling law for parent network size vs pruned network performance
-3e96e59a8c116790a82e162215257c1e|file:///home/zac/development/research/thesis/draft/thesis.tex|537|1|V|latex
-	% Magnitude pruning might be good, but it really isn't that much better than magnitude worst, so do we actually understand pruning nearly as well as we would like to think we do?
-270a679029e78cb636dea0196b12a900|file:///home/zac/development/research/thesis/draft/thesis.tex|549|1|V|latex
-	% Pruning by iteratively pushing both the parent size and the sparsity ratio, almost like a grid search
-6234c641c4eb475f138ab321bb027c0c|file:///home/zac/development/research/thesis/draft/thesis.tex|537|1|V|latex
-	% Random pruning is really strong, but we already knew that
-a231c665079e561fb2acbcc3028f9397|file:///home/zac/development/research/thesis/draft/thesis.tex|537|87|v|latex
-	much compu
-fdbf95f97eda75bbad0851b0138aaaed|file:///home/zac/development/research/thesis/draft/thesis.tex|538|11|V|latex
-	% Early mag
-db8d866e6e1cfb4c0a3a909c3021d685|file:///home/zac/development/research/thesis/draft/thesis.tex|538|80|v|latex
-	particulalry
-0fcf484173ae3fa80060d97efdf4aa07|file:///home/zac/development/research/thesis/draft/thesis.tex|538|188|v|latex
-	large model p
-e95594c16b1319a7ae3d8943d84852ff|file:///home/zac/development/research/thesis/draft/thesis.tex|538|328|v|latex
-	 when masking
-657e0e4ded391b1afdc0be70f37c8a14|file:///home/zac/development/research/thesis/draft/thesis.tex|538|627|v|latex
-	tn the world
-35341b6b7e526f5448c83aed8ceecc8a|file:///home/zac/development/research/thesis/draft/thesis.tex|544|22|v|latex
-	 and Conclusion
-ac67ede5a84eb5a1add7ff4440e9a485|file:///home/zac/development/research/thesis/draft/thesis.tex|540|700|v|latex
-	required
-8a70a06bceafa5fa71d2fec214279084|file:///home/zac/development/research/thesis/draft/thesis.tex|540|831|v|latex
-	there is  
-48488cd6efa29e723cb4cfe52eeee62c|file:///home/zac/development/research/thesis/draft/thesis.tex|540|836|v|latex
-	there is a use for chooseing
-1c0a6d7b66409e8ec948e429b924493d|file:///home/zac/development/research/thesis/draft/thesis.tex|540|874|v|latex
-	cheapen
 9ecf00e0c7cf10e958f3f9bfb05f1885|file:///home/zac/development/research/thesis/draft/thesis.tex|541|1|V|latex
 	% Coherence-based pruning works sometimes, not others; It is useful because it can be calculated much earlier in the training process than magnitude pruning can
 	% Random pruning works well for the larger networks, coherence and magnitude pruning work better for the smaller networks
@@ -621,3 +416,327 @@ a0e2e9aa7e15b5afe36d4aeba35e4a6f|file:///home/zac/dotfiles/nvim/init.vim|49|1|V|
 0fff0363e05fc6120d104e30db17e736|file:///home/zac/dotfiles/nvim/init.vim|44|1|V|vim
 	<<<<<<< Updated upstream
 	=======
+91ccbe0a00f9797dbeb5b4f9a26d8b27|file:///home/zac/development/research/thesis/defense_outline|5|33|V|
+	- gravity: are large diffs just movement in weight space? (the answer is no)
+	-- magnitude distribution
+	-- Coherence on normal vs gravity
+f01e95f63a4afd0ff31cb1f733e283ed|file:///home/zac/development/research/thesis/defense_outline|4|1|V|
+	Gradient coherence - what is it, why does it matter?
+4606dd129ab0b3ff65d988817bddee2c|file:///home/zac/development/research/thesis/defense_outline|32|1|V|
+	- generalization gap grows as a fun
+d0b407cfcc61a5dc50618fd322cb0069|file:///home/zac/development/research/thesis/defense_outline|34|20|V|
+	- generalization gap
+4b98aad59701619b9a24f2bf9c1f88e7|file:///home/zac/development/research/thesis/defense_outline|35|7|v|
+	 densities 
+fcaafe4ed266082f60157c30be1b7848|file:///home/zac/development/research/thesis/defense_outline|37|29|V|
+	Coherence and Generalization:
+34ce4494c816f8c15e87e49eac4e7d5a|file:///home/zac/development/research/thesis/defense_outline|39|53|v|
+	in good performance
+3d596bda2721dafeef1eb8345a5bc44b|file:///home/zac/development/research/thesis/defense_outline|40|37|V|
+	-- the gains are best for random and 
+0fe4dc5f36cfe531d4cd5117109f686a|file:///home/zac/development/research/thesis/draft/todo|1|1|V|
+	Fix all the graphs
+dc0fefee9f936ac3b69f1b67c5bc1bc9|file:///home/zac/development/research/thesis/draft/todo|16|39|V|
+	- also calculate coherence after every 
+9e25d28fbf5c51523e4f5850825141f4|file:///home/zac/development/research/thesis/draft/todo|31|1|V|
+	Don't save lots of models, but record
+01a6651a94ab602dbfc47587d234b52c|file:///home/zac/development/research/thesis/draft/todo|31|10|V|
+	----------
+4637f5de2458d0d862fba58d55aa8b9d|file:///home/zac/development/research/thesis/draft/todo|46|1|V|
+	Error ba
+6fdfdc385ddc7ccd81a911db8b2123c4|file:///home/zac/development/research/thesis/draft/todo|47|1|V|
+	Always 
+a4a694a6acf92d68917c4e275b7a4a10|file:///home/zac/development/research/thesis/draft/todo|47|23|V|
+	Clears the model files 
+baf390abfcc57268d3ede494a94253b4|file:///home/zac/development/research/thesis/draft/todo|48|10|V|
+	- contains
+807c6ef5bd24fd135df62b6fca42d8ec|file:///home/zac/development/research/thesis/draft/todo|53|15|V|
+	Update the mask
+2cd96b9522b0e852d26deb8002e2c4d0|file:///home/zac/development/research/thesis/draft/todo|50|1|V|
+	*** Run the unmasked models for everything***
+787feaa4343b1f10fdf961b62e02e13f|file:///home/zac/development/research/thesis/draft/todo|54|13|v|
+	unmasked
+03b40d1a6bcf7acb4619df7bb7ca6ee5|file:///home/zac/dotfiles/nvim/init.vim|21|1|V|vim
+	" Disable CoC snippets
+	let g:coc_snippet_enable = 'false'
+d0b59483941cd96619320ef32215095a|file:///home/zac/development/research/thesis/draft/todo|52|14|V|
+	-Resnet50 real/random
+a368b30a7cf9aba627d30963facd7d0d|file:///home/zac/development/research/thesis/draft/todo|46|48|v|
+	 times with that number of epochs,
+9fa6d987b48b8dc9cdecdc67d300f128|file:///home/zac/development/research/thesis/draft/todo|47|1|V|
+	Creates a folder with 5 different results files, organized by results/model/dataset/mask
+15b5f5117cf2429fee71a77a13bad062|file:///home/zac/development/research/thesis/draft/todo|47|1|V|
+	Compute cold
+5f87b706e75e1c8a1c3c4b5748ef60b1|file:///home/zac/development/research/thesis/src/compute/scheduler.py|440|1|V|python
+	    # ----- Section 3: Linear Coherence - ----
+	
+	    # print("Training Linear Models")
+	    # train_linear_models()
+	
+	    # print("Computing linear coherence...")
+	    # linear_coherence(overwrite=True)
+	
+	    # print("Computing linear diffs")
+	    # linear_diffs(overwrite=True)
+9802cd6f054afbb8ef7bf6c754386e4d|file:///home/zac/development/research/thesis/src/compute/scheduler.py|76|58|V|python
+	        run_id = get_run_id(model_id, mask_id, dataset_id)
+8c9dda66d9720d6560429f349db9832c|file:///home/zac/development/research/thesis/src/train.py|19|5|V|python
+	          save_masked=False,
+b59f20632d4affc0bd6d722b26b19e18|file:///home/zac/development/research/thesis/src/train.py|21|5|V|python
+	          resume=False,
+480f0233956950314ee65cc70af96d44|file:///home/zac/development/research/thesis/src/train.py|21|11|v|python
+	overwrite=True
+2619bcc21a20c143a55582566ba51d8a|file:///home/zac/development/research/thesis/src/train.py|33|35|v|python
+	 and (mask_id == 'none' or save_masked)
+ead596080dfb5e80c8f3e6353efd0009|file:///home/zac/development/research/thesis/src/train.py|39|67|V|python
+	    # If the model directory isn't empty, then we should overwrite
+	    if (mask_id == 'none' or
+	            save_masked) and len(os.listdir(models_dir)) > 0 and not overwrite:
+	        return
+f8320b26d30ab433c5a54546d21f414c|file:///home/zac/development/research/thesis/src/train.py|23|15|v|python
+	False
+5f83821f049ffcc406283d05187ed1e3|file:///home/zac/development/research/thesis/src/train.py|51|1|V|python
+	    if resume:
+	        # Load the model
+	        trained_weights = get_trained_weights(id)
+	        model.load_state_dict(trained_weights)
+	
+	        max_epoch = get_max_epoch(id)
+	    else:
+	        max_epoch = 0
+	
+0d505b2b34d2b42ccba446e6828fa449|file:///home/zac/development/research/thesis/src/train.py|65|22|v|python
+	max_epoch + 1, 
+f96aab434fc23bf57b80a44ad175e57a|file:///home/zac/development/research/thesis/src/train.py|123|43|v|python
+	0, 0
+0acf093b3c88f5600dc622a33921d360|file:///home/zac/development/research/thesis/src/compute/coherence.py|11|25|v|python
+	run_id
+46939c04785ee48204d67416ca2de9a4|file:///home/zac/development/research/thesis/src/compute/coherence.py|11|51|v|python
+	epoch, 
+22bcac48f5bb99a26f86c27c256ba4c0|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|51|V|python
+	    outdir = os.path.join("intermediate", "coherence", run_id,
+	                          target_dataset_id)
+d2b6e495c96893bbd58324ad8f5b8ae8|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|1|V|python
+	    if not os.path.exists(outdir):
+	        os.makedirs(outdir)
+31eba712150904f41956151f19f7a2f7|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|1|V|python
+	
+	    outfile = os.path.join(outdir, f"{epoch}_train.feather")
+	
+	    if os.path.exists(outfile) and not overwrite:
+	        return
+f6cb5fca634406d60d1e60f68fa13564|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|1|V|python
+	
+	    model_id = get_model_id(run_id)
+	
+	    # Set up directories
+	    models_dir = os.path.join("models", run_id)
+	    model_path = os.path.join(models_dir, f"{epoch}.pt")
+	
+	    # If the model file doesn't exist, skip
+	    if not os.path.exists(model_path):
+	        return
+	
+	    # Load the model
+	    model = get_model(model_id)
+	    layers, _ = get_layers(model_id)
+	    model.load_state_dict(torch.load(model_path))
+3576b3cb047363d7711f9f193765abba|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|1|V|python
+	    model.cuda()
+5d72fbe3e2195512365b9baac1bd2679|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|1|V|python
+	    # Calculate a mask if we need to
+	    masked = get_mask_id(run_id) != "none"
+	    mask = None
+	    if masked:
+	        # Mask is where the model is non-zero
+	        mask = {
+	            layer: torch.abs(param) > 0
+	            for layer, param in model.named_parameters()
+	        }
+5ee53223ef2c4e4af9ed4ccbbafe25fc|file:///home/zac/development/research/thesis/src/compute/coherence.py|17|27|v|python
+	, layers, mask=mask
+704020999209b536cf2cbf57f4c5752e|file:///home/zac/development/research/thesis/src/compute/coherence.py|69|50|v|python
+	, layers, mask=None
+f6cb0c9c0b31ffb27d00caf3c2e25f66|file:///home/zac/development/research/thesis/src/compute/coherence.py|69|33|v|python
+	dataloader, 
+10c6a3bf19cf6854d71dd34934030471|file:///home/zac/development/research/thesis/src/compute/coherence.py|69|5|v|python
+	calculate_dataset
+74de5f83b824a0d47db6b7616b6f1842|file:///home/zac/development/research/thesis/src/compute/coherence.py|75|7|V|python
+	    layer_denom = {layer: 0 for layer in layers}
+2ec3cc18be83c08d915cad287fd303e6|file:///home/zac/development/research/thesis/src/compute/coherence.py|71|1|V|python
+	    grad_layer_store = {
+	        layer: torch.zeros_like(param)
+	        for layer, param in model.named_parameters()
+	    }
+443d338cb6c41a6dfadedde752f95464|file:///home/zac/development/research/thesis/src/compute/coherence.py|71|1|V|python
+	    trainloader, testloader = load_dataset(dataset_id)
+d366d308c745e26a5bd7aae961cbf98d|file:///home/zac/development/research/thesis/src/compute/coherence.py|69|26|v|python
+	dataset_id
+372dfc298e54c738bad7e214bacbfee6|file:///home/zac/development/research/thesis/src/compute/coherence.py|78|1|V|python
+	        if mask is not None:
+	            grad = {layer: grad[layer] * mask[layer] for layer in grad}
+89f2211d0cc72299fcae0a83480c2c01|file:///home/zac/development/research/thesis/src/compute/coherence.py|78|1|V|python
+	
+	        # Layer coherence
+	        for layer in layers:
+	            grad_layer_store[layer] += grad[layer]
+	            layer_denom[layer] += np.dot(grad[layer].cpu().flatten(),
+	                                         grad[layer].cpu().flatten())
+c6a319f05fd0ac9115e88e40c8b15437|file:///home/zac/development/research/thesis/src/compute/coherence.py|82|28|V|python
+	        if mask is not None:
+	            grad = {layer: grad[layer] * mask[layer] for layer in grad}
+	
+	        # Layer coherence
+	        for layer in layers:
+	            grad_layer_store[layer] += grad[layer]
+	            layer_denom[layer] += np.dot(grad[layer].cpu().flatten(),
+	                                         grad[layer].cpu().flatten())
+aa292f2aa620cd815bef2503fda49342|file:///home/zac/development/research/thesis/src/compute/coherence.py|83|22|v|python
+	layers
+c323d4f84b2e1701122c6fe02c632f86|file:///home/zac/development/research/thesis/src/compute/coherence.py|85|1|V|python
+	            layer_denom[layer] += np.dot(grad[layer].cpu().flatten(),
+	                                         grad[layer].cpu().flatten())
+ab129ab9e7c6e2226992309c426a5830|file:///home/zac/development/research/thesis/src/compute/coherence.py|100|1|V|python
+	    # Compute the coherence
+	    coherence = {
+	        layer:
+	        (np.dot(grad_layer_store[layer].cpu().flatten(),
+	                grad_layer_store[layer].cpu().flatten()) / layer_denom[layer])
+	        / len(dataloader)
+	        for layer in layers
+	    }
+cd5c92c20af5c58b1d73dbb8733d5cc0|file:///home/zac/development/research/thesis/src/compute/coherence.py|100|1|V|python
+	    # Turn into dataframe
+	    coherence = pd.DataFrame.from_dict(coherence, orient='index').reset_index()
+	    coherence.columns = ['layer', 'coherence']
+c55d5083bb60ee2b4d4c12f9c81898e0|file:///home/zac/development/research/thesis/src/compute/coherence.py|100|12|v|python
+	coherence, 
+8ff4d9a09b03ffc33abd91a921967ea0|file:///home/zac/development/research/thesis/src/train.py|124|24|v|python
+	, test_coherence 
+a051adc077334fa58dd4c3abee9a4de1|file:///home/zac/development/research/thesis/src/train.py|131|47|V|python
+	        train_accuracies.append(train_accuracy)
+03c034697d7472524bd4c28d68bd7871|file:///home/zac/development/research/thesis/src/train.py|143|29|v|python
+	 or save_masked
+b524c1c6d68bda56b0716f436afb91d5|file:///home/zac/development/research/thesis/src/train.py|34|1|V|python
+	    id = get_run_id(model_id, run_mask_id, dataset_id,
+	                    optimizer_id) + f'_{run_number}'
+bd75b7df8e5add0a3e7123e31959f7d0|file:///home/zac/development/research/thesis/src/train.py|166|1|V|python
+	    # If we have already saved results, append to them
+	    if resume:
+	        try:
+	            results = pd.read_csv(f'results/{id}.csv')
+	            df = pd.concat([results, df])
+	        except FileNotFoundError:
+	            print("No results file found, creating a new one")
+6d63a1ea2131c7fca0c5af2a65096e68|file:///home/zac/development/research/thesis/src/compute/scheduler.py|84|1|V|python
+	    train('resnet50', 'none', 'cifar_gaussian', epochs, resume=True)
+	    train('resnet50', 'none', 'cifar_normal', epochs, overwrite=False)
+	    train('resnet50200', 'none', 'cifar_gaussian', epochs, overwrite=False)
+d79a7112626097196941f4bf3be5849e|file:///home/zac/development/research/thesis/src/compute/scheduler.py|83|14|V|python
+	    epochs = 500
+36485149435d99ad961d2158345b7674|file:///home/zac/development/research/thesis/src/compute/scheduler.py|83|55|v|python
+	epochs
+1f1371b268423562a4fdea7d166f766a|file:///home/zac/development/research/thesis/src/compute/scheduler.py|84|1|V|python
+	    multiple_runs('resnet50', 'none', 'cifar_gaussian',
+	                  epochs=1000, num_runs=5)
+572d26bac6d6c8c6bd3b0454ff84119a|file:///home/zac/development/research/thesis/src/compute/scheduler.py|90|1|V|python
+	    epochs = 300
+aa126487e4ee383cc92c17e42b340230|file:///home/zac/development/research/thesis/src/compute/scheduler.py|90|1|V|python
+	    train('vit', 'none', 'cifar_normal', epochs, overwrite=True)
+	    train('vit', 'none', 'cifar_gaussian', epochs, overwrite=True)
+	    train('vit200', 'none', 'cifar_gaussian', epochs, overwrite=True)
+7f31e52cf28ed8d8f98da42b2f9b41be|file:///home/zac/dotfiles/nvim/init.vim|11|3|V|vim
+	" Set nerdcommenter to use comma as leader
+	" let g:NERDSpaceDelims = 1
+	" let g:NERDCommentEmptyLines = 1
+	" let g:NERDCreateDefaultMappings = 0
+	" let g:NERDDefaultAlign = 'left'
+	" let g:NERDSpaceDelims = 1
+	" let g:NERDCommentEmptyLines = 1
+	"
+6d7f358f955db88562b655d8c1939591|file:///home/zac/development/research/thesis/src/compute/scheduler.py|188|9|V|python
+	        train(model_id, 'none', dataset_id, epochs, overwrite=overwrite)
+2584063920814d652c9fc3a0e4921c50|file:///home/zac/development/research/thesis/draft/todo|68|1|V|
+	Write the 
+cdd76a2edb9f551071f425ea5fb729b2|file:///home/zac/development/research/thesis/draft/todo|57|2|V|
+	Compute scheduler function
+	Training function
+7906ac09cffee1d2f638f0d3a7758a43|file:///home/zac/development/research/thesis/draft/todo|57|1|V|
+	Make sure things are working
+	Masking function
+	
+	Plotting code
+9c4318f5cc764bee75c332583a5252e6|file:///home/zac/development/research/thesis/draft/todo|63|1|V|
+	Make sure everything is working so far 
+	Wr
+ff4c8ff01d544500ea4bfea43e6108c1|file:///home/zac/development/research/thesis/draft/todo|55|1|V|
+	
+	
+	
+	
+	
+62b972915792c88332c8ed5b89fb70e6|file:///home/zac/development/research/thesis/src/train.py|75|1|V|python
+	    # Set the seed
+	    torch.manual_seed(18)
+99b21162b8e9a85c8e0e1a223e0847c9|file:///home/zac/development/research/thesis/src/train.py|61|5|V|python
+	    pudb
+f6d4b52c6123695001ea8ad863128482|file:///home/zac/development/research/thesis/src/compute/scheduler.py|92|35|V|python
+	    multiple_runs('vit', 'none', 'cifar_normal', epochs=200, num_runs=5)
+	    multiple_runs('vit', 'none', 'cifar_gaussian', epochs=500, num_runs=5)
+fda24749cc7671c0d66a24e212d222b1|file:///home/zac/development/research/thesis/src/train.py|61|1|V|python
+	    import pudb
+	    pudb.set_trace()
+e29f822a42391a2574c72a4158bbf498|file:///home/zac/development/research/thesis/src/train.py|30|1|V|python
+	    epochs_save = list(range(0, 30)) + list(range(30, 100, 3)) + list(
+	        range(100, 1000, 30))
+30cf1d637cac13131059b02e7f919071|file:///home/zac/development/research/thesis/draft/todo|69|22|V|
+	- whichever is closest
+eb5bcf96c0bed4af56935112c1f20a43|file:///home/zac/development/research/thesis/draft/todo|71|1|V|
+	(really all we are doing is changing the calculation of max coherence epoch)
+9af22764acb4d74ba4fdc4f2dff5cda8|file:///home/zac/development/research/thesis/draft/todo|71|51|V|
+	&& Also check that the max coherence epoch is usual
+adae237bc0c9e9664af58f1654586cb2|file:///home/zac/development/research/thesis/src/compute/scheduler.py|85|1|V|python
+	    multiple_runs('resnet50', 'none', 'cifar_normal', epochs=300, num_runs=5)
+35e949f02d4ef63e099ce770bfde2e04|file:///home/zac/development/research/thesis/src/compute/scheduler.py|93|1|V|python
+	    # multiple_runs('vit', 'none', 'cifar_normal', epochs=200, num_runs=5)
+	    # multiple_runs('vit', 'none', 'cifar_gaussian', epochs=500, num_runs=5)
+7f7a49e9692b01bc1af3e3c61f5e304c|file:///home/zac/development/research/thesis/src/train.py|146|27|v|python
+	max_epoch + 1, max_epoch + 1 + 
+f261f3f0750d0ba15c619d3e21ca6856|file:///home/zac/development/research/thesis/src/compute/scheduler.py|86|1|V|python
+	    multiple_runs('resnet50', 'none', 'cifar_normal', epochs=2, num_runs=5)
+9fe85a5efa032d82f8dece19a26757ac|file:///home/zac/development/research/thesis/src/compute/scheduler.py|98|1|V|python
+	    multiple_runs('vit', 'none', 'cifar_normal', epochs=2, num_runs=5)
+	    multiple_runs('vit', 'none', 'cifar_gaussian', epochs=2, num_runs=5)
+1d1813b0407eb8817893d0e0d517487d|file:///home/zac/development/research/thesis/src/compute/scheduler.py|465|1|V|python
+	    train_linear_models()
+78fa964c71c3706ccbaa9dbbba78b8b3|file:///home/zac/development/research/thesis/src/compute/scheduler.py|462|1|V|python
+	    # ----- Section 3: Linear Coherence - ----
+	
+	    # print("Training Linear Models")
+	    train_linear_models()
+	
+	    # print("Computing linear coherence...")
+	    # linear_coherence(overwrite=True)
+	
+	    # print("Computing linear diffs")
+	    # linear_diffs(overwrite=True)
+812c0ec97017a801ce311c46672ca2ff|file:///home/zac/development/research/thesis/draft/thesis.tex|278|12|v|latex
+	linear_results
+34557c30824e12e6ded8235d7ce53b96|file:///home/zac/development/research/thesis/draft/todo|61|16|V|
+	Masking function
+9adec5dabc71303123cfff58580edd72|file:///home/zac/development/research/thesis/draft/todo|56|1|V|
+	=============================================
+b415c733c866ac4e517941f913b8f77d|file:///home/zac/development/research/thesis/draft/thesis.tex|306|172|v|latex
+	 of the network
+5734d0340e1e58b5cdf5bce45f9a6e5e|file:///home/zac/development/research/thesis/draft/todo|63|20|V|
+	Generalization curve
+57765d2713a1d444f3137313162ae01b|file:///home/zac/development/research/thesis/draft/todo|64|1|V|
+	Finish plots
+cde740d6f08b1602750d9a24cf57a52e|file:///home/zac/development/research/thesis/src/compute/scheduler.py|519|27|v|python
+	resnet_only=True, 
+05802668e995bdb86052b978ae1a8ae7|file:///home/zac/development/research/thesis/src/compute/scheduler.py|531|27|V|python
+	    # train_resnet_gaussian()
+3b2e56a370fe8e409c24f1a9c5f1729e|file:///home/zac/development/research/thesis/src/compute/scheduler.py|527|1|V|python
+	    # print("Training Resnet")
+	    # train_resnet()
+	    # resnet_coherence(overwrite=True)
