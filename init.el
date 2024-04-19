@@ -524,7 +524,7 @@
 (setq copilot-indent-offset-warning-disable t)
 
 ;; =========== Font  ===================
-(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
+(set-face-attribute 'default nil :font "Fira Code Retina" :height 180)
 
 
 ;; =========== Keybindings  ===================
