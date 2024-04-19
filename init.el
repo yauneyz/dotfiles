@@ -65,10 +65,9 @@
 ;; All the icons
 (use-package all-the-icons)
 
-;;(scroll-bar-mode -1)        ; Disable visible scrollbar
+(scroll-bar-mode -1)        ; Disable visible scrollbar
 (tool-bar-mode -1)          ; Disable the toolbar
 (tooltip-mode -1)           ; Disable tooltips
-;;(set-fringe-mode 10)       ; Give some breathing room
 (menu-bar-mode -1)            ; Disable the menu bar
 
 ;; =========== Packages ===================
@@ -99,6 +98,11 @@
 ;; Leader Key
 (evil-set-leader 'normal (kbd "SPC"))
 
+;; Evil Surround
+(use-package evil-surround
+	:config
+	(global-evil-surround-mode 1))
+
 ;; Which Key
 (use-package which-key
   :init (which-key-mode)
@@ -123,12 +127,31 @@
 ;; Disable paredt in emacs-lisp-mode
 (add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode 0)))
 
+;; FZF
+(use-package fzf
+  :bind
+    ;; Don't forget to set keybinds!
+  :config
+  (setq fzf/args "-x --color bw --print-query --margin=1,0 --no-hscroll"
+        fzf/executable "fzf"
+        fzf/git-grep-args "-i --line-number %s"
+        ;; command used for `fzf-grep-*` functions
+        ;; example usage for ripgrep:
+        ;; fzf/grep-command "rg --no-heading -nH"
+        fzf/grep-command "grep -nrH"
+        ;; If nil, the fzf buffer will appear at the top of the window
+        fzf/position-bottom t
+        fzf/window-height 15))
+
+;; use ivy with fzf
+
+
 
 ;; NERD Commenter
 (install-if-necessary 'evil-nerd-commenter)
 ;; (evilnc-default-hotkeys)
-(evil-define-key '(normal visual) 'global (kbd ",cc") 'evilnc-comment-or-uncomment-lines)
-(evil-define-key '(normal visual) 'global (kbd ",cu") 'evilnc-comment-or-uncomment-lines)
+(evil-define-key '(normal visual) 'global (kbd "<leader>cc") 'evilnc-comment-or-uncomment-lines)
+(evil-define-key '(normal visual) 'global (kbd "<leader>cu") 'evilnc-comment-or-uncomment-lines)
 
 
 ;; Helpful
@@ -143,6 +166,20 @@
   ([remap describe-variable] . helpful-variable)
   ([remap describe-key] . helpful-key))
 
+;; Pulsar
+(use-package pulsar
+	:config
+	(setq pulsar-pulse t)
+	(setq pulsar-delay 0.055)
+	(setq pulsar-iterations 10)
+	(setq pulsar-face 'pulsar-magenta)
+	(setq pulsar-highlight-face 'pulsar-yellow)
+	(pulsar-global-mode 1))
+
+;; ELscreen
+(use-package elscreen
+	:config
+	(elscreen-start))
 
 ;; Flycheck
 (use-package flycheck
@@ -189,8 +226,24 @@
 
 ;; Ivy Rich
 (use-package ivy-rich
-  :init
+	:after ivy
+  :config
   (ivy-rich-mode 1))
+
+;; Flx for fuzzy matching
+(use-package flx)
+(setq ivy-re-builders-alist
+			'((t . ivy--regex-fuzzy)))
+
+;; Also use prescient for sorting
+(use-package prescient
+	 :config
+	 (prescient-persist-mode 1))
+
+(use-package ivy-prescient
+	:after (ivy prescient)
+	:config
+	(ivy-prescient-mode 1))
 
 ;; Projectile
 (use-package projectile
@@ -203,18 +256,18 @@
   :config (projectile-mode)
   (evil-define-key 'normal 'global (kbd "<leader>p") 'projectile-command-map)
   (add-to-list 'projectile-globally-ignored-directories ".clj-kondo")
-  (setq projectile-mode-line "Projectile"))
-
-(with-eval-after-load 'projectile
-  (add-to-list 'projectile-globally-ignored-directories ".clj-kondo"))
-
+  (setq projectile-mode-line "Projectile")
+	(setq projectile-sort-order 'recently-active)
+	(setq projectile-generic-command "find . -type f -not -path '*/node_modules/*' -not -path '*/build/*' -not -path '*/.clj-kondo/*' -print0")
+)
 
 
 
 
 ;; Counsel Projectile
 (use-package counsel-projectile
-  :config (counsel-projectile-mode))
+  :config (counsel-projectile-mode)
+	:after ivy-prescient)
 
 ;; Magit
 (use-package magit)
@@ -288,6 +341,7 @@
     ;;(treemacs-resize-icons 44)
 
     (treemacs-follow-mode t)
+		(treemacs-project-follow-mode t)
     (treemacs-filewatch-mode t)
     (treemacs-fringe-indicator-mode 'always)
     (when treemacs-python-executable
@@ -398,11 +452,20 @@
   (setq cider-completion-system 'ivy)
   (setq cider-repl-display-help-banner nil))
 
-;; After every save, run cider-format-buffer if in clojure-mode
-(add-hook 'before-save-hook
-	  (lambda ()
-	    (when (eq major-mode 'clojure-mode)
-	      (cider-format-buffer))))
+;; Format All
+(use-package format-all
+  :commands format-all-mode
+  :hook (prog-mode . format-all-mode)
+  :config
+  (setq-default format-all-formatters
+								;; Python
+								'((python-mode "black" "isort")
+									;; Clojure
+									(clojure-mode "cljfmt")
+									;;Rust
+									(rust-mode "rustfmt")
+									;; Emacs Lisp
+									(emacs-lisp-mode "emacs-lisp-formatter"))))
 
 ;; Python
 (use-package python-mode
@@ -429,7 +492,12 @@
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
-  (load-theme 'doom-tokyo-night t))
+	;(load-theme 'doom-tokyo-night t)
+	(load-theme 'doom-rouge t)
+	;(load-theme 'doom-dracula t)
+	;(load-theme 'doom-snazzy t)
+	;(load-theme 'doom-outrun-electric t)
+	)
 
 
 (use-package doom-modeline
@@ -456,7 +524,7 @@
 (setq copilot-indent-offset-warning-disable t)
 
 ;; =========== Font  ===================
-(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
+(set-face-attribute 'default nil :font "Fira Code Retina" :height 180)
 
 
 ;; =========== Keybindings  ===================
@@ -468,17 +536,24 @@
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-;; Window selection like Vim
-(evil-define-key 'normal 'global (kbd "C-h") 'evil-window-left)
-(evil-define-key 'normal 'global (kbd "C-l") 'evil-window-right)
-(evil-define-key 'normal 'global (kbd "C-k") 'evil-window-up)
-(evil-define-key 'normal 'global (kbd "C-j") 'evil-window-down)
+(use-package windmove)
+
+;; Evil keybindings for window movement
+(evil-define-key 'normal 'global (kbd "C-h") 'windmove-left)
+(evil-define-key 'normal 'global (kbd "C-j") 'windmove-down)
+(evil-define-key 'normal 'global (kbd "C-k") 'windmove-up)
+(evil-define-key 'normal 'global (kbd "C-l") 'windmove-right)
+
+;; Repeat for treemacs
+(with-eval-after-load 'treemacs
+  (define-key treemacs-mode-map (kbd "C-h") 'windmove-left)
+  (define-key treemacs-mode-map (kbd "C-j") 'windmove-down)
+  (define-key treemacs-mode-map (kbd "C-k") 'windmove-up)
+  (define-key treemacs-mode-map (kbd "C-l") 'windmove-right))
 
 
 (global-set-key (kbd "C-M-h") 'help-command)
 (global-set-key (kbd "C-x C-b") 'counsel-switch-buffer)
-(global-set-key (kbd "<leader>SPC") 'projectile-find-file)
-(global-set-key (kbd "<leader>g") 'counsel-projectile-rg)
 
 ;; paredit commands
 ;; (evil-define-key 'normal 'global (kbd "C-f") 'paredit-forward)
@@ -490,30 +565,79 @@
 ; Slurp and barf on parentheses and brackets
 
 
-;; In evil normal mode, gd will go to definition
-(evil-define-key 'normal 'global (kbd "gd") 'lsp-find-definition)
-(evil-define-key 'normal 'global (kbd "gl") 'lsp-find-references)
-
 ;; Turn off read-only mode
 (read-only-mode 0)
 
 (setq lsp-pylsp-plugins-autopep8-enabled t)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("da75eceab6bea9298e04ce5b4b07349f8c02da305734f7c0c8c6af7b5eaa9738" default))
- '(helm-minibuffer-history-key "M-p")
- '(package-selected-packages
-   '(exec-path-from-shell winum which-key rainbow-delimiters quelpa-use-package python-mode paredit magit lsp-ui lsp-ivy ivy-rich helpful helm-lsp fzf flycheck evil-nerd-commenter evil-collection elscreen doom-themes doom-modeline dap-mode counsel-projectile company-box command-log-mode cider all-the-icons)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-;; set red background
-;(set-face-attribute 'default nil :background "#1f1f1f")
+;; Fountain mode
+;(use-package fountain-mode)
+
+;; =================== Evil command shortcuts ===================
+
+
+;; Elscreen
+(evil-define-key 'normal 'global (kbd "<leader>sc") 'elscreen-create)
+(evil-define-key 'normal 'global (kbd "<leader>sk") 'elscreen-kill)
+(evil-define-key 'normal 'global (kbd "<leader>sg") 'elscreen-goto)
+(evil-define-key 'normal 'global (kbd "<leader>sp") 'elscreen-previous)
+(evil-define-key 'normal 'global (kbd "<leader>sn") 'elscreen-next)
+(evil-define-key 'normal 'global (kbd "<leader>sb") 'elscreen-find-and-goto-by-buffer)
+(evil-define-key 'normal 'global (kbd "<leader>so") 'elscreen-toggle) ;; Jump to last screen
+
+;; Elscreen with M-h and M-l
+(evil-define-key 'normal 'global (kbd "M-h") 'elscreen-previous)
+(evil-define-key 'normal 'global (kbd "M-l") 'elscreen-next)
+
+;; Treemacs
+(evil-define-key 'normal 'global (kbd "<leader>tt") 'treemacs)
+(evil-define-key 'normal 'global (kbd "<leader>tf") 'treemacs-find-file)
+
+;; Magit
+(evil-define-key 'normal 'global (kbd "<leader>gs") 'magit-status)
+
+;; Cider
+(evil-define-key 'normal 'global (kbd "<leader>cj") 'cider-jack-in)
+(evil-define-key 'normal 'global (kbd "<leader>cl") 'cider-eval-last-sexp)
+(evil-define-key 'normal 'global (kbd "<leader>cb") 'cider-eval-buffer)
+(evil-define-key 'normal 'global (kbd "<leader>cf") 'cider-format-buffer)
+(evil-define-key 'normal 'global (kbd "<leader>cr") 'cider-restart)
+
+;; Emacs lisp
+(evil-define-key 'normal 'global (kbd "<leader>ee") 'eval-buffer)
+(evil-define-key 'normal 'global (kbd "<leader>el") 'eval-last-sexp)
+
+;; Repl
+(evil-define-key 'normal 'global (kbd "<leader>nr") 'cider-switch-to-repl-buffer)
+(evil-define-key 'normal 'global (kbd "<leader>nc") 'cider-switch-to-last-clojure-buffer)
+
+;; Buffer control
+(evil-define-key 'normal 'global (kbd "<leader>bs") 'counsel-switch-buffer)
+(evil-define-key 'normal 'global (kbd "<leader>bk") 'kill-buffer)
+
+;; File finding
+
+(evil-define-key 'normal 'global (kbd "<leader>SPC") 'fzf-find-file)
+(evil-define-key 'normal 'global (kbd "<leader>gg") 'counsel-projectile-rg)
+
+;; LSP commands
+
+(evil-define-key 'normal 'global (kbd "gd") 'lsp-find-definition)
+(evil-define-key 'normal 'global (kbd "gr") 'lsp-find-references)
+(evil-define-key 'normal 'global (kbd "gi") 'lsp-find-implementation)
+(evil-define-key 'normal 'global (kbd "<leader>rn") 'lsp-rename)
+
+;; Tooltips - glance, hover, etc
+(evil-define-key 'normal 'global (kbd "<leader>lg") 'lsp-ui-doc-glance)
+(evil-define-key 'normal 'global (kbd "<leader>ld") 'lsp-ui-doc-show)
+(evil-define-key 'normal 'global (kbd "<leader>ls") 'lsp-signature-help)
+(evil-define-key 'normal 'global (kbd "<leader>lh") 'lsp-describe-thing-at-point)
+
+
+;; Help commands
+(evil-define-key 'normal 'global (kbd "<leader>hf") 'counsel-describe-function)
+(evil-define-key 'normal 'global (kbd "<leader>hv") 'counsel-describe-variable)
+(evil-define-key 'normal 'global (kbd "<leader>hk") 'counsel-describe-key)
+
+;; Disable Custom
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
