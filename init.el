@@ -107,7 +107,7 @@
 (use-package which-key
   :init (which-key-mode)
   :diminish which-key-mode
-  :config
+	:config
   (setq which-key-idle-delay 0.3))
 
 ;; cider
@@ -206,7 +206,7 @@
   :diminish
   :bind (("C-s" . swiper)
          :map ivy-minibuffer-map
-         ;("TAB" . ivy-alt-done)
+				 ("TAB" . ivy-alt-done)
          ("C-l" . ivy-alt-done)
          ("C-j" . ivy-next-line)
          ("C-k" . ivy-previous-line)
@@ -382,23 +382,6 @@
 ;; Command Log
 (use-package command-log-mode)
 
-;; Company Mode - configured to use LSP
-(use-package company
-  :after lsp-mode
-  :hook (lsp-mode . company-mode)
-  :bind (:map company-active-map
-	      ("C-l" . company-complete-selection))
-  (:map lsp-mode-map
-	("C-l" . company-indent-or-complete-common))
-  :custom
-  (company-minimum-prefix-length 1)
-  (company-idle-delay 0.0)
-  :config
-  (define-key company-active-map (kbd "TAB") nil))
-
-;; Company Box
-(use-package company-box
-  :hook (company-mode . company-box-mode))
 
 ;; =========== Language Specific  ===================(
 
@@ -414,6 +397,12 @@
 ;;; Jedi
 ;(use-package lsp-jedi
   ;:ensure t)
+
+;; configure pylsp
+(setq lsp-pylsp-plugins-flake8-enabled t)
+;; ignore docstring errors
+(setq lsp-pylsp-plugins-flake8-ignore '("D100" "D101" "D102" "D103" "D104" "D105" "D107"))
+
 
 ;; LSP UI
 (use-package lsp-ui
@@ -459,7 +448,7 @@
   :config
   (setq-default format-all-formatters
 								;; Python
-								'((python-mode "black" "isort")
+								'((python-mode "black")
 									;; Clojure
 									(clojure-mode "cljfmt")
 									;;Rust
@@ -484,16 +473,14 @@
 (save-place-mode 1)
 
 ;; =========== Theme  ===================
-;; (load-theme 'wombat)
-
 (use-package doom-themes
   :ensure t
   :config
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
-	;(load-theme 'doom-tokyo-night t)
-	(load-theme 'doom-rouge t)
+	(load-theme 'doom-tokyo-night t)
+	;(load-theme 'doom-rouge t)
 	;(load-theme 'doom-dracula t)
 	;(load-theme 'doom-snazzy t)
 	;(load-theme 'doom-outrun-electric t)
@@ -523,8 +510,29 @@
 (copilot-mode)
 (setq copilot-indent-offset-warning-disable t)
 
+;; =========== Company  ===================
+
+;; Company Mode - configured to use LSP
+(use-package company
+	:after (lsp-mode copilot)
+	:hook (lsp-mode . company-mode)
+	:bind (:map company-active-map
+				("C-l" . company-complete-selection)
+				("TAB" . copilot-accept-completion)
+				("<tab>" . copilot-accept-completion))
+	(:map lsp-mode-map
+	("C-l" . company-indent-or-complete-common))
+	:custom
+	(company-minimum-prefix-length 1)
+	(company-idle-delay 0.0))
+
+;; Company Box
+(use-package company-box
+	:hook (company-mode . company-box-mode))
+
+
 ;; =========== Font  ===================
-(set-face-attribute 'default nil :font "Fira Code Retina" :height 180)
+(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
 
 
 ;; =========== Keybindings  ===================
@@ -639,5 +647,18 @@
 (evil-define-key 'normal 'global (kbd "<leader>hv") 'counsel-describe-variable)
 (evil-define-key 'normal 'global (kbd "<leader>hk") 'counsel-describe-key)
 
+
 ;; Disable Custom
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+
+(defun my-tab-completion ()
+  "Custom TAB behavior for Evil insert mode."
+  (interactive)
+  (if (and (bound-and-true-p evil-mode)
+           (eq evil-state 'insert))
+      (progn
+        (copilot-call 'accept)
+        (setq this-command 'copilot-complete))
+    (tab-indent-or-complete)))
+
+(define-key evil-insert-state-map (kbd "TAB") 'my-tab-completion)
