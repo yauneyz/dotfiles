@@ -15,8 +15,8 @@
 
 (package-initialize)
 
-;(when (memq window-system '(mac ns x))
-	;(exec-path-from-shell-initialize))
+(when (memq window-system '(mac ns x))
+	(exec-path-from-shell-initialize))
 
 (unless package-archive-contents
  (package-refresh-contents))
@@ -72,12 +72,15 @@
 
 ;; =========== Packages ===================
 
+;;; No-littering
+;(use-package no-littering)
+
 ;; Evil
 (use-package evil
   :init
   (setq evil-want-keybinding nil)
   ;; (setq evil-want-C-u-scroll t)
-  (setq evil-want-C-i-jump nil)
+  (setq evil-want-C-i-jump t)
   (setq evil-want-integration t)
   :config
   (evil-mode 1)
@@ -97,6 +100,7 @@
 
 ;; Leader Key
 (evil-set-leader 'normal (kbd "SPC"))
+(evil-set-leader 'visual (kbd "SPC"))
 
 ;; Evil Surround
 (use-package evil-surround
@@ -441,25 +445,63 @@
   (setq cider-completion-system 'ivy)
   (setq cider-repl-display-help-banner nil))
 
-;; Format All
-(use-package format-all
-  :commands format-all-mode
-  :hook (prog-mode . format-all-mode)
-  :config
-  (setq-default format-all-formatters
-								;; Python
-								'((python-mode "black")
-									;; Clojure
-									(clojure-mode "cljfmt")
-									;;Rust
-									(rust-mode "rustfmt")
-									;; Emacs Lisp
-									(emacs-lisp-mode "emacs-lisp-formatter"))))
+;; Hide the REPL window after connecting
+(defun my/cider-hide-repl-window ()
+  "Hide the cider REPL window after connecting."
+  (let ((repl-window (get-buffer-window (cider-current-repl-buffer))))
+    (when repl-window
+      (delete-window repl-window))))
+
+(add-hook 'cider-connected-hook 'my/cider-hide-repl-window)
+
+
+;;; Format All
+;(use-package format-all
+  ;:commands format-all-mode
+  ;:hook (prog-mode . format-all-mode)
+  ;:config
+  ;(setq-default format-all-formatters
+								;;; Python
+								;'((python-mode "black")
+									;;; Clojure
+									;(clojure-mode "cljfmt")
+									;;;Rust
+									;(rust-mode "rustfmt")
+									;;; Emacs Lisp
+									;(emacs-lisp-mode "emacs-lisp-formatter"))))
+
+;; Have lsp-format-buffer run on save in programming modes
+(add-hook 'prog-mode-hook
+	  (lambda ()
+	    (add-hook 'before-save-hook #'lsp-format-buffer nil 'local)))
+
 
 ;; Python
 (use-package python-mode
   :mode "\\.py\\'"
   :hook (python-mode . lsp-deferred))
+
+;; Rust
+(use-package rust-mode
+	:mode "\\.rs\\'"
+	:hook (rust-mode . lsp-deferred)
+	:config
+	(setq lsp-rust-server 'rust-analyzer)
+	(setq indent-tabs-mode nil))
+
+;; YAML w/ highlight-indent
+
+(use-package yaml-mode
+	:mode "\\.yml\\'"
+	:hook (yaml-mode . highlight-indent-guides-mode))
+
+
+
+
+;; Markdown
+(use-package markdown-mode
+	:mode "\\.md\\'"
+	:hook (markdown-mode . visual-line-mode))
 
 
 
@@ -503,12 +545,14 @@
 									 :branch "main"
 									 :files ("dist" "*.el")))
 (add-hook 'prog-mode-hook 'copilot-mode)
-(evil-define-key 'insert 'global (kbd "<tab>") 'copilot-accept-completion)
-;; Make sure TAB isn't bound to anything else
-(define-key evil-insert-state-map (kbd "TAB") nil)
-(evil-define-key 'insert 'global (kbd "TAB") 'copilot-accept-completion)
-(copilot-mode)
-(setq copilot-indent-offset-warning-disable t)
+;; only if in a programming mode
+(if (derived-mode-p 'prog-mode)
+	;(evil-define-key 'insert 'global (kbd "<tab>") 'copilot-accept-completion)
+	;; Make sure TAB isn't bound to anything else
+	(define-key evil-insert-state-map (kbd "TAB") nil)
+	;(evil-define-key 'insert 'global (kbd "TAB") 'copilot-accept-completion)
+	(copilot-mode)
+	(setq copilot-indent-offset-warning-disable t))
 
 ;; =========== Company  ===================
 
@@ -532,7 +576,8 @@
 
 
 ;; =========== Font  ===================
-(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
+(set-face-attribute 'default nil :font "Fira Code Retina" :height 180)
+;(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
 
 
 ;; =========== Keybindings  ===================
@@ -578,8 +623,103 @@
 
 (setq lsp-pylsp-plugins-autopep8-enabled t)
 
-;; Fountain mode
-;(use-package fountain-mode)
+(defun org-mode-setup ()
+	(org-indent-mode)
+	(variable-pitch-mode 1)
+	(visual-line-mode 1)
+	(auto-fill-mode 0)
+	(olivetti-mode 1))
+
+;; Org mode
+(use-package org
+	:hook (org-mode . org-mode-setup)
+	:config
+	(setq org-ellipsis " ▼")
+	(setq org-hide-emphasis-markers t)
+	; set tab to be org mode tab
+	(evil-define-key 'insert 'global (kbd "TAB") 'org-cycle))
+
+;; Org hook to turn off evil auto-indent
+;; Can't be in org-mode-setup or it somehow messes with other buffers
+;;(add-hook 'org-mode-hook (lambda () (setq evil-auto-indent nil)))
+
+;; Org-bullets
+(use-package org-bullets
+	:after org
+	:hook (org-mode . org-bullets-mode)
+	:custom
+	(org-bullets-bullet-list '("◉" "○" "✸" "✿" "❀" "❁" "❂" "❃" "❄" "❅" "❆" "❇")))
+
+(dolist (face '((org-level-1 . 1.2)
+		(org-level-2 . 1.1)
+		(org-level-3 . 1.05)
+		(org-level-4 . 1.0)
+		(org-level-5 . 1.1)
+		(org-level-6 . 1.1)
+		(org-level-7 . 1.1)
+		(org-level-8 . 1.1)))
+	;(set-face-attribute (car face) nil :font "Cantarell" :weight 'regular :height (cdr face))
+	)
+
+; Replace list hyphen with dot
+(font-lock-add-keywords 'org-mode
+			'(("^ *\\([-]\\) "
+			 (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+
+(defun fountain-mode-setup ()
+	(olivetti-mode 1)
+	(visual-line-mode 1)
+	(auto-fill-mode 0)
+	(setq fountain-hide-emphasis-markup t)
+	(setq fountain-hide-element t)
+	(setq fountain-display-scene-numbers-in-margin t))
+
+
+; Fountain mode
+(use-package fountain-mode
+	:hook
+	(fountain-mode . fountain-mode-setup)
+	:config
+	(setq copilot-mode 0)
+	(setq company-mode 0)
+	(which-function-mode 1))
+
+(defun dispatch-tab-command ()
+  "Dispatch <tab> to different functions based on the current buffer's major mode."
+  (interactive)
+  (cond
+   ;; When in fountain-mode
+   ((eq major-mode 'fountain-mode)
+    (fountain-dwim))
+   ;; Other cases
+   (t
+    (or (copilot-accept-completion)
+        ;(company-yasnippet-or-completion)
+        (indent-for-tab-command)))))
+
+
+
+;; Globally bind <tab> to the dispatcher function
+(global-set-key (kbd "<tab>") 'dispatch-tab-command)
+(evil-define-key 'insert 'global (kbd "<tab>") 'dispatch-tab-command)
+
+
+
+
+; Olivetti mode
+(use-package olivetti
+	:config
+	(setq olivetti-body-width 80)
+	(setq olivetti-minimum-body-width 80)
+	(setq olivetti-recall-visual-line-mode-entry-state t))
+
+; Code folding in programming modes
+(defun hs-minor-mode-setup ()
+	(hs-minor-mode 1)
+	(setq hs-hide-comments-when-hiding-all t))
+(add-hook 'prog-mode-hook 'hs-minor-mode-setup)
+
+
 
 ;; =================== Evil command shortcuts ===================
 
@@ -605,7 +745,7 @@
 (evil-define-key 'normal 'global (kbd "<leader>gs") 'magit-status)
 
 ;; Cider
-(evil-define-key 'normal 'global (kbd "<leader>cj") 'cider-jack-in)
+(evil-define-key 'normal 'global (kbd "<leader>cj") 'cider-connect-cljs)
 (evil-define-key 'normal 'global (kbd "<leader>cl") 'cider-eval-last-sexp)
 (evil-define-key 'normal 'global (kbd "<leader>cb") 'cider-eval-buffer)
 (evil-define-key 'normal 'global (kbd "<leader>cf") 'cider-format-buffer)
@@ -634,6 +774,9 @@
 (evil-define-key 'normal 'global (kbd "gr") 'lsp-find-references)
 (evil-define-key 'normal 'global (kbd "gi") 'lsp-find-implementation)
 (evil-define-key 'normal 'global (kbd "<leader>rn") 'lsp-rename)
+
+;; Treemacs
+(evil-define-key 'normal 'global (kbd "<leader>ts") 'lsp-treemacs-symbols)
 
 ;; Tooltips - glance, hover, etc
 (evil-define-key 'normal 'global (kbd "<leader>lg") 'lsp-ui-doc-glance)

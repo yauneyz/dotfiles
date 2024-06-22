@@ -53,6 +53,7 @@ alias shell="python manage.py shell"
 alias ca="conda activate anaconda"
 alias cda="conda deactivate"
 alias p="python"
+alias python="python3.11"
 alias pt="python -m unittest"
 alias db="psql emerald"
 alias debug="python -m pdb manage.py runserver"
@@ -97,7 +98,7 @@ alias da="deactivate"
 
 alias vim="nvim"
 alias v="vim"
-alias valias="vim ~/.bash_aliases"
+alias valias="vim ~/dotfiles/.bash_aliases"
 alias vbrc="vim ~/.zshrc_zac"
 alias vxb="vim ~/dotfiles/.Xresources"
 alias vv="vim ~/.config/nvim/init.vim"
@@ -113,17 +114,15 @@ alias ni="npm run inspect"
 alias vp="vim package.json"
 
 # Misc Aliases
-alias vpn="sudo purevpn-pptp"
 alias slp="sleep 3; xset dpms force off"
 alias sbrc="source ~/.bashrc"
-alias salias="source ~/.bash_aliases"
+alias salias="source ~/dotfiles/.bash_aliases"
 alias zbrc="source ~/.zshrc"
 alias xb="xrdb ~/.Xresources"
 alias change_keyboard="sudo dpkg-reconfigure keyboard-configuration"
 alias mc="mongodb-compass"
 alias pm="postman"
 alias chrome="google-chrome-stable"
-alias jl="jupyter lab"
 alias at="alacritty-themes"
 
 # Opening config files
@@ -180,8 +179,17 @@ alias hl="heroku local"
 # Screenplay
 alias mkft="screenplain ~/development/screenplay/markov/markov.fountain ~/development/screenplay/markov/markov.pdf"
 
+# Jekyll
+alias js="bundle exec jekyll serve"
+
 # Useful
 alias smi="nvidia-smi"
 alias chat="./chat -m ggml-alpaca-13b-q4.bin -c 2048 -n 2048"
 alias audio="pkill pulseaudio"
 alias forget="rm -f models/* results/* diffs/*"
+
+# Clojure
+alias cljs="shadow-cljs"
+alias nb="npm run build"
+alias nc="npm run compile"
+alias nw="npm run watch"
