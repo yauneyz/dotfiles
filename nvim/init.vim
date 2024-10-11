@@ -137,7 +137,7 @@ set splitright
 :highlight Pmenu ctermbg=gray guibg=gray
 
 " Use the right python
-let g:python3_host_prog = '/opt/homebrew/bin/python3.11'
+"let g:python3_host_prog = '/opt/homebrew/bin/python3.11'
 
 "Smartf
 "" press <esc> to cancel.

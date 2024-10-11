@@ -48,61 +48,38 @@ alias shell="python manage.py shell"
 
 
 # Python Aliases
-
-
-alias ca="conda activate anaconda"
-alias cda="conda deactivate"
 alias p="python"
-alias python="python3.11"
-alias pt="python -m unittest"
-alias db="psql emerald"
-alias debug="python -m pdb manage.py runserver"
+alias pip="pip3.11"
 alias freeze="pip freeze"
 alias freezer="pip freeze >| requirements.txt"
-alias ph="git push heroku master"
-alias po="git push origin master"
-alias req="pip install -r requirements.txt"
-alias run="python manage.py runserver"
-alias coverage="pytest --cov-report html --cov"
-
-# SASS Aliases
-
-alias css="vim ~/development/emerald/sass/custom.scss"
-alias ss="sass sass/custom.scss static/emerald/css/custom.css"
-alias sw="sass --watch sass:static/emerald/css/"
 
 # Moving Around
-
 alias dt="cd ~/dotfiles"
-alias envs="cd $WORKON_HOME"
-alias st="cd ~/setup"
 alias dev="cd ~/development"
+alias llm="cd ~/development/llm"
+alias sd="cd ~/development/stable-diffusion"
+alias comfy="cd ~/development/stable-diffusion/ComfyUI"
 
 # Git Aliases
-
 alias gs="git status --ignore-submodules"
 alias ga="git add *"
 alias gc="git commit -m"
 alias gl="git log --abbrev-commit --pretty=oneline"
 alias gd="git diff"
-alias gz="git push origin Zac"
+alias ph="git push heroku master"
+alias po="git push origin master"
 
 # Run that thing that lets you get colors
 alias colors="sh ~/.colors.sh"
 
 # Virtual Environment Aliases
-
+alias va="source venv/bin/activate"
 alias da="deactivate"
 
 # Vim shortcuts
-
 alias vim="nvim"
-alias v="vim"
-alias valias="vim ~/dotfiles/.bash_aliases"
-alias vbrc="vim ~/.zshrc_zac"
+alias v="nvim"
 alias vxb="vim ~/dotfiles/.Xresources"
-alias vv="vim ~/.config/nvim/init.vim"
-alias ee="vim ~/dotfiles/init.el"
 alias plugin="cd ~/.config/nvim/ftplugin"
 alias vswap="cd ~/.local/share/nvim/swap"
 
@@ -113,47 +90,31 @@ alias nd="npm run develop"
 alias ni="npm run inspect"
 alias vp="vim package.json"
 
-# Misc Aliases
+# Config Aliases
 alias slp="sleep 3; xset dpms force off"
 alias sbrc="source ~/.bashrc"
+alias valias="vim ~/dotfiles/.bash_aliases"
 alias salias="source ~/dotfiles/.bash_aliases"
-alias zbrc="source ~/.zshrc"
+alias vbrc="vim ~/.zshrc_zac"
+alias zbrc="source ~/.zshrc_zac"
 alias xb="xrdb ~/.Xresources"
 alias change_keyboard="sudo dpkg-reconfigure keyboard-configuration"
-alias mc="mongodb-compass"
-alias pm="postman"
 alias chrome="google-chrome-stable"
 alias at="alacritty-themes"
 
 # Opening config files
 alias ii="vim ~/.i3/config"
 alias pbar="vim ~/.config/polybar/config"
+alias vv="vim ~/.config/nvim/init.vim"
+alias ee="vim ~/dotfiles/init.el"
 
 # Directory Aliases
-alias va="cd ~/development/acme/"
-alias v1="cd ~/development/acme/Volume1"
-alias vh="cd ~/development/acme/homework"
-alias vh1="cd ~/development/acme/homework/1"
-alias vh2="cd ~/development/acme/homework/2"
-alias l3="cd ~/development/acme/lab_3"
-alias l4="cd ~/development/acme/lab_4"
 alias q="cd ~/development/Q/"
 alias vs="vim ~/development/Q/server.js"
 alias qu="cd ~/development/Q/client/src"
 alias qb="cd ~/development/Q/server"
-alias bio="cd ~/development/research/biocheck/biocheck"
-alias net="cd ~/development/netflix-clone/src/"
-alias e="cd ~/development/techEd/"
-alias eb="cd ~/development/techEd/server"
-alias eu="cd ~/development/techEd/client/src"
-alias nfl="cd ~/development/nfl-predictor"
-alias pr="cd ~/development/acme/637/homework"
-alias res="cd ~/development/research"
-alias grc="cd ~/development/research/gradientconditioning"
-alias thesis="cd ~/development/research/thesis/src"
-alias draft="cd ~/development/research/thesis/draft"
-alias p3="cd ~/development/acme/CS\ 674/Project\ 3"
-alias rp="cd ~/development/acme/522/random_pruning"
+alias anki="cd ~/development/anki"
+
 
 # Shortcuts to edit files
 alias vA="vim ~/development/Q/client/src/App.js"
@@ -193,3 +154,7 @@ alias cljs="shadow-cljs"
 alias nb="npm run build"
 alias nc="npm run compile"
 alias nw="npm run watch"
+alias owl="cd ~/development/clojure/owl"
+alias thc="cd ~/.config/Thinky"
+alias install="npm run dist && cd dist && sudo dpkg -i Thinky_1.0.0_amd64.deb"
+alias schema="cp -f schema.json resources/storage/app-state.json"

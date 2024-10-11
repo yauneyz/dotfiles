@@ -1,742 +1,916 @@
-9ecf00e0c7cf10e958f3f9bfb05f1885|file:///home/zac/development/research/thesis/draft/thesis.tex|541|1|V|latex
-	% Coherence-based pruning works sometimes, not others; It is useful because it can be calculated much earlier in the training process than magnitude pruning can
-	% Random pruning works well for the larger networks, coherence and magnitude pruning work better for the smaller networks
-9ee43a1877e6cc6ac576f62a7ddc75c2|file:///home/zac/development/research/thesis/draft/thesis.tex|542|10|v|latex
-	Further Work
-b50204e17c0a475d3d65191e029fdf1d|file:///home/zac/development/research/thesis/draft/thesis.tex|548|20|V|latex
-	\section{Conclusion}
-5ac83d1a2ca4774fd7b13f2b031d9b72|file:///home/zac/development/research/thesis/draft/thesis.tex|543|15|v|latex
-	 gaussian trained networks
-7a4ad2d593ff69d9add096aca6390201|file:///home/zac/development/research/thesis/draft/thesis.tex|543|72|v|latex
-	 Are diffs actually related to coherence?
-632539a7aff73982dd4275b59db70604|file:///home/zac/development/research/thesis/draft/thesis.tex|544|1|V|latex
-	According to the
-a367ed62e9d2353a3336d431fa4da763|file:///home/zac/development/research/thesis/draft/thesis.tex|544|1|V|latex
-	According 
-1a7c429a04afab44908f95aad56a8f61|file:///home/zac/development/research/thesis/draft/thesis.tex|544|315|v|latex
-	the diffs should av
-98b6fe7226036a6c8e305fa0f0931450|file:///home/zac/development/research/thesis/draft/thesis.tex|545|18|v|latex
-	linear_diffs
-7206ac544e81775d2b2b9785d2f62df9|file:///home/zac/development/research/thesis/draft/thesis.tex|548|42|v|latex
-	the diffs for the
-21582c6c30be1217322cdb9aebaf4a59|file:///home/zac/development/research/thesis/draft/thesis.tex|548|174|v|latex
-	that
-39e3f0f901a9fe6dee45c57aa68ef181|file:///home/zac/development/research/thesis/draft/thesis.tex|548|377|v|latex
-	confirmation
-224f8f3388906e750f00a119f1b669b2|file:///home/zac/development/research/thesis/draft/thesis.tex|552|1|V|latex
-	Follwing on from the previous question, we can see that
-a7dd12b1dab17d25467b0b0a4c8d4a92|file:///home/zac/development/research/thesis/draft/thesis.tex|552|103|v|latex
-	show
-753aaff4bc02463cb8baa7239737767e|file:///home/zac/development/research/thesis/draft/thesis.tex|552|103|v|latex
-	illustrate a problem:  
-b843aeab2f4af34d45919ff306483015|file:///home/zac/development/research/thesis/draft/thesis.tex|552|136|v|latex
-	combine to show that even when width is large and g
-f65eab92c31d06e5201959728fdb004b|file:///home/zac/development/research/thesis/draft/thesis.tex|552|285|v|latex
-	Our present hypothesis is that 
-c7ce59a327a1ce705b3b17689b3b3710|file:///home/zac/development/research/thesis/draft/thesis.tex|552|366|v|latex
-	it was only 
-1c6448e6f6c5b4e8fc3cff784d8eefc5|file:///home/zac/development/research/thesis/draft/thesis.tex|552|532|v|latex
-	separaete
-6ff6f4ce3e2c53ea8dc3994317422df3|file:///home/zac/development/research/thesis/draft/thesis.tex|552|658|v|latex
-	caus
-ce48d05ae821b673f327b785134dd0ee|file:///home/zac/development/research/thesis/draft/thesis.tex|552|646|v|latex
-	increase has some other   
-c8cff1007ff94c2b9047a7f2b9854a3b|file:///home/zac/development/research/thesis/draft/thesis.tex|552|636|v|latex
-	coherence must have some other cause that is 
-23a58bf9274bedb19375e527a0744fa9|file:///home/zac/development/research/thesis/draft/thesis.tex|554|58|v|latex
-	with
-7ddf32e17a6ac5ce04a8ecbf782ca509|file:///home/zac/development/research/thesis/draft/thesis.tex|559|14|v|latex
-	random
-f0471e1a1521e5cfd90065e3fb6c84dd|file:///home/zac/development/research/thesis/draft/thesis.tex|559|14|v|latex
-	 pru
-97cef678a604b2eb359c283ce0d0ef10|file:///home/zac/development/research/thesis/draft/thesis.tex|559|50|v|latex
-	calls into question the efficacy of all our our pruning methods
-29a359f53144a07c1ac856cfe110c273|file:///home/zac/development/research/thesis/draft/thesis.tex|559|133|v|latex
-	or their singular
-edbc7c8a05de26537cd92d8c3abc26c4|file:///home/zac/development/research/thesis/draft/thesis.tex|559|378|v|latex
-	climbs a 
-0ac115651ba50d99353110bfb2eab7ce|file:///home/zac/development/research/thesis/draft/thesis.tex|559|401|v|latex
-	random pruning
-99608ab617d2d6cb7bf481c859d1daaa|file:///home/zac/development/research/thesis/draft/thesis.tex|559|352|v|latex
-	IMP only works because it finds the best of many 
-7a725117989b4b9f4ece7db85a68e90d|file:///home/zac/development/research/thesis/draft/thesis.tex|559|344|v|latex
-	Perhaps we don't know enough to 
-db82206b1d49042d1a710e9c88c21d36|file:///home/zac/development/research/thesis/draft/thesis.tex|562|355|v|latex
-	best
-bb3ccd5881d651448ded1dac904054ac|file:///home/zac/development/research/thesis/draft/thesis.tex|566|153|v|latex
-	information
-c45c619af575332a0f463f095da30bb7|file:///home/zac/development/research/thesis/draft/thesis.tex|566|331|v|latex
-	mask resulting 
-39463837fe39a2821406b5c72712f23f|file:///home/zac/development/research/thesis/draft/thesis.tex|566|392|v|latex
-	throu
-632a2406bbcbcd553eec45ac14b40a0a|file:///home/zac/development/research/thesis/draft/thesis.tex|566|456|v|latex
-	after
-4b66e130fb5bacad33e57724e8b22bb7|file:///home/zac/development/research/thesis/draft/thesis.tex|566|487|v|latex
-	If it varies indefinitely  
-effcae83d1f216d7c88a17df5b1f2db4|file:///home/zac/development/research/thesis/draft/thesis.tex|566|487|v|latex
-	This que
-776c391f9d1f66c48abbe8a6f84aea1a|file:///home/zac/development/research/thesis/draft/thesis.tex|566|636|v|latex
-	just use
-6cddb7353e699051a384686b6b3ff1e2|file:///home/zac/development/research/thesis/draft/thesis.tex|566|661|v|latex
-	derived
-5fe05153b77725154d13c7675a99c675|file:///home/zac/development/research/thesis/draft/thesis.tex|573|21|v|latex
-	transformer
-606c261e2f9a232a25a1bba84ae6a300|file:///home/zac/development/research/thesis/draft/thesis.tex|573|163|v|latex
-	This is an interesting question. 
-16217e5d20122def84dfb2efe39015c0|file:///home/zac/development/research/thesis/draft/thesis.tex|576|1|V|latex
-	All of these exper
-f220edafc56339e53320a7d69e504b77|file:///home/zac/development/research/thesis/draft/thesis.tex|577|217|v|latex
-	Do the gains
-0eccef1fe0100f85b12e6eabe08eaff6|file:///home/zac/development/research/thesis/draft/thesis.tex|577|313|v|latex
-	dense
-fa2299269f88c8979207bf48c9fcca2e|file:///home/zac/development/research/thesis/draft/thesis.tex|577|480|v|latex
-	\frac{LLMs}{}
-81611531cb3f61d954f2aa38baf2f2a4|file:///home/zac/development/research/thesis/draft/thesis.tex|33|10|V|latex
-	%% This file contains the theorem definitions and custom commands that I commonly use
-	%% they may be changed, the reference to the file removed, etc. Or, if you like, you
-	%% may use them as well.
-	%\input{thsiscfg}
-db9235482937945af21be83fe0d568e8|file:///home/zac/development/research/thesis/draft/thesis.tex|45|1|V|latex
-		We show how it is possible to take mask out 90\% of the parameters in a network and get a sub-network that is just as good as the original one. The method for doing this requires only one additional epoch of computation. It is done by tracking the sum of the sign of the gradient over one epoch of training, and then pruning the weights for the absolute value of the associated gradient sign sum is smallest. We compare this to random and magnitude based methods and find that for layerwise pruning, our method is superior even though it does not require additional training. We find that for the InceptionV3 network our method is able to prune 90\% of the parameters without a loss in accuracy.
-72eb3202c2c3cd0583a8a264b45a01f3|file:///home/zac/development/research/thesis/draft/todo|49|1|v|
-	Analysis & 
-70759d2c34e4f35201b80bfab11ed121|file:///home/zac/development/research/thesis/draft/thesis.tex|46|1|V|latex
-	%The paragraphs of the abstract should be indented. This is part of the template, but in case it doesn't work, you'll need to but a \qquad at the front of the first paragraph.
-4315ec6a2181c4f76e0419c05f4e77d9|file:///home/zac/development/research/thesis/draft/thesis.tex|99|1|V|latex
-	%This idea fits well with \citet{arpit_closer_nodate}, where they showed that many samples (the "easy" ones) are consistently classified correctly from early in training while the "hard" samples are learned later in the training. One use of the coherence metric is that it allows us to distinguish between these two regimes.
-1e9bc6f45e2ff8d3500606b710be2de2|file:///home/zac/development/research/thesis/draft/thesis.tex|98|1|V|latex
-	% NEEDS CITATION
-69ce7546b8231f2aa01adb5aafbb2e20|file:///home/zac/development/research/thesis/draft/thesis.tex|215|528|v|latex
-	paramters
-de1f2e295c4a2fb110b70a26532a6c06|file:///home/zac/development/research/thesis/draft/thesis.tex|227|513|v|latex
-	learing
-21ffce5b8a6cc8cc6a41448dd69623c9|file:///home/zac/development/research/thesis/draft/thesis.tex|319|163|v|latex
-	params
-bebd00d7fe69da1178578ff16abb5ecf|file:///home/zac/development/research/thesis/draft/thesis.tex|327|63|v|latex
-	trainin
-3ce0846f51dae2d9a75afbc1132b86d7|file:///home/zac/development/research/thesis/draft/thesis.tex|360|299|v|latex
-	multile
-5f101a6ac50aa3fd31a2ed613f35bbde|file:///home/zac/development/research/thesis/draft/thesis.tex|360|366|v|latex
-	backpropogating
-782ba26376bbde3fd635e8e868960314|file:///home/zac/development/research/thesis/draft/thesis.tex|367|360|v|latex
-	signifcantly
-60a4490ce61c0f88766f8e7e783ea2c9|file:///home/zac/development/research/thesis/draft/thesis.tex|378|247|v|latex
-	ohter
-e7f07dd2f18f824d8b5695a5f9f44ebd|file:///home/zac/development/research/thesis/draft/thesis.tex|410|196|v|latex
-	scrach
-e3eb16afdbabab150c5da0ade825a14d|file:///home/zac/development/research/thesis/draft/thesis.tex|428|786|v|latex
-	the 
-24d1792f6fd07997908abd5ddc6e4acb|file:///home/zac/development/research/thesis/draft/thesis.tex|434|132|v|latex
-	strenth
-7130819122f5ac29087f51a76e658de9|file:///home/zac/development/research/thesis/draft/thesis.tex|439|115|v|latex
-	sparsities
-f8c9a6c4a75ca426b9bcf2214f73c745|file:///home/zac/development/research/thesis/draft/thesis.tex|441|383|v|latex
-	parametrs
-5db4ba2abb52668c2e51831b5d38494d|file:///home/zac/development/research/thesis/draft/thesis.tex|551|417|v|latex
-	significanly
-bb6dbb9fde5abe9b673200d2e7f59636|file:///home/zac/development/research/thesis/draft/thesis.tex|570|1|v|latex
-	Coherence
-c02ff48f3c4c738c6e07c59cb91dccd6|file:///home/zac/development/research/thesis/draft/thesis.tex|570|167|v|latex
-	Diffs, on the other hand
-334ea1c685078bfd7b3a6ec5a17f135a|file:///home/zac/development/research/thesis/draft/thesis.tex|570|215|v|latex
-	there is some
-b5e2986d9b50163c960855276166cff7|file:///home/zac/development/research/thesis/draft/thesis.tex|570|219|v|latex
-	correla
-0419a53837d3419adcb95070025b8317|file:///home/zac/development/research/thesis/draft/thesis.tex|570|216|v|latex
-	may be an approximation to coherence
-c672edfc00c20c9b3c8bfed894a9e7df|file:///home/zac/development/research/thesis/draft/thesis.tex|570|308|v|latex
-	Linear pruning 
-509832f8b7ce5593107221303fc3f93c|file:///home/zac/development/research/thesis/draft/thesis.tex|570|307|v|latex
-	 Coherence mysteriously rises as network width rises. Pruned linear networks
-69576d7fe95d2adb024e414c52980deb|file:///home/zac/development/research/thesis/draft/thesis.tex|577|1|V|latex
-	%% Choose your bibliography style. Some options: plain, unsrt, abbrev etc.
-	%\bibliographystyle{plain}
-	%\bibliographystyle{unsrt}
-63ec83fcda5fa16998099a365d61a52e|file:///home/zac/development/research/thesis/draft/thesis.tex|580|85|V|latex
-	%% If you want to include an index, this prints the index at this location. You must
-	%% have \makeindex uncommented in the preamble
-1ddf3c6e13377ccf51f43d0d26d25763|file:///home/zac/development/research/thesis/draft/thesis.tex|580|11|V|latex
-	\printindex
-efc0939aad9129682781a99dbbf6edbe|file:///home/zac/development/research/thesis/draft/thesis.tex|574|1|V|latex
-	Trying to prune
-aa5d20d3d097dd5a4754026d119821db|file:///home/zac/development/research/thesis/draft/thesis.tex|574|1|V|latex
-	For more x
-657f8b8da628ef83cf69101b6817150a|file:///home/zac/development/research/thesis/draft/thesis.tex|574|23|v|latex
-	help
-f058c15dc1afa5d0d7fd5621f21aefc8|file:///home/zac/development/research/thesis/draft/thesis.tex|574|88|v|latex
-	While there are
-8d8391fcc8148ac2628972ad541ad057|file:///home/zac/development/research/thesis/draft/thesis.tex|574|178|v|latex
-	reas
-996be9c40a9133265b965c3e5ea3bd17|file:///home/zac/development/research/thesis/draft/thesis.tex|574|178|v|latex
-	good results
-60ee3c8947195dd5f21abb1d64c89f3d|file:///home/zac/development/research/thesis/draft/thesis.tex|574|167|v|latex
-	models had 
-90e750718e5b82b1d211e0c2fe3a9dd3|file:///home/zac/development/research/thesis/draft/thesis.tex|574|167|v|latex
-	found performance
-983d5382e6ad3e3c0d2afb9148ab5a6e|file:///home/zac/development/research/thesis/draft/thesis.tex|576|1|V|latex
-	A lot of work needs to be done in the fu
-180856becb9ad5a75deaea3c44431ff3|file:///home/zac/development/research/thesis/draft/thesis.tex|576|98|v|latex
-	arose in their place
-68145452161edec7ff04b4289f5a22da|file:///home/zac/development/research/thesis/draft/thesis.tex|576|130|v|latex
-	intersction of 
-a6daad2f29decd1e94a592164d34183a|file:///home/zac/development/research/thesis/draft/thesis.tex|576|173|v|latex
-	remain
-af5946446853a63a577b6b7fe8d72cbf|file:///home/zac/development/research/thesis/draft/thesis.tex|576|190|v|latex
-	fertile field for future development
-0b7fc2310b6fb16fb02deaa8a62f157d|file:///home/zac/development/research/thesis/draft/thesis.tex|576|173|v|latex
-	promises to be a 
-111d59d8f358544ab22f48cdd0be99ff|file:///home/zac/development/research/thesis/draft/thesis.tex|64|1|V|latex
-	One of the 
-6357d3551190ec7e79371a8570121d3a|file:///home/zac/development/research/thesis/draft/thesis.tex|64|1|V|latex
-	There are
-81a264547e1f29ca505d89903d933160|file:///home/zac/development/research/thesis/draft/thesis.tex|64|157|v|latex
-	gradient coh
-1a39f4f8a8512ad197caf8f69afe0a5d|file:///home/zac/development/research/thesis/draft/thesis.tex|64|192|v|latex
-	investigate the properties of these coherent gradients.
-03488dc1f4f1a658d13e6ef1e0d37d59|file:///home/zac/development/research/thesis/draft/thesis.tex|64|210|v|latex
-	impact on current 
-0cbc6611f5540bd0809a388dc95a615b|file:///home/zac/development/research/thesis/draft/thesis.tex|63|1|V|latex
-	Test
-4ce967e9d3a2d96fefeeeeff7a669812|file:///home/zac/development/research/thesis/draft/thesis.tex|64|25|v|latex
-	follow a par
-a424ee75698d4806be715d067928cee5|file:///home/zac/development/research/thesis/draft/thesis.tex|64|1|V|latex
-	The ideas in this paper 
-eea17a65ec72c9c84fcd8dfd52671849|file:///home/zac/development/research/thesis/draft/thesis.tex|64|106|v|latex
-	begain b
-3cbb4fc6fc843790f7cc6de44ce1cd43|file:///home/zac/development/research/thesis/draft/thesis.tex|64|186|v|latex
-	indicate
-027e9972538e183e279efde4b4c942e4|file:///home/zac/development/research/thesis/draft/thesis.tex|64|340|v|latex
-	Follo
-8a5502c92444c625c27e6adc7a9b6442|file:///home/zac/development/research/thesis/draft/thesis.tex|64|340|v|latex
-	This led to the idea that 
-37d45fb37476fd3275c0cc3a366dac74|file:///home/zac/development/research/thesis/draft/thesis.tex|64|340|v|latex
-	A poor understanding of 
-dcc1abc2dfe7cda875a9be745b0c2dc4|file:///home/zac/development/research/thesis/draft/thesis.tex|64|342|v|latex
-	misguided
-cae5302965e74ae09bfb6d390003afe2|file:///home/zac/development/research/thesis/draft/thesis.tex|64|434|v|latex
-	us to the 
-9959ae8ef7e171147370f69775c9916e|file:///home/zac/development/research/thesis/draft/thesis.tex|64|551|v|latex
-	letting neural networks
-5b7990ea1e65ed76d5262573ac0a8831|file:///home/zac/development/research/thesis/draft/thesis.tex|64|598|v|latex
-	led to a study of the 
-405aaff66082ffe7231d7c1f79926c17|file:///home/zac/development/research/thesis/draft/thesis.tex|64|710|v|latex
-	nature
-d850f04cdb48312a9be171e214c0b4ee|file:///home/zac/development/research/thesis/draft/thesis.tex|64|789|v|latex
-	there
-5d5a992d86282c9ba65bac797fa0f96c|file:///home/zac/development/research/thesis/draft/thesis.tex|64|789|v|latex
-	 are certainly interest
-3e11ca2215bada5ab235ee73e4ff7cd0|file:///home/zac/development/research/thesis/draft/thesis.tex|64|7|v|latex
-	networks
-d5b4a9a5a6b50466e8837c3cd98c3442|file:///home/zac/development/research/thesis/draft/thesis.tex|64|38|v|latex
-	seen
-5ae7fb3197b6fd8c723c7766a5680e2e|file:///home/zac/development/research/thesis/draft/thesis.tex|64|165|v|latex
-	Many
-c83fa94bd1d522276a32f81682a43d29|file:///home/zac/development/research/thesis/draft/thesis.tex|64|171|v|latex
-	discoveries
-4ab8710d781ba5b13aaf561cafd896b7|file:///home/zac/development/research/thesis/draft/thesis.tex|64|193|v|latex
-	made
-4a931512ce65bdc9ca6808adf92d8783|file:///home/zac/development/research/thesis/draft/thesis.tex|64|286|v|latex
-	tools
-f0e64971512e95da43f42767853568ca|file:///home/zac/development/research/thesis/draft/thesis.tex|64|332|v|latex
-	This is why  
-a1ef9a07608bff79100fa309ca0f418a|file:///home/zac/development/research/thesis/draft/thesis.tex|64|368|v|latex
-	undertook
-5d6326a2f4e5c5a84765a9d46262f0c0|file:///home/zac/development/research/thesis/draft/thesis.tex|64|379|v|latex
-	develop the theory behind  
-7c66df3e9e55c6f821fdc3925baea8e4|file:///home/zac/development/research/thesis/draft/thesis.tex|64|612|v|latex
-	is of
-806d8370a72f4ed8a7a60da812dac8b2|file:///home/zac/development/research/thesis/draft/thesis.tex|64|616|v|latex
-	repeatedly
-a822c6f5cf867e0c9c311c1669acf19a|file:///home/zac/development/research/thesis/draft/thesis.tex|64|648|v|latex
-	this meant empirical study 
-15187c065b89bf525f661025af3cdb94|file:///home/zac/development/research/thesis/draft/thesis.tex|64|797|v|latex
-	exposing some hol
-a290724b5f8b7e5417e4db876ba7fb25|file:///home/zac/development/research/thesis/draft/thesis.tex|64|797|v|latex
-	providing some 
-3bd5c103140bfcd65067d16cb9bab514|file:///home/zac/development/research/thesis/draft/thesis.tex|64|839|v|latex
-	study of
-df547e45e4808296e568dcf010a4e6a2|file:///home/zac/development/research/thesis/draft/thesis.tex|64|866|v|latex
-	investig
-eefc6fcfae34167ced4e4c526023d3ff|file:///home/zac/development/research/thesis/draft/thesis.tex|46|21|v|latex
-	%Keywords need to be as close to the bottom of the page as possible without moving to a new page.
-63edc982f6469f3c206d8850f2109955|file:///home/zac/development/research/thesis/draft/thesis.tex|53|600|v|latex
-	additinoal
-d94d24c658d2363c6a98d6fd475a900b|file:///home/zac/development/research/thesis/draft/thesis.tex|55|303|v|latex
-	end result
-f1ed88ef56f6c8f680b331079531d75b|file:///home/zac/development/research/thesis/draft/thesis.tex|45|39|v|latex
-	phenomenon a
-1ad86fbaf8f6f71e6ae0a297cc82f437|file:///home/zac/development/research/thesis/draft/thesis.tex|45|64|v|latex
-	it is similar to 
-54d0ed31283867e61abbfaafa1f04e24|file:///home/zac/development/research/thesis/draft/thesis.tex|45|91|v|latex
-	similar to 
-8739f1f6cae2d255325e0525c24ead7d|file:///home/zac/development/research/thesis/draft/thesis.tex|45|68|v|latex
-	coherent gradients are in fact different
-7455cdf3a433c60318c9243b472a767f|file:///home/zac/development/research/thesis/draft/thesis.tex|45|176|v|latex
-	search for 
-e4f70c75a93eecb10ca503566d9832ae|file:///home/zac/development/research/thesis/draft/thesis.tex|45|176|v|latex
-	investigate
-9a932b3cb396238423eb2f33ec17d6aa|file:///home/zac/development/research/thesis/draft/thesis.tex|45|335|v|latex
-	linear
-d877b5620b83c6dc9153e161f8e6f958|file:///home/zac/development/research/thesis/draft/thesis.tex|45|449|v|latex
-	equally
-4d6ecffd87d7be4fa6be5b03ed7f6c8d|file:///home/zac/development/research/thesis/draft/thesis.tex|45|449|v|latex
-	equivalently sized de 
-239e1e51ceef4837d2f055c95bd22164|file:///home/zac/development/research/thesis/draft/thesis.tex|45|705|v|latex
-	ViT and
-b0b12f622ee36d1708276f4a65737583|file:///home/zac/development/research/thesis/draft/thesis.tex|45|754|v|latex
-	is in some
-d64c2afc88cb19454209f7be284e66de|file:///home/zac/development/research/thesis/draft/thesis.tex|45|760|v|latex
-	 cases
-ca960f125ced23f977c8c322a75195e0|file:///home/zac/development/research/thesis/draft/todo|49|11|V|
-	Conclusion
-	Introduction and Abstract
-5df23b3cb22ac596ace5028a231d2c6b|file:///home/zac/development/research/thesis/draft/todo|52|1|V|
-	Let pruned large model results have both models on the same plot, to look better
-	Pruned result tables look better
-2c2b655a970d7de6dd07bcee9de4c5a4|file:///home/zac/development/research/thesis/draft/todo|66|1|V|
-	Spell check
-49ff5f710086893da8586416fc94bed5|file:///home/zac/development/research/thesis/draft/todo|57|23|V|
-	Mathematical arguments?
-17f30ca52c9751b26b7f7f7b9605fb73|file:///home/zac/development/research/thesis/draft/thesis.tex|572|509|v|latex
-	they also respond diff
-525452a1d867c88fc020f5d6902eb5da|file:///home/zac/development/research/thesis/draft/Thesis.bib|20|1|V|bib
-		year = {2022},
-92a2b5cb9c6906035c2864fa225e1940|file:///home/zac/development/research/thesis/draft/Thesis.bib|2|2|v|bib
-	article
-098f6bcd4621d373cade4e832627b4f6|file:///home/zac/development/research/thesis/draft/thesis.tex|392|828|v|latex
-	test
-df3b6296db607a8b273016a47f751bc6|file:///home/zac/development/research/thesis/draft/thesis.tex|392|856|v|latex
-	it might
-ad88adbdac50799a3bc8c02b217c6f76|file:///home/zac/development/research/thesis/draft/thesis.tex|392|866|v|latex
-	might
-7c8966b25284a42cf6711e4f229f2de6|file:///home/zac/development/research/thesis/draft/thesis.tex|392|856|v|latex
-	coherence if coherence d
-31c183e25071a6c3e8505db7ab6fbe69|file:///home/zac/development/research/thesis/draft/todo|53|1|V|
-	Nelson thesis?
-	- probably in the analysis/conclusion
-	- also where we look at width vs coherence
-5b33d6248cc12a0fd383b9b624ba242d|file:///home/zac/development/research/thesis/draft/thesis.tex|157|21|v|latex
-	\mathbb{E}_{z \in \mathcal{D}}
-512da3ce222723529544189cae4af9f5|file:///home/zac/development/research/thesis/draft/thesis.tex|157|27|v|latex
-	\mathbb{E}_{z \in \mathcal{D}}[\nabla f(z)]
-0fd5f03a9ffcc1e19b9a40857919e71e|file:///home/zac/development/research/thesis/draft/thesis.tex|157|76|v|latex
-	\nabla f(z)
-90bf31a669796c0042e32bae61dff4ae|file:///home/zac/development/research/thesis/draft/thesis.tex|157|72|v|latex
-	{4}%
-964f7c8b3e405cb596430e4bfcebc442|file:///home/zac/development/research/thesis/draft/thesis.tex|157|120|v|latex
-	{5}%
-a2d9350b2a939515ac07b149d7fd34ef|file:///home/zac/development/research/thesis/draft/thesis.tex|157|70|v|latex
-	}{5}%
-480d2175ca0d4de3481e65466fceaa78|file:///home/zac/development/research/thesis/draft/thesis.tex|156|2|V|latex
-	\[
-		\text{coherence} = \frac{\mathbb{E}_{z \in \mathcal{D}}[\nabla f(z)] \cdot \mathbb{E}_{z \in \mathcal{D}}[\nabla f(z)]}{\mathbb{E}_{z \in \mathcal{D}}[\nabla f(z) \dot \nabla f(z)]}
-	\]
-bac4f06fdca35437bea4e788bdbce44c|file:///home/zac/development/research/thesis/draft/thesis.tex|155|1|V|latex
-	To calculate coherence for a network $f$ and dataset $\mathcal{D}$, we use the equation
-fac9375224ddeeb4f02b6f3a77a267ec|file:///home/zac/development/research/thesis/draft/thesis.tex|155|5|v|latex
-	final calc
-592d015debf192e057cbc2ce93696961|file:///home/zac/development/research/thesis/draft/thesis.tex|155|117|v|latex
-	becaue the
-a6dd56e1d8a8a1e615bb9e9488d6136f|file:///home/zac/development/research/thesis/draft/thesis.tex|155|195|v|latex
-	Using 
-070effdab06d37738f98b3265e475947|file:///home/zac/development/research/thesis/draft/thesis.tex|155|197|v|latex
-	calculate 
-c78179beb949ea33f7746ba6c1707ed3|file:///home/zac/development/research/thesis/draft/thesis.tex|155|240|v|latex
-	 product
-53d8f4d1e2b5be0d0abfde443f017359|file:///home/zac/development/research/thesis/draft/thesis.tex|155|283|v|latex
-	itself
-29100bdafc9c033ac7d1c681a568699f|file:///home/zac/development/research/thesis/draft/thesis.tex|155|383|v|latex
-	This measurement is 
-c7a80d2307e031516b116945ce650bf6|file:///home/zac/development/research/thesis/draft/thesis.tex|155|449|v|latex
-	accross
-e704ee666f738ba95dcb780cb5329f78|file:///home/zac/development/research/thesis/draft/thesis.tex|410|12|V|latex
-	When pruning
-104fb92bb038c046ea1241cf8cfee388|file:///home/zac/development/research/thesis/draft/thesis.tex|408|498|v|latex
-	so that
-17e61901a20068274a6c4de421370650|file:///home/zac/development/research/thesis/draft/thesis.tex|408|488|v|latex
-	skipping batch norm layers, downsampling layers, 
-567904efe9e64d9faf3e41ef402cb568|file:///home/zac/development/research/thesis/draft/thesis.tex|408|607|v|latex
-	where
-ff40cfb74aa6e143154e78b0723d6b88|file:///home/zac/development/research/thesis/draft/thesis.tex|408|607|v|latex
-	 the weights are far few
-bba7f98ee1c6953d2f76a5efa9e4b8e9|file:///home/zac/development/research/thesis/draft/thesis.tex|408|646|v|latex
-	more to adjust the weights
-a6df2a5f26de562837a5b7f68ed4bcaa|file:///home/zac/development/research/thesis/draft/thesis.tex|408|605|v|latex
-	, which are very small layers that serve 
-a318ab2b459f0c73057018a2fb05b29b|file:///home/zac/development/research/thesis/draft/todo|53|1|V|
-	How do we compute coherence? We don't multiply by the number of items
-	- just make sure that I define my calculation well
-	
-	Pruning techniques:
-	- defining each mask
-	- no words
-787a88b437a18682cfb6dde2547c60fa|file:///home/zac/development/research/thesis/draft/todo|53|1|V|
-	-----------------------------------------------
-e27ebf74de6e1f2a1df53b9890efa193|file:///home/zac/development/research/thesis/draft/thesis.tex|69|797|v|latex
-	exposing
-1105ad154e979f9c7e84a717d60ff563|file:///home/zac/development/research/thesis/draft/thesis.tex|115|60|v|latex
-	It demonstrates that training ResNet50 on real and random data yields meaningful differences in coherence measurement, even though the network can drive training loss near zero in both cases. Specifically, coherence is high on real data and low on random data.
-413729ee0d2b8cb1594a4fcda53854b9|file:///home/zac/development/research/thesis/draft/thesis.tex|119|170|v|latex
-	on a net
-369b93b5c7aa1f9c37c6a30d3df387bd|file:///home/zac/development/research/thesis/draft/thesis.tex|119|266|v|latex
-	 This
-d341f39101d011c2f345726034795328|file:///home/zac/development/research/thesis/draft/thesis.tex|119|287|v|latex
-	The network that
-60686ae524e6d65dc12bb1be47b204ee|file:///home/zac/development/research/thesis/draft/thesis.tex|115|114|v|latex
-	CIFAR-10
-fa0660fcb76de1e68ad582bc1df4c8ae|file:///home/zac/development/research/thesis/draft/thesis.tex|119|388|v|latex
-	This difference in behavior in real and random datasets may pont
-eb80f462e211378eabc26619d0ea710a|file:///home/zac/development/research/thesis/draft/thesis.tex|119|444|v|latex
-	cannot occur on 
-e8a1c318689be76a228136a6006f07ce|file:///home/zac/development/research/thesis/draft/thesis.tex|119|670|v|latex
-	it is generalizing as opposed to 
-2e18a1c6baa77e7d180f86195731a851|file:///home/zac/development/research/thesis/draft/thesis.tex|138|73|V|latex
-		\item We examine the patterns of activations when networks process data.
-a0221658c4250d25c5940c6b18ce1342|file:///home/zac/development/research/thesis/draft/thesis.tex|138|23|v|latex
-	neural network pruning from the perspective of varying the parent network size while keeping the pruning ratio constant, which is the reverse of the way it is usually done.
-bc9f7d99c97f6d76d78d201ab8dc0374|file:///home/zac/development/research/thesis/draft/thesis.tex|138|130|v|latex
-	 We also introduce coherence-based pruning methods using diffs.
-42aa49c0d7dbcb48d24549aa678bc7c6|file:///home/zac/development/research/thesis/draft/thesis.tex|139|1|V|latex
-		\item We analyze the structure of pruned networks and compare their activation patterns to the unpruned networks
-73d5342eba070f636ac3246f319bf77f|file:///home/zac/development/research/thesis/draft/thesis.tex|222|573|v|latex
-	section
-dd20d5e041ad2f093c8f4234cdee37ea|file:///home/zac/.bash_aliases|103|1|V|sh
-	alias vv="vim ~/.config/nvim/init.vim"
-53d6aeb99314b91adfd5bfd4b227589b|file:///home/zac/.bash_aliases|104|17|v|sh
-	.config/nvim/init.vim
-4e18228891cd89a248f5978ad627582c|file:///home/zac/dotfiles/nvim/init.vim|48|1|V|vim
-	"Disable ultisnips in CoC 
-66c360f3a0693807cc26ac945fa92e82|file:///home/zac/dotfiles/nvim/config/coc.vim|173|1|V|vim
-	
-	" Disable ultisnips in CoCG
-c8e40c2ee5fcfc458520ffadc7788026|file:///home/zac/dotfiles/nvim/config/coc.vim|173|27|V|vim
-	snippets.ultisnips.enable: false
-a0e2e9aa7e15b5afe36d4aeba35e4a6f|file:///home/zac/dotfiles/nvim/init.vim|49|1|V|vim
-	>>>>>>> Stashed changes
-0fff0363e05fc6120d104e30db17e736|file:///home/zac/dotfiles/nvim/init.vim|44|1|V|vim
-	<<<<<<< Updated upstream
-	=======
-91ccbe0a00f9797dbeb5b4f9a26d8b27|file:///home/zac/development/research/thesis/defense_outline|5|33|V|
-	- gravity: are large diffs just movement in weight space? (the answer is no)
-	-- magnitude distribution
-	-- Coherence on normal vs gravity
-f01e95f63a4afd0ff31cb1f733e283ed|file:///home/zac/development/research/thesis/defense_outline|4|1|V|
-	Gradient coherence - what is it, why does it matter?
-4606dd129ab0b3ff65d988817bddee2c|file:///home/zac/development/research/thesis/defense_outline|32|1|V|
-	- generalization gap grows as a fun
-d0b407cfcc61a5dc50618fd322cb0069|file:///home/zac/development/research/thesis/defense_outline|34|20|V|
-	- generalization gap
-4b98aad59701619b9a24f2bf9c1f88e7|file:///home/zac/development/research/thesis/defense_outline|35|7|v|
-	 densities 
-fcaafe4ed266082f60157c30be1b7848|file:///home/zac/development/research/thesis/defense_outline|37|29|V|
-	Coherence and Generalization:
-34ce4494c816f8c15e87e49eac4e7d5a|file:///home/zac/development/research/thesis/defense_outline|39|53|v|
-	in good performance
-3d596bda2721dafeef1eb8345a5bc44b|file:///home/zac/development/research/thesis/defense_outline|40|37|V|
-	-- the gains are best for random and 
-0fe4dc5f36cfe531d4cd5117109f686a|file:///home/zac/development/research/thesis/draft/todo|1|1|V|
-	Fix all the graphs
-dc0fefee9f936ac3b69f1b67c5bc1bc9|file:///home/zac/development/research/thesis/draft/todo|16|39|V|
-	- also calculate coherence after every 
-9e25d28fbf5c51523e4f5850825141f4|file:///home/zac/development/research/thesis/draft/todo|31|1|V|
-	Don't save lots of models, but record
-01a6651a94ab602dbfc47587d234b52c|file:///home/zac/development/research/thesis/draft/todo|31|10|V|
-	----------
-4637f5de2458d0d862fba58d55aa8b9d|file:///home/zac/development/research/thesis/draft/todo|46|1|V|
-	Error ba
-6fdfdc385ddc7ccd81a911db8b2123c4|file:///home/zac/development/research/thesis/draft/todo|47|1|V|
-	Always 
-a4a694a6acf92d68917c4e275b7a4a10|file:///home/zac/development/research/thesis/draft/todo|47|23|V|
-	Clears the model files 
-baf390abfcc57268d3ede494a94253b4|file:///home/zac/development/research/thesis/draft/todo|48|10|V|
-	- contains
-807c6ef5bd24fd135df62b6fca42d8ec|file:///home/zac/development/research/thesis/draft/todo|53|15|V|
-	Update the mask
-2cd96b9522b0e852d26deb8002e2c4d0|file:///home/zac/development/research/thesis/draft/todo|50|1|V|
-	*** Run the unmasked models for everything***
-787feaa4343b1f10fdf961b62e02e13f|file:///home/zac/development/research/thesis/draft/todo|54|13|v|
-	unmasked
-03b40d1a6bcf7acb4619df7bb7ca6ee5|file:///home/zac/dotfiles/nvim/init.vim|21|1|V|vim
-	" Disable CoC snippets
-	let g:coc_snippet_enable = 'false'
-d0b59483941cd96619320ef32215095a|file:///home/zac/development/research/thesis/draft/todo|52|14|V|
-	-Resnet50 real/random
-a368b30a7cf9aba627d30963facd7d0d|file:///home/zac/development/research/thesis/draft/todo|46|48|v|
-	 times with that number of epochs,
-9fa6d987b48b8dc9cdecdc67d300f128|file:///home/zac/development/research/thesis/draft/todo|47|1|V|
-	Creates a folder with 5 different results files, organized by results/model/dataset/mask
-15b5f5117cf2429fee71a77a13bad062|file:///home/zac/development/research/thesis/draft/todo|47|1|V|
-	Compute cold
-5f87b706e75e1c8a1c3c4b5748ef60b1|file:///home/zac/development/research/thesis/src/compute/scheduler.py|440|1|V|python
-	    # ----- Section 3: Linear Coherence - ----
-	
-	    # print("Training Linear Models")
-	    # train_linear_models()
-	
-	    # print("Computing linear coherence...")
-	    # linear_coherence(overwrite=True)
-	
-	    # print("Computing linear diffs")
-	    # linear_diffs(overwrite=True)
-9802cd6f054afbb8ef7bf6c754386e4d|file:///home/zac/development/research/thesis/src/compute/scheduler.py|76|58|V|python
-	        run_id = get_run_id(model_id, mask_id, dataset_id)
-8c9dda66d9720d6560429f349db9832c|file:///home/zac/development/research/thesis/src/train.py|19|5|V|python
-	          save_masked=False,
-b59f20632d4affc0bd6d722b26b19e18|file:///home/zac/development/research/thesis/src/train.py|21|5|V|python
-	          resume=False,
-480f0233956950314ee65cc70af96d44|file:///home/zac/development/research/thesis/src/train.py|21|11|v|python
-	overwrite=True
-2619bcc21a20c143a55582566ba51d8a|file:///home/zac/development/research/thesis/src/train.py|33|35|v|python
-	 and (mask_id == 'none' or save_masked)
-ead596080dfb5e80c8f3e6353efd0009|file:///home/zac/development/research/thesis/src/train.py|39|67|V|python
-	    # If the model directory isn't empty, then we should overwrite
-	    if (mask_id == 'none' or
-	            save_masked) and len(os.listdir(models_dir)) > 0 and not overwrite:
-	        return
-f8320b26d30ab433c5a54546d21f414c|file:///home/zac/development/research/thesis/src/train.py|23|15|v|python
-	False
-5f83821f049ffcc406283d05187ed1e3|file:///home/zac/development/research/thesis/src/train.py|51|1|V|python
-	    if resume:
-	        # Load the model
-	        trained_weights = get_trained_weights(id)
-	        model.load_state_dict(trained_weights)
-	
-	        max_epoch = get_max_epoch(id)
-	    else:
-	        max_epoch = 0
-	
-0d505b2b34d2b42ccba446e6828fa449|file:///home/zac/development/research/thesis/src/train.py|65|22|v|python
-	max_epoch + 1, 
-f96aab434fc23bf57b80a44ad175e57a|file:///home/zac/development/research/thesis/src/train.py|123|43|v|python
-	0, 0
-0acf093b3c88f5600dc622a33921d360|file:///home/zac/development/research/thesis/src/compute/coherence.py|11|25|v|python
-	run_id
-46939c04785ee48204d67416ca2de9a4|file:///home/zac/development/research/thesis/src/compute/coherence.py|11|51|v|python
-	epoch, 
-22bcac48f5bb99a26f86c27c256ba4c0|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|51|V|python
-	    outdir = os.path.join("intermediate", "coherence", run_id,
-	                          target_dataset_id)
-d2b6e495c96893bbd58324ad8f5b8ae8|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|1|V|python
-	    if not os.path.exists(outdir):
-	        os.makedirs(outdir)
-31eba712150904f41956151f19f7a2f7|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|1|V|python
-	
-	    outfile = os.path.join(outdir, f"{epoch}_train.feather")
-	
-	    if os.path.exists(outfile) and not overwrite:
-	        return
-f6cb5fca634406d60d1e60f68fa13564|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|1|V|python
-	
-	    model_id = get_model_id(run_id)
-	
-	    # Set up directories
-	    models_dir = os.path.join("models", run_id)
-	    model_path = os.path.join(models_dir, f"{epoch}.pt")
-	
-	    # If the model file doesn't exist, skip
-	    if not os.path.exists(model_path):
-	        return
-	
-	    # Load the model
-	    model = get_model(model_id)
-	    layers, _ = get_layers(model_id)
-	    model.load_state_dict(torch.load(model_path))
-3576b3cb047363d7711f9f193765abba|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|1|V|python
-	    model.cuda()
-5d72fbe3e2195512365b9baac1bd2679|file:///home/zac/development/research/thesis/src/compute/coherence.py|13|1|V|python
-	    # Calculate a mask if we need to
-	    masked = get_mask_id(run_id) != "none"
-	    mask = None
-	    if masked:
-	        # Mask is where the model is non-zero
-	        mask = {
-	            layer: torch.abs(param) > 0
-	            for layer, param in model.named_parameters()
-	        }
-5ee53223ef2c4e4af9ed4ccbbafe25fc|file:///home/zac/development/research/thesis/src/compute/coherence.py|17|27|v|python
-	, layers, mask=mask
-704020999209b536cf2cbf57f4c5752e|file:///home/zac/development/research/thesis/src/compute/coherence.py|69|50|v|python
-	, layers, mask=None
-f6cb0c9c0b31ffb27d00caf3c2e25f66|file:///home/zac/development/research/thesis/src/compute/coherence.py|69|33|v|python
-	dataloader, 
-10c6a3bf19cf6854d71dd34934030471|file:///home/zac/development/research/thesis/src/compute/coherence.py|69|5|v|python
-	calculate_dataset
-74de5f83b824a0d47db6b7616b6f1842|file:///home/zac/development/research/thesis/src/compute/coherence.py|75|7|V|python
-	    layer_denom = {layer: 0 for layer in layers}
-2ec3cc18be83c08d915cad287fd303e6|file:///home/zac/development/research/thesis/src/compute/coherence.py|71|1|V|python
-	    grad_layer_store = {
-	        layer: torch.zeros_like(param)
-	        for layer, param in model.named_parameters()
-	    }
-443d338cb6c41a6dfadedde752f95464|file:///home/zac/development/research/thesis/src/compute/coherence.py|71|1|V|python
-	    trainloader, testloader = load_dataset(dataset_id)
-d366d308c745e26a5bd7aae961cbf98d|file:///home/zac/development/research/thesis/src/compute/coherence.py|69|26|v|python
-	dataset_id
-372dfc298e54c738bad7e214bacbfee6|file:///home/zac/development/research/thesis/src/compute/coherence.py|78|1|V|python
-	        if mask is not None:
-	            grad = {layer: grad[layer] * mask[layer] for layer in grad}
-89f2211d0cc72299fcae0a83480c2c01|file:///home/zac/development/research/thesis/src/compute/coherence.py|78|1|V|python
-	
-	        # Layer coherence
-	        for layer in layers:
-	            grad_layer_store[layer] += grad[layer]
-	            layer_denom[layer] += np.dot(grad[layer].cpu().flatten(),
-	                                         grad[layer].cpu().flatten())
-c6a319f05fd0ac9115e88e40c8b15437|file:///home/zac/development/research/thesis/src/compute/coherence.py|82|28|V|python
-	        if mask is not None:
-	            grad = {layer: grad[layer] * mask[layer] for layer in grad}
-	
-	        # Layer coherence
-	        for layer in layers:
-	            grad_layer_store[layer] += grad[layer]
-	            layer_denom[layer] += np.dot(grad[layer].cpu().flatten(),
-	                                         grad[layer].cpu().flatten())
-aa292f2aa620cd815bef2503fda49342|file:///home/zac/development/research/thesis/src/compute/coherence.py|83|22|v|python
-	layers
-c323d4f84b2e1701122c6fe02c632f86|file:///home/zac/development/research/thesis/src/compute/coherence.py|85|1|V|python
-	            layer_denom[layer] += np.dot(grad[layer].cpu().flatten(),
-	                                         grad[layer].cpu().flatten())
-ab129ab9e7c6e2226992309c426a5830|file:///home/zac/development/research/thesis/src/compute/coherence.py|100|1|V|python
-	    # Compute the coherence
-	    coherence = {
-	        layer:
-	        (np.dot(grad_layer_store[layer].cpu().flatten(),
-	                grad_layer_store[layer].cpu().flatten()) / layer_denom[layer])
-	        / len(dataloader)
-	        for layer in layers
-	    }
-cd5c92c20af5c58b1d73dbb8733d5cc0|file:///home/zac/development/research/thesis/src/compute/coherence.py|100|1|V|python
-	    # Turn into dataframe
-	    coherence = pd.DataFrame.from_dict(coherence, orient='index').reset_index()
-	    coherence.columns = ['layer', 'coherence']
-c55d5083bb60ee2b4d4c12f9c81898e0|file:///home/zac/development/research/thesis/src/compute/coherence.py|100|12|v|python
-	coherence, 
-8ff4d9a09b03ffc33abd91a921967ea0|file:///home/zac/development/research/thesis/src/train.py|124|24|v|python
-	, test_coherence 
-a051adc077334fa58dd4c3abee9a4de1|file:///home/zac/development/research/thesis/src/train.py|131|47|V|python
-	        train_accuracies.append(train_accuracy)
-03c034697d7472524bd4c28d68bd7871|file:///home/zac/development/research/thesis/src/train.py|143|29|v|python
-	 or save_masked
-b524c1c6d68bda56b0716f436afb91d5|file:///home/zac/development/research/thesis/src/train.py|34|1|V|python
-	    id = get_run_id(model_id, run_mask_id, dataset_id,
-	                    optimizer_id) + f'_{run_number}'
-bd75b7df8e5add0a3e7123e31959f7d0|file:///home/zac/development/research/thesis/src/train.py|166|1|V|python
-	    # If we have already saved results, append to them
-	    if resume:
-	        try:
-	            results = pd.read_csv(f'results/{id}.csv')
-	            df = pd.concat([results, df])
-	        except FileNotFoundError:
-	            print("No results file found, creating a new one")
-6d63a1ea2131c7fca0c5af2a65096e68|file:///home/zac/development/research/thesis/src/compute/scheduler.py|84|1|V|python
-	    train('resnet50', 'none', 'cifar_gaussian', epochs, resume=True)
-	    train('resnet50', 'none', 'cifar_normal', epochs, overwrite=False)
-	    train('resnet50200', 'none', 'cifar_gaussian', epochs, overwrite=False)
-d79a7112626097196941f4bf3be5849e|file:///home/zac/development/research/thesis/src/compute/scheduler.py|83|14|V|python
-	    epochs = 500
-36485149435d99ad961d2158345b7674|file:///home/zac/development/research/thesis/src/compute/scheduler.py|83|55|v|python
-	epochs
-1f1371b268423562a4fdea7d166f766a|file:///home/zac/development/research/thesis/src/compute/scheduler.py|84|1|V|python
-	    multiple_runs('resnet50', 'none', 'cifar_gaussian',
-	                  epochs=1000, num_runs=5)
-572d26bac6d6c8c6bd3b0454ff84119a|file:///home/zac/development/research/thesis/src/compute/scheduler.py|90|1|V|python
-	    epochs = 300
-aa126487e4ee383cc92c17e42b340230|file:///home/zac/development/research/thesis/src/compute/scheduler.py|90|1|V|python
-	    train('vit', 'none', 'cifar_normal', epochs, overwrite=True)
-	    train('vit', 'none', 'cifar_gaussian', epochs, overwrite=True)
-	    train('vit200', 'none', 'cifar_gaussian', epochs, overwrite=True)
-7f31e52cf28ed8d8f98da42b2f9b41be|file:///home/zac/dotfiles/nvim/init.vim|11|3|V|vim
-	" Set nerdcommenter to use comma as leader
-	" let g:NERDSpaceDelims = 1
-	" let g:NERDCommentEmptyLines = 1
-	" let g:NERDCreateDefaultMappings = 0
-	" let g:NERDDefaultAlign = 'left'
-	" let g:NERDSpaceDelims = 1
-	" let g:NERDCommentEmptyLines = 1
-	"
-6d7f358f955db88562b655d8c1939591|file:///home/zac/development/research/thesis/src/compute/scheduler.py|188|9|V|python
-	        train(model_id, 'none', dataset_id, epochs, overwrite=overwrite)
-2584063920814d652c9fc3a0e4921c50|file:///home/zac/development/research/thesis/draft/todo|68|1|V|
-	Write the 
-cdd76a2edb9f551071f425ea5fb729b2|file:///home/zac/development/research/thesis/draft/todo|57|2|V|
-	Compute scheduler function
-	Training function
-7906ac09cffee1d2f638f0d3a7758a43|file:///home/zac/development/research/thesis/draft/todo|57|1|V|
+da274a49fc1d3cf244692ff59d5bc998|file:///home/zac/dotfiles/init.el|451|31|v|lisp
+	 "isort"
+e56089ccdaa24ea3f491f41c49c20f1e|file:///home/zac/development/research/thesis/draft/todo|59|1|V|
 	Make sure things are working
-	Masking function
+	Fix get_coherence_extreme
+4a2fc350869fc5e158b255d086f6625a|file:///home/zac/development/research/thesis/draft/todo|60|12|V|
+	- linear and
+e32fdabb35243b6bbb75c8b502c09af8|file:///home/zac/dotfiles/init.el|652|58|V|lisp
+	;; Also, pressing space in visual mode is the leader key and not a command
+e9c38fa1ceae5a6fbf18db0dd7d35976|file:///home/zac/dotfiles/init.el|654|1|V|lisp
+	(evil-define-key 'visual 'global (kbd "SPC") 'evil-leader)
+7886076eaba2f356a41a284d659d6fa5|file:///home/zac/dotfiles/init.el|656|1|V|lisp
+	(evil-define-key 'visual 'global (kbd "<leader>cc") 'evilnc-comment-or-uncomment-lines)
+0e5d8049ddd839300c8bccf1a1a529c4|file:///home/zac/dotfiles/init.el|655|49|V|lisp
+	;; In visual mode, allow <leader>cc to comment out the region
+14b8d34c5c4f0b42bb249ca947d26041|file:///home/zac/dotfiles/init.el|654|1|V|lisp
+	(evil-define-key 'visual 'global (kbd "<leader>cc") 'evilnc-comment-or-uncomment-lines)
+	(evil-define-key 'visual 'global (kbd "<leader>cu") 'evilnc-comment-or-uncomment-lines)
+95094e47454dbde489a4530e44341983|file:///home/zac/dotfiles/init.el|654|69|v|lisp
+	'comment-region
+c19c87327d719f1d6885b0c4d70bb532|file:///home/zac/dotfiles/init.el|650|9|V|lisp
+	;; Fixes
 	
-	Plotting code
-9c4318f5cc764bee75c332583a5252e6|file:///home/zac/development/research/thesis/draft/todo|63|1|V|
-	Make sure everything is working so far 
-	Wr
-ff4c8ff01d544500ea4bfea43e6108c1|file:///home/zac/development/research/thesis/draft/todo|55|1|V|
+	;; In visual mode, pressing TAB will indent the region
+	(evil-define-key 'visual 'global (kbd "TAB") 'indent-region)
+	(evil-define-key 'visual evil-visual-state-map (kbd "<leader> c c") 'evilnc-comment-or-uncomment-lines)
+128477f50347d98ee1213d71f27e8886|file:///home/zac/development/research/thesis/draft/thesis.tex|87|480|v|latex
+	bind
+a8a36ca94c37a7082739e41103fce735|file:///home/zac/development/research/thesis/draft/thesis.tex|87|456|v|latex
+	(that it is possible to restrict a hypothesis class such that 
+5ea790e4a248dab6ac4b6ae1854463c7|file:///home/zac/development/research/thesis/draft/thesis.tex|87|654|v|latex
+	notion
+cb5e100e5a9a3e7f6d1fd97512215282|file:///home/zac/development/research/thesis/draft/thesis.tex|87|757|v|latex
+	error
+9ab1a6177d533a2a32ad619542831202|file:///home/zac/development/research/thesis/draft/thesis.tex|89|34|V|latex
+	Mathematically, we have that the g
+8d777f385d3dfec8815d20f7496026dc|file:///home/zac/development/research/thesis/draft/thesis.tex|87|846|v|latex
+	data
+635abb4cc19792b4b5d70b71969c2bdf|file:///home/zac/development/research/thesis/draft/thesis.tex|87|872|v|latex
+	They also show that many uniform convergence bounds are vacuous in practice.
+538fa7317839a5ff27769f270d6f3244|file:///home/zac/development/research/thesis/draft/thesis.tex|104|21|v|latex
+	\frac{
+d2202031b964e8d8e8f857d9e688a51c|file:///home/zac/development/research/thesis/draft/thesis.tex|104|11|v|latex
+	\big|\big|
+9bf6a00aad7d80806ada01ae80f709da|file:///home/zac/development/research/thesis/draft/thesis.tex|104|63|v|latex
+	\cdot\mathbb{E}_{z \sim \mathcal{D}}[g_{z}]
+1d61585a95c012c741a8b2f380eff293|file:///home/zac/development/research/thesis/draft/thesis.tex|104|109|v|latex
+	g_z\cdot g_{z}
+423c3be944b05dc1b8c4b6a5bce7ecd6|file:///home/zac/development/research/thesis/draft/thesis.tex|119|215|v|latex
+	a good measure of coherence, and thus a good indicator of generalization.
+23ca35531237efc7ad00650d14c663a7|file:///home/zac/development/research/thesis/draft/thesis.tex|128|360|v|latex
+	The connection to gradient coherence is that t
+d395743cb6c29ce13b701c7882a24ffc|file:///home/zac/development/research/thesis/draft/thesis.tex|13|1|V|latex
+	\usepackage{csquotes}
+92d77b97f4eed8bcb9110ac6d70b7468|file:///home/zac/development/research/thesis/draft/thesis.tex|13|18|V|latex
+	%\usepackage[T1]{fontenc}
+	%\usepackage[utf8]{inputenc}
+	%\usepackage[english]{babel}
+	%\usepackage{csquotes}
+88b973e1bb800b4cbd0552c14cf7bdf8|file:///home/zac/development/research/thesis/draft/thesis.tex|148|123|v|latex
+	 with
+fea087517c26fadd409bd4b9dc642555|file:///home/zac/development/research/thesis/draft/thesis.tex|152|230|v|latex
+	normal
+be7b21db47e68ed6da8a345a876fad3e|file:///home/zac/development/research/thesis/draft/thesis.tex|158|263|v|latex
+	1<Plug>(coc-snippets-expand-jump)}
+b56a6cab0f5636ba8d297e309f37c930|file:///home/zac/development/research/thesis/draft/thesis.tex|158|338|v|latex
+	entirely
+1356051a324c5ce42c61a1a674b964e9|file:///home/zac/development/research/thesis/draft/thesis.tex|158|517|v|latex
+	\frac{}{}
+f183fde1c1f409b21fc8463052ca49e5|file:///home/zac/development/research/thesis/draft/thesis.tex|178|307|v|latex
+	migrate
+408a89822726674e680d99ab2cb86ce7|file:///home/zac/development/research/thesis/draft/thesis.tex|178|307|v|latex
+	are far from
+e383234c8c5c6cf7eb44a3208e26d50f|file:///home/zac/development/research/thesis/draft/thesis.tex|178|457|v|latex
+	minimum
+36273dd90ed73ea341322d133cd6ba06|file:///home/zac/development/research/thesis/draft/thesis.tex|178|694|v|latex
+	minimizers
+ff9bb0239f3f4f50007998a789662dbf|file:///home/zac/development/research/thesis/draft/thesis.tex|150|46|v|latex
+	Cifar10
+8e2dcfd7e7e24b1ca76c1193f645902b|file:///home/zac/development/research/thesis/draft/thesis.tex|140|79|v|latex
+	element
+677a4ea5293f6021226ca3c07f582e85|file:///home/zac/development/research/thesis/draft/thesis.tex|210|76|v|latex
+	element-wise
+f70cf526b32d5c73a944d9850b898355|file:///home/zac/development/research/thesis/draft/thesis.tex|184|383|v|latex
+	generalization
+a03b60224e27ceb7730a40e79d7c067e|file:///home/zac/development/research/thesis/draft/thesis.tex|190|193|v|latex
+	almost identical
+dd33504ae564bc85271cf957d0bc364f|file:///home/zac/development/research/thesis/draft/thesis.tex|184|262|v|latex
+	rules out
+216c38e1f0036c53e873cc312af1d8a6|file:///home/zac/development/research/thesis/draft/thesis.tex|184|276|v|latex
+	the possibility that 
+f3953d1be3f645ddc832386e5c98913b|file:///home/zac/development/research/thesis/draft/thesis.tex|184|158|v|latex
+	The fact that the weight magnitudes are very similar between networks trained on real and Gaussian data suggests that a difference in how the weight magnitudes evolve is not responsible for the difference in measured coherence.
+d20306946b1f0028e1629c1d1b3460a3|file:///home/zac/development/research/thesis/draft/thesis.tex|190|153|v|latex
+	The fact that the weight magnitudes are very similar between networks trained on real and Gaussian data rules out the possibility that a difference in how the weight magnitudes evolve is responsible for the difference in measured coherence.
+44f7cee8577201a2c4e9cd9f1889e1ff|file:///home/zac/development/research/thesis/draft/thesis.tex|200|720|v|latex
+	coherene
+03973af1531db5504b67e3c884466783|file:///home/zac/development/research/thesis/draft/thesis.tex|200|654|v|latex
+	when trained on random data
+c5344ff39ad1e7e65b1d73438a45e2ea|file:///home/zac/development/research/thesis/draft/thesis.tex|194|853|v|latex
+	This leaves the learning of 
+62cedf9c782b330714637e47792bf96c|file:///home/zac/development/research/thesis/draft/thesis.tex|196|4|v|latex
+	will run
+30db597822c6e06c6737052260426f45|file:///home/zac/development/research/thesis/draft/thesis.tex|196|87|v|latex
+	initialize
+0f2600079aadeb7d6aa07b5ea6453e83|file:///home/zac/development/research/thesis/draft/thesis.tex|196|82|v|latex
+	ill 
+6489a0eac6cb1b964ab650e7e9af9642|file:///home/zac/development/research/thesis/draft/thesis.tex|204|55|v|latex
+	 in fac
+8e522999dcc2d29a0143b573b7451d89|file:///home/zac/development/research/thesis/draft/thesis.tex|204|278|v|latex
+	coincides
+54f8234b7fb8387098eeea2c23289e43|file:///home/zac/development/research/thesis/draft/thesis.tex|204|270|v|latex
+	, which seems to coincide with the point in time when the network is memorizing the data. 
+0a6cd00e15b9cadb013bd608f6fed577|file:///home/zac/development/research/thesis/draft/thesis.tex|214|339|v|latex
+	one calculated individually for
+a81d41675e213dfd61f502241975dafd|file:///home/zac/development/research/thesis/draft/thesis.tex|219|16|v|latex
+	\sum{z \in D} 
+e12e8546bc4d061343b78de6a89a8a88|file:///home/zac/development/research/thesis/draft/thesis.tex|219|27|v|latex
+	\sum_{z \in D} g_z
+f5e0681d866705b4f367d2d9c18080af|file:///home/zac/development/research/thesis/draft/thesis.tex|216|189|v|latex
+	a dot product multiplied by the number of elements in the dataset
+ebf052e77c036b93840b18025e1b7b70|file:///home/zac/development/research/thesis/draft/thesis.tex|216|155|v|latex
+	a 1-dimensional
+f0d861acd100f1777c815ec40c8842bd|file:///home/zac/development/research/thesis/draft/thesis.tex|253|495|v|latex
+	whether that is the right value for the parameter
+58053a8e13f7a2c14bc43a726de4936e|file:///home/zac/development/research/thesis/draft/thesis.tex|253|615|v|latex
+	isn't as helpful for classifying the next observed sample
+8f4c1961cd14b77018bc97acd0962bff|file:///home/zac/development/research/thesis/draft/thesis.tex|255|184|v|latex
+	the right direction
+e5dee84f405b9366f44feef46df9704d|file:///home/zac/development/research/thesis/draft/thesis.tex|255|186|v|latex
+	particular
+77631ca4f0e08419b70726a447333ab6|file:///home/zac/development/research/thesis/draft/thesis.tex|255|556|v|latex
+	This
+69ce7546b8231f2aa01adb5aafbb2e20|file:///home/zac/development/research/thesis/draft/thesis.tex|255|615|v|latex
+	paramters
+9ae3f37b35ed8083c217fc82c55344a7|file:///home/zac/development/research/thesis/draft/thesis.tex|255|585|v|latex
+	confined
+87c0f8d76f0fc20a2a6705455371a692|file:///home/zac/development/research/thesis/draft/thesis.tex|243|428|v|latex
+	These plots show that diffs calculated during the epoch when coherence was highest are larger than diffs calculated when coherence was smallest. This correlation between average diff magnitudes and coherence measurement strengthens the case that diffs are a useful parameter-wise approximation of coherence.
+ee40698f1e2d7a72312b87c5ae1fde47|file:///home/zac/development/research/thesis/draft/thesis.tex|257|212|v|latex
+	strong 
+b233b5ddde6ebf3fab6cccfa8f74dd5b|file:///home/zac/development/research/thesis/draft/thesis.tex|261|453|v|latex
+	but if generalization is occurring then the diffs are able to identify the parameters most responsible for it
+3a45da0d5405623c2443e30e0bc76939|file:///home/zac/development/research/thesis/draft/thesis.tex|261|721|v|latex
+	Whatever
+e4eee5390c5e8a0f1bb2188bcca9bf51|file:///home/zac/development/research/thesis/draft/thesis.tex|261|751|v|latex
+	 the case may be
+1a450f2a63243a535bf02c54fb534e10|file:///home/zac/development/research/thesis/draft/thesis.tex|261|756|v|latex
+	will investigate
+6c886922082cdb317e95b76c8450fdd9|file:///home/zac/development/research/thesis/draft/thesis.tex|279|1|v|latex
+	Fortunately, 
+08aac17bdcf825fa5131bd6c04e8ac56|file:///home/zac/development/research/thesis/draft/thesis.tex|296|386|v|latex
+	trainset
+b573766d46494a5f5e12c44a0e1949cf|file:///home/zac/development/research/thesis/draft/thesis.tex|300|54|v|latex
+	testset
+c8a6569731adfdd0ed40c75e60c5d4a5|file:///home/zac/development/research/thesis/draft/thesis.tex|314|80|v|latex
+	ourselves 
+d7fec36cb38d8a6b00826d43a6622290|file:///home/zac/development/research/thesis/draft/thesis.tex|314|181|v|latex
+	average of the
+ff4d1c249a4c3f2a807f3cec31c88874|file:///home/zac/development/research/thesis/draft/thesis.tex|314|189|v|latex
+	3-epoch 
+d3d14025827d8274e8a78099a6448854|file:///home/zac/development/research/thesis/draft/thesis.tex|316|1013|v|latex
+	 What remains unclear is whether this is simply a
+d4d173100a349cdc72b62fd6fc40abfb|file:///home/zac/development/research/thesis/draft/thesis.tex|316|1088|v|latex
+	However, i
+cc70865f1ecd933ec055851deb5bd69a|file:///home/zac/development/research/thesis/draft/thesis.tex|325|588|v|latex
+	because
+9671885ae79c961f59d82cb7f3c67718|file:///home/zac/development/research/thesis/draft/thesis.tex|325|660|v|latex
+	 We might go further and state that somehow the gradients of these superfluous parameters line up, thus increasing the gradient coherence.
+c2053a0246c569857071db3aca734508|file:///home/zac/development/research/thesis/draft/thesis.tex|335|492|v|latex
+	compactification 
+5d07182d32063d7ea666184b1717af35|file:///home/zac/development/research/thesis/draft/thesis.tex|335|495|v|latex
+	neural network 
+1ab765fe7d78916169e07d6aabd1018e|file:///home/zac/development/research/thesis/draft/thesis.tex|335|550|v|latex
+	one of its
+7622f5498fa90a7319bdbf875f9296ee|file:///home/zac/development/research/thesis/draft/thesis.tex|335|886|v|latex
+	 One might even imagine a sparse network.
+0456769778423bd0ba1dcedf4909ff04|file:///home/zac/development/research/thesis/draft/thesis.tex|337|674|v|latex
+	repea
+da5040df42b338e395dfdd2505880904|file:///home/zac/development/research/thesis/draft/thesis.tex|337|674|v|latex
+	tedly 
+e4590736201649b6e4f716839832735e|file:///home/zac/development/research/thesis/draft/thesis.tex|337|687|v|latex
+	remaining 
+68c97f439fb2d2c1fb618a78300cbccc|file:///home/zac/development/research/thesis/draft/thesis.tex|360|427|v|latex
+	The equation that they use O
+9379ba030842032613368e5952fea2a5|file:///home/zac/development/research/thesis/draft/thesis.tex|378|131|v|latex
+	after 
+37e685fddf0c7550488f642b60de2e65|file:///home/zac/development/research/thesis/draft/thesis.tex|371|40|v|latex
+	large parameters with large gradients.
+9bede4dc73ce8c752e3514c5fadcb40e|file:///home/zac/development/research/thesis/draft/thesis.tex|368|61|v|latex
+	 \cdot \theta
+6ad499d0242ce0d5fd8044f22d70dfdc|file:///home/zac/development/research/thesis/draft/thesis.tex|371|54|v|latex
+	on how sensitive the 
+c42032c3e5f9b6d723b3222dd487a842|file:///home/zac/development/research/thesis/draft/thesis.tex|335|885|v|latex
+	Unfotunately, 
+d0e6ef34e76c41b0fac84f608289d013|file:///home/zac/development/research/thesis/draft/thesis.tex|412|384|v|latex
+	must
+c64854b8ad94bb2282787671f5823884|file:///home/zac/development/research/thesis/draft/thesis.tex|426|44|v|latex
+	coherence
+1f1c0bbdd268d98f2a525a1051082d95|file:///home/zac/development/research/thesis/draft/thesis.tex|428|359|v|latex
+	without training all the way to the end
+fd8e6841e932d65bd81080409ec1ee72|file:///home/zac/development/research/thesis/draft/thesis.tex|455|553|v|latex
+	\frac{10}{}
+713830923fe572566442850e211cb691|file:///home/zac/development/research/thesis/draft/thesis.tex|153|147|v|latex
+	dimension of
+c4cf4802b30127a6ae42a1a1798c51b3|file:///home/zac/development/research/thesis/draft/thesis.tex|153|152|v|latex
+	dimension
+39634129f9420952e30f468a59407d6d|file:///home/zac/development/research/thesis/draft/thesis.tex|506|1|v|latex
+	Now that we have shown that
+5327831e349a70251bff74ad33d12c78|file:///home/zac/development/research/thesis/draft/thesis.tex|496|252|v|latex
+	We can see that 
+d9ec7acd6e100debd7fa3e0a5460b51c|file:///home/zac/development/research/thesis/draft/thesis.tex|506|240|v|latex
+	each layer is only 
+f6cb3e816496528d4187db53bc66567f|file:///home/zac/development/research/thesis/draft/thesis.tex|539|682|v|latex
+	both
+5f0e8c5ce4dcc5b9f1f947b9852a27e3|file:///home/zac/development/research/thesis/draft/thesis.tex|549|25|v|latex
+	both 
+40153960187268bf42b2e647fbfdc6a5|file:///home/zac/development/research/thesis/draft/thesis.tex|187|1|V|latex
+	\begin{figure}
+	\includegraphics[]{weights_vit.pdf}
+	\caption{Distribution of bottom 99\% of weight magnitudes for ViT trained on real and Gaussian data, as well as at the network's random initialization. The fact that the weight magnitudes are very similar between networks trained on real and Gaussian data suggests that a difference in how the weight magnitudes evolve is not responsible for the difference in measured coherence.}
+	\label{fig:weights_vit}
+	\end{figure}
+f19627512e245e50fcc529f9c63d65d9|file:///home/zac/development/research/thesis/draft/thesis.tex|188|32|v|latex
+	 and \ref{fig:weights_vit} 
+3e11ca2215bada5ab235ee73e4ff7cd0|file:///home/zac/development/research/thesis/draft/thesis.tex|188|78|v|latex
+	networks
+0621fa131f4ba0ff804e47d6448f56a3|file:///home/zac/development/research/thesis/draft/todo|95|59|V|
+	Vit weight histogram - what's going on there? (Drop if necessary)
+be686ddf37b80b8d3bc222f1567740c9|file:///home/zac/development/research/thesis/draft/thesis.tex|304|109|v|latex
+	Interestingly, the result is not a smooth curve but instead there are two peaks. In addition, it seems strange that the largest coherence should be measured when the generalization gap is largest. 
+75765d2c3987c9a6879979f73a0a838b|file:///home/zac/development/research/thesis/draft/thesis.tex|310|173|v|latex
+	The spike in coherence near 500 parameters would seem to correspond to the point where maximum test accuracy (generalization) occurs and minimum overfitting occurs. This fits well with the coherent gradients hypothesis. What is surprising, however, is the increase in coherence at widths beyond 2000 neurons.
+aca97d20e08b40dcdc4199b8b8166eda|file:///home/zac/development/research/thesis/draft/thesis.tex|310|369|v|latex
+	One hypothesis that would explain why coherence increases with size is that the larger networks are able to search a larger space of parameter value paths and find those that generalize better. These parameters generalize so well that they have very strong gradients pointing in the same direction across all the training data, pulling up the average coherence with them.
+12a6cb1fdeb4b5b0d8cefa4870c91b1e|file:///home/zac/development/research/thesis/draft/thesis.tex|310|654|v|latex
+	. the coherent gradients hypothesis because coherence appears to increase in tandem with the generalization gap
+abfae730f00e04dc81e3b9e858504950|file:///home/zac/development/research/thesis/draft/thesis.tex|310|853|v|latex
+	Whatever the case may be, it is notable that coherence is at its largest when the generalization gap is also at its largest, because this directly contradicts the coherent gradient hypothesis. We expect that coherence should fall as the generalization gap increases.
+a8baf6c700dff132995904e7ef61d3d7|file:///home/zac/development/research/thesis/draft/thesis.tex|536|82|v|latex
+	, but the increase is not monotonic.
+5a7349cd25ef6bf5f869127b96b52743|file:///home/zac/development/research/thesis/draft/thesis.tex|538|64|v|latex
+	has 2 peaks - once when the network has enough parameters to learn the data without overfitting, and then a second peak when there are a lot of parameters. The first peak's existence is predicted by the coherent gradients hypothesis - generalizable learning is occurring. We will offer a hypothesis to explain the existence of the second peak: the second peak exists because
 	
 	
+14591145ff7222c6bd550ec1a66d1112|file:///home/zac/development/research/thesis/draft/thesis.tex|538|122|v|latex
+	The first peak 
+756e741e7d3386214e3af2cce08f0cab|file:///home/zac/development/research/thesis/draft/thesis.tex|538|122|v|latex
+	This might be explained by larger networks
+ad3d2af048b6a1b1ab45fdc4cf6f6a21|file:///home/zac/development/research/thesis/draft/thesis.tex|540|1|V|latex
+	has 2 peaks - once when the network has enough parameters to learn the data without overfitting, and then a second peak when there are a lot of parameters. The first peak's existence is predicted by the coherent gradients hypothesis - generalizable learning is occurring. We will offer a hypothesis to explain the existence of the second peak: the second peak exists because
+aefa4c562e01af2ba8b34757afe5ec92|file:///home/zac/development/research/thesis/draft/thesis.tex|538|323|v|latex
+	 performance
+2b68849104d14931f07939a265c0f6f8|file:///home/zac/development/research/thesis/draft/thesis.tex|319|338|v|latex
+	for the narrowness of the diffs with increasing width is that because the data can be effectively learned with a width of ~500, all of the extra parameters don't really have a "job" to do during training and are not moved in any consistent direction; i
+27ac2f054cf508372f7cf6671f5ad573|file:///home/zac/development/research/thesis/draft/thesis.tex|319|337|v|latex
+	., they don't really have a strong impact on the network's gradient
+b4a8a8f68aad816e44944599edae9bff|file:///home/zac/development/research/thesis/draft/thesis.tex|553|9|v|latex
+	Coherence pruning can sometimes work better than magnitude pruning, and it is computationally cheaper to run.
+28c3d8f4b7e312af5e0d6b59a50efd1c|file:///home/zac/development/research/thesis/draft/thesis.tex|553|15|v|latex
+	magnitude
+5c7f8f280f4dbe3d1fd182113e2c9fb7|file:///home/zac/development/research/thesis/draft/thesis.tex|555|140|v|latex
+	we see that particularly at lower widths, coherence pruning generalized better than magnitude pruning. In addition, the ViT pruning results in tables \ref{fig:pruned_vit} and \ref{fig:pruned_vit_local} show that coherence pruning outperformed all other methods. In the case where layers were non-uniformly pruned, coherence pruning actually surpassed the original dense network in max accuracy. This is a powerful result that shows that while diffs and coherence may not be as closely linked as we would like, diff-based coherence pruning may yet have a place in the landscape of pruning techniques. In addition, the coherence masks can be derived with fewer epochs of training than magnitude masks, meaning that if the two methods are roughly comparable in power then coherence pruning may serve simply to reduce the compute cost of training pruned models.
 	
 	
+8e9d684607e8ebc71a33fc370c97360a|file:///home/zac/development/research/thesis/draft/thesis.tex|555|326|v|latex
+	coherence p
+bb6dbb9fde5abe9b673200d2e7f59636|file:///home/zac/development/research/thesis/draft/thesis.tex|553|151|v|latex
+	Coherence
+5a0a3c139f318fdcb14edce7787c75d6|file:///home/zac/development/research/thesis/draft/thesis.tex|555|421|v|latex
+	is significantly 
+96d1a588ffe1f7c9da65da998eed11dc|file:///home/zac/development/research/thesis/draft/thesis.tex|564|148|v|latex
+	overparametrized
+10898f1ef244b66986d236e312ad538b|file:///home/zac/development/research/thesis/draft/thesis.tex|566|63|v|latex
+	 Section 3, why does the second peak exists?
+4f1bcc75494e4d3aa11f54dcda523301|file:///home/zac/development/research/thesis/draft/thesis.tex|568|43|v|latex
+	contains a peak in coherence at high width
+1facc39d1c697155ed1dff81d20f0f87|file:///home/zac/development/research/thesis/draft/thesis.tex|572|65|v|latex
+	suggest that coherence pruning might generalize better than magnitude pruning. However
+a38bf9994672020e4390cdf7913f130c|file:///home/zac/development/research/thesis/draft/thesis.tex|572|1|v|latex
+	The results found i
+53bd2c50504b4753270007ed242559d3|file:///home/zac/development/research/thesis/draft/thesis.tex|572|110|v|latex
+	this into question
+dc42358723d58d7e072d091d79196c38|file:///home/zac/development/research/thesis/draft/thesis.tex|572|192|v|latex
+	then could it be the case that diff-based pruning simply does a better job of approximating random pruning and thus generalizes better
+78c767959b213cb39788e2a641bb764a|file:///home/zac/development/research/thesis/draft/thesis.tex|574|1|v|latex
+	Beyond this, t
+d4cd8e4a1738dd2ec14433c5d0d9acbe|file:///home/zac/development/research/thesis/draft/thesis.tex|598|101|v|latex
+	, although not monotonically
+8268ec34e09303c24abec0a9b7612aa3|file:///home/zac/development/research/thesis/draft/thesis.tex|151|330|v|latex
+	 ResNet
+62fd3f87581663e4371e40eb51d66e76|file:///home/zac/development/research/thesis/draft/thesis.tex|151|331|v|latex
+	for 
+82f9e82f567f40e2f99f1ec3b1c7d8f1|file:///home/zac/development/research/thesis/draft/thesis.tex|151|343|v|latex
+	ViT for 200 epochs, 
+0314227d6af2b7d2d07d8e13328d9486|file:///home/zac/development/research/thesis/draft/thesis.tex|49|766|v|latex
+	coherence 
+098312e5ee6436ca0775cb12c3a8b25f|file:///home/zac/development/research/thesis/draft/thesis.tex|161|233|v|latex
+	is higher at the beginning
+856dcb6362c3c1e17ca6d4821d5e4025|file:///home/zac/development/research/thesis/draft/thesis.tex|171|254|v|latex
+	whereas
+44114fd344c6eada581e75c26fc0d55b|file:///home/zac/development/research/thesis/draft/thesis.tex|171|276|v|latex
+	not 
+069a212d258150362ac8107d4a499bc4|file:///home/zac/development/research/thesis/draft/thesis.tex|395|1|V|latex
+	Finally, we review one final paper. \citet{yang_pruning_2023} explores the connection between pruning and generalization, the two subjects of this thesis.
+b7dfc85f020bfb5c7dd51f4fcea00c8c|file:///home/zac/development/research/thesis/draft/todo|96|23|V|
+	Yang et al, 2023 review
+5b31a90552a508dcffa136e6fc2f3cd0|file:///home/zac/development/research/thesis/draft/todo|94|32|V|
+	Reproduction plot y-axis scaling
+c5d252814718107b050554c6c73e7193|file:///home/zac/development/research/thesis/draft/todo|87|45|V|
+	- linear coherence does not have a double peak - it is in fact a somewhat smooth curve, exactly what one would hope for
+	- linear generalization gap is also different
+	- how I compute my diffs, averaging the runs, etc
+	- rework all the images, captions, and surrounding analysis
 	
-62b972915792c88332c8ed5b89fb70e6|file:///home/zac/development/research/thesis/src/train.py|75|1|V|python
-	    # Set the seed
-	    torch.manual_seed(18)
-99b21162b8e9a85c8e0e1a223e0847c9|file:///home/zac/development/research/thesis/src/train.py|61|5|V|python
-	    pudb
-f6d4b52c6123695001ea8ad863128482|file:///home/zac/development/research/thesis/src/compute/scheduler.py|92|35|V|python
-	    multiple_runs('vit', 'none', 'cifar_normal', epochs=200, num_runs=5)
-	    multiple_runs('vit', 'none', 'cifar_gaussian', epochs=500, num_runs=5)
-fda24749cc7671c0d66a24e212d222b1|file:///home/zac/development/research/thesis/src/train.py|61|1|V|python
-	    import pudb
-	    pudb.set_trace()
-e29f822a42391a2574c72a4158bbf498|file:///home/zac/development/research/thesis/src/train.py|30|1|V|python
-	    epochs_save = list(range(0, 30)) + list(range(30, 100, 3)) + list(
-	        range(100, 1000, 30))
-30cf1d637cac13131059b02e7f919071|file:///home/zac/development/research/thesis/draft/todo|69|22|V|
-	- whichever is closest
-eb5bcf96c0bed4af56935112c1f20a43|file:///home/zac/development/research/thesis/draft/todo|71|1|V|
-	(really all we are doing is changing the calculation of max coherence epoch)
-9af22764acb4d74ba4fdc4f2dff5cda8|file:///home/zac/development/research/thesis/draft/todo|71|51|V|
-	&& Also check that the max coherence epoch is usual
-adae237bc0c9e9664af58f1654586cb2|file:///home/zac/development/research/thesis/src/compute/scheduler.py|85|1|V|python
-	    multiple_runs('resnet50', 'none', 'cifar_normal', epochs=300, num_runs=5)
-35e949f02d4ef63e099ce770bfde2e04|file:///home/zac/development/research/thesis/src/compute/scheduler.py|93|1|V|python
-	    # multiple_runs('vit', 'none', 'cifar_normal', epochs=200, num_runs=5)
-	    # multiple_runs('vit', 'none', 'cifar_gaussian', epochs=500, num_runs=5)
-7f7a49e9692b01bc1af3e3c61f5e304c|file:///home/zac/development/research/thesis/src/train.py|146|27|v|python
-	max_epoch + 1, max_epoch + 1 + 
-f261f3f0750d0ba15c619d3e21ca6856|file:///home/zac/development/research/thesis/src/compute/scheduler.py|86|1|V|python
-	    multiple_runs('resnet50', 'none', 'cifar_normal', epochs=2, num_runs=5)
-9fe85a5efa032d82f8dece19a26757ac|file:///home/zac/development/research/thesis/src/compute/scheduler.py|98|1|V|python
-	    multiple_runs('vit', 'none', 'cifar_normal', epochs=2, num_runs=5)
-	    multiple_runs('vit', 'none', 'cifar_gaussian', epochs=2, num_runs=5)
-1d1813b0407eb8817893d0e0d517487d|file:///home/zac/development/research/thesis/src/compute/scheduler.py|465|1|V|python
-	    train_linear_models()
-78fa964c71c3706ccbaa9dbbba78b8b3|file:///home/zac/development/research/thesis/src/compute/scheduler.py|462|1|V|python
-	    # ----- Section 3: Linear Coherence - ----
+51dad69399948cf4bdc6f7587188c024|file:///home/zac/development/research/thesis/draft/todo|80|6|V|
+	Diffs
+	Reproductions
+1d076b768f087585f83e73c660612c12|file:///home/zac/development/research/thesis/draft/thesis.tex|486|20|v|latex
+	pruned_layer_percentages_resnet_.pdf
+50d41f8eeb411988d2a70edc73972228|file:///home/zac/development/research/thesis/draft/thesis.tex|492|20|v|latex
+	pruned_layer_percentages_vit.pdf
+b5bdd77adb6f5e0df2d6dda6c78f60a5|file:///home/zac/development/research/thesis/draft/thesis.tex|51|1|V|latex
+	\vskip=3in
+4abb9e6883b7616b36e78b446799d307|file:///home/zac/development/research/thesis/draft/thesis.tex|51|1|V|latex
+	\vspace{3in}
 	
-	    # print("Training Linear Models")
-	    train_linear_models()
+00ab8f929e57081fae5a97bd9f154d68|file:///home/zac/dotfiles/.i3/config|58|1|V|i3config
+	#bindsym Mod1+Return exec i3-sensible-terminal
+988fd738de9c6d177440c5dcf69e73ce|file:///home/zac/dotfiles/.i3/config|59|14|v|i3config
+	Return
+88db4748941f28dbce3231ce4048c01d|file:///home/zac/dotfiles/.i3/config|59|15|v|i3config
+	 exec
+f2a6c498fb90ee345d997f888fce3b18|file:///home/zac/dotfiles/.i3/config|59|14|v|i3config
+	Delete
+2283e00c6bbbc2baf2b1ec9960125c4d|file:///home/zac/dotfiles/.bash_aliases|57|12|v|sh
+	pip3
+1645a3681216ed2253b0faf2405f325a|file:///home/zac/requirements.txt|338|1|V|text
+	xformers @ git+https://github.com/facebookresearch/xformers.git@6f3c20f223c0f051e4b2dc744cc7591591ee04c4
+ad1720e184c1f7c96640e340081d8a49|file:///home/zac/development/clojure/owl/resources/public/storage/app-state.edn|1|1|V|clojure
+	["set-db",{}]
+1441a7909c087dbbe7ce59881b9df8b9|file:///home/zac/development/clojure/owl/resources/public/storage/app-state.edn|1|33|v|clojure
+	[object Object]
+8e73fcc80c5c7dbc69130d65d8962af6|file:///home/zac/dotfiles/init.el|62|1|V|lisp
+	(setq org-replace-disputed-keys t)
+05eb7a1c747cea7dab7550ddd4d82cd6|file:///home/zac/dotfiles/init.el|61|13|V|lisp
+	;; Set org mode command for indenting headings to control arrow insteal of alt arrow
+	(define-key org-mode-map (kbd "C-<right>") 'org-metaright)
+	(define-key org-mode-map (kbd "C-<left>") 'org-metaleft)
+8a42eb4d03fc56e11457aebf87bd98e9|file:///home/zac/dotfiles/init.el|633|57|V|lisp
+	;; Set org mode command for indenting headings to control arrow insteal of alt arrow
+0fd1656fc685ef37de088e662838407c|file:///home/zac/development/clojure/owl/resources/public/storage/app-state.edn|1|33|v|clojure
+	dccww
+3d5f265a3d63c5ca476275b3159693c5|file:///home/zac/development/clojure/owl/resources/public/storage/app-state.edn|1|1|V|clojure
+	{"editor-contents":{"editor-1":"text-1"}}
+89d2c35f781dc2db6945fd339f70e09c|file:///home/zac/development/clojure/owl/resources/public/storage/app-state.edn|1|1|V|clojure
+	{"editor-contents":{"editor-1":"dccww"}}
+8393dd4a16f0e1c9723f9d9cfa2c39f1|file:///home/zac/development/clojure/owl/resources/public/storage/app-state.edn|1|1|V|clojure
+	"{}"
+82f1d32eb7539aade6c7fa0e24c41358|file:///home/zac/development/clojure/owl/resources/public/storage/app-state.edn|1|1|V|clojure
+	{"editor-contents":{"editor-1":"text-1","editor-2":"This is more text","editor-3":"text-3w","editor-4":"werteq"}}
+23d71d700d071c5fb7737c11f17b8ea4|file:///home/zac/development/clojure/owl/resources/public/storage/app-state.edn|15|1|V|clojure
+	    {
+	      "id": "3",
+	      "name": "Window 3",
+	      "type": "file",
+	      "file": "file.txt"
+	    }
+537bb5c992d2b97239ba4b48c9160113|file:///home/zac/dotfiles/init.el|635|57|V|lisp
+		;; also move items up and down with C-<up> and C-<down>)
+accdbfb7664577382f51e1e502407a47|file:///home/zac/development/clojure/owl/resources/public/storage/app-state.edn|3|5|V|clojure
+	{for 
+3324aff06510dfd4536bfe2c5e0bae77|file:///home/zac/dotfiles/.bash_aliases|151|1|V|sh
+	alias pr="cd ~/development/acme/637/homework"
+	alias res="cd ~/development/research"
+	alias grc="cd ~/development/research/gradientconditioning"
+	alias thesis="cd ~/development/research/thesis/src"
+	alias draft="cd ~/development/research/thesis/draft"
+	alias p3="cd ~/development/acme/CS\ 674/Project\ 3"
+	alias rp="cd ~/development/acme/522/random_pruning"
+7afbb06dc2be8ae4172fb321f6c54273|file:///home/zac/dotfiles/.bash_aliases|145|1|V|sh
+	alias bio="cd ~/development/research/biocheck/biocheck"
+	alias net="cd ~/development/netflix-clone/src/"
+	alias e="cd ~/development/techEd/"
+	alias eb="cd ~/development/techEd/server"
+	alias eu="cd ~/development/techEd/client/src"
+7e45746dd0290347560bd9aea2bc0a52|file:///home/zac/dotfiles/.bash_aliases|134|1|V|sh
+	alias va="cd ~/development/acme/"
+	alias v1="cd ~/development/acme/Volume1"
+	alias vh="cd ~/development/acme/homework"
+	alias vh1="cd ~/development/acme/homework/1"
+	alias vh2="cd ~/development/acme/homework/2"
+	alias l3="cd ~/development/acme/lab_3"
+	alias l4="cd ~/development/acme/lab_4"
+43bb9075ea5bb71431a14d45d4668f2a|file:///home/zac/dotfiles/.bash_aliases|138|7|V|sh
+	alias nfl="cd ~/development/nfl-predictor"
+ff2364a0be3d20e46cc69efb36afe9a5|file:///home/zac/dotfiles/.i3/config|282|50|v|i3config
+	space
+5a2ebc6f71dbc4b2b592aa499a9a2298|file:///home/zac/dotfiles/.i3/config|282|92|v|i3config
+	space_portrait
+b2d7d7656eb4e5153688637c8fbf7b49|file:///home/zac/dotfiles/.i3/config|282|134|v|i3config
+	wave
+77703cc8715cf5f65ce7cd4b6ae5e172|file:///home/zac/dotfiles/.i3/config|282|50|v|i3config
+	red2.jpg
+8923eabbf9f93a7772e82ec6ceae0016|file:///home/zac/.config/alacritty/alacritty.toml|1|1|V|toml
+	"window.opacity" = 1
 	
-	    # print("Computing linear coherence...")
-	    # linear_coherence(overwrite=True)
+4722ec377b6dcf4d32401008bfadb815|file:///home/zac/dotfiles/.i3/config|282|50|v|i3config
+	cyberpunk_japan.jpg
+a021ebcbfaa30c3128e0bf7b31f34b8f|file:///home/zac/dotfiles/.i3/config|282|50|v|i3config
+	jhoto-city.jpg
+3c0ebeb07905319513981264c2a9bf70|file:///home/zac/dotfiles/.i3/config|166|24|v|i3config
+	HDMI-b
+76efdc70eb686c891b08d9fbbb75d1f3|file:///home/zac/dotfiles/.i3/config|167|24|v|i3config
+	HDMI-0
+b63439801bdf08b9d35a37aa309f6528|file:///home/zac/dotfiles/.i3/config|275|1|V|i3config
+	exec_always xrandr \
+			--output DP-2 --mode 3840x2160 --rotate left --left-of DP-2 --panning 0x0 \
+			--output DP-4 --primary --mode 3840x2160 \
+			#--output HDMI-0 --mode 3840x2160 --rotate right --right-of DP-2
+	#exec_always xrandr --output DP-2 --mode 3840x2160 --primary --panning 0x0 --output HDMI-0 --mode 3840x2160 --rotate right --right-of DP-2 --output DP-0 --mode 3840x2160 --rotate left --left-of DP-2
 	
-	    # print("Computing linear diffs")
-	    # linear_diffs(overwrite=True)
-812c0ec97017a801ce311c46672ca2ff|file:///home/zac/development/research/thesis/draft/thesis.tex|278|12|v|latex
-	linear_results
-34557c30824e12e6ded8235d7ce53b96|file:///home/zac/development/research/thesis/draft/todo|61|16|V|
-	Masking function
-9adec5dabc71303123cfff58580edd72|file:///home/zac/development/research/thesis/draft/todo|56|1|V|
-	=============================================
-b415c733c866ac4e517941f913b8f77d|file:///home/zac/development/research/thesis/draft/thesis.tex|306|172|v|latex
-	 of the network
-5734d0340e1e58b5cdf5bce45f9a6e5e|file:///home/zac/development/research/thesis/draft/todo|63|20|V|
-	Generalization curve
-57765d2713a1d444f3137313162ae01b|file:///home/zac/development/research/thesis/draft/todo|64|1|V|
-	Finish plots
-cde740d6f08b1602750d9a24cf57a52e|file:///home/zac/development/research/thesis/src/compute/scheduler.py|519|27|v|python
-	resnet_only=True, 
-05802668e995bdb86052b978ae1a8ae7|file:///home/zac/development/research/thesis/src/compute/scheduler.py|531|27|V|python
-	    # train_resnet_gaussian()
-3b2e56a370fe8e409c24f1a9c5f1729e|file:///home/zac/development/research/thesis/src/compute/scheduler.py|527|1|V|python
-	    # print("Training Resnet")
-	    # train_resnet()
-	    # resnet_coherence(overwrite=True)
+a0ca4483970e5bbe21223210e9f40af7|file:///home/zac/dotfiles/.i3/config|280|106|v|i3config
+	red4.jpg
+811882fecd5c7618d7099ebbd39ea254|file:///home/zac/dotfiles/.i3/config|276|62|v|i3config
+	left
+8b242b345b96849d9f78499d33670af0|file:///home/zac/dotfiles/.i3/config|280|106|v|i3config
+	yvetal-xerneas.png
+17898ac1f5f2062903bd22464b98a50f|file:///home/zac/development/clojure/owl/package.json|9|84|v|json
+	 resources/preload.js"
+4a6c4f2eb5d6900dd7a9dd8888a6d56e|file:///home/zac/development/clojure/owl/package.json|9|85|v|json
+	resources/preload.js
+ced8f1a60e977e66fd9663520d1c1c28|file:///home/zac/development/clojure/owl/package.json|9|60|v|json
+	 && rm resources/main.js
+997d90fcc485b7ca87dc22061fbaa506|file:///home/zac/development/clojure/owl/.gitignore|16|1|V|
+	.*#.*
+4c1913f34e2e4b97899b1222bc46e7b0|file:///home/zac/.emacs.d/snippets/clojurescript-mode/reframe-repl|2|9|v|
+	defn
+a1467bfba60f1dfca814e9a5a677f295|file:///home/zac/.emacs.d/snippets/clojurescript-mode/reframe-repl|5|19|V|
+	(defn ${1:name} [$2]
+	  "$3"
+	  $0)
+d9cac231feba39e90801b92eba4e1eaa|file:///home/zac/dotfiles/init.el|705|1|V|lisp
+	;; Use snippets
+	(use-package yasnippet
+		:config
+		(yas-global-mode 1))
+a5cbee96b84b40fe39ea684f7d6e977f|file:///home/zac/dotfiles/init.el|573|1|V|lisp
+	
+	;; company with yasnippet
+	(use-package company-yasnippet
+		:after company)
+5b722cfbe55a8699316a653107662879|file:///home/zac/dotfiles/init.el|714|42|V|lisp
+	;; Make sure company-yasnippet is enabled
+	(add-hook 'company-mode-hook 'company-yasnippet)
+9f406f95105470962fdddfeaf278b9eb|file:///home/zac/dotfiles/init.el|711|1|V|lisp
+		(define-key yas-minor-mode-map (kbd "C-j") 'yas-next-field-or-maybe-expand)
+82db932820883eb1f1c769ecc4bf7515|file:///home/zac/dotfiles/init.el|712|50|v|lisp
+	next-field-or-maybe-expand
+014286d44d2c9a7ea24a9c4588c49a2d|file:///home/zac/dotfiles/init.el|715|1|V|lisp
+	  (defun company-backend-with-yas (backend)
+	    "Add yasnippet support to a company backend."
+	    (if (and (listp backend) (member 'company-yasnippet backend))
+	        backend
+	      (append (if (consp backend) backend (list backend))
+	              '(:with company-yasnippet))))
+	
+	  (setq company-backends (mapcar #'company-backend-with-yas company-backends)))
+70b2ade89b525ab61e27737e2273ba69|file:///home/zac/dotfiles/init.el|714|1|V|lisp
+	;(with-eval-after-load 'company
+b56dec876d17bf8b5931e5a039f404e3|file:///home/zac/.emacs.d/snippets/clojurescript-mode/reframe-repl|3|8|v|
+	reframe-repl
+589bbfe885cb231367fcfa57cffbc3d2|file:///home/zac/dotfiles/init.el|729|1|V|lisp
+	  (setq company-backends
+	        '((company-capf
+	           company-dabbrev
+	           company-yasnippet))))
+ae699c9c9534df314aa8d553a869cc49|file:///home/zac/dotfiles/init.el|715|45|v|lisp
+	capf
+d419fb6451e1fa53f8c8719b1c21cbed|file:///home/zac/dotfiles/init.el|717|14|V|lisp
+	;; add company
+c326b83451b380e1457182067229e8c6|file:///home/zac/dotfiles/init.el|719|1|V|lisp
+	(global-set-key (kbd "C-c C-y") 'my/company-yasnippet-complete)
+dce151fda5c90bd5470802a9bb048406|file:///home/zac/dotfiles/init.el|719|23|v|lisp
+	C-c C-y
+ac8ba4d9ca15e1ae71a794f4c30e3d8a|file:///home/zac/dotfiles/init.el|720|1|V|lisp
+		(global-set-key (kbd "<leader>sj") 'my/company-yasnippet-complete))
+a2ed27a16f26487982504e97baecd518|file:///home/zac/dotfiles/init.el|720|24|v|lisp
+	<leader>sj
+8876386bb6c5ed72c489e9dce93d4ad8|file:///home/zac/dotfiles/init.el|710|31|V|lisp
+	  (define-key yas-minor-mode-map (kbd "C-y") 'yas-expand)
+434747f6e5997fd1fa467af3a68b1b57|file:///home/zac/dotfiles/init.el|730|31|V|lisp
+	;; Add the function to post-command-hook to run it after each command
+fcf5315d3ffbcff882db7f97c53f1c1a|file:///home/zac/dotfiles/init.el|732|1|V|lisp
+	;(with-eval-after-load 'company
+			;(add-to-list 'company-backends '(company-bbdb :with company-yasnippet)))
+	
+	;(defvar company-mode/enable-yas t
+		;"Enable yasnippet for all backends.")
+	
+	;(with-eval-after-load 'company
+		;(defun company-mode/backend-with-yas (backend)
+			;(if (or (not company-mode/enable-yas) (and (listp backend) (member 'company-yasnippet backend)))
+					;backend
+				;(append (if (consp backend) backend (list backend))
+								;'(:with company-yasnippet))))
+	
+		;(setq company-backends (mapcar #'company-mode/backend-with-yas company-backends)))
+	;(with-eval-after-load 'company
+		;(push '(company-semantic :with company-yasnippet) company-backends))
+db472a7964b7e44f98b587bbcdc77c1b|file:///home/zac/dotfiles/init.el|719|3|v|lisp
+	global-set-key (kbd "C-y") 'my/company-yasnippet-complete
+280f9a0568e9141c9ea4c3a9c3ff1903|file:///home/zac/dotfiles/.bash_aliases|56|7|V|sh
+	alias python="python3.11"
+6d4b6bab64c58b17b78921f20d755e00|file:///home/zac/dotfiles/.bash_aliases|56|7|V|sh
+	#alias pip="python3.11 -m pip"
+9293e7ed60c073583aaee2078ca6ae9c|file:///home/zac/dotfiles/.bash_aliases|56|7|V|sh
+	alias pt="python -m unittest"
+5ae3f0446754c0ae930823624f1748ee|file:///home/zac/dotfiles/.bash_aliases|56|7|V|sh
+	alias db="psql emerald"
+98a92547ce3da86e666474eeb0a7cdf1|file:///home/zac/dotfiles/.bash_aliases|56|7|V|sh
+	alias debug="python -m pdb manage.py runserver"
+4044fa06386f80580782a84461555cd4|file:///home/zac/dotfiles/.bash_aliases|53|7|V|sh
+	alias ca="conda activate anaconda"
+	alias cda="conda deactivate"
+37479e1c783cb7ae12e68b23fc701253|file:///home/zac/dotfiles/.bash_aliases|59|7|V|sh
+	alias run="python manage.py runserver"
+f49a3eb3fe43eb69b52d6e0ef68bc882|file:///home/zac/dotfiles/.bash_aliases|59|7|V|sh
+	alias coverage="pytest --cov-report html --cov"
+dff3ecae11f181a57ad70164c5102aa0|file:///home/zac/dotfiles/.bash_aliases|56|1|V|sh
+	alias ph="git push heroku master"
+	alias po="git push origin master"
+8aeb3e6bf44ec1a3650d0c76974b8c67|file:///home/zac/dotfiles/.bash_aliases|54|5|V|sh
+	alias req="pip install -r requirements.txt"
+256e6a44b4997a227910d20b50c71137|file:///home/zac/dotfiles/.bash_aliases|60|1|V|sh
+	alias css="vim ~/development/emerald/sass/custom.scss"
+	alias ss="sass sass/custom.scss static/emerald/css/custom.css"
+	alias sw="sass --watch sass:static/emerald/css/"
+ecb3430398ee6db23f209365e341df27|file:///home/zac/dotfiles/.bash_aliases|63|1|V|sh
+	alias envs="cd $WORKON_HOME"
+57a986fe1f5341421c1ff2d0fb111f83|file:///home/zac/dotfiles/.bash_aliases|63|1|V|sh
+	alias st="cd ~/setup"
+696e9838ec866a5bad41c051d41d7fac|file:///home/zac/dotfiles/.bash_aliases|71|1|V|sh
+	alias gz="git push origin Zac"
+f8b5cbee0485995d7811c78a5f7168e1|file:///home/zac/dotfiles/.bash_aliases|55|1|V|sh
+	# Git
+17ef8e30025f80527168f27d59d99c40|file:///home/zac/dotfiles/.bash_aliases|55|1|V|sh
+	# SASS Aliases
+dd20d5e041ad2f093c8f4234cdee37ea|file:///home/zac/dotfiles/.bash_aliases|82|10|V|sh
+	alias vv="vim ~/.config/nvim/init.vim"
+c7650ff679682098e20e7f922e942610|file:///home/zac/dotfiles/.bash_aliases|82|7|V|sh
+	alias ee="vim ~/dotfiles/init.el"
+a932e8769f4679def0c47ab2797904ce|file:///home/zac/dotfiles/.bash_aliases|116|6|V|sh
+	alias 
+fadb22c18b594c9d03366fa0d918564e|file:///home/zac/.zshrc_zac|10|1|V|zsh
+	#export GPT_BIN="$HOME/development/research/reu/gpt/bin"
+35533c2116332b28112490f6041d0483|file:///home/zac/.zshrc_zac|10|1|V|zsh
+	export GPT_BIN="../../gpt/bin/gpt"
+11e991ccae12bb9195994bba177dfa0b|file:///home/zac/.zshrc_zac|10|1|V|zsh
+	export PATH="$PATH:$HOME/development/research/reu/gpt/bin"
+c1936b406e45fd0eae6670c0f8c39707|file:///home/zac/.zshrc_zac|11|1|V|zsh
+	export PATH="$PATH:$HOME/anaconda3/bin"
+	export PATH="$PATH:$HOME/opt/openmpi/bin"
+215b073ebb2e71cdb77eee772d7b0558|file:///home/zac/.zshrc_zac|9|1|V|zsh
+	export XDG_RUNTIME_DIR=""
+0bfdbf40dd1b2973027351049b824450|file:///home/zac/.zshrc_zac|9|1|V|zsh
+	export ASCI2GDF_BIN="../../gpt/bin/asci2gdf"
+c52db16212341e68927555fd65b4254a|file:///home/zac/.zshrc_zac|8|1|V|zsh
+	export GPTLICENSE=1251405651
+6e7d7a09130c1a066b8e83a04576a993|file:///home/zac/.zshrc_zac|8|1|V|zsh
+	export LD_LIBRARY_PATH="$HOME/opt/openmpi/lib"
+cf7276d639f75ce744ba8c287e2ccc30|file:///home/zac/.zshrc_zac|7|1|V|zsh
+	# GPT Stuff
+	export NODE_ENV="development"
+0902f19f9c3998ab481805c1dbd9efaf|file:///home/zac/.zshrc_zac|7|1|V|zsh
+	export PYSPARK_PYTHON="/usr/bin/python3"
+559fe251163c5d581e8dbc696e79b11e|file:///home/zac/dotfiles/.bash_aliases|80|7|V|sh
+	alias vbrc="vim ~/.zshrc_zac"
+b53de3f1a94817590f5c3d3bfac38bfb|file:///home/zac/dotfiles/.bash_aliases|79|1|V|sh
+	alias valias="vim ~/dotfiles/.bash_aliases"
+74248c725e00bf9fe04df4e35b249a19|file:///home/zac/dotfiles/.bash_aliases|90|3|v|sh
+	Misc
+9e15e9b7fc2e1269b7ab0e833777c0c6|file:///home/zac/dotfiles/.bash_aliases|99|1|V|sh
+	alias mc="mongodb-compass"
+	alias pm="postman"
+5d0f569a87c408775764c447c3a2725d|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	apturl
+5f458537edd9c5878d1113e4d09e1c43|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	Brlapi
+7ab53459d552ea6c24ba68d18081f66c|file:///home/zac/development/requirements_no_versions.txt|15|1|V|text
+	chrome-gnome-shell
+629e85581ed46df7519e3ca24bc0589e|file:///home/zac/development/requirements_no_versions.txt|17|1|V|text
+	command-not-found
+5456fe5b0c5a78c1af19e598c107a763|file:///home/zac/development/requirements_no_versions.txt|22|1|V|text
+	cupshelpers
+3e7f2b118f38fb3553d42911f9643479|file:///home/zac/development/requirements_no_versions.txt|23|1|V|text
+	dbus-python
+5efa83022c6bf1cb073a32e9ac351565|file:///home/zac/development/requirements_no_versions.txt|42|1|V|text
+	GDAL
+7e705a1a0105c16bb188f17237578000|file:///home/zac/development/requirements_no_versions.txt|69|1|V|text
+	language-selector
+fb1c2e050a9df9d095edc7bef9e6ae33|file:///home/zac/development/requirements_no_versions.txt|107|1|V|text
+	olefile
+90f14c9facbbe9ffc9fd48f2b19f9e08|file:///home/zac/development/requirements_no_versions.txt|106|1|V|text
+	oauthlib
+16736539cb7097149b5a947878a2c665|file:///home/zac/development/requirements_no_versions.txt|105|1|V|text
+	nvidia-nvtx-cu12
+879b19d435c218c5d989645bdca02a6b|file:///home/zac/development/requirements_no_versions.txt|105|1|V|text
+	openshot-qt
+36cbb59909f3ab1a847655c171249888|file:///home/zac/development/requirements_no_versions.txt|120|1|V|text
+	psycopg2
+a45273f80a277550f9c4c469c6260431|file:///home/zac/development/requirements_no_versions.txt|129|1|V|text
+	PyGObject
+aaed4b9777c9059768547d096690e74a|file:///home/zac/development/requirements_no_versions.txt|141|1|V|text
+	pyrsistent
+5cb9b3e320621a6e7aefa427b0a4ea41|file:///home/zac/development/requirements_no_versions.txt|140|1|V|text
+	pyRFC3339
+c14200fc9dbd9d16c35625b4dcb82e7e|file:///home/zac/development/requirements_no_versions.txt|139|1|V|text
+	PyQtWebEngine
+8bdb75ff7b8d600acd789f4e2c73a3fd|file:///home/zac/development/requirements_no_versions.txt|138|1|V|text
+	PyQt5
+291901f4baad813a6c12a068424e5cb5|file:///home/zac/development/requirements_no_versions.txt|137|1|V|text
+	pyproj
+08f0a2c0592da674dd240782af066701|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	aiohappyeyeballs
+	aiohttp
+	aiosignal
+	apsw
+	attrs
+	Automat
+	backcall
+	bcrypt
+	beautifulsoup4
+	bleach
+	blinker
+	certifi
+	cffi
+	chardet
+	Click
+	colorama
+	constantly
+	cryptography
+	css-parser
+	cssselect
+	cssutils
+	cycler
+	decorator
+	defer
+	defusedxml
+	deluge
+	distro
+	distro-info
+	dnspython
+	docopt
+	duplicity
+	einops
+	entrypoints
+	evdev
+	fasteners
+	feedparser
+	filelock
+	Flask
+	frozenlist
+	fsspec
+	future
+	GeoIP
+	greenlet
+	html2text
+	html5-parser
+	html5lib
+	httplib2
+	huggingface-hub
+	hyperlink
+	idna
+	ifaddr
+	importlib-metadata
+	incremental
+	ipykernel
+	ipython
+	ipython_genutils
+	ipywidgets
+	itsdangerous
+	jedi
+	Jinja2
+	jsonschema
+	jupyter-client
+	jupyter-console
+	jupyter-core
+	keyring
+	kiwisolver
+	kornia
+	kornia_rs
+	launchpadlib
+	lazr.restfulclient
+	lazr.uri
+	lockfile
+	louis
+	lxml
+	macaroonbakery
+	Mako
+	Markdown
+	MarkupSafe
+	matplotlib
+	mechanize
+	mistune
+	monotonic
+	more-itertools
+	mpmath
+	msgpack
+	multidict
+	nbconvert
+	nbformat
+	netifaces
+	networkx
+	nose
+	notebook
+	numpy
+	nvidia-cublas-cu12
+	nvidia-cuda-cupti-cu12
+	nvidia-cuda-nvrtc-cu12
+	nvidia-cuda-runtime-cu12
+	nvidia-cudnn-cu12
+	nvidia-cufft-cu12
+	nvidia-curand-cu12
+	nvidia-cusolver-cu12
+	nvidia-cusparse-cu12
+	nvidia-nccl-cu12
+	nvidia-nvjitlink-cu12
+	OWSLib
+	packaging
+	pandocfilters
+	paramiko
+	parso
+	path-and-address
+	pbr
+	pexpect
+	pickleshare
+	pillow
+	plotly
+	prometheus-client
+	prompt-toolkit
+	protobuf
+	psutil
+	pyasn1
+	pyasn1-modules
+	pycairo
+	pychm
+	pycparser
+	pycups
+	pyenchant
+	pygame
+	Pygments
+	PyHamcrest
+	pyinotify
+	PyJWT
+	pymacaroons
+	PyNaCl
+	pynvim
+	pyOpenSSL
+cbfaceb2022c9b5c383262cbd870ece1|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	pyparsing
+fd0f52f34ee22e29547cb4adee9fe9da|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	python-apt
+246c7577a8aef5c863fbe8d83bda6bf6|file:///home/zac/development/requirements_no_versions.txt|3|1|V|text
+	python-libtorrent
+ec6cf67c734ae1b4bd8440fbe3f4b5a9|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	python-dateutil
+	python-debian
+	python-magic
+	pytz
+	pyxattr
+	pyxdg
+	PyYAML
+	pyzmq
+	ranger-fm
+	regex
+	rencode
+	reportlab
+	repoze.lru
+	requests
+	requests-unixsocket
+	retrying
+	Routes
+	safetensors
+	scipy
+4ef4f5ef8f69a24c6cff8f8e2be29a23|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	screen-resolution-extra
+0f859d0e3a4f0732cdafcde62981d150|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	SecretStorage
+	Send2Trash
+	sentencepiece
+	service-identity
+	setproctitle
+	setuptools
+	simplejson
+	sip
+	six
+	soundfile
+	soupsieve
+	spandrel
+	ssh-import-id
+	sympy
+	systemd-python
+f8f6b410e57f2a1cbd1f06fcc682a3c5|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	terminado
+	testpath
+	testresources
+	tokenizers
+	torch
+	torchaudio
+	torchsde
+	torchvision
+	tornado
+	tqdm
+	traitlets
+	trampoline
+	transformers
+	triton
+	Twisted
+	typing_extensions
+691eaeac163cc3ff47d8646954b381eb|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	ubuntu-drivers-common
+3c25408e2ba5c89b8df04af675e1b2ec|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	ubuntu-pro-client
+630fc584d81085fd3bd3c24f7c146cf8|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	unattended-upgrades
+c881052989ea5b8a7bcc3b6815abfb8c|file:///home/zac/development/requirements_no_versions.txt|2|1|V|text
+	usb-creator
+047b711dccd51ecdab3dfe474b8600ea|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	urllib3
+	wadllib
+	wcwidth
+	webencodings
+	WebOb
+	Werkzeug
+	wheel
+	widgetsnbextension
+5dcdeee35a45f3c0139500eb83ef6986|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	xkit
+9e509747ba76e499be43d8976f7cd509|file:///home/zac/development/requirements_no_versions.txt|1|1|V|text
+	yarl
+	youtube-dl
+	zeroconf
+762eec3c8e679afe916fe18b1d2bd6fd|file:///home/zac/dotfiles/.bash_aliases|61|31|v|sh
+	ccomfy
+c9550d5fad73447fc24ba47f95d1c6b7|file:///home/zac/dotfiles/.bash_aliases|160|46|v|sh
+	schema
+e7239c101e39a2649cc2ba706ff67fa6|file:///home/zac/dotfiles/.bash_aliases|160|21|v|sh
+	resources/public/storage/app-state.edn
+ae1211566046c1b646401a38358ba896|file:///home/zac/development/clojure/owl/.gitignore|16|18|v|
+	<Plug>(coc-snippets-expand-jump)
+a5cc4e8437847801a329cf7b4f464e50|file:///home/zac/development/clojure/owl/node_modules/%40codemirror/state/dist/index.cjs|3939|1|V|javascript
+	exports.EditorState = EditorState;
+6b502dd973592607e28f08c7e35b1e16|file:///home/zac/dotfiles/.i3/config|285|14|v|i3config
+	Bluetooth device with MAC address XXXX
+ad347226dcc1d205f58e693925c28783|file:///home/zac/dotfiles/.i3/config|286|58|v|i3config
+	XXXX
+49f2291f9f7a1986c0c8a29ff3a86782|file:///home/zac/dotfiles/.i3/config|285|1|V|i3config
+	# Connect to Headphones
+	bindsym $mod+b exec --no-startup-id bluetoothctl connect 94:DB:56:F7:A5:C7
+	
+	# Disconnect from Headphones
+	bindsym $mod+Shift+b exec --no-startup-id bluetoothctl disconnect 94:DB:56:F7:A5:C7
+	
+e5b33aec2df52251e7b7d6bbaef74c82|file:///home/zac/dotfiles/.i3/config|291|1|V|i3config
+	# Connect Xbox Controller
+dcbedde0ce401a37130de9628240c6aa|file:///home/zac/dotfiles/.i3/config|291|14|v|i3config
+	Headphones
+8867cab906e9e36b8e54e3bd1ba600a5|file:///home/zac/dotfiles/.i3/config|292|58|v|i3config
+	94:DB:56:F7:A5:C7
+1e2aef9ab29367564c60bef8717dba02|file:///home/zac/dotfiles/.i3/config|285|1|V|i3config
+	# Connect to Headphones
+	bindsym $mod+b exec --no-startup-id bluetoothctl connect 94:DB:56:F7:A5:C7
+	
+	# Disconnect from Headphones
+	bindsym $mod+Shift+b exec --no-startup-id bluetoothctl disconnect 94:DB:56:F7:A5:C7
+	
+	# Connect to Xbox Controller
+	bindsym $mod+x exec --no-startup-id bluetoothctl connect 44:16:22:4F:73:4B
+	
+	# Disconnect from Xbox Controller
+	bindsym $mod+Shift+x exec --no-startup-id bluetoothctl disconnect 44:16:22:4F:73:4B
+b1e236a47d72e88036214d97b38e8c72|file:///home/zac/dotfiles/.i3/config|286|9|v|i3config
+	$mod
+e1918875ea72575ba2662b80a3f2b7fa|file:///home/zac/dotfiles/.i3/config|244|13|V|i3config
+	#crop-area screenshot by pressing Mod + printscreen
+	#bindsym $mod+Print exec gnome-screenshot -a
+2db780e35b77c543697fe9dbc70aa4ae|file:///home/zac/dotfiles/.i3/config|7|1|V|i3config
+	#==========================================================
+	# i3 config file (v4)
+	#
+	# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+	#
+	# This config file uses keycodes (bindsym) and was written for the QWERTY
+	# layout.
+	#
+	# To get a config file with the same key positions, but for your current
+	# layout, use the i3-config-wizard
+	#
+c1436f4dc68e3ff3d5c4354863a0c5a2|file:///home/zac/dotfiles/.i3/config|49|1|V|i3config
+	# start dmenu (a program launcher)
+	#bindsym Mod1+d exec dmenu_run # There also is the (new) i3-dmenu-desktop which only displays applications
+dda99dfddcbc6964544c8d1d3763cb6d|file:///home/zac/dotfiles/.i3/config|52|1|V|i3config
+	# There also is the (new) i3-dmenu-desktop which only displays applications
+	# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+	# installed.
+	# bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop
+3ccf9c665a972d7db5b8e73ee3727c1e|file:///var/log/dist-upgrade/20241011-0823/apt.log|3455|1|V|
+	Investigating (1) openmpi-bin:amd64 < 4.1.2-2ubuntu1 -> 4.1.6-7ubuntu2 @ii umU Ib >
+	Broken openmpi-bin:amd64 Depends on libopenmpi3t64:amd64 < none | 4.1.6-7ubuntu2 @un umH > (>= 4.1.6)
+	  Considering libopenmpi3t64:amd64 0 as a solution to openmpi-bin:amd64 0
+	  MarkKeep openmpi-bin:amd64 < 4.1.2-2ubuntu1 -> 4.1.6-7ubuntu2 @ii umU Ib > FU=0
+b7e7adc83ce7929b45ed94f272b7be71|file:///home/zac/development/sources_fix.py|62|1|V|python
+	        print(f"Error processing {file_path}: {e}")
+d5de2bf5f92ab3f052936f17f9beb93f|file:///home/zac/development/sources_fix.py|63|45|v|python
+	: {e}
