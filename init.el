@@ -58,7 +58,6 @@
 		eshell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
-
 ;; Rainbow Delimiters
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
@@ -349,8 +348,6 @@
 		(treemacs-project-follow-mode t)
     (treemacs-filewatch-mode t)
     (treemacs-fringe-indicator-mode 'always)
-    (when treemacs-python-executable
-      (treemacs-git-commit-diff-mode t))
 
     (pcase (cons (not (null (executable-find "git")))
                  (not (null treemacs-python-executable)))
@@ -516,23 +513,53 @@
 (save-place-mode 1)
 
 ;; =========== Theme  ===================
-(use-package doom-themes
-  :ensure t
+;(use-package doom-themes
+  ;:ensure t
+  ;:config
+  ;;; Global settings (defaults)
+  ;(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        ;doom-themes-enable-italic t) ; if nil, italics is universally disabled
+	;(load-theme 'doom-tokyo-night t)
+	;;(load-theme 'doom-rouge t)
+	;;(load-theme 'doom-dracula t)
+	;;(load-theme 'doom-snazzy t)
+	;;(load-theme 'doom-outrun-electric t)
+	;)
+
+
+;(use-package doom-modeline
+  ;:ensure t
+  ;:hook (after-init . doom-modeline-mode))
+
+;; =================== Theme and Appearance ===================
+
+;; Install and configure ewal and ewal-doom-themes
+(use-package ewal
+  :quelpa (ewal :fetcher github :repo "ebanster/ewal"))
+
+(use-package ewal-doom-themes
+  :quelpa (ewal-doom-themes :fetcher github :repo "tsc25/ewal-doom-themes")
   :config
-  ;; Global settings (defaults)
-  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-        doom-themes-enable-italic t) ; if nil, italics is universally disabled
-	(load-theme 'doom-tokyo-night t)
-	;(load-theme 'doom-rouge t)
-	;(load-theme 'doom-dracula t)
-	;(load-theme 'doom-snazzy t)
-	;(load-theme 'doom-outrun-electric t)
-	)
+  ;; Set the theme to use ewal-doom-vibrant or your preferred theme
+  ;(load-theme 'ewal-doom-one t)
+	;; (load-theme 'ewal-doom-vibrant t)
+  (load-theme 'doom-solarized-dark t)
+  ;; Enable bold and italic if desired
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t)
+  ;; Configure doom themes enhancements
+  (doom-themes-org-config))     ;; Correct org-mode fontification
 
+(use-package ewal-evil-cursors
+  :after ewal
+  :config
+  (ewal-evil-cursors-get-colors :apply t :spaceline t))
 
+;; Optionally, configure doom-modeline
 (use-package doom-modeline
   :ensure t
   :hook (after-init . doom-modeline-mode))
+
 
 ;; =========== Copilot  ===================
 ;(install-if-necessary 'editorconfig)
@@ -577,7 +604,6 @@
 
 
 ;; =========== Font  ===================
-;(set-face-attribute 'default nil :font "Fira Code Retina" :height 180)
 (set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
 
 
@@ -861,3 +887,13 @@
 ;; Bind the custom function to Ctl-E (Ctrl + E) in Treemacs mode
 (with-eval-after-load 'treemacs
   (define-key treemacs-mode-map (kbd "C-e") #'my-treemacs-expand-recursively))
+
+;; Suppress warnings
+(setq warning-suppress-types '((comp)))
+
+;; =========== Custom  Functions ===================
+
+(defun my-open-init-file ()
+  "Open the init file."
+  (interactive)
+  (find-file user-init-file))

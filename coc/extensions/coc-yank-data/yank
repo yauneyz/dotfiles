@@ -1,250 +1,3 @@
-da274a49fc1d3cf244692ff59d5bc998|file:///home/zac/dotfiles/init.el|451|31|v|lisp
-	 "isort"
-e56089ccdaa24ea3f491f41c49c20f1e|file:///home/zac/development/research/thesis/draft/todo|59|1|V|
-	Make sure things are working
-	Fix get_coherence_extreme
-4a2fc350869fc5e158b255d086f6625a|file:///home/zac/development/research/thesis/draft/todo|60|12|V|
-	- linear and
-e32fdabb35243b6bbb75c8b502c09af8|file:///home/zac/dotfiles/init.el|652|58|V|lisp
-	;; Also, pressing space in visual mode is the leader key and not a command
-e9c38fa1ceae5a6fbf18db0dd7d35976|file:///home/zac/dotfiles/init.el|654|1|V|lisp
-	(evil-define-key 'visual 'global (kbd "SPC") 'evil-leader)
-7886076eaba2f356a41a284d659d6fa5|file:///home/zac/dotfiles/init.el|656|1|V|lisp
-	(evil-define-key 'visual 'global (kbd "<leader>cc") 'evilnc-comment-or-uncomment-lines)
-0e5d8049ddd839300c8bccf1a1a529c4|file:///home/zac/dotfiles/init.el|655|49|V|lisp
-	;; In visual mode, allow <leader>cc to comment out the region
-14b8d34c5c4f0b42bb249ca947d26041|file:///home/zac/dotfiles/init.el|654|1|V|lisp
-	(evil-define-key 'visual 'global (kbd "<leader>cc") 'evilnc-comment-or-uncomment-lines)
-	(evil-define-key 'visual 'global (kbd "<leader>cu") 'evilnc-comment-or-uncomment-lines)
-95094e47454dbde489a4530e44341983|file:///home/zac/dotfiles/init.el|654|69|v|lisp
-	'comment-region
-c19c87327d719f1d6885b0c4d70bb532|file:///home/zac/dotfiles/init.el|650|9|V|lisp
-	;; Fixes
-	
-	;; In visual mode, pressing TAB will indent the region
-	(evil-define-key 'visual 'global (kbd "TAB") 'indent-region)
-	(evil-define-key 'visual evil-visual-state-map (kbd "<leader> c c") 'evilnc-comment-or-uncomment-lines)
-128477f50347d98ee1213d71f27e8886|file:///home/zac/development/research/thesis/draft/thesis.tex|87|480|v|latex
-	bind
-a8a36ca94c37a7082739e41103fce735|file:///home/zac/development/research/thesis/draft/thesis.tex|87|456|v|latex
-	(that it is possible to restrict a hypothesis class such that 
-5ea790e4a248dab6ac4b6ae1854463c7|file:///home/zac/development/research/thesis/draft/thesis.tex|87|654|v|latex
-	notion
-cb5e100e5a9a3e7f6d1fd97512215282|file:///home/zac/development/research/thesis/draft/thesis.tex|87|757|v|latex
-	error
-9ab1a6177d533a2a32ad619542831202|file:///home/zac/development/research/thesis/draft/thesis.tex|89|34|V|latex
-	Mathematically, we have that the g
-8d777f385d3dfec8815d20f7496026dc|file:///home/zac/development/research/thesis/draft/thesis.tex|87|846|v|latex
-	data
-635abb4cc19792b4b5d70b71969c2bdf|file:///home/zac/development/research/thesis/draft/thesis.tex|87|872|v|latex
-	They also show that many uniform convergence bounds are vacuous in practice.
-538fa7317839a5ff27769f270d6f3244|file:///home/zac/development/research/thesis/draft/thesis.tex|104|21|v|latex
-	\frac{
-d2202031b964e8d8e8f857d9e688a51c|file:///home/zac/development/research/thesis/draft/thesis.tex|104|11|v|latex
-	\big|\big|
-9bf6a00aad7d80806ada01ae80f709da|file:///home/zac/development/research/thesis/draft/thesis.tex|104|63|v|latex
-	\cdot\mathbb{E}_{z \sim \mathcal{D}}[g_{z}]
-1d61585a95c012c741a8b2f380eff293|file:///home/zac/development/research/thesis/draft/thesis.tex|104|109|v|latex
-	g_z\cdot g_{z}
-423c3be944b05dc1b8c4b6a5bce7ecd6|file:///home/zac/development/research/thesis/draft/thesis.tex|119|215|v|latex
-	a good measure of coherence, and thus a good indicator of generalization.
-23ca35531237efc7ad00650d14c663a7|file:///home/zac/development/research/thesis/draft/thesis.tex|128|360|v|latex
-	The connection to gradient coherence is that t
-d395743cb6c29ce13b701c7882a24ffc|file:///home/zac/development/research/thesis/draft/thesis.tex|13|1|V|latex
-	\usepackage{csquotes}
-92d77b97f4eed8bcb9110ac6d70b7468|file:///home/zac/development/research/thesis/draft/thesis.tex|13|18|V|latex
-	%\usepackage[T1]{fontenc}
-	%\usepackage[utf8]{inputenc}
-	%\usepackage[english]{babel}
-	%\usepackage{csquotes}
-88b973e1bb800b4cbd0552c14cf7bdf8|file:///home/zac/development/research/thesis/draft/thesis.tex|148|123|v|latex
-	 with
-fea087517c26fadd409bd4b9dc642555|file:///home/zac/development/research/thesis/draft/thesis.tex|152|230|v|latex
-	normal
-be7b21db47e68ed6da8a345a876fad3e|file:///home/zac/development/research/thesis/draft/thesis.tex|158|263|v|latex
-	1<Plug>(coc-snippets-expand-jump)}
-b56a6cab0f5636ba8d297e309f37c930|file:///home/zac/development/research/thesis/draft/thesis.tex|158|338|v|latex
-	entirely
-1356051a324c5ce42c61a1a674b964e9|file:///home/zac/development/research/thesis/draft/thesis.tex|158|517|v|latex
-	\frac{}{}
-f183fde1c1f409b21fc8463052ca49e5|file:///home/zac/development/research/thesis/draft/thesis.tex|178|307|v|latex
-	migrate
-408a89822726674e680d99ab2cb86ce7|file:///home/zac/development/research/thesis/draft/thesis.tex|178|307|v|latex
-	are far from
-e383234c8c5c6cf7eb44a3208e26d50f|file:///home/zac/development/research/thesis/draft/thesis.tex|178|457|v|latex
-	minimum
-36273dd90ed73ea341322d133cd6ba06|file:///home/zac/development/research/thesis/draft/thesis.tex|178|694|v|latex
-	minimizers
-ff9bb0239f3f4f50007998a789662dbf|file:///home/zac/development/research/thesis/draft/thesis.tex|150|46|v|latex
-	Cifar10
-8e2dcfd7e7e24b1ca76c1193f645902b|file:///home/zac/development/research/thesis/draft/thesis.tex|140|79|v|latex
-	element
-677a4ea5293f6021226ca3c07f582e85|file:///home/zac/development/research/thesis/draft/thesis.tex|210|76|v|latex
-	element-wise
-f70cf526b32d5c73a944d9850b898355|file:///home/zac/development/research/thesis/draft/thesis.tex|184|383|v|latex
-	generalization
-a03b60224e27ceb7730a40e79d7c067e|file:///home/zac/development/research/thesis/draft/thesis.tex|190|193|v|latex
-	almost identical
-dd33504ae564bc85271cf957d0bc364f|file:///home/zac/development/research/thesis/draft/thesis.tex|184|262|v|latex
-	rules out
-216c38e1f0036c53e873cc312af1d8a6|file:///home/zac/development/research/thesis/draft/thesis.tex|184|276|v|latex
-	the possibility that 
-f3953d1be3f645ddc832386e5c98913b|file:///home/zac/development/research/thesis/draft/thesis.tex|184|158|v|latex
-	The fact that the weight magnitudes are very similar between networks trained on real and Gaussian data suggests that a difference in how the weight magnitudes evolve is not responsible for the difference in measured coherence.
-d20306946b1f0028e1629c1d1b3460a3|file:///home/zac/development/research/thesis/draft/thesis.tex|190|153|v|latex
-	The fact that the weight magnitudes are very similar between networks trained on real and Gaussian data rules out the possibility that a difference in how the weight magnitudes evolve is responsible for the difference in measured coherence.
-44f7cee8577201a2c4e9cd9f1889e1ff|file:///home/zac/development/research/thesis/draft/thesis.tex|200|720|v|latex
-	coherene
-03973af1531db5504b67e3c884466783|file:///home/zac/development/research/thesis/draft/thesis.tex|200|654|v|latex
-	when trained on random data
-c5344ff39ad1e7e65b1d73438a45e2ea|file:///home/zac/development/research/thesis/draft/thesis.tex|194|853|v|latex
-	This leaves the learning of 
-62cedf9c782b330714637e47792bf96c|file:///home/zac/development/research/thesis/draft/thesis.tex|196|4|v|latex
-	will run
-30db597822c6e06c6737052260426f45|file:///home/zac/development/research/thesis/draft/thesis.tex|196|87|v|latex
-	initialize
-0f2600079aadeb7d6aa07b5ea6453e83|file:///home/zac/development/research/thesis/draft/thesis.tex|196|82|v|latex
-	ill 
-6489a0eac6cb1b964ab650e7e9af9642|file:///home/zac/development/research/thesis/draft/thesis.tex|204|55|v|latex
-	 in fac
-8e522999dcc2d29a0143b573b7451d89|file:///home/zac/development/research/thesis/draft/thesis.tex|204|278|v|latex
-	coincides
-54f8234b7fb8387098eeea2c23289e43|file:///home/zac/development/research/thesis/draft/thesis.tex|204|270|v|latex
-	, which seems to coincide with the point in time when the network is memorizing the data. 
-0a6cd00e15b9cadb013bd608f6fed577|file:///home/zac/development/research/thesis/draft/thesis.tex|214|339|v|latex
-	one calculated individually for
-a81d41675e213dfd61f502241975dafd|file:///home/zac/development/research/thesis/draft/thesis.tex|219|16|v|latex
-	\sum{z \in D} 
-e12e8546bc4d061343b78de6a89a8a88|file:///home/zac/development/research/thesis/draft/thesis.tex|219|27|v|latex
-	\sum_{z \in D} g_z
-f5e0681d866705b4f367d2d9c18080af|file:///home/zac/development/research/thesis/draft/thesis.tex|216|189|v|latex
-	a dot product multiplied by the number of elements in the dataset
-ebf052e77c036b93840b18025e1b7b70|file:///home/zac/development/research/thesis/draft/thesis.tex|216|155|v|latex
-	a 1-dimensional
-f0d861acd100f1777c815ec40c8842bd|file:///home/zac/development/research/thesis/draft/thesis.tex|253|495|v|latex
-	whether that is the right value for the parameter
-58053a8e13f7a2c14bc43a726de4936e|file:///home/zac/development/research/thesis/draft/thesis.tex|253|615|v|latex
-	isn't as helpful for classifying the next observed sample
-8f4c1961cd14b77018bc97acd0962bff|file:///home/zac/development/research/thesis/draft/thesis.tex|255|184|v|latex
-	the right direction
-e5dee84f405b9366f44feef46df9704d|file:///home/zac/development/research/thesis/draft/thesis.tex|255|186|v|latex
-	particular
-77631ca4f0e08419b70726a447333ab6|file:///home/zac/development/research/thesis/draft/thesis.tex|255|556|v|latex
-	This
-69ce7546b8231f2aa01adb5aafbb2e20|file:///home/zac/development/research/thesis/draft/thesis.tex|255|615|v|latex
-	paramters
-9ae3f37b35ed8083c217fc82c55344a7|file:///home/zac/development/research/thesis/draft/thesis.tex|255|585|v|latex
-	confined
-87c0f8d76f0fc20a2a6705455371a692|file:///home/zac/development/research/thesis/draft/thesis.tex|243|428|v|latex
-	These plots show that diffs calculated during the epoch when coherence was highest are larger than diffs calculated when coherence was smallest. This correlation between average diff magnitudes and coherence measurement strengthens the case that diffs are a useful parameter-wise approximation of coherence.
-ee40698f1e2d7a72312b87c5ae1fde47|file:///home/zac/development/research/thesis/draft/thesis.tex|257|212|v|latex
-	strong 
-b233b5ddde6ebf3fab6cccfa8f74dd5b|file:///home/zac/development/research/thesis/draft/thesis.tex|261|453|v|latex
-	but if generalization is occurring then the diffs are able to identify the parameters most responsible for it
-3a45da0d5405623c2443e30e0bc76939|file:///home/zac/development/research/thesis/draft/thesis.tex|261|721|v|latex
-	Whatever
-e4eee5390c5e8a0f1bb2188bcca9bf51|file:///home/zac/development/research/thesis/draft/thesis.tex|261|751|v|latex
-	 the case may be
-1a450f2a63243a535bf02c54fb534e10|file:///home/zac/development/research/thesis/draft/thesis.tex|261|756|v|latex
-	will investigate
-6c886922082cdb317e95b76c8450fdd9|file:///home/zac/development/research/thesis/draft/thesis.tex|279|1|v|latex
-	Fortunately, 
-08aac17bdcf825fa5131bd6c04e8ac56|file:///home/zac/development/research/thesis/draft/thesis.tex|296|386|v|latex
-	trainset
-b573766d46494a5f5e12c44a0e1949cf|file:///home/zac/development/research/thesis/draft/thesis.tex|300|54|v|latex
-	testset
-c8a6569731adfdd0ed40c75e60c5d4a5|file:///home/zac/development/research/thesis/draft/thesis.tex|314|80|v|latex
-	ourselves 
-d7fec36cb38d8a6b00826d43a6622290|file:///home/zac/development/research/thesis/draft/thesis.tex|314|181|v|latex
-	average of the
-ff4d1c249a4c3f2a807f3cec31c88874|file:///home/zac/development/research/thesis/draft/thesis.tex|314|189|v|latex
-	3-epoch 
-d3d14025827d8274e8a78099a6448854|file:///home/zac/development/research/thesis/draft/thesis.tex|316|1013|v|latex
-	 What remains unclear is whether this is simply a
-d4d173100a349cdc72b62fd6fc40abfb|file:///home/zac/development/research/thesis/draft/thesis.tex|316|1088|v|latex
-	However, i
-cc70865f1ecd933ec055851deb5bd69a|file:///home/zac/development/research/thesis/draft/thesis.tex|325|588|v|latex
-	because
-9671885ae79c961f59d82cb7f3c67718|file:///home/zac/development/research/thesis/draft/thesis.tex|325|660|v|latex
-	 We might go further and state that somehow the gradients of these superfluous parameters line up, thus increasing the gradient coherence.
-c2053a0246c569857071db3aca734508|file:///home/zac/development/research/thesis/draft/thesis.tex|335|492|v|latex
-	compactification 
-5d07182d32063d7ea666184b1717af35|file:///home/zac/development/research/thesis/draft/thesis.tex|335|495|v|latex
-	neural network 
-1ab765fe7d78916169e07d6aabd1018e|file:///home/zac/development/research/thesis/draft/thesis.tex|335|550|v|latex
-	one of its
-7622f5498fa90a7319bdbf875f9296ee|file:///home/zac/development/research/thesis/draft/thesis.tex|335|886|v|latex
-	 One might even imagine a sparse network.
-0456769778423bd0ba1dcedf4909ff04|file:///home/zac/development/research/thesis/draft/thesis.tex|337|674|v|latex
-	repea
-da5040df42b338e395dfdd2505880904|file:///home/zac/development/research/thesis/draft/thesis.tex|337|674|v|latex
-	tedly 
-e4590736201649b6e4f716839832735e|file:///home/zac/development/research/thesis/draft/thesis.tex|337|687|v|latex
-	remaining 
-68c97f439fb2d2c1fb618a78300cbccc|file:///home/zac/development/research/thesis/draft/thesis.tex|360|427|v|latex
-	The equation that they use O
-9379ba030842032613368e5952fea2a5|file:///home/zac/development/research/thesis/draft/thesis.tex|378|131|v|latex
-	after 
-37e685fddf0c7550488f642b60de2e65|file:///home/zac/development/research/thesis/draft/thesis.tex|371|40|v|latex
-	large parameters with large gradients.
-9bede4dc73ce8c752e3514c5fadcb40e|file:///home/zac/development/research/thesis/draft/thesis.tex|368|61|v|latex
-	 \cdot \theta
-6ad499d0242ce0d5fd8044f22d70dfdc|file:///home/zac/development/research/thesis/draft/thesis.tex|371|54|v|latex
-	on how sensitive the 
-c42032c3e5f9b6d723b3222dd487a842|file:///home/zac/development/research/thesis/draft/thesis.tex|335|885|v|latex
-	Unfotunately, 
-d0e6ef34e76c41b0fac84f608289d013|file:///home/zac/development/research/thesis/draft/thesis.tex|412|384|v|latex
-	must
-c64854b8ad94bb2282787671f5823884|file:///home/zac/development/research/thesis/draft/thesis.tex|426|44|v|latex
-	coherence
-1f1c0bbdd268d98f2a525a1051082d95|file:///home/zac/development/research/thesis/draft/thesis.tex|428|359|v|latex
-	without training all the way to the end
-fd8e6841e932d65bd81080409ec1ee72|file:///home/zac/development/research/thesis/draft/thesis.tex|455|553|v|latex
-	\frac{10}{}
-713830923fe572566442850e211cb691|file:///home/zac/development/research/thesis/draft/thesis.tex|153|147|v|latex
-	dimension of
-c4cf4802b30127a6ae42a1a1798c51b3|file:///home/zac/development/research/thesis/draft/thesis.tex|153|152|v|latex
-	dimension
-39634129f9420952e30f468a59407d6d|file:///home/zac/development/research/thesis/draft/thesis.tex|506|1|v|latex
-	Now that we have shown that
-5327831e349a70251bff74ad33d12c78|file:///home/zac/development/research/thesis/draft/thesis.tex|496|252|v|latex
-	We can see that 
-d9ec7acd6e100debd7fa3e0a5460b51c|file:///home/zac/development/research/thesis/draft/thesis.tex|506|240|v|latex
-	each layer is only 
-f6cb3e816496528d4187db53bc66567f|file:///home/zac/development/research/thesis/draft/thesis.tex|539|682|v|latex
-	both
-5f0e8c5ce4dcc5b9f1f947b9852a27e3|file:///home/zac/development/research/thesis/draft/thesis.tex|549|25|v|latex
-	both 
-40153960187268bf42b2e647fbfdc6a5|file:///home/zac/development/research/thesis/draft/thesis.tex|187|1|V|latex
-	\begin{figure}
-	\includegraphics[]{weights_vit.pdf}
-	\caption{Distribution of bottom 99\% of weight magnitudes for ViT trained on real and Gaussian data, as well as at the network's random initialization. The fact that the weight magnitudes are very similar between networks trained on real and Gaussian data suggests that a difference in how the weight magnitudes evolve is not responsible for the difference in measured coherence.}
-	\label{fig:weights_vit}
-	\end{figure}
-f19627512e245e50fcc529f9c63d65d9|file:///home/zac/development/research/thesis/draft/thesis.tex|188|32|v|latex
-	 and \ref{fig:weights_vit} 
-3e11ca2215bada5ab235ee73e4ff7cd0|file:///home/zac/development/research/thesis/draft/thesis.tex|188|78|v|latex
-	networks
-0621fa131f4ba0ff804e47d6448f56a3|file:///home/zac/development/research/thesis/draft/todo|95|59|V|
-	Vit weight histogram - what's going on there? (Drop if necessary)
-be686ddf37b80b8d3bc222f1567740c9|file:///home/zac/development/research/thesis/draft/thesis.tex|304|109|v|latex
-	Interestingly, the result is not a smooth curve but instead there are two peaks. In addition, it seems strange that the largest coherence should be measured when the generalization gap is largest. 
-75765d2c3987c9a6879979f73a0a838b|file:///home/zac/development/research/thesis/draft/thesis.tex|310|173|v|latex
-	The spike in coherence near 500 parameters would seem to correspond to the point where maximum test accuracy (generalization) occurs and minimum overfitting occurs. This fits well with the coherent gradients hypothesis. What is surprising, however, is the increase in coherence at widths beyond 2000 neurons.
-aca97d20e08b40dcdc4199b8b8166eda|file:///home/zac/development/research/thesis/draft/thesis.tex|310|369|v|latex
-	One hypothesis that would explain why coherence increases with size is that the larger networks are able to search a larger space of parameter value paths and find those that generalize better. These parameters generalize so well that they have very strong gradients pointing in the same direction across all the training data, pulling up the average coherence with them.
-12a6cb1fdeb4b5b0d8cefa4870c91b1e|file:///home/zac/development/research/thesis/draft/thesis.tex|310|654|v|latex
-	. the coherent gradients hypothesis because coherence appears to increase in tandem with the generalization gap
-abfae730f00e04dc81e3b9e858504950|file:///home/zac/development/research/thesis/draft/thesis.tex|310|853|v|latex
-	Whatever the case may be, it is notable that coherence is at its largest when the generalization gap is also at its largest, because this directly contradicts the coherent gradient hypothesis. We expect that coherence should fall as the generalization gap increases.
-a8baf6c700dff132995904e7ef61d3d7|file:///home/zac/development/research/thesis/draft/thesis.tex|536|82|v|latex
-	, but the increase is not monotonic.
-5a7349cd25ef6bf5f869127b96b52743|file:///home/zac/development/research/thesis/draft/thesis.tex|538|64|v|latex
-	has 2 peaks - once when the network has enough parameters to learn the data without overfitting, and then a second peak when there are a lot of parameters. The first peak's existence is predicted by the coherent gradients hypothesis - generalizable learning is occurring. We will offer a hypothesis to explain the existence of the second peak: the second peak exists because
-	
-	
-14591145ff7222c6bd550ec1a66d1112|file:///home/zac/development/research/thesis/draft/thesis.tex|538|122|v|latex
-	The first peak 
 756e741e7d3386214e3af2cce08f0cab|file:///home/zac/development/research/thesis/draft/thesis.tex|538|122|v|latex
 	This might be explained by larger networks
 ad3d2af048b6a1b1ab45fdc4cf6f6a21|file:///home/zac/development/research/thesis/draft/thesis.tex|540|1|V|latex
@@ -914,3 +667,425 @@ b7e7adc83ce7929b45ed94f272b7be71|file:///home/zac/development/sources_fix.py|62|
 	        print(f"Error processing {file_path}: {e}")
 d5de2bf5f92ab3f052936f17f9beb93f|file:///home/zac/development/sources_fix.py|63|45|v|python
 	: {e}
+43132ad8cdf5ec16a605bf0a5c5a361c|file:///home/zac/dotfiles/init.el|352|1|V|lisp
+	    (when treemacs-python-executable
+	      (treemacs-git-commit-diff-mode t))
+1c4b030505c8bc6053b759b354ead75e|file:///home/zac/dotfiles/.i3/config|40|1|V|i3config
+	# use Mouse+Mod1 to drag floating windows to their wanted position
+	floating_modifier Mod1
+6517ecb3064fa3840df7782fa736271f|file:///home/zac/.config/polybar/config|47|1|V|dosini
+	background = ${colors.background}
+	foreground = ${colors.foreground}
+fef2e487b24364d67170c4e696028a62|file:///home/zac/dotfiles/.i3/config|309|1|V|i3config
+	# Colorscheme
+	include ~/.cache/wal/i3/config
+110ad702cfe963593a551afc53314297|file:///home/zac/.zshrc_zac|17|30|V|zsh
+	# Import colorscheme from 'wal' asynchronously
+	# &   # Run the process in the background.
+	# ( ) # Hide shell job control messages.
+	# Not supported in the "fish" shell.
+	(cat ~/.cache/wal/sequences &)
+183449a653a48833252452974e2a60ee|file:///home/zac/.config/alacritty/alacritty.yml|26|3|V|yaml
+	  background_opacity: 0.8
+fa9b15d2aebe95d78858d7908911b5a7|file:///home/zac/dotfiles/.i3/config|253|9|V|i3config
+	# Start compton
+	exec --no-startup-id compton
+4024a71f57c0d80588cc45b9fc75859c|file:///home/zac/dotfiles/.i3/config|253|25|v|i3config
+	 with blur
+ba0458c573901a61cf5c6f350595545f|file:///home/zac/.config/picom/picom.conf|1|1|V|conf
+	# ~/.config/picom/picom.conf
+	
+	# Enable vsync to prevent screen tearing
+	vsync = true;
+	
+	# Enable shadows
+	shadow = true;
+	shadow-radius = 7;
+	shadow-offset-x = -7;
+	shadow-offset-y = -7;
+	shadow-opacity = 0.5;
+	
+	# Enable transparency
+	opacity-rule = [
+	    "80:class_g = 'Alacritty'"
+	];
+	
+	# Backend settings
+	backend = "glx";
+	
+	# Fading settings
+	fading = true;
+	fade-delta = 4;
+	fade-in-step = 0.03;
+	fade-out-step = 0.03;
+3c503882d245fb7fff6bcb568f0e550f|file:///home/zac/dotfiles/.i3/config|4|12|V|i3config
+	gaps inner 5
+1966c1c1eff0ca85abbefe793f1b67a7|file:///home/zac/Downloads/Zathura-Pywal/genzathurarc|10|20|v|sh
+	$background
+b06554d10e4ac78a96632f03df3e59fb|file:///home/zac/Downloads/Zathura-Pywal/genzathurarc|11|20|v|sh
+	$foreground
+05a1ab5efe2a7ac42a815853ab88d3f1|file:///home/zac/Downloads/Zathura-Pywal/genzathurarc|11|1|V|sh
+	set default-bg "$background"
+99d51c933bbd5371908cf1e64d678d0d|file:///home/zac/Downloads/Zathura-Pywal/genzathurarc|12|16|V|sh
+	set default-bg ""
+c2a52a1f15171aae16718d11b4a953a5|file:///home/zac/Downloads/Zathura-Pywal/genzathurarc|10|1|V|sh
+	# set $background to be red 
+2edab1cfa26fa2fbd605e0ca6deedaba|file:///home/zac/Downloads/Zathura-Pywal/genzathurarc|10|1|V|sh
+	# Echo the colors
+	e
+1a18124f685a7453b251ba7ad751eedc|file:///home/zac/.config/picom/picom.conf|27|4|V|conf
+	# Kitty 
+ca727972597f6721a39313a256326256|file:///home/zac/.config/picom/picom.conf|24|4|V|conf
+	# Emacs 
+0f5967aa969c570f00fbeb9bed821090|file:///home/zac/.config/picom/picom.conf|22|29|V|conf
+	    "90:class_g = 'URxvt'"        # Example for URxvt
+9ffbcd58000d405acae0c66db1266949|file:///home/zac/.config/picom/picom.conf|22|20|v|conf
+	URxvt
+3c3e1a44008ab4693ce43b90fb118fac|file:///home/zac/.config/picom/picom.conf|21|1|V|conf
+	    "80:class_g = 'Alacritty'",  # Set Alacritty opacity to 90%
+6ca94e8bfd17a759cfe8590f5fca0062|file:///home/zac/.config/picom/picom.conf|22|20|v|conf
+	Alacritty
+8a99c56c6e7894042e93716f5fb4b6c2|file:///home/zac/.config/picom/picom.conf|24|20|V|conf
+	    "90:class_g = ''"        # Example for URxvt
+b8418a90ac3713c9dad6e009bde12e57|file:///home/zac/dotfiles/.i3/config|42|1|V|i3config
+	bindsym Mod1+t; exec i3-sensible-terminal
+b46490a41c5b8a1a0b688c8785bb3efd|file:///home/zac/dotfiles/.i3/config|43|22|v|i3config
+	i3-sensible-terminal
+bb689df7c48fa0f47c1df04d69b77953|file:///home/zac/dotfiles/init.el|602|11|V|lisp
+	;(set-face-attribute 'default nil :font "Fira Code Retina" :height 180)
+928a9db36db373cb29b463e2cbe58004|file:///home/zac/dotfiles/init.el|545|1|V|lisp
+	  (load-theme 'ewal-doom-vibrant t)
+13af528039c500905f92e2a55ccccc2d|file:///home/zac/dotfiles/init.el|545|26|v|lisp
+	vibrant
+6ead2d874e072ee22a1db960a2b50a1d|file:///home/zac/dotfiles/.i3/config|281|1|V|i3config
+	## Remove all title bars
+555ad8a93ac60d73a63639cf8aa070ca|file:///home/zac/dotfiles/.i3/config|285|1|V|i3config
+	# Todo commands
+	# command to easily move my browser to my terminal window, or move it to my second monitor, along with a good way to move it back when I'm done
+	# a command to spawn another browser in my second monitor
+	# a command to spawn a random vim window and take me to it
+	# a set of commands for going to the terminal and opening one of a number of possible files
+	#
+	
+	## Startup commands
+	## Open Alacritty in workspace 9 and run "owl" and "nd"
+	#exec --no-startup-id i3-msg 'workspace 9; exec --no-startup-id alacritty -e sh -c "owl; nd"'
+	
+	## Open Alacritty in workspace 10 and run "owl" and "electron ."
+	#exec --no-startup-id i3-msg 'workspace 10; exec --no-startup-id alacritty -e sh -c "owl; electron ."'
+	
+	## Open Firefox in workspace 2 with chatgpt.com
+	#exec --no-startup-id i3-msg 'workspace 2; exec --no-startup-id firefox --new-window "https://chatgpt.com"'
+	
+	## Open Emacs in workspace 3
+	#exec --no-startup-id i3-msg 'workspace 3; exec --no-startup-id emacs'
+	
+	## Open 2 instances of Firefox in workspace "u", first with 3 Google Keep tabs and second with YouTube
+	#exec --no-startup-id i3-msg 'workspace u; exec --no-startup-id firefox --new-window "https://keep.google.com" "https://keep.google.com" "https://keep.google.com"'
+	#exec --no-startup-id i3-msg 'workspace u; exec --no-startup-id firefox --new-window "https://youtube.com"'
+	
+	## Open Firefox in workspace "p" with thinky.dev
+	#exec --no-startup-id i3-msg 'workspace p; exec --no-startup-id firefox --new-window "https://thinky.dev"'
+1cf026650447bb9667feeaf7c31a71d1|file:///home/zac/dotfiles/.i3/config|117|1|v|i3config
+	set $ws1 "1"
+	set $ws2 "2"
+	set $ws3 "3"
+	set $ws4 "4"
+	set $ws5 "5"
+	set $ws6 "6"
+	set $ws7 "7"
+	set $ws8 "8"
+	set $ws9 "9"
+	set $ws10 "10"
+	set $ws11 "11"
+	set $ws12 "12"
+	set $ws13 "13"
+cd634e6f4eed0678ff8d65e5a3e85e22|file:///home/zac/dotfiles/.i3/config|143|1|V|i3config
+	# Assign Firefox and Spotify to their respective workspaces
+	assign [class="firefox"] $ws2
+adc577b3bbec50c9131f84fb4f4a8e10|file:///home/zac/dotfiles/.i3/config|143|1|V|i3config
+	assign [class="Spotify"] $ws12
+8bc5cfe506cae3bc733891eadc04e557|file:///home/zac/dotfiles/.i3/config|144|1|V|i3config
+	
+	# Assign workspaces
+	
+	#assign [class="Google-chrome"] $ws2
+	#assign [class="Spotify Premium"] $ws9
+	#assign [class="Postman"] $ws4
+	#assign [class="mongodb compass"] $ws4
+bc89fff6b2ea53e8f5edb357605a19a5|file:///home/zac/dotfiles/.i3/config|131|1|V|i3config
+	# Assign terminals with specific titles to workspaces
+	assign [title="Terminal owl nd"] $ws9
+	assign [title="Terminal owl ns"] $ws10
+	
+	# Assign Emacs instances to workspaces based on their instance names
+	assign [instance="emacs1"] $ws3
+	assign [instance="emacs2"] $ws9
+	
+	# Assign first instance of Firefox to workspace 2
+	assign [class="firefox" instance="Navigator"] $ws2
+	
+	assign [class="Spotify"] $ws12
+67fa84dc7dea11bc9836409af93dd66e|file:///home/zac/dotfiles/.i3/config|131|1|V|i3config
+	# Assign terminals with specific titles to workspaces
+	assign [title="Terminal owl nd"] $ws9
+	assign [title="Terminal owl ns"] $ws10
+	
+	# Assign Emacs instances to workspaces based on their instance names
+	assign [instance="emacs1"] $ws3
+	assign [instance="emacs2"] $ws9
+	
+	# Assign first instance of Firefox to workspace 2
+	assign [class="firefox" instance="Navigator"] $ws2
+	
+	assign [class="Spotify"] $ws12
+	
+fd539ca17a17132049c4fef4619df638|file:///home/zac/dotfiles/.i3/config|305|16|v|i3config
+	Spotify
+e2184f43926726305357b2cb729f8cea|file:///home/zac/dotfiles/.i3/config|305|1|V|i3config
+	assign [class=""] $ws12
+e0954e326899e38a8e933cd281926eda|file:///home/zac/dotfiles/.i3/config|305|9|v|i3config
+	class=""
+4fa1883a4ce4a2bcc4d7f478854790d2|file:///home/zac/.xinitrc|3|1|V|
+	# Set wallpaper using feh
+c465a1a506d7b4dffc520d72cdecde45|file:///home/zac/.xinitrc|3|1|V|
+	feh --bg-scale "$(cat ~/.cache/wal/wal)"
+7f03f1268bada93bc28cf104b83de4da|file:///home/zac/dotfiles/.i3/config|255|1|V|i3config
+	#exec_always feh --bg-scale ~/Pictures/Wallpapers/ho-oh-burned-tower.png --bg-scale ~/Pictures/Wallpapers/dratini.jpg --bg-scale ~/Pictures/Wallpapers/red3.jpg # Right monitor
+839e1ff7fc155fffab1bc776a992a2a1|file:///home/zac/.xinitrc|2|1|V|
+	wal -R
+688efb5dbd674d5e8ce58f5131128a9f|file:///home/zac/dotfiles/.i3/config|253|1|V|i3config
+	# Restore Pywal theme and wallpaper on startup
+	exec --no-startup-id wal -R
+5b3555d470bbd02b2067adcc4a06e6e8|file:///home/zac/dotfiles/.i3/config|311|117|v|i3config
+	 exec bash
+2bbc8f83468b52845688545b845790e8|file:///home/zac/dotfiles/.i3/config|311|62|v|i3config
+	"cd /home/zac/development/clojure/owl; npm run develop;"
+8a3a4e7d7ff7dd57a84c1a01c218525e|file:///home/zac/dotfiles/.i3/config|312|62|v|i3config
+	"owl; ns; exec bash"
+	
+49ddff6e0e31ecde4a154bd5936588a0|file:///home/zac/dotfiles/.i3/config|312|37|v|i3config
+	Terminal owl ns
+35d4756e0eb8f24cf501dea5ccb88968|file:///home/zac/dotfiles/.i3/config|311|37|v|i3config
+	Terminal owl nd
+a19ea622182c63ddc19bb22cde982b82|file:///home/zac/dotfiles/.i3/config|312|102|v|i3config
+	develop
+09b2227cfc457f9be890295edcb33085|file:///home/zac/dotfiles/.i3/config|314|7|V|i3config
+	# wait for emacs to start before starting another instance
+9ace6c751fa8ec7f851059da83942ad2|file:///home/zac/dotfiles/.i3/config|316|1|V|i3config
+	exec --no-startup-id firefox --name firstfox
+	exec --no-startup-id spotify
+0648f82dbbdcd460a99d45bdfb3aeacb|file:///home/zac/dotfiles/.i3/config|307|19|v|i3config
+	firstfox
+77ce251be6ccb20393f356336a50cf56|file:///home/zac/dotfiles/.i3/config|305|9|v|i3config
+	class="firefox" 
+7123a699d77db6479a1d8ece2c4f1c16|file:///home/zac/dotfiles/.i3/config|307|9|v|i3config
+	instance
+e95c97e10ca0a240e83e018e7b277ae1|file:///home/zac/dotfiles/.i3/config|305|9|v|i3config
+	class="f
+f189314177d1f5a2cad63af8b0721146|file:///home/zac/dotfiles/.i3/config|305|9|v|i3config
+	irefox" 
+7392e5a07cc56647b45a9598ce4d646d|file:///home/zac/dotfiles/.i3/config|305|19|v|i3config
+	Navigator
+f0c524d6c90a6d6836ccc57e978d8e0b|file:///home/zac/dotfiles/.i3/config|314|1|V|i3config
+	exec --no-startup-id firefox --name firstfox
+618ae4070692cea86ce76b1ecfbb784b|file:///home/zac/dotfiles/.i3/config|316|1|V|i3config
+	sleep 2
+0ff030ecf7a219a1ea3ae93adc03b4f4|file:///home/zac/dotfiles/.i3/config|307|1|V|i3config
+	assign [class="spotify"] $ws12
+9aeab829e27266990f352631530f9f8d|file:///home/zac/dotfiles/.i3/config|307|16|v|i3config
+	spotify
+1036e530a60e7f88461ab56daff2bc1e|file:///home/zac/dotfiles/.i3/config|292|1|V|i3config
+	
+	# Restore Pywal theme and wallpaper on startup
+	exec --no-startup-id wal -R
+	
+	# Assign terminals with specific titles to workspaces
+	assign [title="Shadow-CLJS"] $ws9
+	assign [title="Electron"] $ws10
+	
+	# Assign Emacs instances to workspaces based on their instance names
+	assign [instance="emacs1"] $ws3
+	assign [instance="emacs2"] $ws9
+	
+	# Assign first instance of Firefox to workspace 2
+	assign [instance="firstfox"] $ws2
+	
+	assign [class="Thinky"] $ws1
+	assign [class="Spotify"] $ws12
+	
+	
+	# Open applications on startup
+	exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl; npm run develop;"
+	exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl; npm run start;"
+	exec --no-startup-id emacs --name emacs1
+	sleep 2
+	exec --no-startup-id firefox --name firstfox
+	exec --no-startup-id spotify
+	exec --no-startup-id emacs --name emacs2
+b59fa458e98109616b4eaf867e33cccc|file:///home/zac/dotfiles/.i3/config|293|11|v|i3config
+	Pywal theme and wallpaper on startup
+b93476a55672f6f06478465a72c3c51f|file:///home/zac/dotfiles/.i3/config|293|1|V|i3config
+	# Restore 
+	exec --no-startup-id wal -R
+	
+	# Assign terminals with specific titles to workspaces
+	assign [title="Shadow-CLJS"] $ws9
+	assign [title="Electron"] $ws10
+	
+	# Assign Emacs instances to workspaces based on their instance names
+	assign [instance="emacs1"] $ws3
+	assign [instance="emacs2"] $ws9
+	
+	# Assign first instance of Firefox to workspace 2
+	assign [instance="firstfox"] $ws2
+	
+	assign [class="Thinky"] $ws1
+	assign [class="Spotify"] $ws12
+	
+	
+	# Start the emacs daemon
+	exec --no-startup-id emacs --daemon
+	
+	# Open applications on startup
+	exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl; npm run develop;"
+	exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl; npm run start;"
+	exec --no-startup-id emacs --name emacs1
+	sleep 2
+	exec --no-startup-id firefox --name firstfox
+	exec --no-startup-id spotify
+	exec --no-startup-id emacs --name emacs2
+b902a35c13c35c8ecee2bd01c281183a|file:///home/zac/dotfiles/.i3/config|313|87|v|i3config
+	/path/to/your/first-file.el
+6a6334310b6e6eb0aaf50b60b72efb1a|file:///home/zac/dotfiles/.i3/config|316|87|v|i3config
+	/path/to/your/second-file.el
+3a90c00d097bd7632799136a89a0fe63|file:///home/zac/dotfiles/.i3/config|316|121|v|i3config
+	src/app/components/Editor.cljs
+367a4dae7b7de174924a3e0153e64860|file:///home/zac/dotfiles/.i3/config|314|31|v|i3config
+	ep 4 && 
+b13cb5d94c4702bf0932c3cffba61887|file:///home/zac/dotfiles/.i3/config|317|31|v|i3config
+	sleep 6 && 
+b852ecb46a3a450ebe82fb811c0c7c66|file:///home/zac/dotfiles/.i3/config|314|31|v|i3config
+	emacsclient -c -n -F '((name . \"emacs1\"))' /home/zac/development/clojure/owl/src/app/components/Editor.cljs
+af6d97b15d4cf0b81242b250029197b5|file:///home/zac/dotfiles/.i3/config|311|1|V|i3config
+	sleep 10
+0bfb75f0fae35f08a6ca7865f9dbebe2|file:///home/zac/dotfiles/.i3/config|311|6|V|i3config
+	;; Sle
+8ec5c7d7d7255ae4999474f6bd9b7687|file:///home/zac/dotfiles/init.el|902|1|V|lisp
+	(server-start)
+3d024d83a68b22bd90b69af84fc31045|file:///home/zac/dotfiles/init.el|902|25|V|lisp
+	;; set server-use-tcp to nil 
+1f378eccfdc658bfc5f2390159c153d6|file:///home/zac/dotfiles/init.el|904|25|V|lisp
+	(setq server-socket-dir "~/.emacs.d/server")
+8ea050a922c6bd5fe179cc78f8c46c67|file:///home/zac/dotfiles/.i3/config|315|1|V|i3config
+	## Open the second Emacs frame on workspace 9 with another specific file
+	#exec --no-startup-id bash -c "emacsclient -c -n -F '((name . \"emacs2\"))' /home/zac/development/clojure/owl/todo.org"
+33e4b68dd8efa2e109f29737005f2680|file:///home/zac/dotfiles/.i3/config|309|1|V|i3config
+	# Start Emacs as a daemon
+	exec --no-startup-id emacs --daemon
+dc503f3ab481a8ddc2099a03453ec128|file:///home/zac/dotfiles/.i3/config|310|1|V|i3config
+	## Open the first Emacs frame on workspace 3 with a specific file
+	exec --no-startup-id bash -c "emacsclient -c -n -F '((name . \"emacs1\"))' /home/zac/development/clojure/owl/src/app/components/Editor.cljs"
+d9fe21babb29355df8943269c37b7d26|file:///home/zac/dotfiles/.i3/config|311|1|v|i3config
+	exec --no-startup-id bash -c "emacsclient -c -n -F '((name . \"emacs1\"))' /home/zac/development/clojure/owl/src/app/components/Editor.cljs"
+	
+5a7968ace09efc28970492e424b9d1a1|file:///home/zac/dotfiles/.i3/config|300|1|v|i3config
+	assign [title="emacs1"] $ws3
+974cb1a1c88f585e7857c3670af71c6a|file:///home/zac/dotfiles/.i3/config|311|1|V|i3config
+	exec --no-startup-id bash -c "emacsclient -c -n -F '((name . \"emacs1\"))' /home/zac/development/clojure/owl/src/app/components/Editor.cljs"
+b068931cc450442b63f5b3d276ea4297|file:///home/zac/dotfiles/.i3/config|316|32|v|i3config
+	name
+eec2610b80c4d471e36471fc13302223|file:///home/zac/dotfiles/.i3/config|316|1|V|i3config
+	exec --no-startup-id firefox --title "firstfox"
+a030c818d917a25d947e96bdaed46189|file:///home/zac/dotfiles/.i3/config|316|1|V|i3config
+	exec --no-startup-id i3-msg "workspace number 2, exec firefox"
+d6a5c9544eca9b5ce2266d1c34a93222|file:///home/zac/dotfiles/.i3/config|317|55|v|i3config
+	firefox
+c027b0c41f1678064094e62f4208a092|file:///home/zac/dotfiles/.i3/config|311|45|v|i3config
+	/home/zac/development/clojure/owl/src/app/components/Editor.cljs
+	
+37c5762ce17ddb32b70f8dd0ec0d8e82|file:///home/zac/dotfiles/.i3/config|306|28|V|i3config
+	assign [class="Thinky"] $ws1
+c1059d34d6300ecb79c4287adb11a857|file:///home/zac/dotfiles/.i3/config|304|30|V|i3config
+	assign [title="firstfox"] $ws2
+150bd3d083c7fa2e7f31057c6fdc768b|file:///home/zac/dotfiles/.i3/config|299|1|V|i3config
+	# Assign Emacs frames to workspaces based on their frame names
+	assign [title="emacs1"] $ws3
+	assign [title="emacs2"] $ws9
+	
+	# Assign first instance of Firefox to workspace 2
+432d2be08de8f9a65193b5d772b06629|file:///home/zac/dotfiles/.i3/config|307|1|V|i3config
+	## i3msg to move window with class "Thinky" to workspace 1
+fd477aba41a17427ec3df81a0b86ca60|file:///home/zac/dotfiles/.i3/config|308|55|v|i3config
+	sleep 6
+8b950af45091e7b291eca3523e5e65fa|file:///home/zac/dotfiles/init.el|901|1|V|lisp
+	;; Start server
+	;(setq server-use-tcp nil)
+	;(setq server-socket-dir "~/.emacs.d/server")
+	(server-start)
+f7440308ae1360e90544060b2f679735|file:///home/zac/dotfiles/.i3/config|308|1|V|i3config
+	exec --no-startup-id sleep 3
+a04755c9dcfa7d5762275243faa93d71|file:///home/zac/dotfiles/.i3/config|311|1|V|i3config
+	exec --no-startup-id i3-msg "workspace number 9, exec emacs /home/zac/development/clojure/owl/todo.org"
+4fbe412f0840a1a06c6f927b038e257f|file:///home/zac/dotfiles/.i3/config|311|95|v|i3config
+	todo.org
+e09b81d5f495091b7c38dbb6b8438fcb|file:///home/zac/dotfiles/.i3/config|310|1|V|i3config
+	exec --no-startup-id sleep 5
+13b3a99fbf79365d9d859e15aa065d90|file:///home/zac/dotfiles/.i3/config|310|28|V|i3config
+	exec --no-startup-id i3-msg "workspace number 3, exec emacs /home/zac/development/clojure/owl/src/app/components/Editor.cljs"
+561c5469c251351e0dab3a74e7dee2a0|file:///home/zac/dotfiles/.i3/config|306|1|v|i3config
+	exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl; npm run develop;"
+	exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl; npm run start;"
+d1b86890c2a19a22c578ed9c66c4470d|file:///home/zac/dotfiles/.i3/config|299|1|V|i3config
+	assign [class="Thinky" window_role="browser-window"] $ws1
+89643c5a9c5a9107de4c1fc2f0282471|file:///home/zac/dotfiles/.i3/config|300|37|v|i3config
+	browser-window
+71d1e38b1a02987359c3ab5b1d2ad770|file:///home/zac/dotfiles/.i3/config|308|118|v|i3config
+	; exec bash
+723e2a237d78d3f6b73614bfa3ba67fa|file:///home/zac/dotfiles/.i3/config|307|59|v|i3config
+	exec bash; 
+42f2da1c9270a109ee342ee7dd4e7fde|file:///home/zac/dotfiles/.i3/config|308|56|v|i3config
+	cd /home/za
+1a1f87b7f8eda87623683b8a84f7da56|file:///home/zac/dotfiles/.i3/config|311|1|V|i3config
+	exec --no-startup-id i3-msg "workspace number 2, exec firefox"
+	exec --no-startup-id i3-msg "workspace number 3, exec emacs /home/zac/development/clojure/owl/src/app/components/Editor.cljs"
+7320f5ded8b438e04288cf820452f5eb|file:///home/zac/dotfiles/.i3/config|310|1|V|i3config
+	# Sleep for 5 seconds to allow the Electron app to start
+eb2eb7566809a05258a7b20b21ddbe9b|file:///home/zac/dotfiles/.i3/config|307|1|V|i3config
+	exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl; npm run develop; exec bash"
+	exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl; npm run start; exec bash"
+	
+b5b57d710826cc75822c43f82ceece8c|file:///home/zac/dotfiles/.i3/config|307|1|V|i3config
+	exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl; npm run develop; exec bash"
+	exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl; npm run start; exec bash"
+32e84b06e9e576b64d8f01e9cf4290e1|file:///home/zac/.zshrc_zac|11|18|V|zsh
+	pulseaudio --start
+2788df173c2e52c6dad4db4c3d5106c2|file:///home/zac/dotfiles/.i3/config|294|50|v|i3config
+	ho-oh-burned-tower.png
+3199317e6626bf2a6244efd7f836bbf3|file:///home/zac/dotfiles/.i3/config|294|99|v|i3config
+	dratini.jpg
+9aad34c8f0d1c7cec9599967d1bf9f19|file:///home/zac/dotfiles/init.el|551|20|V|lisp
+	  (doom-themes-neotree-config)  ;; Enable for neotree users
+f8a43fd690bdc2d2f1e40095997b50ef|file:///home/zac/dotfiles/.i3/config|242|1|V|i3config
+	# Get that sweet Alt+Tab behavior
+	#
+ed6bd7540ebc7f7978afbf3e53c31ace|file:///home/zac/dotfiles/.i3/config|32|1|V|i3config
+	# Also do play/pause and next/previous if you use those
+	bindsym XF86AudioPlay exec playerctl play-pause
+	bindsym XF86AudioNext exec playerctl next
+	bindsym XF86AudioPrev exec playerctl previous
+a5d70e6de663c06d18f05511ed5e7f92|file:///home/zac/dotfiles/.i3/config|25|1|V|i3config
+	
+	# Use pactl to adjust volume in PulseAudio.
+	set $refresh_i3status killall -SIGUSR1 i3status
+	bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+	bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+	bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+	bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+	
+a9451f29460c6e0926414d6584fce31d|file:///home/zac/dotfiles/.i3/config|28|1|v|i3config
+	bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+	bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+	bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+	bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+	

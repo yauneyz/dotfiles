@@ -1,7 +1,7 @@
 # My own additions
 #for_window [class="^.*"] border pixel 0
 
-gaps inner 0
+gaps inner 4
 gaps outer 0
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -17,7 +17,7 @@ font pango:monospace 8
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -29,6 +29,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# Also do play/pause and next/previous if you use those
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -37,12 +41,10 @@ set $down j
 set $left h
 set $right l
 
-# use Mouse+Mod1 to drag floating windows to their wanted position
-floating_modifier Mod1
-
 # start a terminal
 #bindsym Mod1+Return exec i3-sensible-terminal
-bindsym Mod1+t; exec i3-sensible-terminal
+#bindsym Mod1+t; exec i3-sensible-terminal
+bindsym Mod1+t; exec kitty
 
 # kill focused window
 bindsym Mod1+Shift+q kill
@@ -130,13 +132,6 @@ set $ws11 "11"
 set $ws12 "12"
 set $ws13 "13"
 
-# Assign workspaces
-
-#assign [class="Google-chrome"] $ws2
-#assign [class="Spotify Premium"] $ws9
-#assign [class="Postman"] $ws4
-#assign [class="mongodb compass"] $ws4
-
 # Assign monitors
 
 workspace $ws1 output DP-4
@@ -215,7 +210,7 @@ mode "resize" {
         bindsym Mod1+r mode "default"
 }
 
-bindsym Mod1+r mode "resize"
+#bindsym Mod1+r mode "resize"
 
 # Commented out because we use polybar instead
 
@@ -248,20 +243,18 @@ bindsym Mod1+n exec nautilus
 bindsym Mod1+g exec gnome-control-center
 bindsym Mod1+m exec spotify
 
-# Get that sweet Alt+Tab behavior
-#
 bindsym Mod1+Tab workspace back_and_forth
 
 
-# Start compton
-exec --no-startup-id compton
+# Start Picom compositor
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
 exec_always xrandr --output DP-4 --primary --mode 3840x2160 --pos 0x0 --rotate normal \
        --output DP-2 --mode 3840x2160 --pos -2160x0 --rotate right
 
 
 # Get wallpaper
-exec_always feh --bg-scale ~/Pictures/Wallpapers/ho-oh-burned-tower.png --bg-scale ~/Pictures/Wallpapers/dratini.jpg --bg-scale ~/Pictures/Wallpapers/red3.jpg # Right monitor
+#exec_always feh --bg-scale ~/Pictures/Wallpapers/ho-oh-burned-tower.png --bg-scale ~/Pictures/Wallpapers/dratini.jpg --bg-scale ~/Pictures/Wallpapers/red3.jpg # Right monitor
 
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -272,38 +265,54 @@ bindsym Mod1+b exec --no-startup-id bluetoothctl connect 94:DB:56:F7:A5:C7
 # Disconnect from Headphones
 bindsym Mod1+Shift+b exec --no-startup-id bluetoothctl disconnect 94:DB:56:F7:A5:C7
 
-# Connect to Xbox Controller
-bindsym Mod1+x exec --no-startup-id bluetoothctl connect 44:16:22:4F:73:4B
+# Don't uncomment until we have a good binding
+## Connect to Xbox Controller
+#bindsym Mod1+ exec --no-startup-id bluetoothctl connect 44:16:22:4F:73:4B
 
-# Disconnect from Xbox Controller
-bindsym Mod1+Shift+x exec --no-startup-id bluetoothctl disconnect 44:16:22:4F:73:4B
+## Disconnect from Xbox Controller
+#bindsym Mod1+Shift+ exec --no-startup-id bluetoothctl disconnect 44:16:22:4F:73:4B
+
+
+# Remove title bars for all applications
+new_window pixel 0
 
 
 
 
-# Todo commands
-# command to easily move my browser to my terminal window, or move it to my second monitor, along with a good way to move it back when I'm done
-# a command to spawn another browser in my second monitor
-# a command to spawn a random vim window and take me to it
-# a set of commands for going to the terminal and opening one of a number of possible files
-#
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
 
-## Startup commands
-## Open Alacritty in workspace 9 and run "owl" and "nd"
-#exec --no-startup-id i3-msg 'workspace 9; exec --no-startup-id alacritty -e sh -c "owl; nd"'
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
 
-## Open Alacritty in workspace 10 and run "owl" and "electron ."
-#exec --no-startup-id i3-msg 'workspace 10; exec --no-startup-id alacritty -e sh -c "owl; electron ."'
+client.background       $bg
 
-## Open Firefox in workspace 2 with chatgpt.com
-#exec --no-startup-id i3-msg 'workspace 2; exec --no-startup-id firefox --new-window "https://chatgpt.com"'
+# Restore Pywal theme and wallpaper on startup
+exec_always --no-startup-id wal -R
+exec_always feh --bg-scale ~/Pictures/Wallpapers/solarized_1.png --bg-scale ~/Pictures/Wallpapers/solarized_1.png #--bg-scale ~/Pictures/Wallpapers/red3.jpg # Right monitor
 
-## Open Emacs in workspace 3
-#exec --no-startup-id i3-msg 'workspace 3; exec --no-startup-id emacs'
+# Assign terminals with specific titles to workspaces
+assign [title="Shadow-CLJS"] $ws9
+assign [title="Electron"] $ws10
+assign [class="Spotify"] $ws12
+assign [class="Thinky" window_role="browser-window"] $ws1
+assign [class="Thinky" window_role="devtools"] $ws10
 
-## Open 2 instances of Firefox in workspace "u", first with 3 Google Keep tabs and second with YouTube
-#exec --no-startup-id i3-msg 'workspace u; exec --no-startup-id firefox --new-window "https://keep.google.com" "https://keep.google.com" "https://keep.google.com"'
-#exec --no-startup-id i3-msg 'workspace u; exec --no-startup-id firefox --new-window "https://youtube.com"'
 
-## Open Firefox in workspace "p" with thinky.dev
-#exec --no-startup-id i3-msg 'workspace p; exec --no-startup-id firefox --new-window "https://thinky.dev"'
+### Open the first Emacs frame on workspace 3 with a specific file
+#exec --no-startup-id emacs --title "emacs1" /home/zac/development/clojure/owl/src/app/components/Editor.cljs
+
+# Open other applications on startup
+exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl; npm run develop"
+exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl; npm run start"
+
+
+exec --no-startup-id i3-msg "workspace number 2, exec firefox"
+exec --no-startup-id i3-msg "workspace number 3, exec emacs /home/zac/development/clojure/owl/src/app/components/Editor.cljs"
+exec --no-startup-id i3-msg "workspace number 9, exec emacs /home/zac/development/clojure/owl/todo.org"
+
+exec --no-startup-id spotify
