@@ -1,1 +1,0 @@
-("~/development/clojure/scratch/" "~/" "~/development/clojure/guestbook/" "~/development/ics/models/off-model/" "~/development/short_stories/" "~/development/alpaca.cpp/" "~/development/Data_Warehouse/")
