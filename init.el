@@ -43,7 +43,10 @@
 ;; =========== UI Cleanup  ===================
 (setq inhibit-startup-message t
       visible-bell t)
+
+;; relative line numbers
 (global-display-line-numbers-mode)
+(setq display-line-numbers-type 'relative)
 
 ;; Command Log
 (use-package command-log-mode
@@ -91,7 +94,6 @@
   (evil-set-initial-state 'dashboard-mode 'normal)
   (evil-set-undo-system 'undo-redo))
 
-
 ;; Evil-Collection
 (use-package evil-collection
   :after evil
@@ -106,6 +108,15 @@
 (use-package evil-surround
 	:config
 	(global-evil-surround-mode 1))
+
+;; ;; Emacs snipe
+;; (use-package evil-snipe
+;;   :after evil
+;;   :config
+;;   (evil-snipe-mode +1)
+;;   (evil-snipe-override-mode +1)
+;;   (setq evil-snipe-scope 'visible
+;;         evil-snipe-repeat-scope 'whole-buffer))
 
 ;; Which Key
 (use-package which-key
@@ -564,7 +575,10 @@
 ;; =========== Copilot  ===================
 ;(install-if-necessary 'editorconfig)
 ;(install-if-necessary 'jsonrpc)
-(use-package editorconfig)
+(use-package editorconfig
+  :config
+  (editorconfig-mode 1))
+
 (use-package jsonrpc)
 
 (use-package copilot
@@ -572,15 +586,14 @@
 									 :repo "copilot-emacs/copilot.el"
 									 :branch "main"
 									 :files ("dist" "*.el")))
-(add-hook 'prog-mode-hook 'copilot-mode)
-;; only if in a programming mode
-(if (derived-mode-p 'prog-mode)
-	;(evil-define-key 'insert 'global (kbd "<tab>") 'copilot-accept-completion)
-	;; Make sure TAB isn't bound to anything else
-	(define-key evil-insert-state-map (kbd "TAB") nil)
-	;(evil-define-key 'insert 'global (kbd "TAB") 'copilot-accept-completion)
-	(copilot-mode)
-	(setq copilot-indent-offset-warning-disable t))
+(add-hook 'prog-mode-hook
+          (lambda ()
+            (copilot-mode)
+            ;; Unbind TAB in evil insert state to allow Copilot to use it
+            (define-key evil-insert-state-map (kbd "TAB") nil)
+            ;; Optionally, bind TAB to 'copilot-accept-completion'
+            ;; (evil-define-key 'insert 'global (kbd "TAB") 'copilot-accept-completion)
+            (setq copilot-indent-offset-warning-disable t)))
 
 ;; =========== Company  ===================
 
@@ -850,6 +863,9 @@
 (evil-define-key 'normal 'global (kbd "<leader>hv") 'counsel-describe-variable)
 (evil-define-key 'normal 'global (kbd "<leader>hk") 'counsel-describe-key)
 
+;; F3 is toggle fold
+(evil-define-key 'normal 'global (kbd "<f3>") 'evil-toggle-fold)
+
 
 ;; Disable Custom
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -884,6 +900,9 @@
         (treemacs-toggle-node)
         (treemacs--expand-recursively child)))))
 
+;; winner mode
+(winner-mode 1)
+
 ;; Bind the custom function to Ctl-E (Ctrl + E) in Treemacs mode
 (with-eval-after-load 'treemacs
   (define-key treemacs-mode-map (kbd "C-e") #'my-treemacs-expand-recursively))
@@ -897,3 +916,29 @@
   "Open the init file."
   (interactive)
   (find-file user-init-file))
+
+(defun evil-select-inside-comment-block ()
+  "Select everything inside the (comment ...) block under the cursor, excluding the 'comment' keyword itself, in Evil visual mode."
+  (interactive)
+  (when (and (bound-and-true-p evil-mode)
+             (eq evil-state 'normal))
+    (save-excursion
+      ;; Navigate up the syntax tree to find the (comment ...) block
+      (condition-case nil
+          (progn
+            ;; Move to the beginning of the current sexp
+            (while (not (and (looking-at-p "(comment")
+                             (eq (char-after (point)) ?\())
+                        (not (bobp)))
+              (backward-up-list))
+            ;; Move past the 'comment' keyword and opening paren
+            (let ((start (progn (forward-char 8) (point)))) ; Move forward over "(comment "
+              ;; Move to the end of the comment block
+              (forward-sexp)
+              ;; Move back one char to avoid selecting the closing paren
+              (let ((end (1- (point))))
+                ;; Use Evil's visual selection
+                (evil-visual-select start end))))
+        (error (message "Not inside a (comment ...) block"))))))
+
+(evil-define-key 'normal 'global (kbd "<leader>cv") 'evil-select-comment-block)

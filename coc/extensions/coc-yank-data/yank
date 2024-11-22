@@ -1,55 +1,3 @@
-756e741e7d3386214e3af2cce08f0cab|file:///home/zac/development/research/thesis/draft/thesis.tex|538|122|v|latex
-	This might be explained by larger networks
-ad3d2af048b6a1b1ab45fdc4cf6f6a21|file:///home/zac/development/research/thesis/draft/thesis.tex|540|1|V|latex
-	has 2 peaks - once when the network has enough parameters to learn the data without overfitting, and then a second peak when there are a lot of parameters. The first peak's existence is predicted by the coherent gradients hypothesis - generalizable learning is occurring. We will offer a hypothesis to explain the existence of the second peak: the second peak exists because
-aefa4c562e01af2ba8b34757afe5ec92|file:///home/zac/development/research/thesis/draft/thesis.tex|538|323|v|latex
-	 performance
-2b68849104d14931f07939a265c0f6f8|file:///home/zac/development/research/thesis/draft/thesis.tex|319|338|v|latex
-	for the narrowness of the diffs with increasing width is that because the data can be effectively learned with a width of ~500, all of the extra parameters don't really have a "job" to do during training and are not moved in any consistent direction; i
-27ac2f054cf508372f7cf6671f5ad573|file:///home/zac/development/research/thesis/draft/thesis.tex|319|337|v|latex
-	., they don't really have a strong impact on the network's gradient
-b4a8a8f68aad816e44944599edae9bff|file:///home/zac/development/research/thesis/draft/thesis.tex|553|9|v|latex
-	Coherence pruning can sometimes work better than magnitude pruning, and it is computationally cheaper to run.
-28c3d8f4b7e312af5e0d6b59a50efd1c|file:///home/zac/development/research/thesis/draft/thesis.tex|553|15|v|latex
-	magnitude
-5c7f8f280f4dbe3d1fd182113e2c9fb7|file:///home/zac/development/research/thesis/draft/thesis.tex|555|140|v|latex
-	we see that particularly at lower widths, coherence pruning generalized better than magnitude pruning. In addition, the ViT pruning results in tables \ref{fig:pruned_vit} and \ref{fig:pruned_vit_local} show that coherence pruning outperformed all other methods. In the case where layers were non-uniformly pruned, coherence pruning actually surpassed the original dense network in max accuracy. This is a powerful result that shows that while diffs and coherence may not be as closely linked as we would like, diff-based coherence pruning may yet have a place in the landscape of pruning techniques. In addition, the coherence masks can be derived with fewer epochs of training than magnitude masks, meaning that if the two methods are roughly comparable in power then coherence pruning may serve simply to reduce the compute cost of training pruned models.
-	
-	
-8e9d684607e8ebc71a33fc370c97360a|file:///home/zac/development/research/thesis/draft/thesis.tex|555|326|v|latex
-	coherence p
-bb6dbb9fde5abe9b673200d2e7f59636|file:///home/zac/development/research/thesis/draft/thesis.tex|553|151|v|latex
-	Coherence
-5a0a3c139f318fdcb14edce7787c75d6|file:///home/zac/development/research/thesis/draft/thesis.tex|555|421|v|latex
-	is significantly 
-96d1a588ffe1f7c9da65da998eed11dc|file:///home/zac/development/research/thesis/draft/thesis.tex|564|148|v|latex
-	overparametrized
-10898f1ef244b66986d236e312ad538b|file:///home/zac/development/research/thesis/draft/thesis.tex|566|63|v|latex
-	 Section 3, why does the second peak exists?
-4f1bcc75494e4d3aa11f54dcda523301|file:///home/zac/development/research/thesis/draft/thesis.tex|568|43|v|latex
-	contains a peak in coherence at high width
-1facc39d1c697155ed1dff81d20f0f87|file:///home/zac/development/research/thesis/draft/thesis.tex|572|65|v|latex
-	suggest that coherence pruning might generalize better than magnitude pruning. However
-a38bf9994672020e4390cdf7913f130c|file:///home/zac/development/research/thesis/draft/thesis.tex|572|1|v|latex
-	The results found i
-53bd2c50504b4753270007ed242559d3|file:///home/zac/development/research/thesis/draft/thesis.tex|572|110|v|latex
-	this into question
-dc42358723d58d7e072d091d79196c38|file:///home/zac/development/research/thesis/draft/thesis.tex|572|192|v|latex
-	then could it be the case that diff-based pruning simply does a better job of approximating random pruning and thus generalizes better
-78c767959b213cb39788e2a641bb764a|file:///home/zac/development/research/thesis/draft/thesis.tex|574|1|v|latex
-	Beyond this, t
-d4cd8e4a1738dd2ec14433c5d0d9acbe|file:///home/zac/development/research/thesis/draft/thesis.tex|598|101|v|latex
-	, although not monotonically
-8268ec34e09303c24abec0a9b7612aa3|file:///home/zac/development/research/thesis/draft/thesis.tex|151|330|v|latex
-	 ResNet
-62fd3f87581663e4371e40eb51d66e76|file:///home/zac/development/research/thesis/draft/thesis.tex|151|331|v|latex
-	for 
-82f9e82f567f40e2f99f1ec3b1c7d8f1|file:///home/zac/development/research/thesis/draft/thesis.tex|151|343|v|latex
-	ViT for 200 epochs, 
-0314227d6af2b7d2d07d8e13328d9486|file:///home/zac/development/research/thesis/draft/thesis.tex|49|766|v|latex
-	coherence 
-098312e5ee6436ca0775cb12c3a8b25f|file:///home/zac/development/research/thesis/draft/thesis.tex|161|233|v|latex
-	is higher at the beginning
 856dcb6362c3c1e17ca6d4821d5e4025|file:///home/zac/development/research/thesis/draft/thesis.tex|171|254|v|latex
 	whereas
 44114fd344c6eada581e75c26fc0d55b|file:///home/zac/development/research/thesis/draft/thesis.tex|171|276|v|latex
@@ -1089,3 +1037,436 @@ a9451f29460c6e0926414d6584fce31d|file:///home/zac/dotfiles/.i3/config|28|1|v|i3c
 	bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 	bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 	
+b1eb3377f5d43878c848b4c5358ef197|file:///home/zac/dotfiles/init.el|569|1|V|lisp
+	(use-package editorconfig)
+8f42f7564657928caa1e4315bc0d4dc1|file:///home/zac/dotfiles/init.el|580|1|V|lisp
+	(add-hook 'prog-mode-hook 'copilot-mode)
+	;; only if in a programming mode
+	(if (derived-mode-p 'prog-mode)
+		;(evil-define-key 'insert 'global (kbd "<tab>") 'copilot-accept-completion)
+		;; Make sure TAB isn't bound to anything else
+		(define-key evil-insert-state-map (kbd "TAB") nil)
+		;(evil-define-key 'insert 'global (kbd "TAB") 'copilot-accept-completion)
+		(copilot-mode)
+		(setq copilot-indent-offset-warning-disable t))
+78ae328fccb68e98f813962831bd5222|file:///home/zac/dotfiles/.i3/config|215|1|V|i3config
+	# Commented out because we use polybar instead
+	
+	## Start i3bar to display a workspace bar (plus the system information i3status
+	## finds out, if available)
+	#bar {
+					#status_command i3status
+	#}
+d511f8439ecde36647437fbba67a4394|file:///home/zac/dotfiles/.i3/config|37|14|v|i3config
+	Space
+7b7327aef6b286c78a2c897c3cb577f2|file:///home/zac/dotfiles/.i3/config|37|1|V|i3config
+	bindsym Mod1+Space exec playerctl play-pause
+87bbd7e1c93e07bb0ea1b714913e54a3|file:///home/zac/dotfiles/.i3/config|36|40|v|i3config
+	 + ;
+0530be097fc26a2b9cfb7bffd0359058|file:///home/zac/dotfiles/.i3/config|254|29|v|i3config
+	$HOME/.config/polybar/launch.sh
+	
+	
+c1a2d445925775839e78d58020961a34|file:///home/zac/.config/polybar/config|1|1|V|dosini
+	;==========================================================
+	;
+	;
+	;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+	;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+	;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+	;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+	;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+	;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+	;
+	;
+	;   To learn more about how to configure Polybar
+	;   go to https://github.com/polybar/polybar
+	;
+	;   The README contains a lot of information
+	;
+	;==========================================================
+	
+	;[colors]
+	;;background = ${xrdb:color0:#222}
+	;background = #33222
+	;background-alt = #444
+	;;foreground = ${xrdb:color7:#222}
+	;foreground = #dfdfdf
+	;foreground-alt = #555
+	;primary = #ffb52a
+	;secondary = #e60053
+	;alert = #bd2c40
+	
+	[colors]
+	background = ${wal:background}
+	foreground = ${wal:foreground}
+	primary = ${wal:color8}
+	secondary = ${wal:color9}
+	alert = ${wal:color1}
+	
+	
+	[bar/example]
+	;monitor = ${env:MONITOR:HDMI-1}
+	width = 100%
+	height = 27
+	;offset-x = 1%
+	;offset-y = 1%
+	radius = 6.0
+	fixed-center = false
+	
+	line-size = 3
+	line-color = #f00
+	
+	border-size = 4
+	border-color = #00000000
+	
+	padding-left = 0
+	padding-right = 1
+	
+	module-margin-left = 1
+	module-margin-right = 1
+	
+	font-0 = fixed:pixelsize=20;1
+	font-1 = unifont:fontformat=truetype:size=16:antialias=false;0
+	font-2 = siji:pixelsize=20;1
+	
+	modules-left = i3
+	modules-center = xwindow
+	modules-right = filesystem memory cpu eth date powermenu
+	
+	separator="|"
+	
+	tray-position = right
+	tray-padding = 2
+	;tray-background = #0063ff
+	
+	;wm-restack = bspwm
+	;wm-restack = i3
+	
+	;override-redirect = true
+	
+	;scroll-up = bspwm-desknext
+	;scroll-down = bspwm-deskprev
+	
+	;scroll-up = i3wm-wsnext
+	;scroll-down = i3wm-wsprev
+	
+	cursor-click = pointer
+	cursor-scroll = ns-resize
+	
+	; Put the bar at the bottom of the screen
+	bottom = true
+	
+	[module/xwindow]
+	type = internal/xwindow
+	label = %title:0:30:...%
+	
+	[module/xkeyboard]
+	type = internal/xkeyboard
+	blacklist-0 = num lock
+	
+	format-prefix = " "
+	format-prefix-foreground = ${colors.foreground-alt}
+	format-prefix-underline = ${colors.secondary}
+	
+	label-layout = %layout%
+	label-layout-underline = ${colors.secondary}
+	
+	label-indicator-padding = 2
+	label-indicator-margin = 1
+	label-indicator-background = ${colors.secondary}
+	label-indicator-underline = ${colors.secondary}
+	
+	[module/filesystem]
+	type = internal/fs
+	interval = 25
+	
+	mount-0 = /
+	
+	label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %free%
+	label-unmounted = %mountpoint% not mounted
+	label-unmounted-foreground = ${colors.foreground-alt}
+	
+	[module/i3]
+	type = internal/i3
+	format = <label-state> <label-mode>
+	index-sort = true
+	wrapping-scroll = false
+	
+	; Only show workspaces on the same output as the bar
+	;pin-workspaces = true
+	
+	label-mode-padding = 2
+	label-mode-foreground = #000
+	label-mode-background = ${colors.primary}
+	
+	; focused = Active workspace on focused monitor
+	label-focused = %index%
+	label-focused-background = ${colors.background-alt}
+	label-focused-underline= ${colors.primary}
+	label-focused-padding = 2
+	
+	; unfocused = Inactive workspace on any monitor
+	label-unfocused = %index%
+	label-unfocused-padding = 2
+	
+	; visible = Active workspace on unfocused monitor
+	label-visible = %index%
+	label-visible-background = ${self.label-focused-background}
+	label-visible-underline = ${self.label-focused-underline}
+	label-visible-padding = ${self.label-focused-padding}
+	
+	; urgent = Workspace with urgency hint set
+	label-urgent = %index%
+	label-urgent-background = ${colors.alert}
+	label-urgent-padding = 2
+	
+	; Separator in between workspaces
+	; label-separator = |
+	
+	[module/cpu]
+	type = internal/cpu
+	interval = 2
+	format-prefix = " "
+	format-prefix-foreground = ${colors.foreground-alt}
+	format-underline = #f90000
+	label = %percentage:2%%
+	
+	[module/memory]
+	type = internal/memory
+	interval = 2
+	format-prefix = " "
+	format-prefix-foreground = ${colors.foreground-alt}
+	format-underline = #4bffdc
+	label = %gb_free%
+	
+	[module/wlan]
+	type = internal/network
+	interface = net1
+	interval = 3.0
+	
+	format-connected = <ramp-signal> <label-connected>
+	format-connected-underline = #9f78e1
+	label-connected = %essid%
+	
+	format-disconnected =
+	;format-disconnected = <label-disconnected>
+	;format-disconnected-underline = ${self.format-connected-underline}
+	;label-disconnected = %ifname% disconnected
+	;label-disconnected-foreground = ${colors.foreground-alt}
+	
+	ramp-signal-0 = 
+	ramp-signal-1 = 
+	ramp-signal-2 = 
+	ramp-signal-3 = 
+	ramp-signal-4 = 
+	ramp-signal-foreground = ${colors.foreground-alt}
+	
+	[module/eth]
+	type = internal/network
+	interface = ens2
+	interval = 3.0
+	
+	format-connected-underline = #55aa55
+	format-connected-prefix = " "
+	format-connected-prefix-foreground = ${colors.foreground-alt}
+	label-connected = %local_ip%
+	
+	format-disconnected =
+	;format-disconnected = <label-disconnected>
+	;format-disconnected-underline = ${self.format-connected-underline}
+	;label-disconnected = %ifname% disconnected
+	;label-disconnected-foreground = ${colors.foreground-alt}
+	
+	[module/date]
+	type = internal/date
+	interval = 5
+	
+	date = "%m-%d-%Y"
+	date-alt = " %Y-%m-%d"
+	
+	time = %I:%M %p
+	time-alt = %H:%M:%S
+	
+	format-prefix = 
+	format-prefix-foreground = ${colors.foreground-alt}
+	format-underline = #0a6cf5
+	
+	label = %time% | %date%
+	
+	[module/temperature]
+	type = internal/temperature
+	thermal-zone = 0
+	warn-temperature = 60
+	
+	format = <ramp> <label>
+	format-underline = #f50a4d
+	format-warn = <ramp> <label-warn>
+	format-warn-underline = ${self.format-underline}
+	
+	label = %temperature-c%
+	label-warn = %temperature-c%
+	label-warn-foreground = ${colors.secondary}
+	
+	ramp-0 = 
+	ramp-1 = 
+	ramp-2 = 
+	ramp-foreground = ${colors.foreground-alt}
+	
+	[module/powermenu]
+	type = custom/menu
+	
+	expand-right = true
+	
+	format-spacing = 1
+	
+	label-open = 
+	label-open-foreground = ${colors.secondary}
+	label-close =  cancel
+	label-close-foreground = ${colors.secondary}
+	label-separator = |
+	label-separator-foreground = ${colors.foreground-alt}
+	
+	menu-0-0 = reboot
+	menu-0-0-exec = menu-open-1
+	menu-0-1 = power off
+	menu-0-1-exec = menu-open-2
+	
+	menu-1-0 = cancel
+	menu-1-0-exec = menu-open-0
+	menu-1-1 = reboot
+	menu-1-1-exec = sudo reboot
+	
+	menu-2-0 = power off
+	menu-2-0-exec = sudo poweroff
+	menu-2-1 = cancel
+	menu-2-1-exec = menu-open-0
+	
+	[settings]
+	screenchange-reload = true
+	;compositing-background = xor
+	;compositing-background = screen
+	;compositing-foreground = source
+	;compositing-border = over
+	;pseudo-transparency = false
+	
+	[global/wm]
+	margin-top = 5
+	margin-bottom = 5
+	
+	; vim:ft=dosini
+	;
+59b2303b1b01c61013e054da9a510adb|file:///home/zac/dotfiles/init.el|121|19|V|lisp
+	;; Bind snipe to S
+	(evil-define-key 'normal 'global (kbd 
+db0f6f37ebeb6ea09489124345af2a45|file:///home/zac/development/clojure/owl/resources/storage/app-state.json|1|3871|v|json
+	group
+be2083f5e9c59398626b4b55b139bc19|file:///home/zac/development/clojure/owl/resources/storage/app-state.json|1|3402|v|json
+	"modal-open?":false
+db99e9e223565bd13a7c221c69baf358|file:///home/zac/development/clojure/owl/resources/storage/app-state.json|1|3402|v|json
+	"file-modal?":false
+4f78b34ffa3c3c88b86dd49ea4a6de21|file:///home/zac/development/clojure/owl/resources/storage/app-state.json|1|4883|v|json
+	"files-modal?":true
+6acc5137b5e684d653a0615aad589114|file:///home/zac/development/clojure/owl/resources/storage/app-state.json|1|4911|v|json
+	"fuzzy-find-modal-open?":false
+bbd768dba5accdf836a1fc70e14884f7|file:///home/zac/dotfiles/.i3/config|246|13|v|i3config
+	xrandr --output DP-4 --primary --mode 3840x2160 --pos 0x0 --rotate normal \
+	       --output DP-2 --mode 3840x2160 --pos -2160x0 --rotate right
+90d09c6985a4f14c3a289cba126e3ddb|file:///home/zac/dotfiles/.i3/config|299|1|V|i3config
+	
+	### Open the first Emacs frame on workspace 3 with a specific file
+	#exec --no-startup-id emacs --title "emacs1" /home/zac/development/clojure/owl/src/app/components/Editor.cljs
+344a7f427fb765610ef96eb7bce95257|file:///home/zac/dotfiles/.i3/config|305|114|v|i3config
+	Editor
+77c79ccc44a55c21805c76a35d2ed03b|file:///home/zac/Main/Scripts/Mission/Old/Paradise.pdf|22|1|v|pdf
+	2 0 obj
+	<< /Type /Page /Parent 3 0 R /Resources 6 0 R /Contents 4 0 R /MediaBox [0 0 612 792]
+	>>
+	endobj
+	6 0 obj
+	<< /ProcSet [ /PDF /Text ] /ColorSpace << /Cs1 7 0 R >> /Font << /TT2.0 9 0 R
+	/TT1.0 8 0 R >> >>
+	endobj
+	10 0 obj
+	<< /Length 11 0 R /N 3 /Alternate /DeviceRGB /Filter /FlateDecode >>
+	stream
+	
+bc943609e79e4771f96d50a6eb6f5406|file:///home/zac/development/jessica-scraping.py|4|1|V|python
+	impor
+294b6b11cead0b837805b40cacb68c87|file:///home/zac/development/jessica-scraping.py|12|5|V|python
+	    for row in tqdm(csv_reader):
+c414094af691acde91c4eec510f194c3|file:///home/zac/development/jessica-scraping.py|12|19|v|python
+	tqdm(csv_reader, total=total):
+6a3df1f1c13050724cb5a16744ff8d86|file:///home/zac/development/jessica-scraping.py|1|1|v|python
+	import requests
+	import csv
+	import time
+	from tqdm import tqdm
+	
+	csv_file_path = 'courses.csv'
+	output = []
+	fail = []
+	with open(csv_file_path, mode='r', encoding='utf-8') as file:
+	    csv_reader = csv.reader(file)
+	    total = len(list(csv_reader))
+	    bar = tqdm(total=total)
+	    for i, row in enumerate(csv_reader):
+	        bar.update(1)
+	        if len(row) >= 2:
+	            department = row[0]
+	            course_number = row[1]
+	            #print(f"Department: {department}, Course Number: {course_number}")
+	            headers = {
+	                'Authorization':
+	                'Token d4c5e67a2fc88aa972d255f1a7cab55c86af2759'
+	            }
+	            time.sleep(0.5)
+	            name = 'https://carta-beta.stanford.edu/api/courses/codes/' + \
+	                department + '%20' + course_number + '/'
+	            response = requests.get(name, headers=headers)
+	            data = response.json()
+	            if response.status_code == 200:
+	                ratings = data['course']['ratings']
+	                # print(department+course_number)
+	                for item in ratings:
+	                    year = str(item['term']['start_year']) + '-' + str(
+	                        item['term']['end_year'])
+	                    course = {
+	                        'department':
+	                        department,
+	                        'number':
+	                        course_number,
+	                        'ratings':
+	                        item['average_rating'],
+	                        'quantity':
+	                        item['num_ratings'],
+	                        'year':
+	                        year,
+	                        'season':
+	                        item['term']['season'],
+	                        'instructor':
+	                        item['instructor_name'],
+	                        'max_units':
+	                        data['course']['max_units'],
+	                        'min_units':
+	                        data['course']['min_units'],
+	                        'average_hours_spent':
+	                        data['course']['average_hours_spent']
+	                    }
+	                    output.append(course)
+	                    # print('.')
+	                    csv_file = department + "_courses_ratings.csv"
+	                    with open(csv_file, mode='a', newline='') as file:
+	                        writer = csv.DictWriter(file,
+	                                                fieldnames=output[0].keys())
+	                        writer.writerow(course)
+	            else:
+	                with open('429log.csv', mode='a', newline='') as file:
+	                    writer2 = csv.writer(file)
+	                    writer2.writerow([course_number, response.status_code])
+48b2cb29f247d3888c0fb6bfd2ef4db6|file:///home/zac/dotfiles/init.el|867|48|v|lisp
+	hs-toggle-hiding
+cc35a56fa43813e217649f9173318d15|file:///home/zac/development/clojure/owl/forge.config.js|21|1|V|javascript
+	      config: {},
+68934a3e9455fa72420237eb05902327|file:///home/zac/.config/Thinky/app-state.json|1|709|v|json
+	false
