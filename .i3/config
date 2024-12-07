@@ -251,7 +251,7 @@ exec_always xrandr --output DP-4 --primary --mode 3840x2160 --pos 0x0 --rotate n
 #exec_always feh --bg-scale ~/Pictures/Wallpapers/ho-oh-burned-tower.png --bg-scale ~/Pictures/Wallpapers/dratini.jpg --bg-scale ~/Pictures/Wallpapers/red3.jpg # Right monitor
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Connect to Headphones
 bindsym Mod1+b exec --no-startup-id bluetoothctl connect 94:DB:56:F7:A5:C7
@@ -297,12 +297,12 @@ assign [class="Thinky" window_role="browser-window"] $ws1
 assign [class="Thinky" window_role="devtools"] $ws10
 
 # Open other applications on startup
-exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl; npm run develop"
-exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl; npm run start"
+exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl/electron; npm run develop"
+exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl/electron; npm run start"
 
 
 exec --no-startup-id i3-msg "workspace number 2, exec firefox"
-exec --no-startup-id i3-msg "workspace number 3, exec emacs /home/zac/development/clojure/owl/src/app/components/PdfWindow.cljs"
+exec --no-startup-id i3-msg "workspace number 3, exec emacs /home/zac/development/clojure/owl/electron/src/app/components/PdfWindow.cljs"
 exec --no-startup-id i3-msg "workspace number 9, exec emacs /home/zac/development/clojure/owl/todo.org"
 
 exec --no-startup-id spotify
