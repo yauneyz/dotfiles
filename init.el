@@ -726,6 +726,9 @@
 	:config
 	(setq copilot-mode 0)
 	(setq company-mode 0)
+	;; Set the way we export, just using screenplain
+	;; To get it to work, just pip install screenplain
+	(setq fountain-export-command-profiles '(("screenplain" . "screenplain -f pdf %b output\/%B.pdf")))
 	(which-function-mode 1))
 
 (defun dispatch-tab-command ()
@@ -909,6 +912,23 @@
 
 ;; Suppress warnings
 (setq warning-suppress-types '((comp)))
+
+;; Directory for lock files
+(defvar my-emacs-lockfiles-directory (expand-file-name "~/.emacs.d/lockfiles/"))
+
+;; Create the lockfiles directory if it doesn't exist
+(unless (file-exists-p my-emacs-lockfiles-directory)
+  (make-directory my-emacs-lockfiles-directory t))
+
+;; Function to set lock file location
+(defun my-emacs-lockfile-name (orig-fn &rest args)
+  "Create lockfiles in a dedicated directory."
+  (let ((lockfile (apply orig-fn args)))
+    (expand-file-name (file-name-nondirectory lockfile) my-emacs-lockfiles-directory)))
+
+;; Advise Emacs to use the custom lockfile location
+(advice-add 'lock-file-name-transforms :around #'my-emacs-lockfile-name)
+
 
 ;; =========== Custom  Functions ===================
 
