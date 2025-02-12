@@ -234,8 +234,9 @@ bindsym Mod1+i exec firefox
 #bindsym Mod1+p exec postman
 #bindsym Mod1+c exec mongodb-compass
 bindsym Mod1+n exec nautilus
-bindsym Mod1+g exec gnome-control-center
+bindsym Mod1+g exec gedit
 bindsym Mod1+m exec spotify
+bindsym Mod1+e exec emacs
 
 bindsym Mod1+Tab workspace back_and_forth
 
@@ -300,6 +301,8 @@ assign [class="Thinky" window_role="devtools"] $ws10
 exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl/electron; npm run develop"
 exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl/electron; npm run start"
 
+exec --no-startup-id i3-msg "workspace number 7"
+exec --no-startup-id kitty --title "Backend" bash -c "cd /home/zac/development/clojure/owl/site; lein ring server-headless 3000"
 
 exec --no-startup-id i3-msg "workspace number 2, exec firefox"
 exec --no-startup-id i3-msg "workspace number 3, exec emacs /home/zac/development/clojure/owl/electron/src/app/components/PdfWindow.cljs"

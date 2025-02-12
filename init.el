@@ -1,29 +1,28 @@
-
 ;;; Code:
 
 (defun install-if-necessary (package)
   "Install PACKAGE unless it is already installed."
-      (unless (package-installed-p package)
-	(package-install package)))
+  (unless (package-installed-p package)
+    (package-install package)))
 
 ;; Initialize package sources
 (require 'package)
 
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("org" . "https://orgmode.org/elpa/")
-                         ("elpa" . "https://elpa.gnu.org/packages/")))
+                         ("org"   . "https://orgmode.org/elpa/")
+                         ("elpa"  . "https://elpa.gnu.org/packages/")))
 
 (package-initialize)
 
 ;(when (memq window-system '(mac ns x))
-	;(exec-path-from-shell-initialize))
+;  (exec-path-from-shell-initialize))
 
 (unless package-archive-contents
- (package-refresh-contents))
+  (package-refresh-contents))
 
 ;; Initialize use-package on non-Linux platforms
 (unless (package-installed-p 'use-package)
-   (package-install 'use-package))
+  (package-install 'use-package))
 
 (require 'use-package)
 (setq use-package-always-ensure t)
@@ -50,16 +49,20 @@
 
 ;; Command Log
 (use-package command-log-mode
- :config
- (global-command-log-mode))
+  :config
+  (global-command-log-mode))
 
 ;; Don't show line numbers on some modes like terminal, shell, org
 (dolist (mode '(org-mode-hook
-		term-mode-hook
-		shell-mode-hook
-		treemacs-mode-hook
-		eshell-mode-hook))
+                term-mode-hook
+                shell-mode-hook
+                treemacs-mode-hook
+                eshell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
+(use-package rainbow-mode
+  :ensure t
+  :hook (prog-mode . rainbow-mode))
 
 ;; Rainbow Delimiters
 (use-package rainbow-delimiters
@@ -71,7 +74,7 @@
 (scroll-bar-mode -1)        ; Disable visible scrollbar
 (tool-bar-mode -1)          ; Disable the toolbar
 (tooltip-mode -1)           ; Disable tooltips
-(menu-bar-mode -1)            ; Disable the menu bar
+(menu-bar-mode -1)          ; Disable the menu bar
 
 ;; =========== Packages ===================
 
@@ -106,8 +109,8 @@
 
 ;; Evil Surround
 (use-package evil-surround
-	:config
-	(global-evil-surround-mode 1))
+  :config
+  (global-evil-surround-mode 1))
 
 ;; ;; Emacs snipe
 ;; (use-package evil-snipe
@@ -118,11 +121,24 @@
 ;;   (setq evil-snipe-scope 'visible
 ;;         evil-snipe-repeat-scope 'whole-buffer))
 
+(use-package avy
+  :ensure t
+  :bind (("C-:"   . avy-goto-char)        ;; Jump to a character in the visible buffer
+         ("C-'"   . avy-goto-char-2)      ;; Jump to a character using a two-character lookup
+         ("M-g g" . avy-goto-line)        ;; Jump to a specific line
+         ("M-g w" . avy-goto-word-0))     ;; Jump to the beginning of a word
+  :config
+  ;; When Avy is activated, highlight potential jump targets in the background.
+  (setq avy-background t
+        ;; Limit Avy to the current window (set to nil for all windows)
+        avy-all-windows nil))
+
+
 ;; Which Key
 (use-package which-key
   :init (which-key-mode)
   :diminish which-key-mode
-	:config
+  :config
   (setq which-key-idle-delay 0.3))
 
 ;; cider
@@ -133,41 +149,54 @@
 (use-package paredit)
   ;; :config
   ;; (show-paren-mode t)
-  ;;  :diminish)
+  ;; :diminish)
 
 ;; Enable paredit mode for Clojure buffers, CIDER mode and CIDER REPL buffers
 (add-hook 'cider-repl-mode-hook #'paredit-mode)
 (add-hook 'cider-mode-hook #'paredit-mode)
 (add-hook 'clojure-mode-hook #'paredit-mode)
-;; Disable paredt in emacs-lisp-mode
+;; Disable paredit in emacs-lisp-mode
 (add-hook 'emacs-lisp-mode-hook (lambda () (paredit-mode 0)))
 
-;; FZF
-(use-package fzf
-  :bind
-    ;; Don't forget to set keybinds!
+;; -----------------------------------------------------------------------------
+;; Paredit custom keybinding: Bind Ctrl-p to paredit-splice-sexp-killing-backward
+(evil-define-key 'normal 'global (kbd "C-p") 'paredit-splice-sexp-killing-backward)
+
+(defun my-spy-and-slurp ()
+  "Insert '(spy )', move point before the closing parenthesis, then call `paredit-forward-slurp-sexp`."
+  (interactive)
+  (insert "(spy )")
+  (backward-char 1)  ;; Position point before the closing parenthesis
+  (paredit-forward-slurp-sexp))
+
+(global-set-key (kbd "C-S-p") 'my-spy-and-slurp)
+
+;; Ensure Ivy is using fuzzy matching for all completions.
+(setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
+(ivy-mode 1)
+
+;; --- New: Define a wrapper for counsel-projectile-find-file ---
+(defun my-counsel-projectile-find-file ()
+  "Use counsel-projectile-find-file with Ivy’s built-in fuzzy matching.
+Temporarily disable ivy-prescient-mode so that the regex builder
+`ivy--regex-fuzzy` is used."
+  (interactive)
+  (let ((ivy-prescient-mode nil))
+    (counsel-projectile-find-file)))
+
+;; Counsel
+(use-package counsel
+  :ensure t
+  :bind (("C-x C-f"   . counsel-find-file)          ; default binding
+         ("<leader>SPC" . my-counsel-projectile-find-file)) ; use our wrapper for Projectile
   :config
-  (setq fzf/args "-x --color bw --print-query --margin=1,0 --no-hscroll"
-        fzf/executable "fzf"
-        fzf/git-grep-args "-i --line-number %s"
-        ;; command used for `fzf-grep-*` functions
-        ;; example usage for ripgrep:
-        ;; fzf/grep-command "rg --no-heading -nH"
-        fzf/grep-command "grep -nrH"
-        ;; If nil, the fzf buffer will appear at the top of the window
-        fzf/position-bottom t
-        fzf/window-height 15))
-
-;; use ivy with fzf
-
-
+  (setq ivy-initial-inputs-alist nil))
 
 ;; NERD Commenter
 (install-if-necessary 'evil-nerd-commenter)
 ;; (evilnc-default-hotkeys)
 (evil-define-key '(normal visual) 'global (kbd "<leader>cc") 'evilnc-comment-or-uncomment-lines)
 (evil-define-key '(normal visual) 'global (kbd "<leader>cu") 'evilnc-comment-or-uncomment-lines)
-
 
 ;; Helpful
 (use-package helpful
@@ -183,24 +212,24 @@
 
 ;; Pulsar
 (use-package pulsar
-	:config
-	(setq pulsar-pulse t)
-	(setq pulsar-delay 0.055)
-	(setq pulsar-iterations 10)
-	(setq pulsar-face 'pulsar-magenta)
-	(setq pulsar-highlight-face 'pulsar-yellow)
-	(pulsar-global-mode 1))
+  :config
+  (setq pulsar-pulse t)
+  (setq pulsar-delay 0.055)
+  (setq pulsar-iterations 10)
+  (setq pulsar-face 'pulsar-magenta)
+  (setq pulsar-highlight-face 'pulsar-yellow)
+  (pulsar-global-mode 1))
 
 ;; ELscreen
 (use-package elscreen
-	:config
-	(elscreen-start))
+  :config
+  (elscreen-start))
 
 ;; Flycheck
 (use-package flycheck
-	     :ensure t
-	     :config
-	     (add-hook 'after-init-hook #'global-flycheck-mode))
+  :ensure t
+  :config
+  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 ;; Bind counsel-M-x to C-t C-t
 (global-set-key (kbd "C-a") 'counsel-M-x)
@@ -208,10 +237,10 @@
 ;; Counsel
 (use-package counsel
   :bind (("M-x" . counsel-M-x)
-	 ("C-x b" . counsel-ibuffer)
-	 ("C-x C-f" . counsel-find-file)
-	 :map minibuffer-local-map
-	 ("C-r" . 'counsel-minibuffer-history)))
+         ("C-x b" . counsel-ibuffer)
+         ("C-x C-f" . counsel-find-file)
+         :map minibuffer-local-map
+         ("C-r" . 'counsel-minibuffer-history)))
 
 ;; Swiper
 (use-package swiper)
@@ -221,7 +250,7 @@
   :diminish
   :bind (("C-s" . swiper)
          :map ivy-minibuffer-map
-				 ("TAB" . ivy-alt-done)
+         ("TAB" . ivy-alt-done)
          ("C-l" . ivy-alt-done)
          ("C-j" . ivy-next-line)
          ("C-k" . ivy-previous-line)
@@ -235,30 +264,30 @@
   :config
   (setq ivy-initial-inputs-alist nil) ; Don't start searches with ^
   (setq ivy-re-builders-alist
-      '((swiper . ivy--regex-plus)
-        (t      . ivy--regex-fuzzy)))
+        '((swiper . ivy--regex-plus)
+          (t      . ivy--regex-fuzzy)))
   (ivy-mode 1))
 
 ;; Ivy Rich
 (use-package ivy-rich
-	:after ivy
+  :after ivy
   :config
   (ivy-rich-mode 1))
 
 ;; Flx for fuzzy matching
 (use-package flx)
 (setq ivy-re-builders-alist
-			'((t . ivy--regex-fuzzy)))
+      '((t . ivy--regex-fuzzy)))
 
 ;; Also use prescient for sorting
 (use-package prescient
-	 :config
-	 (prescient-persist-mode 1))
+  :config
+  (prescient-persist-mode 1))
 
 (use-package ivy-prescient
-	:after (ivy prescient)
-	:config
-	(ivy-prescient-mode 1))
+  :after (ivy prescient)
+  :config
+  (ivy-prescient-mode 1))
 
 ;; Projectile
 (use-package projectile
@@ -272,22 +301,36 @@
   (evil-define-key 'normal 'global (kbd "<leader>p") 'projectile-command-map)
   (add-to-list 'projectile-globally-ignored-directories ".clj-kondo")
   (setq projectile-mode-line "Projectile")
-	(setq projectile-sort-order 'recently-active)
-	(setq projectile-generic-command "find . -type f -not -path '*/node_modules/*' -not -path '*/build/*' -not -path '*/.clj-kondo/*' -print0")
-)
-
-
-
+  (setq projectile-sort-order 'recently-active)
+  (setq projectile-generic-command "find . -type f -not -path '*/node_modules/*' -not -path '*/build/*' -not -path '*/.clj-kondo/*' -print0"))
 
 ;; Counsel Projectile
 (use-package counsel-projectile
   :config (counsel-projectile-mode)
-	:after ivy-prescient)
+  ;; :after ivy-prescient
+  )
 
-;; Magit
-(use-package magit)
- ;;  :custom
- ;; (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
+(use-package magit
+  :ensure t
+  :commands (magit-status magit-dispatch)
+  :bind (("C-x g" . magit-status)       ;; Quickly open Magit status
+         ("C-x M-g" . magit-dispatch))    ;; Magit command dispatcher
+  :custom
+  ;; Display Magit buffers in the same window (except for diffs)
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
+  ;; Automatically save modified repository buffers without prompting before actions
+  (magit-save-repository-buffers 'dontask)
+  ;; Use Ivy (or your preferred completion framework) for Magit prompts
+  (magit-completing-read-function #'ivy-completing-read)
+  :config
+  ;; Optional: Define your repository search path for Magit if you work in a common directory
+  (setq magit-repository-directories '(("~/projects" . 2)))
+  ;; Optional: Refine diffs to highlight intraline changes
+  (setq magit-diff-refine-hunk t)
+  ;; Optional: Uncomment the following if you use Forge to interact with GitHub, GitLab, etc.
+  ;; (use-package forge
+  ;;   :after magit)
+  )
 
 ;; Treemacs
 (use-package treemacs
@@ -356,7 +399,7 @@
     ;;(treemacs-resize-icons 44)
 
     (treemacs-follow-mode t)
-		(treemacs-project-follow-mode t)
+    (treemacs-project-follow-mode t)
     (treemacs-filewatch-mode t)
     (treemacs-fringe-indicator-mode 'always)
 
@@ -388,13 +431,11 @@
   :hook (dired-mode . treemacs-icons-dired-enable-once))
 
 ;(use-package treemacs-magit
-  ;:after (treemacs magit)
-  ;:ensure t)
-
+;  :after (treemacs magit)
+;  :ensure t)
 
 ;; Command Log
 (use-package command-log-mode)
-
 
 ;; =========== Language Specific  ===================(
 
@@ -409,13 +450,12 @@
 
 ;;; Jedi
 ;(use-package lsp-jedi
-  ;:ensure t)
+;  :ensure t)
 
 ;; configure pylsp
 (setq lsp-pylsp-plugins-flake8-enabled t)
 ;; ignore docstring errors
 (setq lsp-pylsp-plugins-flake8-ignore '("D100" "D101" "D102" "D103" "D104" "D105" "D107"))
-
 
 ;; LSP UI
 (use-package lsp-ui
@@ -437,7 +477,6 @@
 (defun efs/lsp-mode-setup ()
   (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
   (lsp-headerline-breadcrumb-mode))
-
 
 ;; Clojure
 (use-package clojure-mode
@@ -463,27 +502,25 @@
 
 (add-hook 'cider-connected-hook 'my/cider-hide-repl-window)
 
-
 ;;; Format All
 ;(use-package format-all
-  ;:commands format-all-mode
-  ;:hook (prog-mode . format-all-mode)
-  ;:config
-  ;(setq-default format-all-formatters
-								;;; Python
-								;'((python-mode "black")
-									;;; Clojure
-									;(clojure-mode "cljfmt")
-									;;;Rust
-									;(rust-mode "rustfmt")
-									;;; Emacs Lisp
-									;(emacs-lisp-mode "emacs-lisp-formatter"))))
+;  :commands format-all-mode
+;  :hook (prog-mode . format-all-mode)
+;  :config
+;  (setq-default format-all-formatters
+;                ;;; Python
+;                '((python-mode "black")
+;                  ;;; Clojure
+;                  (clojure-mode "cljfmt")
+;                  ;;;Rust
+;                  (rust-mode "rustfmt")
+;                  ;;; Emacs Lisp
+;                  (emacs-lisp-mode "emacs-lisp-formatter"))))
 
 ;; Have lsp-format-buffer run on save in programming modes
 (add-hook 'prog-mode-hook
-	  (lambda ()
-	    (add-hook 'before-save-hook #'lsp-format-buffer nil 'local)))
-
+          (lambda ()
+            (add-hook 'before-save-hook #'lsp-format-buffer nil 'local)))
 
 ;; Python
 (use-package python-mode
@@ -492,27 +529,21 @@
 
 ;; Rust
 (use-package rust-mode
-	:mode "\\.rs\\'"
-	:hook (rust-mode . lsp-deferred)
-	:config
-	(setq lsp-rust-server 'rust-analyzer)
-	(setq indent-tabs-mode nil))
+  :mode "\\.rs\\'"
+  :hook (rust-mode . lsp-deferred)
+  :config
+  (setq lsp-rust-server 'rust-analyzer)
+  (setq indent-tabs-mode nil))
 
 ;; YAML w/ highlight-indent
-
 (use-package yaml-mode
-	:mode "\\.yml\\'"
-	:hook (yaml-mode . highlight-indent-guides-mode))
-
-
-
+  :mode "\\.yml\\'"
+  :hook (yaml-mode . highlight-indent-guides-mode))
 
 ;; Markdown
 (use-package markdown-mode
-	:mode "\\.md\\'"
-	:hook (markdown-mode . visual-line-mode))
-
-
+  :mode "\\.md\\'"
+  :hook (markdown-mode . visual-line-mode))
 
 ;; =========== Config  ===================
 
@@ -525,52 +556,54 @@
 
 ;; =========== Theme  ===================
 ;(use-package doom-themes
-  ;:ensure t
-  ;:config
-  ;;; Global settings (defaults)
-  ;(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-        ;doom-themes-enable-italic t) ; if nil, italics is universally disabled
-	;(load-theme 'doom-tokyo-night t)
-	;;(load-theme 'doom-rouge t)
-	;;(load-theme 'doom-dracula t)
-	;;(load-theme 'doom-snazzy t)
-	;;(load-theme 'doom-outrun-electric t)
-	;)
-
-
-;(use-package doom-modeline
-  ;:ensure t
-  ;:hook (after-init . doom-modeline-mode))
+;  :ensure t
+;  :config
+;  ;;; Global settings (defaults)
+;  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+;        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+;  (load-theme 'doom-tokyo-night t)
+;  ;;(load-theme 'doom-rouge t)
+;  ;;(load-theme 'doom-dracula t)
+;  ;;(load-theme 'doom-snazzy t)
+;  ;;(load-theme 'doom-outrun-electric t)
+;)
 
 ;; =================== Theme and Appearance ===================
 
 ;; Install and configure ewal and ewal-doom-themes
-(use-package ewal
-  :quelpa (ewal :fetcher github :repo "ebanster/ewal"))
+;(use-package ewal
+;  :quelpa (ewal :fetcher github :repo "ebanster/ewal"))
 
-(use-package ewal-doom-themes
-  :quelpa (ewal-doom-themes :fetcher github :repo "tsc25/ewal-doom-themes")
-  :config
-  ;; Set the theme to use ewal-doom-vibrant or your preferred theme
-  ;(load-theme 'ewal-doom-one t)
-	;; (load-theme 'ewal-doom-vibrant t)
-  (load-theme 'doom-solarized-dark t)
-  ;; Enable bold and italic if desired
-  (setq doom-themes-enable-bold t
-        doom-themes-enable-italic t)
-  ;; Configure doom themes enhancements
-  (doom-themes-org-config))     ;; Correct org-mode fontification
+(use-package ewal
+  :init (setq ewal-use-built-in-always-p nil
+              ewal-use-built-in-on-failure-p t
+              ewal-built-in-palette "sexy-gotham"))
+
+;(use-package ewal-doom-themes
+;  :quelpa (ewal-doom-themes :fetcher github :repo "tsc25/ewal-doom-themes")
+;  :config
+;  ;;; Set the theme to use ewal-doom-vibrant or your preferred theme
+;  ;;(load-theme 'ewal-doom-one t)
+;  ;;; (load-theme 'ewal-doom-vibrant t)
+;  (load-theme 'doom-solarized-dark t)
+;  ;;; Enable bold and italic if desired
+;  (setq doom-themes-enable-bold t
+;        doom-themes-enable-italic t)
+;  ;;; Configure doom themes enhancements
+;  (doom-themes-org-config))     ;; Correct org-mode fontification
 
 (use-package ewal-evil-cursors
   :after ewal
   :config
   (ewal-evil-cursors-get-colors :apply t :spaceline t))
 
-;; Optionally, configure doom-modeline
 (use-package doom-modeline
   :ensure t
-  :hook (after-init . doom-modeline-mode))
-
+  :hook (after-init . doom-modeline-mode)
+  :custom
+  (doom-modeline-height 25)
+  (doom-modeline-bar-width 3)
+  (doom-modeline-icon t))
 
 ;; =========== Copilot  ===================
 ;(install-if-necessary 'editorconfig)
@@ -582,10 +615,10 @@
 (use-package jsonrpc)
 
 (use-package copilot
-	:quelpa (copilot :fetcher github
-									 :repo "copilot-emacs/copilot.el"
-									 :branch "main"
-									 :files ("dist" "*.el")))
+  :quelpa (copilot :fetcher github
+                   :repo "copilot-emacs/copilot.el"
+                   :branch "main"
+                   :files ("dist" "*.el")))
 (add-hook 'prog-mode-hook
           (lambda ()
             (copilot-mode)
@@ -599,32 +632,30 @@
 
 ;; Company Mode - configured to use LSP
 (use-package company
-	:after (lsp-mode copilot)
-	:hook (lsp-mode . company-mode)
-	:bind (:map company-active-map
-				("C-l" . company-complete-selection)
-				("TAB" . copilot-accept-completion)
-				("<tab>" . copilot-accept-completion))
-	(:map lsp-mode-map
-	("C-l" . company-indent-or-complete-common))
-	:custom
-	(company-minimum-prefix-length 1)
-	(company-idle-delay 0.0))
+  :after (lsp-mode copilot)
+  :hook (lsp-mode . company-mode)
+  :bind (:map company-active-map
+              ("C-l" . company-complete-selection)
+              ("TAB" . copilot-accept-completion)
+              ("<tab>" . copilot-accept-completion))
+  (:map lsp-mode-map
+        ("C-l" . company-indent-or-complete-common))
+  :custom
+  (company-minimum-prefix-length 1)
+  (company-idle-delay 0.0))
 
 ;; Company Box
 (use-package company-box
-	:hook (company-mode . company-box-mode))
-
+  :hook (company-mode . company-box-mode))
 
 ;; =========== Font  ===================
 (set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
 
-
 ;; =========== Keybindings  ===================
 ;; In elisp-mode, C-c C-c will evaluate the buffer
 (add-hook 'emacs-lisp-mode-hook
-	  (lambda ()
-	    (local-set-key (kbd "C-c C-c") 'eval-buffer)))
+          (lambda ()
+            (local-set-key (kbd "C-c C-c") 'eval-buffer)))
 
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
@@ -644,7 +675,6 @@
   (define-key treemacs-mode-map (kbd "C-k") 'windmove-up)
   (define-key treemacs-mode-map (kbd "C-l") 'windmove-right))
 
-
 (global-set-key (kbd "C-M-h") 'help-command)
 (global-set-key (kbd "C-x C-b") 'counsel-switch-buffer)
 
@@ -657,31 +687,30 @@
 ;; (evil-define-key 'normal 'global (kbd "C-p") 'paredit-backward-down)
 ; Slurp and barf on parentheses and brackets
 
-
 ;; Turn off read-only mode
 (read-only-mode 0)
 
 (setq lsp-pylsp-plugins-autopep8-enabled t)
 
 (defun org-mode-setup ()
-	(org-indent-mode)
-	(variable-pitch-mode 1)
-	(visual-line-mode 1)
-	(auto-fill-mode 0)
-	(olivetti-mode 1)
-	(define-key org-mode-map (kbd "C-<right>") 'org-metaright)
-	(define-key org-mode-map (kbd "C-<left>") 'org-metaleft)
-	(define-key org-mode-map (kbd "C-<up>") 'org-metaup)
-	(define-key org-mode-map (kbd "C-<down>") 'org-metadown))
+  (org-indent-mode)
+  (variable-pitch-mode 1)
+  (visual-line-mode 1)
+  (auto-fill-mode 0)
+  (olivetti-mode 1)
+  (define-key org-mode-map (kbd "C-<right>") 'org-metaright)
+  (define-key org-mode-map (kbd "C-<left>") 'org-metaleft)
+  (define-key org-mode-map (kbd "C-<up>") 'org-metaup)
+  (define-key org-mode-map (kbd "C-<down>") 'org-metadown))
 
 ;; Org mode
 (use-package org
-	:hook (org-mode . org-mode-setup)
-	:config
-	(setq org-ellipsis " ▼")
-	(setq org-hide-emphasis-markers t)
-	; set tab to be org mode tab
-	(evil-define-key 'insert 'global (kbd "TAB") 'org-cycle))
+  :hook (org-mode . org-mode-setup)
+  :config
+  (setq org-ellipsis " ▼")
+  (setq org-hide-emphasis-markers t)
+  ; set tab to be org mode tab
+  (evil-define-key 'insert 'global (kbd "TAB") 'org-cycle))
 
 ;; Org hook to turn off evil auto-indent
 ;; Can't be in org-mode-setup or it somehow messes with other buffers
@@ -689,47 +718,46 @@
 
 ;; Org-bullets
 (use-package org-bullets
-	:after org
-	:hook (org-mode . org-bullets-mode)
-	:custom
-	(org-bullets-bullet-list '("◉" "○" "✸" "✿" "❀" "❁" "❂" "❃" "❄" "❅" "❆" "❇")))
+  :after org
+  :hook (org-mode . org-bullets-mode)
+  :custom
+  (org-bullets-bullet-list '("◉" "○" "✸" "✿" "❀" "❁" "❂" "❃" "❄" "❅" "❆" "❇")))
 
 (dolist (face '((org-level-1 . 1.2)
-		(org-level-2 . 1.1)
-		(org-level-3 . 1.05)
-		(org-level-4 . 1.0)
-		(org-level-5 . 1.1)
-		(org-level-6 . 1.1)
-		(org-level-7 . 1.1)
-		(org-level-8 . 1.1)))
-	;(set-face-attribute (car face) nil :font "Cantarell" :weight 'regular :height (cdr face))
-	)
+                (org-level-2 . 1.1)
+                (org-level-3 . 1.05)
+                (org-level-4 . 1.0)
+                (org-level-5 . 1.1)
+                (org-level-6 . 1.1)
+                (org-level-7 . 1.1)
+                (org-level-8 . 1.1)))
+  ;(set-face-attribute (car face) nil :font "Cantarell" :weight 'regular :height (cdr face))
+  )
 
 ; Replace list hyphen with dot
 (font-lock-add-keywords 'org-mode
-			'(("^ *\\([-]\\) "
-			 (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+                        '(("^ *\\([-]\\) "
+                           (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 
 (defun fountain-mode-setup ()
-	(olivetti-mode 1)
-	(visual-line-mode 1)
-	(auto-fill-mode 0)
-	(setq fountain-hide-emphasis-markup t)
-	(setq fountain-hide-element t)
-	(setq fountain-display-scene-numbers-in-margin t))
-
+  (olivetti-mode 1)
+  (visual-line-mode 1)
+  (auto-fill-mode 0)
+  (setq fountain-hide-emphasis-markup t)
+  (setq fountain-hide-element t)
+  (setq fountain-display-scene-numbers-in-margin t))
 
 ; Fountain mode
 (use-package fountain-mode
-	:hook
-	(fountain-mode . fountain-mode-setup)
-	:config
-	(setq copilot-mode 0)
-	(setq company-mode 0)
-	;; Set the way we export, just using screenplain
-	;; To get it to work, just pip install screenplain
-	(setq fountain-export-command-profiles '(("screenplain" . "screenplain -f pdf %b output\/%B.pdf")))
-	(which-function-mode 1))
+  :hook
+  (fountain-mode . fountain-mode-setup)
+  :config
+  (setq copilot-mode 0)
+  (setq company-mode 0)
+  ;; Set the way we export, just using screenplain
+  ;; To get it to work, just pip install screenplain
+  (setq fountain-export-command-profiles '(("screenplain" . "screenplain -f pdf %b output/%B.pdf")))
+  (which-function-mode 1))
 
 (defun dispatch-tab-command ()
   "Dispatch <tab> to different functions based on the current buffer's major mode."
@@ -749,30 +777,23 @@
   :config
   (yas-global-mode 1)
   ;; Bind C-y to yas-expand
-	(define-key yas-minor-mode-map (kbd "C-j") 'yas-next-field-or-maybe-expand)
-	(define-key yas-minor-mode-map (kbd "C-S-j") 'yas-prev-field))
+  (define-key yas-minor-mode-map (kbd "C-j") 'yas-next-field-or-maybe-expand)
+  (define-key yas-minor-mode-map (kbd "C-S-j") 'yas-prev-field))
 
 (defun my/company-yasnippet-complete ()
-	"Trigger company-yasnippet."
-	(interactive)
-	(let ((company-backends '(company-yasnippet)))
-		(company-complete)))
+  "Trigger company-yasnippet."
+  (interactive)
+  (let ((company-backends '(company-yasnippet)))
+    (company-complete)))
 (evil-define-key 'insert 'global (kbd "C-y") 'my/company-yasnippet-complete)
 
-;(defun my-yas-auto-expand-snippet ()
-  ;"Automatically expand yasnippet if the word before point is a snippet key."
-  ;(let ((snippet (thing-at-point 'word t)))  ;; Get the word at point
-    ;(when (and snippet
-               ;(yas-lookup-snippet snippet))  ;; Check if it's a valid snippet key
-      ;;; Delete the snippet key and expand it
-      ;(delete-region (save-excursion (backward-word) (point)) (point))
-      ;(yas-expand))))
-;(add-hook 'post-command-hook 'my-yas-auto-expand-snippet)
+;; makes snippets work
+(setq require-final-newline nil)
 
 (defun my-yas-try-expanding-auto-snippets ()
-	(when (and (boundp 'yas-minor-mode) yas-minor-mode)
-		(let ((yas-buffer-local-condition ''(require-snippet-condition . auto)))
-			(yas-expand))))
+  (when (and (boundp 'yas-minor-mode) yas-minor-mode)
+    (let ((yas-buffer-local-condition ''(require-snippet-condition . auto)))
+      (yas-expand))))
 (add-hook 'post-command-hook #'my-yas-try-expanding-auto-snippets)
 
 ;; Globally bind <tab> to the dispatcher function
@@ -781,24 +802,34 @@
 
 ; Olivetti mode
 (use-package olivetti
-	:config
-	(setq olivetti-body-width 80)
-	(setq olivetti-minimum-body-width 80)
-	(setq olivetti-recall-visual-line-mode-entry-state t))
+  :config
+  (setq olivetti-body-width 80)
+  (setq olivetti-minimum-body-width 80)
+  (setq olivetti-recall-visual-line-mode-entry-state t))
 
 ;; Call olivetti mode on .txt
 (add-hook 'text-mode-hook 'olivetti-mode)
 
+;; --- New configuration for programming modes ---
+(defun my/prog-olivetti-setup ()
+  "Configure Olivetti in programming modes: set a 100-column width and disable visual margins."
+  (setq-local olivetti-body-width 100)
+  (setq-local olivetti-minimum-body-width 100)
+  ;; Disable visual margins by setting the style to nil.
+  ;; (See Olivetti’s documentation: setting `olivetti-style` to nil turns off any
+  ;; extra side margins.)
+  (setq-local olivetti-style nil)
+  (olivetti-mode 1))
+
+(add-hook 'prog-mode-hook #'my/prog-olivetti-setup)
+
 ; Code folding in programming modes
 (defun hs-minor-mode-setup ()
-	(hs-minor-mode 1)
-	(setq hs-hide-comments-when-hiding-all t))
+  (hs-minor-mode 1)
+  (setq hs-hide-comments-when-hiding-all t))
 (add-hook 'prog-mode-hook 'hs-minor-mode-setup)
 
-
-
 ;; =================== Evil command shortcuts ===================
-
 
 ;; Elscreen
 (evil-define-key 'normal 'global (kbd "<leader>sc") 'elscreen-create)
@@ -840,12 +871,9 @@
 (evil-define-key 'normal 'global (kbd "<leader>bk") 'kill-buffer)
 
 ;; File finding
-
-(evil-define-key 'normal 'global (kbd "<leader>SPC") 'fzf-find-file)
 (evil-define-key 'normal 'global (kbd "<leader>gg") 'counsel-projectile-rg)
 
 ;; LSP commands
-
 (evil-define-key 'normal 'global (kbd "gd") 'lsp-find-definition)
 (evil-define-key 'normal 'global (kbd "gr") 'lsp-find-references)
 (evil-define-key 'normal 'global (kbd "gi") 'lsp-find-implementation)
@@ -860,7 +888,6 @@
 (evil-define-key 'normal 'global (kbd "<leader>ls") 'lsp-signature-help)
 (evil-define-key 'normal 'global (kbd "<leader>lh") 'lsp-describe-thing-at-point)
 
-
 ;; Help commands
 (evil-define-key 'normal 'global (kbd "<leader>hf") 'counsel-describe-function)
 (evil-define-key 'normal 'global (kbd "<leader>hv") 'counsel-describe-variable)
@@ -869,66 +896,40 @@
 ;; F3 is toggle fold
 (evil-define-key 'normal 'global (kbd "<f3>") 'evil-toggle-fold)
 
-
 ;; Disable Custom
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 
-(defun my-tab-completion ()
-  "Custom TAB behavior for Evil insert mode."
+(defun my-open-init-file ()
+  "Open the init file without prompting about symbolic links."
   (interactive)
-  (if (and (bound-and-true-p evil-mode)
-           (eq evil-state 'insert))
-      (progn
-        (copilot-call 'accept)
-        (setq this-command 'copilot-complete))
-    (tab-indent-or-complete)))
+  (let ((vc-follow-symlinks t))
+    (find-file user-init-file)))
 
-(define-key evil-insert-state-map (kbd "TAB") 'my-tab-completion)
-
-;; Treemacs expand-file-name
-(defun my-treemacs-expand-recursively ()
-  "Expand the current directory and all its subdirectories recursively in Treemacs."
+(defun evil-select-inside-comment-block ()
+  "Select everything inside the (comment ...) block under the cursor, excluding the 'comment' keyword itself, in Evil visual mode."
   (interactive)
-  (let ((node (treemacs-node-at-point)))
-    (when (and node (eq 'dir-node-open (treemacs-node->type node)))
-      (treemacs--expand-recursively node))))
+  (when (and (bound-and-true-p evil-mode)
+             (eq evil-state 'normal))
+    (save-excursion
+      ;; Navigate up the syntax tree to find the (comment ...) block
+      (condition-case nil
+          (progn
+            ;; Move to the beginning of the current sexp
+            (while (not (and (looking-at-p "(comment")
+                             (eq (char-after (point)) ?\())
+                        (not (bobp)))
+              (backward-up-list))
+            ;; Move past the 'comment' keyword and opening paren
+            (let ((start (progn (forward-char 8) (point)))) ; Move forward over "(comment "
+              ;; Move to the end of the comment block
+              (forward-sexp)
+              ;; Move back one char to avoid selecting the closing paren
+              (let ((end (1- (point))))
+                ;; Use Evil's visual selection
+                (evil-visual-select start end))))
+        (error (message "Not inside a (comment ...) block"))))))
 
-(defun treemacs--expand-recursively (node)
-  "Recursively expand all directories under NODE."
-  (when (eq 'dir-node-open (treemacs-node->type node))
-    (treemacs-toggle-node)
-    (treemacs-toggle-node)
-    (dolist (child (treemacs-collect-child-nodes node))
-      (when (eq 'dir-node-closed (treemacs-node->type child))
-        (treemacs-toggle-node)
-        (treemacs--expand-recursively child)))))
-
-;; winner mode
-(winner-mode 1)
-
-;; Bind the custom function to Ctl-E (Ctrl + E) in Treemacs mode
-(with-eval-after-load 'treemacs
-  (define-key treemacs-mode-map (kbd "C-e") #'my-treemacs-expand-recursively))
-
-;; Suppress warnings
-(setq warning-suppress-types '((comp)))
-
-;; Directory for lock files
-(defvar my-emacs-lockfiles-directory (expand-file-name "~/.emacs.d/lockfiles/"))
-
-;; Create the lockfiles directory if it doesn't exist
-(unless (file-exists-p my-emacs-lockfiles-directory)
-  (make-directory my-emacs-lockfiles-directory t))
-
-;; Function to set lock file location
-(defun my-emacs-lockfile-name (orig-fn &rest args)
-  "Create lockfiles in a dedicated directory."
-  (let ((lockfile (apply orig-fn args)))
-    (expand-file-name (file-name-nondirectory lockfile) my-emacs-lockfiles-directory)))
-
-;; Advise Emacs to use the custom lockfile location
-(advice-add 'lock-file-name-transforms :around #'my-emacs-lockfile-name)
-
+(evil-define-key 'normal 'global (kbd "<leader>cv") 'evil-select-comment-block)
 
 ;; =========== Custom  Functions ===================
 

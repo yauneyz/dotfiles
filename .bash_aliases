@@ -42,11 +42,6 @@ export LC_ALL=POSIX
 # Standard Directories
 alias home="cd ~"
 
-# 2.8) Django controls
-alias pym="python manage.py"
-alias shell="python manage.py shell"
-
-
 # Python Aliases
 alias p="python"
 alias pip="pip3.11"
@@ -62,15 +57,12 @@ alias comfy="cd ~/development/stable-diffusion/ComfyUI"
 
 # Git Aliases
 alias gs="git status --ignore-submodules"
-alias ga="git add *"
+alias ga="git add --all"
 alias gc="git commit -m"
 alias gl="git log --abbrev-commit --pretty=oneline"
 alias gd="git diff"
 alias ph="git push heroku master"
 alias po="git push origin master"
-
-# Run that thing that lets you get colors
-alias colors="sh ~/.colors.sh"
 
 # Virtual Environment Aliases
 alias va="source venv/bin/activate"
@@ -100,7 +92,6 @@ alias zbrc="source ~/.zshrc_zac"
 alias xb="xrdb ~/.Xresources"
 alias change_keyboard="sudo dpkg-reconfigure keyboard-configuration"
 alias chrome="google-chrome-stable"
-alias at="alacritty-themes"
 
 # Opening config files
 alias ii="vim ~/.i3/config"
@@ -109,16 +100,11 @@ alias vv="vim ~/.config/nvim/init.vim"
 alias ee="vim ~/dotfiles/init.el"
 
 # Directory Aliases
-alias q="cd ~/development/Q/"
-alias vs="vim ~/development/Q/server.js"
-alias qu="cd ~/development/Q/client/src"
-alias qb="cd ~/development/Q/server"
 alias anki="cd ~/development/anki"
+alias org="cd ~/development/org"
 
 
 # Shortcuts to edit files
-alias vA="vim ~/development/Q/client/src/App.js"
-alias vS="vim ~/development/Q/server.js"
 alias vn="vim notes"
 
 # Shortcut for viewing source
@@ -129,7 +115,6 @@ alias modules="cd /home/zac/.local/lib/python3.8/site-packages"
 
 # Application shortcuts
 alias rg="ranger"
-alias t="tmux"
 alias ex="exit"
 
 # Heroku
@@ -145,9 +130,7 @@ alias js="bundle exec jekyll serve"
 
 # Useful
 alias smi="nvidia-smi"
-alias chat="./chat -m ggml-alpaca-13b-q4.bin -c 2048 -n 2048"
 alias audio="pkill pulseaudio"
-alias forget="rm -f models/* results/* diffs/*"
 
 # Clojure
 alias cljs="shadow-cljs"
