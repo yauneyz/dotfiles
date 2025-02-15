@@ -573,8 +573,8 @@
 
 
 ;; =========== Copilot  ===================
-;(install-if-necessary 'editorconfig)
-;(install-if-necessary 'jsonrpc)
+(install-if-necessary 'editorconfig)
+(install-if-necessary 'jsonrpc)
 (use-package editorconfig
   :config
   (editorconfig-mode 1))
@@ -582,10 +582,10 @@
 (use-package jsonrpc)
 
 (use-package copilot
-	:quelpa (copilot :fetcher github
-									 :repo "copilot-emacs/copilot.el"
-									 :branch "main"
-									 :files ("dist" "*.el")))
+ :quelpa (copilot :fetcher github
+                 :repo "copilot-emacs/copilot.el"
+                :branch "main"
+               :files ("*.el")))
 (add-hook 'prog-mode-hook
           (lambda ()
             (copilot-mode)
@@ -617,7 +617,7 @@
 
 
 ;; =========== Font  ===================
-(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
+(set-face-attribute 'default nil :font "Fira Code-12" :height 120)
 
 
 ;; =========== Keybindings  ===================
@@ -709,6 +709,15 @@
 (font-lock-add-keywords 'org-mode
 			'(("^ *\\([-]\\) "
 			 (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+; Olivetti mode
+(use-package olivetti
+	:config
+	(setq olivetti-body-width 80)
+	(setq olivetti-minimum-body-width 80)
+	(setq olivetti-recall-visual-line-mode-entry-state t))
+
+;; Call olivetti mode on .txt
+(add-hook 'text-mode-hook 'olivetti-mode)
 
 (defun fountain-mode-setup ()
 	(olivetti-mode 1)
@@ -718,15 +727,15 @@
 	(setq fountain-hide-element t)
 	(setq fountain-display-scene-numbers-in-margin t))
 
-
-; Fountain mode
-(use-package fountain-mode
-	:hook
-	(fountain-mode . fountain-mode-setup)
-	:config
-	(setq copilot-mode 0)
-	(setq company-mode 0)
-	(which-function-mode 1))
+;; ; Fountain mode
+;; (use-package fountain-mode
+;; 	:hook
+;; 	(fountain-mode . fountain-mode-setup)
+;; 	:config
+;; 	(setq copilot-mode 0)
+;; 	(setq company-mode 0)
+;; 	(which-function-mode 1))
+(use-package fountain-mode)
 
 (defun dispatch-tab-command ()
   "Dispatch <tab> to different functions based on the current buffer's major mode."
@@ -776,15 +785,6 @@
 (global-set-key (kbd "<tab>") 'dispatch-tab-command)
 (evil-define-key 'insert 'global (kbd "<tab>") 'dispatch-tab-command)
 
-; Olivetti mode
-(use-package olivetti
-	:config
-	(setq olivetti-body-width 80)
-	(setq olivetti-minimum-body-width 80)
-	(setq olivetti-recall-visual-line-mode-entry-state t))
-
-;; Call olivetti mode on .txt
-(add-hook 'text-mode-hook 'olivetti-mode)
 
 ; Code folding in programming modes
 (defun hs-minor-mode-setup ()

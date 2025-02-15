@@ -62,7 +62,7 @@ alias comfy="cd ~/development/stable-diffusion/ComfyUI"
 
 # Git Aliases
 alias gs="git status --ignore-submodules"
-alias ga="git add *"
+alias ga="git add --all"
 alias gc="git commit -m"
 alias gl="git log --abbrev-commit --pretty=oneline"
 alias gd="git diff"
@@ -103,7 +103,7 @@ alias chrome="google-chrome-stable"
 alias at="alacritty-themes"
 
 # Opening config files
-alias ii="vim ~/.i3/config"
+alias ii="vim ~/.config/i3/config"
 alias pbar="vim ~/.config/polybar/config"
 alias vv="vim ~/.config/nvim/init.vim"
 alias ee="vim ~/dotfiles/init.el"
