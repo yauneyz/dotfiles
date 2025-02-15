@@ -649,7 +649,7 @@ Temporarily disable ivy-prescient-mode so that the regex builder
   :hook (company-mode . company-box-mode))
 
 ;; =========== Font  ===================
-(set-face-attribute 'default nil :font "Fira Code-12" :height 120)
+(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
 
 ;; =========== Keybindings  ===================
 ;; In elisp-mode, C-c C-c will evaluate the buffer
@@ -736,36 +736,6 @@ Temporarily disable ivy-prescient-mode so that the regex builder
 
 ; Replace list hyphen with dot
 (font-lock-add-keywords 'org-mode
-			'(("^ *\\([-]\\) "
-			 (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
-; Olivetti mode
-(use-package olivetti
-	:config
-	(setq olivetti-body-width 80)
-	(setq olivetti-minimum-body-width 80)
-	(setq olivetti-recall-visual-line-mode-entry-state t))
-
-;; Call olivetti mode on .txt
-(add-hook 'text-mode-hook 'olivetti-mode)
-
-(defun fountain-mode-setup ()
-	(olivetti-mode 1)
-	(visual-line-mode 1)
-	(auto-fill-mode 0)
-	(setq fountain-hide-emphasis-markup t)
-	(setq fountain-hide-element t)
-	(setq fountain-display-scene-numbers-in-margin t))
-
-;; ; Fountain mode
-;; (use-package fountain-mode
-;; 	:hook
-;; 	(fountain-mode . fountain-mode-setup)
-;; 	:config
-;; 	(setq copilot-mode 0)
-;; 	(setq company-mode 0)
-;; 	(which-function-mode 1))
-(use-package fountain-mode)
-=======
                         '(("^ *\\([-]\\) "
                            (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 
@@ -788,7 +758,6 @@ Temporarily disable ivy-prescient-mode so that the regex builder
   ;; To get it to work, just pip install screenplain
   (setq fountain-export-command-profiles '(("screenplain" . "screenplain -f pdf %b output/%B.pdf")))
   (which-function-mode 1))
->>>>>>> 848350ecf586b04e32c0b51e986cdfcb6762022a:init.el
 
 (defun dispatch-tab-command ()
   "Dispatch <tab> to different functions based on the current buffer's major mode."
