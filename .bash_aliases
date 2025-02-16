@@ -130,7 +130,7 @@ alias js="bundle exec jekyll serve"
 
 # Useful
 alias smi="nvidia-smi"
-alias audio="pkill pulseaudio"
+alias audio="wpctl status"
 
 # Clojure
 alias cljs="shadow-cljs"
