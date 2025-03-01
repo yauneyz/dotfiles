@@ -133,6 +133,7 @@ set $ws10 "10"
 set $ws11 "11"
 set $ws12 "12"
 set $ws13 "13"
+set $ws14 "14"
 
 # Assign monitors
 
@@ -149,6 +150,7 @@ workspace $ws10 output DP-2
 workspace $ws11 output DP-4
 workspace $ws12 output DP-4
 workspace $ws13 output DP-4
+workspace $ws14 output DP-4
 
 # switch to workspace
 bindsym Mod1+1 workspace number $ws1
@@ -164,6 +166,7 @@ bindsym Mod1+0 workspace number $ws10
 bindsym Mod1+u workspace number $ws11
 bindsym Mod1+o workspace number $ws12
 bindsym Mod1+p workspace number $ws13
+bindsym Mod1+w workspace number $ws14
 
 # move focused container to workspace
 bindsym Mod1+Shift+1 move container to workspace number $ws1
@@ -179,6 +182,7 @@ bindsym Mod1+Shift+0 move container to workspace number $ws10
 bindsym Mod1+Shift+u move container to workspace number $ws11
 bindsym Mod1+Shift+o move container to workspace number $ws12
 bindsym Mod1+Shift+p move container to workspace number $ws13
+bindsym Mod1+Shift+w move container to workspace number $ws14
 
 # reload the configuration file
 bindsym Mod1+Shift+c reload
@@ -234,7 +238,7 @@ bindsym Mod1+i exec firefox
 #bindsym Mod1+p exec postman
 #bindsym Mod1+c exec mongodb-compass
 bindsym Mod1+n exec nautilus
-bindsym Mod1+g exec gedit
+#bindsym Mod1+x exec gedit
 bindsym Mod1+m exec spotify
 bindsym Mod1+e exec emacs
 

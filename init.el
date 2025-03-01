@@ -175,13 +175,13 @@
 (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
 (ivy-mode 1)
 
-;; --- New: Define a wrapper for counsel-projectile-find-file ---
 (defun my-counsel-projectile-find-file ()
-  "Use counsel-projectile-find-file with Ivy’s built-in fuzzy matching.
-Temporarily disable ivy-prescient-mode so that the regex builder
-`ivy--regex-fuzzy` is used."
+  "Use counsel-projectile-find-file with true fuzzy matching.
+Temporarily disable ivy-prescient-mode and force ivy--regex-fuzzy
+to allow out-of-order matching like 'eve/mp' for 'events/map'."
   (interactive)
-  (let ((ivy-prescient-mode nil))
+  (let ((ivy-prescient-mode nil)
+        (ivy-re-builders-alist '((t . ivy--regex-fuzzy))))
     (counsel-projectile-find-file)))
 
 ;; Counsel
@@ -324,7 +324,7 @@ Temporarily disable ivy-prescient-mode so that the regex builder
   (magit-completing-read-function #'ivy-completing-read)
   :config
   ;; Optional: Define your repository search path for Magit if you work in a common directory
-  (setq magit-repository-directories '(("~/projects" . 2)))
+  ;; (setq magit-repository-directories '(("~/projects" . 2)))
   ;; Optional: Refine diffs to highlight intraline changes
   (setq magit-diff-refine-hunk t)
   ;; Optional: Uncomment the following if you use Forge to interact with GitHub, GitLab, etc.
@@ -668,6 +668,10 @@ Temporarily disable ivy-prescient-mode so that the regex builder
 (evil-define-key 'normal 'global (kbd "C-k") 'windmove-up)
 (evil-define-key 'normal 'global (kbd "C-l") 'windmove-right)
 
+;; Keybindings for sexp movement using literal parentheses
+(evil-define-key '(normal insert) 'global (kbd "C-c (") 'backward-sexp)
+(evil-define-key '(normal insert) 'global (kbd "C-c )") 'forward-sexp)
+
 ;; Repeat for treemacs
 (with-eval-after-load 'treemacs
   (define-key treemacs-mode-map (kbd "C-h") 'windmove-left)
@@ -904,6 +908,17 @@ Temporarily disable ivy-prescient-mode so that the regex builder
   (interactive)
   (let ((vc-follow-symlinks t))
     (find-file user-init-file)))
+
+;; Used to reload buffers after claudesync push
+(defun revert-all-buffers ()
+  "Revert all non-modified buffers associated with a file."
+  (interactive)
+  (dolist (buf (buffer-list))
+    (with-current-buffer buf
+      (when (and (buffer-file-name) (not (buffer-modified-p)))
+        (revert-buffer :ignore-auto :noconfirm))))
+  (message "All buffers reverted"))
+
 
 (defun evil-select-inside-comment-block ()
   "Select everything inside the (comment ...) block under the cursor, excluding the 'comment' keyword itself, in Evil visual mode."
