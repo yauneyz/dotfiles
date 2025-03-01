@@ -175,13 +175,13 @@
 (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
 (ivy-mode 1)
 
+;; --- New: Define a wrapper for counsel-projectile-find-file ---
 (defun my-counsel-projectile-find-file ()
-  "Use counsel-projectile-find-file with true fuzzy matching.
-Temporarily disable ivy-prescient-mode and force ivy--regex-fuzzy
-to allow out-of-order matching like 'eve/mp' for 'events/map'."
+  "Use counsel-projectile-find-file with Ivy’s built-in fuzzy matching.
+Temporarily disable ivy-prescient-mode so that the regex builder
+`ivy--regex-fuzzy` is used."
   (interactive)
-  (let ((ivy-prescient-mode nil)
-        (ivy-re-builders-alist '((t . ivy--regex-fuzzy))))
+  (let ((ivy-prescient-mode nil))
     (counsel-projectile-find-file)))
 
 ;; Counsel
@@ -324,7 +324,7 @@ to allow out-of-order matching like 'eve/mp' for 'events/map'."
   (magit-completing-read-function #'ivy-completing-read)
   :config
   ;; Optional: Define your repository search path for Magit if you work in a common directory
-  ;; (setq magit-repository-directories '(("~/projects" . 2)))
+  (setq magit-repository-directories '(("~/projects" . 2)))
   ;; Optional: Refine diffs to highlight intraline changes
   (setq magit-diff-refine-hunk t)
   ;; Optional: Uncomment the following if you use Forge to interact with GitHub, GitLab, etc.
@@ -649,7 +649,7 @@ to allow out-of-order matching like 'eve/mp' for 'events/map'."
   :hook (company-mode . company-box-mode))
 
 ;; =========== Font  ===================
-(set-face-attribute 'default nil :font "Fira Code Retina" :height 120)
+(set-face-attribute 'default nil :font "Fira Code-12" :height 120)
 
 ;; =========== Keybindings  ===================
 ;; In elisp-mode, C-c C-c will evaluate the buffer
@@ -667,10 +667,6 @@ to allow out-of-order matching like 'eve/mp' for 'events/map'."
 (evil-define-key 'normal 'global (kbd "C-j") 'windmove-down)
 (evil-define-key 'normal 'global (kbd "C-k") 'windmove-up)
 (evil-define-key 'normal 'global (kbd "C-l") 'windmove-right)
-
-;; Keybindings for sexp movement using literal parentheses
-(evil-define-key '(normal insert) 'global (kbd "C-c (") 'backward-sexp)
-(evil-define-key '(normal insert) 'global (kbd "C-c )") 'forward-sexp)
 
 ;; Repeat for treemacs
 (with-eval-after-load 'treemacs
@@ -740,6 +736,36 @@ to allow out-of-order matching like 'eve/mp' for 'events/map'."
 
 ; Replace list hyphen with dot
 (font-lock-add-keywords 'org-mode
+			'(("^ *\\([-]\\) "
+			 (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+; Olivetti mode
+(use-package olivetti
+	:config
+	(setq olivetti-body-width 80)
+	(setq olivetti-minimum-body-width 80)
+	(setq olivetti-recall-visual-line-mode-entry-state t))
+
+;; Call olivetti mode on .txt
+(add-hook 'text-mode-hook 'olivetti-mode)
+
+(defun fountain-mode-setup ()
+	(olivetti-mode 1)
+	(visual-line-mode 1)
+	(auto-fill-mode 0)
+	(setq fountain-hide-emphasis-markup t)
+	(setq fountain-hide-element t)
+	(setq fountain-display-scene-numbers-in-margin t))
+
+;; ; Fountain mode
+;; (use-package fountain-mode
+;; 	:hook
+;; 	(fountain-mode . fountain-mode-setup)
+;; 	:config
+;; 	(setq copilot-mode 0)
+;; 	(setq company-mode 0)
+;; 	(which-function-mode 1))
+(use-package fountain-mode)
+=======
                         '(("^ *\\([-]\\) "
                            (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 
@@ -762,6 +788,7 @@ to allow out-of-order matching like 'eve/mp' for 'events/map'."
   ;; To get it to work, just pip install screenplain
   (setq fountain-export-command-profiles '(("screenplain" . "screenplain -f pdf %b output/%B.pdf")))
   (which-function-mode 1))
+>>>>>>> 848350ecf586b04e32c0b51e986cdfcb6762022a:init.el
 
 (defun dispatch-tab-command ()
   "Dispatch <tab> to different functions based on the current buffer's major mode."
@@ -908,17 +935,6 @@ to allow out-of-order matching like 'eve/mp' for 'events/map'."
   (interactive)
   (let ((vc-follow-symlinks t))
     (find-file user-init-file)))
-
-;; Used to reload buffers after claudesync push
-(defun revert-all-buffers ()
-  "Revert all non-modified buffers associated with a file."
-  (interactive)
-  (dolist (buf (buffer-list))
-    (with-current-buffer buf
-      (when (and (buffer-file-name) (not (buffer-modified-p)))
-        (revert-buffer :ignore-auto :noconfirm))))
-  (message "All buffers reverted"))
-
 
 (defun evil-select-inside-comment-block ()
   "Select everything inside the (comment ...) block under the cursor, excluding the 'comment' keyword itself, in Evil visual mode."

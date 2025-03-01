@@ -94,7 +94,7 @@ alias change_keyboard="sudo dpkg-reconfigure keyboard-configuration"
 alias chrome="google-chrome-stable"
 
 # Opening config files
-alias ii="vim ~/.i3/config"
+alias ii="vim ~/.config/i3/config"
 alias pbar="vim ~/.config/polybar/config"
 alias vv="vim ~/.config/nvim/init.vim"
 alias ee="vim ~/dotfiles/init.el"

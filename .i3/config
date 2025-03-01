@@ -23,6 +23,21 @@ font pango:monospace 8
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+exec --no-startup-id setxkbmap -option ctrl:nocaps
+#exec --no-startup-id xrandr --output eDP-1 --scale 0.5x0.5
+exec --no-startup-id pywalfox start
+exec --no-startup-id xinput set-prop 10 "libinput Tapping Enabled" 1
+exec --no-startup-id xinput set-prop 9 "libinput Tapping Enabled" 1
+
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 -time 0 # increase
+
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 -time 0 # decrease
+
+bindsym Mod1+w exec --no-startup-id sudo brightnessctl s 10%+
+
+bindsym Mod1+q exec --no-startup-id sudo brightnessctl s 10%-
+
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -221,16 +236,6 @@ mode "resize" {
 #interactive screenshot by pressing printscreen
 bindsym Print exec gnome-screenshot -i
 
-#######################################################################
-# automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used their favorite modifier (alt or windows)
-#
-# i3-config-wizard will not launch if there already is a config file
-# in ~/.config/i3/config (or $XDG_CONFIG_HOME/i3/config if set) or
-# ~/.i3/config.
-#
-# Please remove the following exec line:
-#######################################################################
 # Launch applications simply
 
 bindsym Mod1+i exec firefox
@@ -247,9 +252,6 @@ bindsym Mod1+Tab workspace back_and_forth
 
 # Start Picom compositor
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
-
-exec_always xrandr --output DP-4 --primary --mode 3840x2160 --pos 0x0 --rotate normal \
-       --output DP-2 --mode 3840x2160 --pos -2160x0 --rotate right
 
 
 # Get wallpaper
@@ -292,10 +294,9 @@ client.background       $bg
 
 # Restore Pywal theme and wallpaper on startup
 exec_always --no-startup-id wal -R
-exec_always feh --bg-scale ~/Pictures/Wallpapers/solarized_1.png --bg-scale ~/Pictures/Wallpapers/solarized_1.png #--bg-scale ~/Pictures/Wallpapers/red3.jpg # Right monitor
+exec_always feh --bg-scale ~/Pictures/Wallpapers/black-1.jpg
 
-# Assign terminals with specific titles to workspaces
-assign [title="Shadow-CLJS"] $ws9
+assign [title="Shadow-CLJS"] $ws10
 assign [title="Electron"] $ws10
 assign [class="Spotify"] $ws12
 assign [class="Thinky" window_role="browser-window"] $ws1
