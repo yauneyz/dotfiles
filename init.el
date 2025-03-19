@@ -577,20 +577,21 @@ to allow out-of-order matching like 'eve/mp' for 'events/map'."
 (use-package ewal
   :init (setq ewal-use-built-in-always-p nil
               ewal-use-built-in-on-failure-p t
-              ewal-built-in-palette "sexy-gotham"))
+              ewal-built-in-palette "sexy-monokai"))
 
-;(use-package ewal-doom-themes
-;  :quelpa (ewal-doom-themes :fetcher github :repo "tsc25/ewal-doom-themes")
-;  :config
-;  ;;; Set the theme to use ewal-doom-vibrant or your preferred theme
-;  ;;(load-theme 'ewal-doom-one t)
-;  ;;; (load-theme 'ewal-doom-vibrant t)
-;  (load-theme 'doom-solarized-dark t)
-;  ;;; Enable bold and italic if desired
-;  (setq doom-themes-enable-bold t
-;        doom-themes-enable-italic t)
-;  ;;; Configure doom themes enhancements
-;  (doom-themes-org-config))     ;; Correct org-mode fontification
+(use-package ewal-doom-themes
+ :quelpa (ewal-doom-themes :fetcher github :repo "tsc25/ewal-doom-themes")
+ :config
+ ;;; Set the theme to use ewal-doom-vibrant or your preferred theme
+ ;;(load-theme 'ewal-doom-one t)
+ ;;; (load-theme 'ewal-doom-vibrant t)
+ ;; (load-theme 'doom-solarized-dark t)
+ (load-theme 'doom-laserwave t)
+ ;;; Enable bold and italic if desired
+ (setq doom-themes-enable-bold t
+       doom-themes-enable-italic t)
+ ;;; Configure doom themes enhancements
+ (doom-themes-org-config))     ;; Correct org-mode fontification
 
 (use-package ewal-evil-cursors
   :after ewal
@@ -743,21 +744,18 @@ to allow out-of-order matching like 'eve/mp' for 'events/map'."
                         '(("^ *\\([-]\\) "
                            (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
 
-(defun fountain-mode-setup ()
-  (olivetti-mode 1)
-  (visual-line-mode 1)
-  (auto-fill-mode 0)
-  (setq fountain-hide-emphasis-markup t)
-  (setq fountain-hide-element t)
-  (setq fountain-display-scene-numbers-in-margin t))
-
-; Fountain mode
 (use-package fountain-mode
   :hook
-  (fountain-mode . fountain-mode-setup)
+  (fountain-mode . (lambda ()
+                     (olivetti-mode 1)
+                     (visual-line-mode 1)
+                     (auto-fill-mode -1) ; disable auto-fill mode properly
+                     (setq fountain-hide-emphasis-markup t)
+                     (setq fountain-hide-element t)
+                     (setq fountain-display-scene-numbers-in-margin t)))
   :config
-  (setq copilot-mode 0)
-  (setq company-mode 0)
+  (copilot-mode -1)  ; disable copilot-mode
+  (company-mode -1)  ; disable company-mode
   ;; Set the way we export, just using screenplain
   ;; To get it to work, just pip install screenplain
   (setq fountain-export-command-profiles '(("screenplain" . "screenplain -f pdf %b output/%B.pdf")))
