@@ -6,7 +6,7 @@ alias cp="cp -i"
 set -o noclobber
 
 # Local Coding LLM:
-vserve="vllm serve Qwen/Qwen2.5-Coder-32B-Instruct-AWQ \
+alias vserve="vllm serve Qwen/Qwen2.5-Coder-32B-Instruct-AWQ \
   --served-model-name qwen2.5-coder-32b \
   --host 0.0.0.0 --port 11434"
 

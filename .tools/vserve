@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ---- Config (override via env if you like) -------------------------------
+VENV="${VENV:-$HOME/.venvs/vllm}"
+MODEL="${MODEL:-Qwen/Qwen2.5-Coder-14B-Instruct-AWQ}"   # smaller default
+SERVED_NAME="${SERVED_NAME:-qwen2.5-coder-14b}"
+HOST="${HOST:-0.0.0.0}"
+PORT="${PORT:-11434}"
+
+GPU_UTIL="${GPU_UTIL:-0.84}"
+MAX_LEN="${MAX_LEN:-8192}"      # 8k is comfy on 24 GB GPUs with 14B
+MAX_SEQS="${MAX_SEQS:-16}"
+KV_DTYPE="${KV_DTYPE:-fp8}"     # good memory savings; change to 'auto' if you prefer
+
+# ---- Paths ---------------------------------------------------------------
+VLLM_BIN="$VENV/bin/vllm"
+ACTIVATE="$VENV/bin/activate"
+
+# ---- Checks --------------------------------------------------------------
+if [[ ! -x "$VLLM_BIN" ]]; then
+  echo "ERROR: vllm not found at $VLLM_BIN"
+  echo "       Create the venv and install vllm first:"
+  echo "         python3 -m venv \"$VENV\" && source \"$ACTIVATE\" && pip install vllm"
+  exit 1
+fi
+
+# ---- Activate venv & ensure clean exit -----------------------------------
+# shellcheck disable=SC1090
+source "$ACTIVATE" 2>/dev/null || . "$ACTIVATE"
+trap 'deactivate 2>/dev/null || true' EXIT
+
+# ---- Serve ---------------------------------------------------------------
+# Tip: set HF_HUB_OFFLINE=1 if you've pre-downloaded the model weights.
+PYTORCH_CUDA_ALLOC_CONF="${PYTORCH_CUDA_ALLOC_CONF:-expandable_segments:True}" \
+"$VLLM_BIN" serve "$MODEL" \
+  --served-model-name "$SERVED_NAME" \
+  --host "$HOST" --port "$PORT" \
+  --gpu-memory-utilization "$GPU_UTIL" \
+  --max-model-len "$MAX_LEN" \
+  --max-num-seqs "$MAX_SEQS" \
+  --kv-cache-dtype "$KV_DTYPE" \
+  --enforce-eager
