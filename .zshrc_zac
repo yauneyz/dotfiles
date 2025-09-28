@@ -22,17 +22,5 @@ export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 
 cat ~/.cache/wal/sequences
 
+# My personal aliases
 source ~/.bash_aliases
-
-# Function to safeguard against dangerous rm commands
-rm() {
-  if [[ "$*" == "-rf /" || "$*" == "-rf ~" || "$*" == "-rf $HOME" || \
-        "$*" == "-fr /" || "$*" == "-fr ~" || "$*" == "-fr $HOME" || \
-        "$*" == "-rf /." || "$*" == "-rf ~/. " || "$*" == "-rf $HOME/." || \
-        "$*" == "-fr /." || "$*" == "-fr ~/. " || "$*" == "-fr $HOME/." ]]; then
-    echo "Error: Dangerous rm command detected. Aborting."
-    return 1
-  else
-    command rm "$@"
-  fi
-}

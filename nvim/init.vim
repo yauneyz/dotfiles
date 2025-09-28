@@ -5,7 +5,7 @@ let g:ale_disable_lsp = 1
 call plug#begin('~/.vim/plugged')
 
 " Plugs
-Plug 'github/copilot.vim'
+"Plug 'github/copilot.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'

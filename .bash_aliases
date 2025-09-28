@@ -44,12 +44,13 @@ alias home="cd ~"
 
 # Python Aliases
 alias p="python"
-alias pip="pip3.11"
+alias pip="pip3"
 alias freeze="pip freeze"
 alias freezer="pip freeze >| requirements.txt"
 
 # Moving Around
 alias dot="cd ~/dotfiles"
+alias edot="cd ~/.emacs.d"
 alias dev="cd ~/development"
 alias llm="cd ~/development/llm"
 alias sd="cd ~/development/stable-diffusion"
