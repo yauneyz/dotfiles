@@ -72,11 +72,42 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  zsh-syntax-highlighting
+  fzf
+  docker
+  docker-compose
+  kubectl
+  sudo
+  history-substring-search
+  colored-man-pages
+  command-not-found
+  extract
+  z
+)
 
 source $ZSH/oh-my-zsh.sh
 
 ## User configuration
+
+# History configuration
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_BEEP
+setopt SHARE_HISTORY
+
+# Auto completion options
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+setopt PUSHD_SILENT
 #if which tmux 2>&1 >/dev/null; then
   #if [ $TERM != "screen-256color" ] && [  $TERM != "screen" ]; then
     #tmux attach -t hack || tmux new -s hack; exit
@@ -112,3 +143,5 @@ source ~/.zshrc_zac
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+source ~/.zshrc_zac

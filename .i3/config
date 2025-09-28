@@ -152,20 +152,20 @@ set $ws14 "14"
 
 # Assign monitors
 
-workspace $ws1 output DP-4
-workspace $ws2 output DP-4
-workspace $ws3 output DP-4
-workspace $ws4 output DP-4
-workspace $ws5 output DP-4
-workspace $ws6 output DP-4
-workspace $ws7 output DP-4
-workspace $ws8 output DP-2
-workspace $ws9 output DP-2
-workspace $ws10 output DP-2
-workspace $ws11 output DP-4
-workspace $ws12 output DP-4
-workspace $ws13 output DP-4
-workspace $ws14 output DP-4
+workspace $ws1 output DP-2
+workspace $ws2 output DP-2
+workspace $ws3 output DP-2
+workspace $ws4 output DP-2
+workspace $ws5 output DP-2
+workspace $ws6 output DP-2
+workspace $ws7 output DP-2
+workspace $ws8 output DP-0
+workspace $ws9 output DP-0
+workspace $ws10 output DP-0
+workspace $ws11 output DP-2
+workspace $ws12 output DP-2
+workspace $ws13 output DP-2
+workspace $ws14 output DP-2
 
 # switch to workspace
 bindsym Mod1+1 workspace number $ws1
@@ -255,6 +255,7 @@ bindsym Mod1+i exec firefox
 bindsym Mod1+n exec nautilus
 #bindsym Mod1+x exec gedit
 bindsym Mod1+m exec spotify
+bindsym Mod1+Shift+m exec trackball
 bindsym Mod1+e exec emacs
 
 bindsym Mod1+Tab workspace back_and_forth
@@ -263,8 +264,8 @@ bindsym Mod1+Tab workspace back_and_forth
 # Start Picom compositor
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
-exec_always xrandr --output DP-4 --primary --mode 3840x2160 --pos 0x0 --rotate normal \
-       --output DP-2 --mode 3840x2160 --pos -2160x0 --rotate right
+exec_always xrandr --output DP-2 --primary --mode 3840x2160 --pos 0x0 --rotate normal \
+       --output DP-0 --mode 3840x2160 --pos -2160x0 --rotate right
 
 
 # Get wallpaper
@@ -307,7 +308,7 @@ client.background       $bg
 
 # Restore Pywal theme and wallpaper on startup
 exec_always --no-startup-id wal -R
-exec_always feh --bg-scale ~/Pictures/Wallpapers/solarized_1.png --bg-scale ~/Pictures/Wallpapers/solarized_1.png #--bg-scale ~/Pictures/Wallpapers/red3.jpg # Right monitor
+#exec_always feh --bg-scale ~/Pictures/Wallpapers/solarized_1.png --bg-scale ~/Pictures/Wallpapers/solarized_1.png #--bg-scale ~/Pictures/Wallpapers/red3.jpg # Right monitor
 
 # Assign terminals with specific titles to workspaces
 assign [title="Shadow-CLJS"] $ws9

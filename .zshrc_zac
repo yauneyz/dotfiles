@@ -12,6 +12,7 @@ export PULSE_RUNTIME_PATH=/run/user/$(id -u)/pulse
 export PATH="$PATH:$HOME/anaconda3/bin"
 export PATH="$PATH:$HOME/opt/openmpi/bin"
 export PATH="$HOME/.local/lib/python3.12/site-packages:$PATH"
+export PATH="$HOME/.tools:$PATH"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 # Don't know why this used to be set like this
@@ -22,3 +23,16 @@ export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 cat ~/.cache/wal/sequences
 
 source ~/.bash_aliases
+
+# Function to safeguard against dangerous rm commands
+rm() {
+  if [[ "$*" == "-rf /" || "$*" == "-rf ~" || "$*" == "-rf $HOME" || \
+        "$*" == "-fr /" || "$*" == "-fr ~" || "$*" == "-fr $HOME" || \
+        "$*" == "-rf /." || "$*" == "-rf ~/. " || "$*" == "-rf $HOME/." || \
+        "$*" == "-fr /." || "$*" == "-fr ~/. " || "$*" == "-fr $HOME/." ]]; then
+    echo "Error: Dangerous rm command detected. Aborting."
+    return 1
+  else
+    command rm "$@"
+  fi
+}

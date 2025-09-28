@@ -1,0 +1,15 @@
+# Only run if in a graphical environment and xinput is available
+if [ -n "$DISPLAY" ] && command -v xinput >/dev/null 2>&1; then
+    # Get the device id for the MX Ergo mouse (case-insensitive match)
+    MXERGO_ID=$(xinput list | grep -i "MX Ergo" | sed -n 's/.*id=\([0-9]\+\).*/\1/p')
+
+    if [ -n "$MXERGO_ID" ]; then
+#        echo "Configuring MX Ergo mouse (id $MXERGO_ID)..."
+        # Set maximum acceleration (Accel Speed set to 1)
+        xinput --set-prop "$MXERGO_ID" "libinput Accel Speed" 1
+        # Apply a coordinate transformation (increases pointer movement by 50%)
+        xinput --set-prop "$MXERGO_ID" "Coordinate Transformation Matrix" 1.5 0 0 0 1.5 0 0 0 1
+    else
+        echo "MX Ergo device not found."
+    fi
+fi

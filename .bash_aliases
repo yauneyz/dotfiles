@@ -49,7 +49,7 @@ alias freeze="pip freeze"
 alias freezer="pip freeze >| requirements.txt"
 
 # Moving Around
-alias dt="cd ~/dotfiles"
+alias dot="cd ~/dotfiles"
 alias dev="cd ~/development"
 alias llm="cd ~/development/llm"
 alias sd="cd ~/development/stable-diffusion"
@@ -94,7 +94,7 @@ alias change_keyboard="sudo dpkg-reconfigure keyboard-configuration"
 alias chrome="google-chrome-stable"
 
 # Opening config files
-alias ii="vim ~/.i3/config"
+alias ii="vim ~/.config/i3/config"
 alias pbar="vim ~/.config/polybar/config"
 alias vv="vim ~/.config/nvim/init.vim"
 alias ee="vim ~/dotfiles/init.el"
