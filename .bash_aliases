@@ -5,6 +5,11 @@ alias cp="cp -i"
 #alias rm="gio trash"
 set -o noclobber
 
+# Local Coding LLM:
+vserve="vllm serve Qwen/Qwen2.5-Coder-32B-Instruct-AWQ \
+  --served-model-name qwen2.5-coder-32b \
+  --host 0.0.0.0 --port 11434"
+
 # 2.2) Listing, directories, and motion
 alias l="ls --color"
 alias ls="ls --color"

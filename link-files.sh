@@ -51,7 +51,4 @@ create_symlink "$DOTFILES_DIR/.i3" "$HOME/.config/i3"
 create_symlink "$DOTFILES_DIR/.oh-my-zsh" "$HOME/.oh-my-zsh"
 create_symlink "$DOTFILES_DIR/.tools" "$HOME/.tools"
 
-# Emacs configuration
-create_symlink "$DOTFILES_DIR/init.el" "$HOME/.emacs.d/init.el"
-
 echo "Dotfiles symlinks created successfully!"
