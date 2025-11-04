@@ -8,7 +8,7 @@ SERVED_NAME="${SERVED_NAME:-qwen2.5-coder-14b}"
 HOST="${HOST:-0.0.0.0}"
 PORT="${PORT:-11434}"
 
-GPU_UTIL="${GPU_UTIL:-0.84}"
+GPU_UTIL="${GPU_UTIL:-0.80}"
 MAX_LEN="${MAX_LEN:-8192}"      # 8k is comfy on 24 GB GPUs with 14B
 MAX_SEQS="${MAX_SEQS:-16}"
 KV_DTYPE="${KV_DTYPE:-fp8}"     # good memory savings; change to 'auto' if you prefer

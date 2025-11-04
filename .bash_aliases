@@ -1,14 +1,20 @@
+# Directories
+alias res="cd ~/development/research/"
+alias ai="cd ~/development/research/ai"
+alias koop="cd ~/development/research/ai/koopman"
+alias mem="cd ~/development/research/ai/memory"
+alias lando="cd ~/development/Lando/lando-video"
+
+# Commands
+alias disable="focusctl disable"
+alias enable="focusctl enable main"
+
 # 2.1) Safety
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
 #alias rm="gio trash"
 set -o noclobber
-
-# Local Coding LLM:
-alias vserve="vllm serve Qwen/Qwen2.5-Coder-32B-Instruct-AWQ \
-  --served-model-name qwen2.5-coder-32b \
-  --host 0.0.0.0 --port 11434"
 
 # 2.2) Listing, directories, and motion
 alias l="ls --color"
@@ -54,6 +60,7 @@ alias freeze="pip freeze"
 alias freezer="pip freeze >| requirements.txt"
 
 # Moving Around
+alias focus="cd ~/development/tools/focus"
 alias dot="cd ~/dotfiles"
 alias edot="cd ~/.emacs.d"
 alias dev="cd ~/development"
@@ -71,7 +78,7 @@ alias ph="git push heroku master"
 alias po="git push origin master"
 
 # Virtual Environment Aliases
-alias va="source venv/bin/activate"
+alias va="source .venv/bin/activate"
 alias da="deactivate"
 
 # Vim shortcuts
@@ -94,7 +101,9 @@ alias sbrc="source ~/.bashrc"
 alias valias="vim ~/dotfiles/.bash_aliases"
 alias salias="source ~/dotfiles/.bash_aliases"
 alias vbrc="vim ~/.zshrc_zac"
-alias zbrc="source ~/.zshrc_zac"
+alias vbrc="vim ~/.zshrc_zac"
+alias zbrc="vim ~/.zshrc_zac"
+alias szrc="source ~/.zshrc_zac"
 alias xb="xrdb ~/.Xresources"
 alias change_keyboard="sudo dpkg-reconfigure keyboard-configuration"
 alias chrome="google-chrome-stable"
@@ -137,6 +146,8 @@ alias js="bundle exec jekyll serve"
 # Useful
 alias smi="nvidia-smi"
 alias audio="wpctl status"
+alias unmount="sudo umount -l /media/user/usb"
+alias mount-key="sudo mount /dev/sdc2 /media/user/usb"
 
 # Clojure
 alias cljs="shadow-cljs"

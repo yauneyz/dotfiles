@@ -149,6 +149,7 @@ set $ws11 "11"
 set $ws12 "12"
 set $ws13 "13"
 set $ws14 "14"
+set $ws15 "15"
 
 # Assign monitors
 
@@ -166,6 +167,7 @@ workspace $ws11 output DP-2
 workspace $ws12 output DP-2
 workspace $ws13 output DP-2
 workspace $ws14 output DP-2
+workspace $ws15 output DP-2
 
 # switch to workspace
 bindsym Mod1+1 workspace number $ws1
@@ -182,6 +184,7 @@ bindsym Mod1+u workspace number $ws11
 bindsym Mod1+o workspace number $ws12
 bindsym Mod1+p workspace number $ws13
 bindsym Mod1+w workspace number $ws14
+bindsym Mod1+y workspace number $ws15
 
 # move focused container to workspace
 bindsym Mod1+Shift+1 move container to workspace number $ws1
@@ -198,6 +201,7 @@ bindsym Mod1+Shift+u move container to workspace number $ws11
 bindsym Mod1+Shift+o move container to workspace number $ws12
 bindsym Mod1+Shift+p move container to workspace number $ws13
 bindsym Mod1+Shift+w move container to workspace number $ws14
+bindsym Mod1+Shift+y move container to workspace number $ws15
 
 # reload the configuration file
 bindsym Mod1+Shift+c reload
@@ -250,13 +254,13 @@ bindsym Print exec gnome-screenshot -i
 
 bindsym Mod1+i exec firefox
 #bindsym Mod1+b exec blueman-manager
-#bindsym Mod1+p exec postman
-#bindsym Mod1+c exec mongodb-compass
 bindsym Mod1+n exec nautilus
-#bindsym Mod1+x exec gedit
 bindsym Mod1+m exec spotify
-bindsym Mod1+Shift+m exec trackball
 bindsym Mod1+e exec emacs
+bindsym Mod1+Shift+m exec ~/.tools/trackball
+bindsym Mod1+Shift+s exec sleep 3 && xset dpms force off
+
+exec_always ~/.tools/trackball
 
 bindsym Mod1+Tab workspace back_and_forth
 
@@ -308,7 +312,13 @@ client.background       $bg
 
 # Restore Pywal theme and wallpaper on startup
 exec_always --no-startup-id wal -R
-#exec_always feh --bg-scale ~/Pictures/Wallpapers/solarized_1.png --bg-scale ~/Pictures/Wallpapers/solarized_1.png #--bg-scale ~/Pictures/Wallpapers/red3.jpg # Right monitor
+
+# Wallpaper - Main, Left, Right
+exec_always feh \
+  --bg-scale ~/Pictures/Wallpapers/Groudon.png \
+  --bg-scale ~/Pictures/Wallpapers/Portrait/red4.jpg \
+  #--bg-scale ~/Pictures/Wallpapers/red3.jpg
+
 
 # Assign terminals with specific titles to workspaces
 assign [title="Shadow-CLJS"] $ws9
@@ -317,15 +327,35 @@ assign [class="Spotify"] $ws12
 assign [class="Thinky" window_role="browser-window"] $ws1
 assign [class="Thinky" window_role="devtools"] $ws10
 
-# Open other applications on startup
+#### Startup Applications#
+# Thinky Compiler
 exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl/electron; npm run develop"
+# Thinky running
 exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl/electron; npm run start"
 
-exec --no-startup-id i3-msg "workspace number 7"
-exec --no-startup-id kitty --title "Backend" bash -c "cd /home/zac/development/clojure/owl/site; lein ring server-headless 3000"
+# Workspace 2: exactly one Firefox window (blank or your homepage)
+exec --no-startup-id i3-msg 'workspace number 2; exec firefox --new-window'
+# Workspace 11: Firefox window with 3 Google Keep tabs
+exec --no-startup-id i3-msg 'workspace number 11; exec firefox --new-window https://keep.google.com/u/0/#NOTE/1LfIHcKy7mDH-vHjNG-7zp9tjiwsfl_aBGIO-DSVz8BPXgG5luM8Bykf9BHn11g https://keep.google.com/u/0/#NOTE/1ZStNGEGsFzHa5--Yg2AxJ3AMqZ6xodrJs9YfIfNYO0S-KTUonrP91rPG1tBQtPcg85dk https://keep.google.com/u/0/#LIST/1Sr60ensrtLGdf2pUSzEfRWzlulR3nf53lmcIgHJd2XEaSnYplxmHMnAdJRyxllY https://keep.google.com'
 
-exec --no-startup-id i3-msg "workspace number 2, exec firefox"
-exec --no-startup-id i3-msg "workspace number 3, exec emacs /home/zac/development/clojure/owl/electron/src/app/components/PdfWindow.cljs"
-exec --no-startup-id i3-msg "workspace number 9, exec emacs /home/zac/development/clojure/owl/todo.org"
+# Workspace 11: separate Firefox window for YouTube
+exec --no-startup-id i3-msg 'workspace number 11; exec firefox --new-window https://youtube.com'
+
+
+# Dev
+exec --no-startup-id i3-msg "workspace number 3; exec emacs /home/zac/development/clojure/owl/electron/src/app/components/PdfWindow.cljs"
+#exec --no-startup-id i3-msg "workspace number 3, exec emacs /home/zac/development/research/ai/memory/src/memory/train.py"
+exec --no-startup-id i3-msg "workspace number 15; exec emacs /home/zac/development/go/tutorial/"
+
+# Todo
+exec --no-startup-id i3-msg "workspace number 9; exec emacs /home/zac/development/owl/todo.org"
+#exec --no-startup-id i3-msg "workspace number 9, exec emacs /home/zac/development/research/ai/memory/todo.org"
+
+# General Org
+exec --no-startup-id i3-msg "workspace number 13; exec emacs /home/zac/development/org/misc/todo.org"
+
+# Working Memory
+exec --no-startup-id i3-msg "workspace number 14; exec emacs /home/zac/development/org/working-memory.org"
+
 
 exec --no-startup-id spotify

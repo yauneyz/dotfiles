@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# get_geometry.sh
+# Lets you select a rectangle and outputs its coordinates nicely.
+
+set -euo pipefail
+
+# Ensure slop is installed
+if ! command -v slop >/dev/null 2>&1; then
+  echo "Error: 'slop' is not installed. Install it with:"
+  echo "  sudo apt install slop    # Debian/Ubuntu"
+  echo "  sudo dnf install slop    # Fedora"
+  echo "  sudo pacman -S slop      # Arch"
+  exit 1
+fi
+
+echo "👉 Drag a box on the screen to select your region..."
+GEOM=$(slop -f "%wx%h+%x+%y")
+
+# Extract individual components for clarity
+WIDTH=$(echo "$GEOM" | cut -d'x' -f1)
+HEIGHT=$(echo "$GEOM" | cut -d'x' -f2 | cut -d'+' -f1)
+X=$(echo "$GEOM" | cut -d'+' -f2)
+Y=$(echo "$GEOM" | cut -d'+' -f3)
+
+echo
+echo "📏 Geometry summary:"
+echo "  Left:   $X"
+echo "  Top:    $Y"
+echo "  Width:  $WIDTH"
+echo "  Height: $HEIGHT"
+echo
+echo "✅ maim geometry format:"
+echo "  ${WIDTH}x${HEIGHT}+${X}+${Y}"

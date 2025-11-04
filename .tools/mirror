@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+"""
+mirror — simple wget wrapper for site mirroring.
+
+Usage:
+    mirror https://example.com
+    mirror https://example.com -d example.com,cdn.example.com
+    mirror https://example.com --extra "--limit-rate=200k"
+
+Default behavior:
+    - Mirrors entire site recursively.
+    - Converts links for offline use.
+    - Grabs all assets (CSS, JS, images).
+    - Stores result in ~/mirrors/<domain>/
+"""
+
+import argparse, subprocess, os, sys, shlex
+
+def main():
+    parser = argparse.ArgumentParser(description="Mirror a website locally using wget with sensible defaults.")
+    parser.add_argument("url", help="Starting URL to mirror")
+    parser.add_argument("-o", "--outdir", help="Output directory (default: ~/mirrors/<domain>/)")
+    parser.add_argument("-d", "--domains", help="Comma-separated allowed domains (default: autodetected from URL)")
+    parser.add_argument("--depth", type=int, help="Recursion depth limit (default: full mirror)")
+    parser.add_argument("--wait", type=float, default=1.0, help="Seconds to wait between requests (default: 1.0)")
+    parser.add_argument("--no-parent", action="store_true", help="Do not ascend to parent directory")
+    parser.add_argument("--extra", help="Extra wget options to append verbatim")
+    parser.add_argument("--dry-run", action="store_true", help="Print the final wget command instead of running it")
+    args, passthrough = parser.parse_known_args()
+
+    # Constants
+    BASE_DIR = "~/Main/Sites/"
+
+    # Derive sensible defaults
+    site = args.url.rstrip("/")
+    domain = site.split("//")[-1].split("/")[0]
+    outdir = os.path.expanduser(args.outdir or os.path.join(BASE_DIR,domain))
+    os.makedirs(outdir, exist_ok=True)
+
+    # Build the command
+    cmd = [
+        "wget",
+        "--mirror",
+        "--page-requisites",
+        "--convert-links",
+        "--adjust-extension",
+        "--span-hosts",
+        f"--wait={args.wait}",
+        "--random-wait",
+        f"--directory-prefix={outdir}",
+        "--execute=robots=off"
+    ]
+    if args.depth: cmd.append(f"--level={args.depth}")
+    if args.no_parent: cmd.append("--no-parent")
+    if args.domains:
+        cmd.append(f"--domains={args.domains}")
+    else:
+        cmd.append(f"--domains={domain}")
+    if args.extra:
+        cmd += shlex.split(args.extra)
+    cmd.append(site)
+    cmd += passthrough  # any unknown args get forwarded
+
+    if args.dry_run:
+        print(" ".join(shlex.quote(c) for c in cmd))
+        return 0
+
+    print(f"📡 Mirroring {site} → {outdir}")
+    print("Command:", " ".join(shlex.quote(c) for c in cmd))
+    try:
+        subprocess.run(cmd, check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"\n❌ wget exited with status {e.returncode}", file=sys.stderr)
+        return e.returncode
+    print(f"\n✅ Mirror complete: {outdir}")
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())

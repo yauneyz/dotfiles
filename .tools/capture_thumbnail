@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+# capture_single.sh
+# Usage: ./capture_single.sh <Name> <Variable>
+# Example: ./capture_single.sh Ship 001
+#
+# Result:
+#   ~/development/Lando/lando-video/Ship/Ship-001.png
+#
+# Edit GEOM below to the rectangle you want to capture.
+
+set -euo pipefail
+
+### --- CONFIG --- ###
+# Fixed capture geometry for maim: WIDTHxHEIGHT+X+Y
+# Update this to your rectangle (example from earlier: 971x815+2313+486)
+GEOM="961x801+2182+518"
+
+# Hide cursor in screenshots (-u). Set to "" if you want the cursor visible.
+MAIM_CURSOR_FLAG="-u"
+### --- END CONFIG --- ###
+
+# Inputs
+NAME="${1:-}"
+VAR="${2:-}"
+
+if [[ -z "${NAME}" || -z "${VAR}" ]]; then
+  echo "Usage: $0 <Name> <Variable>"
+  echo "Example: $0 Ship 001"
+  exit 1
+fi
+
+# Output directory and filename
+OUTDIR="${HOME}/development/Lando/lando-video/${NAME}"
+mkdir -p "${OUTDIR}"
+
+OUTFILE="${OUTDIR}/${NAME}-${VAR}.png"
+
+# Check dependencies
+if ! command -v maim >/dev/null 2>&1; then
+  echo "Error: maim not found. Install maim first."
+  exit 1
+fi
+
+echo "Capturing region ${GEOM} -> ${OUTFILE}"
+maim ${MAIM_CURSOR_FLAG} -g "${GEOM}" "${OUTFILE}"
+
+echo "Done."

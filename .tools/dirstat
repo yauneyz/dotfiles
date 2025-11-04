@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+import os, sys, argparse, math
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+def fmt_size(n, human=True, si=False):
+    if not human: return str(n)
+    base = 1000 if si else 1024
+    suf  = ['B','KB','MB','GB','TB','PB','EB','ZB','YB'] if si else ['B','KiB','MiB','GiB','TiB','PiB','EiB','ZiB','YiB']
+    if n < base: return f"{n} B"
+    e = min(int(math.log(n, base)), len(suf)-1)
+    v = n / (base**e)
+    return (f"{v:.1f}" if v < 10 else f"{v:.0f}") + f" {suf[e]}"
+
+def safe_stat(p, follow=False):
+    try: return os.stat(p, follow_symlinks=follow)
+    except Exception: return None
+
+def dir_size(path, follow=False):
+    total = 0
+    for root, _, files in os.walk(path, followlinks=follow):
+        for f in files:
+            st = safe_stat(os.path.join(root, f), follow)
+            if st: total += st.st_size
+    return total
+
+def collect(top='.', show_all=False):
+    dirs, files = [], []
+    with os.scandir(top) as it:
+        for e in it:
+            if not show_all and e.name.startswith('.'): continue
+            try:
+                if e.is_dir(follow_symlinks=False): dirs.append(e.path)
+                elif e.is_file(follow_symlinks=False): files.append(e.path)
+            except PermissionError: pass
+    return dirs, files
+
+def main():
+    ap = argparse.ArgumentParser(description="Show sizes of top-level directories (recursive) and files.")
+    ap.add_argument('path', nargs='?', default='.', help='Directory to scan (default: .)')
+    ap.add_argument('-a','--all', action='store_true', help='Include dotfiles/dirs')
+    ap.add_argument('--si', action='store_true', help='Use 1000-based units (KB, MB)')
+    ap.add_argument('-b','--bytes', action='store_true', help='Show raw bytes')
+    ap.add_argument('--sort', choices=['size','name'], default='size', help='Sort order (default: size)')
+    ap.add_argument('--asc', action='store_true', help='Ascending sort')
+    ap.add_argument('--follow-symlinks', action='store_true', help='Follow symlinks (careful of cycles)')
+    ap.add_argument('-j','--jobs', type=int, default=os.cpu_count() or 4, help='Threads for directory sizing')
+    args = ap.parse_args()
+
+    if not os.path.isdir(args.path):
+        print(f"error: {args.path!r} is not a directory", file=sys.stderr); return 2
+
+    dirs, files = collect(args.path, args.all)
+
+    # compute dir sizes (parallel)
+    dir_sizes = {}
+    with ThreadPoolExecutor(max_workers=max(1, args.jobs)) as ex:
+        futs = {ex.submit(dir_size, d, args.follow_symlinks): d for d in dirs}
+        for fut in as_completed(futs):
+            d = futs[fut]
+            try: dir_sizes[d] = fut.result()
+            except Exception: dir_sizes[d] = 0
+
+    file_sizes = {f: (safe_stat(f, args.follow_symlinks).st_size if safe_stat(f, args.follow_symlinks) else 0) for f in files}
+
+    key_name = lambda p: os.path.basename(p).lower()
+    key_size = lambda p, m: (m[p], key_name(p))
+    if args.sort == 'name':
+        dirs_s  = sorted(dirs,  key=key_name, reverse=args.asc)
+        files_s = sorted(files, key=key_name, reverse=args.asc)
+    else:
+        dirs_s  = sorted(dirs,  key=lambda p: key_size(p, dir_sizes), reverse=not args.asc)
+        files_s = sorted(files, key=lambda p: key_size(p, file_sizes), reverse=not args.asc)
+
+    name_w = 0
+    for p in dirs_s + files_s: name_w = max(name_w, len(os.path.basename(p)))
+    human = not args.bytes
+    line  = lambda n, s: f"  {n.ljust(name_w)}  {fmt_size(s, human, args.si).rjust(10)}"
+    sep   = "-" * (name_w + 15)
+
+    td = sum(dir_sizes.values()); tf = sum(file_sizes.values())
+    print("Directories"); print(sep)
+    for d in dirs_s: print(line(os.path.basename(d)+"/", dir_sizes[d]))
+    print(sep); print(f"  {'TOTAL (dirs)'.ljust(name_w)}  {fmt_size(td, human, args.si).rjust(10)}\n")
+
+    print("Files"); print(sep)
+    for f in files_s: print(line(os.path.basename(f), file_sizes[f]))
+    print(sep); print(f"  {'TOTAL (files)'.ljust(name_w)}  {fmt_size(tf, human, args.si).rjust(10)}\n")
+
+    print(f"{'Grand total:':>{name_w+4}}  {fmt_size(td+tf, human, args.si).rjust(10)}")
+
+if __name__ == '__main__':
+    sys.exit(main())
