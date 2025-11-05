@@ -26,8 +26,7 @@ cat ~/.cache/wal/sequences
 export OPENAI_API_BASE=http://127.0.0.1:11434/v1
 export OPENAI_API_KEY=local-anything
 
-# Environment variables
-export WANDB_API_KEY="fd75061e394bd7a96bc63a2cae013a4af7d847f6"
 
 # My personal aliases
 source ~/.bash_aliases
+source ~/.api-keys
