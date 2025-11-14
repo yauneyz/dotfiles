@@ -1,0 +1,1 @@
+tree | tee /dev/tty | xclip -selection clipboard

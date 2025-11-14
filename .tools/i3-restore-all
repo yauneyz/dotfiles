@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Simple "restore all saved workspaces" wrapper for i3-resurrect
+
+for ws in 2 3 9 11 13 14 15; do
+  i3-resurrect restore -w "$ws" &
+done

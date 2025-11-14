@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Save all currently existing workspaces with i3-resurrect
+
+# Requires: jq, i3-resurrect
+
+# Get a list of workspace numbers
+workspaces=$(i3-msg -t get_workspaces | jq '.[].num')
+
+for ws in $workspaces; do
+  i3-resurrect save -w "$ws"
+done

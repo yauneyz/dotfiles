@@ -51,6 +51,9 @@ bindsym XF86AudioPrev exec playerctl previous
 # Play/pause keyboard shortcut for Mod1
 bindsym Mod1+semicolon exec playerctl play-pause
 
+# Save all current workspaces with i3-resurrect
+bindsym Mod1+Shift+a exec --no-startup-id i3-save-all
+
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
 set $up k
@@ -322,24 +325,34 @@ exec_always feh \
 
 # Assign terminals with specific titles to workspaces
 assign [title="Shadow-CLJS"] $ws9
+assign [title="Go Services"] $ws9
 assign [title="Electron"] $ws10
 assign [class="Spotify"] $ws12
 assign [class="Thinky" window_role="browser-window"] $ws1
 assign [class="Thinky" window_role="devtools"] $ws10
+assign [class="Firefox" instance="keep-profile"] $ws11
+assign [class="Firefox" instance="music-youtube"] $ws11
+
 
 #### Startup Applications#
 # Thinky Compiler
-exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl/electron; npm run develop"
+#exec --no-startup-id kitty --title "Shadow-CLJS" bash -c "cd /home/zac/development/clojure/owl/electron; npm run develop"
+exec --no-startup-id kitty --title "Go Services" bash -c "cd /home/zac/development/go/wikidex; bash start-dev.sh"
 # Thinky running
-exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl/electron; npm run start"
+#exec --no-startup-id kitty --title "Electron" bash -c "cd /home/zac/development/clojure/owl/electron; npm run start"
 
 # Workspace 2: exactly one Firefox window (blank or your homepage)
 exec --no-startup-id i3-msg 'workspace number 2; exec firefox --new-window'
 # Workspace 11: Firefox window with 3 Google Keep tabs
-exec --no-startup-id i3-msg 'workspace number 11; exec firefox --new-window https://keep.google.com/u/0/#NOTE/1LfIHcKy7mDH-vHjNG-7zp9tjiwsfl_aBGIO-DSVz8BPXgG5luM8Bykf9BHn11g https://keep.google.com/u/0/#NOTE/1ZStNGEGsFzHa5--Yg2AxJ3AMqZ6xodrJs9YfIfNYO0S-KTUonrP91rPG1tBQtPcg85dk https://keep.google.com/u/0/#LIST/1Sr60ensrtLGdf2pUSzEfRWzlulR3nf53lmcIgHJd2XEaSnYplxmHMnAdJRyxllY https://keep.google.com'
+# Keep profile on workspace 11
+exec --no-startup-id i3-msg 'workspace number 11; exec firefox --no-remote --new-window -P keep-profile \
+  https://keep.google.com/u/0/\#NOTE/1LfIHcKy7mDH-vHjNG-7zp9tjiwsfl_aBGIO-DSVz8BPXgG5luM8Bykf9BHn11g \
+  https://keep.google.com/u/0/\#NOTE/1ZStNGEGsFzHa5--Yg2AxJ3AMqZ6xodrJs9YfIfNYO0S-KTUonrP91rPG1tBQtPcg85dk \
+  https://keep.google.com/u/0/\#LIST/1Sr60ensrtLGdf2pUSzEfRWzlulR3nf53lmcIgHJd2XEaSnYplxmHMnAdJRyxllY \
+  https://keep.google.com'
 
 # Workspace 11: separate Firefox window for YouTube
-exec --no-startup-id i3-msg 'workspace number 11; exec firefox --new-window https://youtube.com'
+exec --no-startup-id i3-msg 'workspace number 11; exec firefox --new-window -P music-youtube https://youtube.com'
 
 
 # Dev
@@ -359,3 +372,5 @@ exec --no-startup-id i3-msg "workspace number 14; exec emacs /home/zac/developme
 
 
 exec --no-startup-id spotify
+
+exec --no-startup-id i3-restore-all

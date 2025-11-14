@@ -4,7 +4,10 @@ alias ai="cd ~/development/research/ai"
 alias koop="cd ~/development/research/ai/koopman"
 alias mem="cd ~/development/research/ai/memory"
 alias lando="cd ~/development/Lando/lando-video"
-alias goz="cd ~/development/go/gophercizes"
+alias gos="cd ~/development/go/gophercises"
+alias com="cd ~/development/go/compass"
+alias pylon="cd ~/development/go/pylon"
+alias dex="cd ~/development/go/wikidex"
 
 # Commands
 alias disable="focusctl disable"

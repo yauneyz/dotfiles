@@ -45,9 +45,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 "This is for my Node templating engine
 "Plug 'digitaltoad/vim-pug'
 
-
-
-
 "Let's get LaTeX
 Plug 'lervag/vimtex'
 "LaTeX Setup
@@ -67,9 +64,6 @@ let vim_markdown_preview_github=1
 "Python syntax highlighting
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
-"React snippets
-Plug 'dsznajder/vscode-es7-javascript-react-snippets', { 'do': 'yarn install --frozen-lockfile && yarn compile' }
-
 call plug#end()
 
 "Fuzzy finding
@@ -82,16 +76,12 @@ nnoremap <silent> <leader>A :Windows<CR>
 
 set nohlsearch
 
-"Coc Snippets Shortcut
-:nnoremap <leader>sn :CocCommand snippets.editSnippets<cr>
-
 "Quick Scope
 let g:qs_highlight_on_keys = ['f','F','t','T']
 
 " Indent
 set autoindent
 set smartindent
-
 
 "" Setup ale
 let g:ale_linters = {
@@ -136,16 +126,6 @@ set splitright
 "Better background highlight color than pink
 :highlight Pmenu ctermbg=gray guibg=gray
 
-" Use the right python
-"let g:python3_host_prog = '/opt/homebrew/bin/python3.11'
-
-"Smartf
-"" press <esc> to cancel.
-nmap f <Plug>(coc-smartf-forward)
-nmap F <Plug>(coc-smartf-backward)
-nmap ; <Plug>(coc-smartf-repeat)
-nmap , <Plug>(coc-smartf-repeat-opposite)
-
 augroup Smartf
   autocmd User SmartfEnter :hi Conceal ctermfg=220 guifg=#6638F0
   autocmd User SmartfLeave :hi Conceal ctermfg=239 guifg=#504945
@@ -155,6 +135,3 @@ let g:copilot_filetypes = {
 			\			 'tex': v:false,
 			\				'fountain': v:false,
 			\			}
-
-"COC
-source ~/.config/nvim/config/coc.vim
