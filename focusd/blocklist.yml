@@ -1,0 +1,13 @@
+# focusd blocklist
+# Edit this file to add or remove domains to block
+# After editing, reload focusd: sudo systemctl reload focusd
+
+domains:
+  - twitter.com
+  - x.com
+  - reddit.com
+  - facebook.com
+  - instagram.com
+  - tiktok.com
+  - news.ycombinator.com
+  - theringer.com
