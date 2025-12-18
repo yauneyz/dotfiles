@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+# record-toggle
+# Toggle screen recording on/off with hotkey
+# First press: select region and start recording
+# Second press: stop recording and save
+
+set -euo pipefail
+
+PID_FILE="/tmp/wf-recorder.pid"
+OUTPUT_DIR="$HOME/Videos"
+mkdir -p "$OUTPUT_DIR"
+
+# Check if recording is active
+if [ -f "$PID_FILE" ]; then
+    PID=$(cat "$PID_FILE")
+
+    # Verify process is actually running
+    if kill -0 "$PID" 2>/dev/null; then
+        # Stop recording gracefully (SIGINT allows wf-recorder to finalize the file)
+        kill -SIGINT "$PID"
+
+        # Wait for process to finish writing the file
+        wait "$PID" 2>/dev/null || true
+
+        # Clean up PID file
+        rm -f "$PID_FILE"
+
+        notify-send -u normal "Screen Recording" "Recording stopped and saved to ~/Videos"
+    else
+        # Stale PID file, clean it up
+        rm -f "$PID_FILE"
+        notify-send -u critical "Screen Recording" "Stale recording process cleaned up"
+    fi
+else
+    # Check if wf-recorder is installed
+    if ! command -v wf-recorder >/dev/null 2>&1; then
+        notify-send -u critical "Screen Recording" "wf-recorder not installed"
+        exit 1
+    fi
+
+    # Check if slurp is installed
+    if ! command -v slurp >/dev/null 2>&1; then
+        notify-send -u critical "Screen Recording" "slurp not installed"
+        exit 1
+    fi
+
+    # Select region with slurp
+    # If user cancels (ESC), slurp exits with non-zero, so we catch it
+    if ! GEOM=$(slurp 2>/dev/null); then
+        notify-send -u normal "Screen Recording" "Region selection cancelled"
+        exit 0
+    fi
+
+    # Generate filename with timestamp
+    FILENAME="$OUTPUT_DIR/recording-$(date +%Y%m%d-%H%M%S).mp4"
+
+    # Start recording in background
+    # -g: geometry (region to record)
+    # -f: output filename
+    wf-recorder -g "$GEOM" -f "$FILENAME" &
+
+    # Save PID for later
+    echo $! > "$PID_FILE"
+
+    notify-send -u normal "Screen Recording" "Recording started\nPress hotkey again to stop"
+fi

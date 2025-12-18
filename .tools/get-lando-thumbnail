@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+# get-lando-thumbnail
+# Capture thumbnail with auto-incrementing identifier
+# Uses capture_thumbnail internally
+
+set -euo pipefail
+
+CONFIG_DIR="$HOME/.config/record-lando"
+STATE_FILE="$CONFIG_DIR/state"
+
+# Check if setup has been run
+if [ ! -f "$STATE_FILE" ]; then
+    echo "Error: Not configured. Run record-lando-setup first."
+    notify-send -u critical "Capture Error" "Run record-lando-setup first"
+    exit 1
+fi
+
+# Load state
+source "$STATE_FILE"
+
+# Function to convert index to identifier
+get_identifier() {
+    local index=$1
+
+    if [ $index -lt $NUM_CHALLENGES ]; then
+        echo "ch-$((index + 1))"
+    elif [ $index -eq $NUM_CHALLENGES ]; then
+        echo "hero"
+    elif [ $index -lt $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]; then
+        local ext_num=$((index - NUM_CHALLENGES))
+        echo "ext-$ext_num"
+    else
+        echo "DONE"
+    fi
+}
+
+# Function to check if done
+is_done() {
+    local index=$1
+    [ $index -ge $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]
+}
+
+# Function to print all counter states
+print_status() {
+    local video_id=$(get_identifier $VIDEO_INDEX)
+    local thumb_id=$(get_identifier $THUMBNAIL_INDEX)
+    local screenshot_id=$(get_identifier $SCREENSHOT_INDEX)
+    echo "Video: $video_id  Thumbnail: $thumb_id  Screenshot: $screenshot_id"
+}
+
+# Get current identifier
+CURRENT_ID=$(get_identifier $THUMBNAIL_INDEX)
+
+# Check if we're done
+if is_done $THUMBNAIL_INDEX; then
+    echo "Thumbnail capture complete!"
+    print_status
+    notify-send -u normal "Capture Complete" "All thumbnail captures finished!"
+    exit 0
+fi
+
+# Check if capture_thumbnail exists
+if ! command -v capture_thumbnail >/dev/null 2>&1; then
+    echo "Error: capture_thumbnail not found"
+    notify-send -u critical "Capture Error" "capture_thumbnail not found"
+    exit 1
+fi
+
+# Capture thumbnail
+capture_thumbnail "$NAME" "$CURRENT_ID"
+
+# Increment THUMBNAIL_INDEX
+NEW_INDEX=$((THUMBNAIL_INDEX + 1))
+
+# Update state file
+sed -i "s/^THUMBNAIL_INDEX=.*/THUMBNAIL_INDEX=$NEW_INDEX/" "$STATE_FILE"
+sed -i "s/^LAST_MODIFIED=.*/LAST_MODIFIED=\"THUMBNAIL\"/" "$STATE_FILE"
+
+# Reload state to get updated values
+source "$STATE_FILE"
+
+# Get next identifier
+NEXT_ID=$(get_identifier $NEW_INDEX)
+
+echo "Captured ${NAME}-${CURRENT_ID}.png"
+print_status
+
+if is_done $NEW_INDEX; then
+    notify-send -u normal "Thumbnail Complete" "Captured ${CURRENT_ID}\nAll thumbnail captures finished!"
+else
+    notify-send -u normal "Thumbnail Captured" "Captured ${CURRENT_ID}\nNext thumbnail: ${NEXT_ID}"
+fi

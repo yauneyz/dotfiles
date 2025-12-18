@@ -1,0 +1,148 @@
+#!/usr/bin/env bash
+# record-lando
+# Toggle screen recording with structured identifiers
+# Sequence: ch-1...ch-N → hero → ext-1...ext-M → DONE
+
+set -euo pipefail
+
+CONFIG_DIR="$HOME/.config/record-lando"
+STATE_FILE="$CONFIG_DIR/state"
+
+# Check if setup has been run
+if [ ! -f "$STATE_FILE" ]; then
+    echo "Error: Not configured. Run record-lando-setup first."
+    notify-send -u critical "Recording Error" "Run record-lando-setup first"
+    exit 1
+fi
+
+# Load state
+source "$STATE_FILE"
+
+# Function to convert index to identifier
+get_identifier() {
+    local index=$1
+
+    if [ $index -lt $NUM_CHALLENGES ]; then
+        echo "ch-$((index + 1))"
+    elif [ $index -eq $NUM_CHALLENGES ]; then
+        echo "hero"
+    elif [ $index -lt $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]; then
+        local ext_num=$((index - NUM_CHALLENGES))
+        echo "ext-$ext_num"
+    else
+        echo "DONE"
+    fi
+}
+
+# Function to check if done
+is_done() {
+    local index=$1
+    [ $index -ge $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]
+}
+
+# Function to print all counter states
+print_status() {
+    local video_id=$(get_identifier $VIDEO_INDEX)
+    local thumb_id=$(get_identifier $THUMBNAIL_INDEX)
+    local screenshot_id=$(get_identifier $SCREENSHOT_INDEX)
+    echo "Video: $video_id  Thumbnail: $thumb_id  Screenshot: $screenshot_id"
+}
+
+# Get current identifier
+CURRENT_ID=$(get_identifier $VIDEO_INDEX)
+
+# Check if we're done
+if is_done $VIDEO_INDEX; then
+    echo "Video recording complete!"
+    print_status
+    notify-send -u normal "Recording Complete" "All video recordings finished!"
+    exit 0
+fi
+
+# Check if currently recording
+if [ -f "$PID_FILE" ]; then
+    PID=$(cat "$PID_FILE")
+    OUTDIR="${OUTPUT_DIR}/${NAME}"
+    OUTFILE="${OUTDIR}/${NAME}-${CURRENT_ID}.mp4"
+
+    # Load status file path
+    if [ -f "${PID_FILE}.status" ]; then
+        STATUS_FILE=$(cat "${PID_FILE}.status")
+    else
+        STATUS_FILE=""
+    fi
+
+    # If process is running, send stop signal
+    if kill -0 "$PID" 2>/dev/null; then
+        # Stop recording (SIGTERM to wrapper, which forwards SIGINT to wf-recorder)
+        kill -SIGTERM "$PID"
+
+        # Poll until process stops (max 5 seconds)
+        for i in {1..50}; do
+            if ! kill -0 "$PID" 2>/dev/null; then
+                break
+            fi
+            sleep 0.1
+        done
+    fi
+
+    # Check if recording was successful by checking if output file exists
+    if [ -f "$OUTFILE" ] && [ -s "$OUTFILE" ]; then
+        # Recording succeeded - file exists and has content!
+        rm -f "$PID_FILE" "${PID_FILE}.status" "$STATUS_FILE"
+
+        # Increment VIDEO_INDEX
+        NEW_INDEX=$((VIDEO_INDEX + 1))
+
+        # Update state file
+        sed -i "s/^VIDEO_INDEX=.*/VIDEO_INDEX=$NEW_INDEX/" "$STATE_FILE"
+        sed -i "s/^LAST_MODIFIED=.*/LAST_MODIFIED=\"VIDEO\"/" "$STATE_FILE"
+
+        # Reload state to get updated values
+        source "$STATE_FILE"
+
+        # Get next identifier
+        NEXT_ID=$(get_identifier $NEW_INDEX)
+
+        echo "Saved ${NAME}-${CURRENT_ID}.mp4"
+        print_status
+
+        if is_done $NEW_INDEX; then
+            notify-send -u normal "Recording Complete" "Saved ${CURRENT_ID}\nAll video recordings finished!"
+        else
+            notify-send -u normal "Recording Saved" "Saved ${CURRENT_ID}\nNext video: ${NEXT_ID}"
+        fi
+    else
+        # Recording failed - no output file or empty file
+        rm -f "$PID_FILE" "${PID_FILE}.status" "$STATUS_FILE"
+
+        # Try to get failure reason from status file
+        if [ -n "$STATUS_FILE" ] && [ -f "$STATUS_FILE" ]; then
+            FAIL_REASON=$(cat "$STATUS_FILE")
+            notify-send -u critical "Recording Error" "Recording failed: $FAIL_REASON"
+        else
+            notify-send -u critical "Recording Error" "Recording failed or was already stopped"
+        fi
+    fi
+else
+    # Check dependencies
+    if ! command -v wf-recorder >/dev/null 2>&1; then
+        echo "Error: wf-recorder not installed"
+        notify-send -u critical "Recording Error" "wf-recorder not installed"
+        exit 1
+    fi
+
+    # Start recording
+    OUTDIR="${OUTPUT_DIR}/${NAME}"
+    mkdir -p "$OUTDIR"
+    OUTFILE="${OUTDIR}/${NAME}-${CURRENT_ID}.mp4"
+    STATUS_FILE="/tmp/wf-recorder-status-$$"
+
+    wf-recorder-wrapper "$GEOM" "$OUTFILE" "$STATUS_FILE" &
+    echo $! > "$PID_FILE"
+    echo "$STATUS_FILE" > "${PID_FILE}.status"
+
+    echo "Recording: ${NAME}-${CURRENT_ID}.mp4"
+    print_status
+    notify-send -u normal "Recording Started" "Recording ${CURRENT_ID}"
+fi

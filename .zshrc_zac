@@ -24,8 +24,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 
 
-cat ~/.cache/wal/sequences
-
 # For local coding agents:
 export OPENAI_API_BASE=http://127.0.0.1:11434/v1
 export OPENAI_API_KEY=local-anything

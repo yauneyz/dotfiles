@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+# record-lando-prev
+# Go back to previous identifier on whichever counter was last modified
+
+set -euo pipefail
+
+CONFIG_DIR="$HOME/.config/record-lando"
+STATE_FILE="$CONFIG_DIR/state"
+
+# Check if setup has been run
+if [ ! -f "$STATE_FILE" ]; then
+    echo "Error: Not configured. Run record-lando-setup first."
+    exit 1
+fi
+
+# Load state
+source "$STATE_FILE"
+
+# Function to convert index to identifier
+get_identifier() {
+    local index=$1
+
+    if [ $index -lt $NUM_CHALLENGES ]; then
+        echo "ch-$((index + 1))"
+    elif [ $index -eq $NUM_CHALLENGES ]; then
+        echo "hero"
+    elif [ $index -lt $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]; then
+        local ext_num=$((index - NUM_CHALLENGES))
+        echo "ext-$ext_num"
+    else
+        echo "DONE"
+    fi
+}
+
+# Function to print all counter states
+print_status() {
+    local video_id=$(get_identifier $VIDEO_INDEX)
+    local thumb_id=$(get_identifier $THUMBNAIL_INDEX)
+    local screenshot_id=$(get_identifier $SCREENSHOT_INDEX)
+    echo "Video: $video_id  Thumbnail: $thumb_id  Screenshot: $screenshot_id"
+}
+
+# Determine which counter to decrement based on LAST_MODIFIED
+case "$LAST_MODIFIED" in
+    VIDEO)
+        if [ $VIDEO_INDEX -eq 0 ]; then
+            echo "Already at beginning for Video (ch-1)."
+            print_status
+            notify-send -u normal "At Beginning" "Video already at ch-1"
+            exit 0
+        fi
+        NEW_INDEX=$((VIDEO_INDEX - 1))
+        sed -i "s/^VIDEO_INDEX=.*/VIDEO_INDEX=$NEW_INDEX/" "$STATE_FILE"
+        COUNTER_TYPE="Video"
+        ;;
+    THUMBNAIL)
+        if [ $THUMBNAIL_INDEX -eq 0 ]; then
+            echo "Already at beginning for Thumbnail (ch-1)."
+            print_status
+            notify-send -u normal "At Beginning" "Thumbnail already at ch-1"
+            exit 0
+        fi
+        NEW_INDEX=$((THUMBNAIL_INDEX - 1))
+        sed -i "s/^THUMBNAIL_INDEX=.*/THUMBNAIL_INDEX=$NEW_INDEX/" "$STATE_FILE"
+        COUNTER_TYPE="Thumbnail"
+        ;;
+    SCREENSHOT)
+        if [ $SCREENSHOT_INDEX -eq 0 ]; then
+            echo "Already at beginning for Screenshot (ch-1)."
+            print_status
+            notify-send -u normal "At Beginning" "Screenshot already at ch-1"
+            exit 0
+        fi
+        NEW_INDEX=$((SCREENSHOT_INDEX - 1))
+        sed -i "s/^SCREENSHOT_INDEX=.*/SCREENSHOT_INDEX=$NEW_INDEX/" "$STATE_FILE"
+        COUNTER_TYPE="Screenshot"
+        ;;
+    *)
+        echo "Error: Unknown LAST_MODIFIED value: $LAST_MODIFIED"
+        notify-send -u critical "Navigation Error" "Unknown counter: $LAST_MODIFIED"
+        exit 1
+        ;;
+esac
+
+# Reload state to get updated values
+source "$STATE_FILE"
+
+NEXT_ID=$(get_identifier $NEW_INDEX)
+
+echo "Decremented $COUNTER_TYPE counter."
+print_status
+notify-send -u normal "Previous" "$COUNTER_TYPE: $NEXT_ID"

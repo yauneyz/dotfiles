@@ -5,12 +5,13 @@
 
 set -euo pipefail
 
-# --- CONFIG: set your fixed rectangles here (WIDTHxHEIGHT+X+Y) ---
-SCRAMBLE_GEOM="646x712+2650+889"   # e.g. Left 2313 Top 486 Width 971 Height 815
-COMPLETE_GEOM="624x704+3294+897"    # change this to your second rectangle
+# --- CONFIG: set your fixed rectangles here ("X,Y WIDTHxHEIGHT" for grim) ---
+# Note: maim used WIDTHxHEIGHT+X+Y, but grim uses "X,Y WIDTHxHEIGHT"
+SCRAMBLE_GEOM="2650,889 646x712"   # e.g. Left 2650 Top 889 Width 646 Height 712
+COMPLETE_GEOM="3294,897 624x704"    # change this to your second rectangle
 
-# Hide mouse cursor in screenshots (set to "" to keep cursor)
-MAIM_CURSOR_FLAG="-u"
+# grim doesn't need a cursor flag (cursors are hidden by default on Wayland)
+GRIM_CURSOR_FLAG=""
 
 # --- OUTPUT LAYOUT ---
 NAME="${1:-}"
@@ -30,13 +31,13 @@ SCRAMBLE_OUT="${OUTDIR}/scramble-${NAME}-${VAR}.png"
 COMPLETE_OUT="${OUTDIR}/complete-${NAME}-${VAR}.png"
 
 # --- CHECKS ---
-command -v maim >/dev/null 2>&1 || { echo "Error: maim not found. Install it first."; exit 1; }
+command -v grim >/dev/null 2>&1 || { echo "Error: grim not found. Install it first."; exit 1; }
 
 # --- CAPTURE ---
 echo "Capturing scramble -> ${SCRAMBLE_OUT}"
-maim ${MAIM_CURSOR_FLAG} -g "${SCRAMBLE_GEOM}" "${SCRAMBLE_OUT}"
+grim -g "${SCRAMBLE_GEOM}" "${SCRAMBLE_OUT}"
 
 echo "Capturing complete  -> ${COMPLETE_OUT}"
-maim ${MAIM_CURSOR_FLAG} -g "${COMPLETE_GEOM}" "${COMPLETE_OUT}"
+grim -g "${COMPLETE_GEOM}" "${COMPLETE_OUT}"
 
 echo "Done."

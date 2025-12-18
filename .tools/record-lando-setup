@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# record-lando-setup
+# Initialize recording session for Lando puzzles
+# Usage: record-lando-setup NAME NUM_CHALLENGES NUM_EXTENSIONS
+#    or: record-lando-setup GEOM SCRAMBLE_GEOM COMPLETE_GEOM NAME NUM_CHALLENGES NUM_EXTENSIONS
+# Example: record-lando-setup "random-matching" 5 3
+# Example: record-lando-setup "1507,345 720x597" "2650,889 646x712" "3294,897 624x704" "random-matching" 5 3
+
+set -euo pipefail
+
+CONFIG_DIR="$HOME/.config/record-lando"
+STATE_FILE="$CONFIG_DIR/state"
+
+# Default geometries
+DEFAULT_GEOM="1507,345 720x597"              # For video and thumbnail
+DEFAULT_SCRAMBLE_GEOM="2650,889 646x712"     # For scrambled screenshot
+DEFAULT_COMPLETE_GEOM="3294,897 624x704"     # For completed screenshot
+
+# Parse arguments
+if [ $# -eq 3 ]; then
+    # Use default geometries
+    GEOM="$DEFAULT_GEOM"
+    SCRAMBLE_GEOM="$DEFAULT_SCRAMBLE_GEOM"
+    COMPLETE_GEOM="$DEFAULT_COMPLETE_GEOM"
+    NAME="$1"
+    NUM_CHALLENGES="$2"
+    NUM_EXTENSIONS="$3"
+elif [ $# -eq 6 ]; then
+    # Custom geometries provided
+    GEOM="$1"
+    SCRAMBLE_GEOM="$2"
+    COMPLETE_GEOM="$3"
+    NAME="$4"
+    NUM_CHALLENGES="$5"
+    NUM_EXTENSIONS="$6"
+else
+    echo "Usage: $0 NAME NUM_CHALLENGES NUM_EXTENSIONS"
+    echo "   or: $0 GEOM SCRAMBLE_GEOM COMPLETE_GEOM NAME NUM_CHALLENGES NUM_EXTENSIONS"
+    echo ""
+    echo "Examples:"
+    echo "  $0 \"random-matching\" 5 3"
+    echo "  $0 \"1507,345 720x597\" \"2650,889 646x712\" \"3294,897 624x704\" \"random-matching\" 5 3"
+    exit 1
+fi
+
+# Validate numbers
+if ! [[ "$NUM_CHALLENGES" =~ ^[0-9]+$ ]] || ! [[ "$NUM_EXTENSIONS" =~ ^[0-9]+$ ]]; then
+    echo "Error: NUM_CHALLENGES and NUM_EXTENSIONS must be numbers"
+    exit 1
+fi
+
+# Create config directory
+mkdir -p "$CONFIG_DIR"
+
+# Write state file with 3 independent counters and 3 geometries
+cat > "$STATE_FILE" <<EOF
+GEOM="$GEOM"
+SCRAMBLE_GEOM="$SCRAMBLE_GEOM"
+COMPLETE_GEOM="$COMPLETE_GEOM"
+NAME="$NAME"
+NUM_CHALLENGES=$NUM_CHALLENGES
+NUM_EXTENSIONS=$NUM_EXTENSIONS
+VIDEO_INDEX=0
+THUMBNAIL_INDEX=0
+SCREENSHOT_INDEX=0
+LAST_MODIFIED="VIDEO"
+OUTPUT_DIR="$HOME/development/Lando/lando-video"
+PID_FILE="$CONFIG_DIR/recording.pid"
+EOF
+
+echo "Setup complete!"
+echo "Project: $NAME"
+echo "Geometry (video/thumbnail): $GEOM"
+echo "Geometry (scramble): $SCRAMBLE_GEOM"
+echo "Geometry (complete): $COMPLETE_GEOM"
+echo "Sequence: $NUM_CHALLENGES challenges → hero → $NUM_EXTENSIONS extensions"
+echo ""
+echo "Video: ch-1  Thumbnail: ch-1  Screenshot: ch-1"

@@ -4,23 +4,29 @@
 
 set -euo pipefail
 
-# Ensure slop is installed
-if ! command -v slop >/dev/null 2>&1; then
-  echo "Error: 'slop' is not installed. Install it with:"
-  echo "  sudo apt install slop    # Debian/Ubuntu"
-  echo "  sudo dnf install slop    # Fedora"
-  echo "  sudo pacman -S slop      # Arch"
+# Ensure slurp is installed
+if ! command -v slurp >/dev/null 2>&1; then
+  echo "Error: 'slurp' is not installed. Install it with:"
+  echo "  NixOS: Add 'slurp' to your packages"
+  echo "  Arch: sudo pacman -S slurp"
   exit 1
 fi
 
 echo "👉 Drag a box on the screen to select your region..."
-GEOM=$(slop -f "%wx%h+%x+%y")
+# slurp outputs: "X,Y WIDTHxHEIGHT" (e.g., "100,200 300x400")
+# This is the CORRECT format for grim - no conversion needed!
+# (Note: maim used "WIDTHxHEIGHT+X+Y" but grim uses "X,Y WIDTHxHEIGHT")
+SLURP_OUT=$(slurp)
 
-# Extract individual components for clarity
-WIDTH=$(echo "$GEOM" | cut -d'x' -f1)
-HEIGHT=$(echo "$GEOM" | cut -d'x' -f2 | cut -d'+' -f1)
-X=$(echo "$GEOM" | cut -d'+' -f2)
-Y=$(echo "$GEOM" | cut -d'+' -f3)
+# Parse slurp output for display purposes
+# Format: "X,Y WIDTHxHEIGHT"
+X=$(echo "$SLURP_OUT" | cut -d',' -f1)
+Y=$(echo "$SLURP_OUT" | cut -d',' -f2 | cut -d' ' -f1)
+WIDTH=$(echo "$SLURP_OUT" | cut -d' ' -f2 | cut -d'x' -f1)
+HEIGHT=$(echo "$SLURP_OUT" | cut -d' ' -f2 | cut -d'x' -f2)
+
+# Use slurp's output directly - it's already in the correct format for grim!
+GEOM="${SLURP_OUT}"
 
 echo
 echo "📏 Geometry summary:"
@@ -29,5 +35,5 @@ echo "  Top:    $Y"
 echo "  Width:  $WIDTH"
 echo "  Height: $HEIGHT"
 echo
-echo "✅ maim geometry format:"
-echo "  ${WIDTH}x${HEIGHT}+${X}+${Y}"
+echo "✅ grim geometry format:"
+echo "  ${GEOM}"

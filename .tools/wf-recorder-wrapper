@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+# wf-recorder-wrapper
+# Run wf-recorder in foreground and report status
+# Usage: wf-recorder-wrapper GEOMETRY OUTPUT_FILE STATUS_FILE
+
+set -euo pipefail
+
+GEOMETRY="$1"
+OUTPUT_FILE="$2"
+STATUS_FILE="${3:-}"
+
+# Trap SIGTERM and forward as SIGINT to wf-recorder
+cleanup() {
+    if [ -n "${WF_PID:-}" ]; then
+        kill -SIGINT "$WF_PID" 2>/dev/null || true
+        wait "$WF_PID" 2>/dev/null || EXIT_CODE=$?
+
+        # Write status file based on recording success
+        if [ -f "$OUTPUT_FILE" ] && [ -s "$OUTPUT_FILE" ]; then
+            [ -n "$STATUS_FILE" ] && echo "SUCCESS" > "$STATUS_FILE"
+        else
+            [ -n "$STATUS_FILE" ] && echo "FAILED:${EXIT_CODE:-1}" > "$STATUS_FILE"
+        fi
+    fi
+    exit 0
+}
+
+trap cleanup SIGTERM SIGINT
+
+# Start wf-recorder in foreground
+wf-recorder -g "$GEOMETRY" -f "$OUTPUT_FILE" &
+WF_PID=$!
+
+# Wait for wf-recorder to finish
+wait "$WF_PID"
+EXIT_CODE=$?
+
+# Report status based on exit code and file existence
+if [ $EXIT_CODE -eq 0 ] && [ -f "$OUTPUT_FILE" ] && [ -s "$OUTPUT_FILE" ]; then
+    [ -n "$STATUS_FILE" ] && echo "SUCCESS" > "$STATUS_FILE"
+    exit 0
+else
+    [ -n "$STATUS_FILE" ] && echo "FAILED:$EXIT_CODE" > "$STATUS_FILE"
+    exit "$EXIT_CODE"
+fi

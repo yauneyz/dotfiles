@@ -11,12 +11,14 @@
 set -euo pipefail
 
 ### --- CONFIG --- ###
-# Fixed capture geometry for maim: WIDTHxHEIGHT+X+Y
-# Update this to your rectangle (example from earlier: 971x815+2313+486)
-GEOM="961x801+2182+518"
+# Fixed capture geometry for grim: "X,Y WIDTHxHEIGHT"
+# (Note: maim used WIDTHxHEIGHT+X+Y, but grim uses "X,Y WIDTHxHEIGHT")
+# Update this to your rectangle (use discover_geometry to get the correct format)
+GEOM="1507,345 720x597"
 
-# Hide cursor in screenshots (-u). Set to "" if you want the cursor visible.
-MAIM_CURSOR_FLAG="-u"
+# Hide cursor in screenshots. Set to "" if you want the cursor visible.
+# grim doesn't have a cursor flag, but cursors are hidden by default on Wayland
+GRIM_CURSOR_FLAG=""
 ### --- END CONFIG --- ###
 
 # Inputs
@@ -36,12 +38,12 @@ mkdir -p "${OUTDIR}"
 OUTFILE="${OUTDIR}/${NAME}-${VAR}.png"
 
 # Check dependencies
-if ! command -v maim >/dev/null 2>&1; then
-  echo "Error: maim not found. Install maim first."
+if ! command -v grim >/dev/null 2>&1; then
+  echo "Error: grim not found. Install grim first."
   exit 1
 fi
 
 echo "Capturing region ${GEOM} -> ${OUTFILE}"
-maim ${MAIM_CURSOR_FLAG} -g "${GEOM}" "${OUTFILE}"
+grim -g "${GEOM}" "${OUTFILE}"
 
 echo "Done."

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+MONITOR="DP-1"
+
+if hyprctl monitors | grep "Monitor $MONITOR" | grep -q "disabled"; then
+  hyprctl keyword monitor "$MONITOR,3840x2160@60,0x0,1.5,transform,3"
+else
+  hyprctl keyword monitor "$MONITOR,disable"
+fi

@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+# record-lando-status
+# Show current recording state for all capture types
+
+set -euo pipefail
+
+CONFIG_DIR="$HOME/.config/record-lando"
+STATE_FILE="$CONFIG_DIR/state"
+
+# Check if setup has been run
+if [ ! -f "$STATE_FILE" ]; then
+    echo "Error: Not configured. Run record-lando-setup first."
+    exit 1
+fi
+
+# Load state
+source "$STATE_FILE"
+
+# Function to convert index to identifier
+get_identifier() {
+    local index=$1
+
+    if [ $index -lt $NUM_CHALLENGES ]; then
+        echo "ch-$((index + 1))"
+    elif [ $index -eq $NUM_CHALLENGES ]; then
+        echo "hero"
+    elif [ $index -lt $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]; then
+        local ext_num=$((index - NUM_CHALLENGES))
+        echo "ext-$ext_num"
+    else
+        echo "DONE"
+    fi
+}
+
+# Calculate total
+TOTAL=$((NUM_CHALLENGES + 1 + NUM_EXTENSIONS))
+
+# Get identifiers for all counters
+VIDEO_ID=$(get_identifier $VIDEO_INDEX)
+THUMB_ID=$(get_identifier $THUMBNAIL_INDEX)
+SCREENSHOT_ID=$(get_identifier $SCREENSHOT_INDEX)
+
+# Check if recording
+RECORDING_STATUS="No"
+if [ -f "$PID_FILE" ] && kill -0 $(cat "$PID_FILE") 2>/dev/null; then
+    RECORDING_STATUS="Yes (recording ${VIDEO_ID})"
+fi
+
+# Display status
+echo "═══════════════════════════════════════"
+echo "Project: $NAME"
+echo "Sequence: $NUM_CHALLENGES challenges → hero → $NUM_EXTENSIONS extensions"
+echo "───────────────────────────────────────"
+echo "Video:      $VIDEO_ID ($VIDEO_INDEX/$TOTAL)"
+echo "Thumbnail:  $THUMB_ID ($THUMBNAIL_INDEX/$TOTAL)"
+echo "Screenshot: $SCREENSHOT_ID ($SCREENSHOT_INDEX/$TOTAL)"
+echo "───────────────────────────────────────"
+echo "Last used:  $LAST_MODIFIED"
+echo "Recording:  $RECORDING_STATUS"
+echo "═══════════════════════════════════════"
