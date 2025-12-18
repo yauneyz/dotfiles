@@ -5,13 +5,10 @@
 
 set -euo pipefail
 
-# --- CONFIG: set your fixed rectangles here ("X,Y WIDTHxHEIGHT" for grim) ---
-# Note: maim used WIDTHxHEIGHT+X+Y, but grim uses "X,Y WIDTHxHEIGHT"
-SCRAMBLE_GEOM="2650,889 646x712"   # e.g. Left 2650 Top 889 Width 646 Height 712
-COMPLETE_GEOM="3294,897 624x704"    # change this to your second rectangle
-
 # grim doesn't need a cursor flag (cursors are hidden by default on Wayland)
 GRIM_CURSOR_FLAG=""
+COMPLETE_GEOM="1821,602 522x577"
+SCRAMBLE_GEOM="2343,606 506x585"
 
 # --- OUTPUT LAYOUT ---
 NAME="${1:-}"

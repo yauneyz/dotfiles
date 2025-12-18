@@ -13,8 +13,8 @@ STATE_FILE="$CONFIG_DIR/state"
 
 # Default geometries
 DEFAULT_GEOM="1507,345 720x597"              # For video and thumbnail
-DEFAULT_SCRAMBLE_GEOM="2650,889 646x712"     # For scrambled screenshot
-DEFAULT_COMPLETE_GEOM="3294,897 624x704"     # For completed screenshot
+DEFAULT_COMPLETE_GEOM="1821,602 522x577"
+DEFAULT_SCRAMBLE_GEOM="2343,606 506x585"
 
 # Parse arguments
 if [ $# -eq 3 ]; then
