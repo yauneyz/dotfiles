@@ -21,35 +21,94 @@ source "$STATE_FILE"
 # Function to convert index to identifier
 get_identifier() {
     local index=$1
+    local sub_index=${2:-0}
 
-    if [ $index -lt $NUM_CHALLENGES ]; then
-        echo "ch-$((index + 1))"
-    elif [ $index -eq $NUM_CHALLENGES ]; then
-        echo "hero"
-    elif [ $index -lt $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]; then
-        local ext_num=$((index - NUM_CHALLENGES))
-        echo "ext-$ext_num"
+    local base_id=""
+    if [ $NUM_CHALLENGES -eq 0 ]; then
+        # No challenges and no hero — extensions only
+        if [ $index -lt $NUM_EXTENSIONS ]; then
+            base_id="ext-$((index + 1))"
+        else
+            echo "DONE"
+            return
+        fi
     else
-        echo "DONE"
+        if [ $index -lt $NUM_CHALLENGES ]; then
+            base_id="ch-$((index + 1))"
+        elif [ $index -eq $NUM_CHALLENGES ]; then
+            base_id="hero"
+        elif [ $index -lt $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]; then
+            local ext_num=$((index - NUM_CHALLENGES))
+            base_id="ext-$ext_num"
+        else
+            echo "DONE"
+            return
+        fi
     fi
+
+    if [ $sub_index -gt 0 ]; then
+        echo "${base_id}_${sub_index}"
+    else
+        echo "$base_id"
+    fi
+}
+
+# Function to get screenshot count for current identifier
+get_screenshot_count() {
+    local index=$1
+    local id=$(get_identifier $index)
+
+    # Default to 1 screenshot if no config or not found
+    local count=1
+
+    if [ -n "$SCREENSHOTS_CONFIG" ]; then
+        # Parse config string like "4-2,hero-3,ex1-2"
+        IFS=',' read -ra PAIRS <<< "$SCREENSHOTS_CONFIG"
+        for pair in "${PAIRS[@]}"; do
+            if [[ "$pair" =~ ^([0-9]+|hero|ex[0-9]+)-([0-9]+)$ ]]; then
+                local cfg_challenge="${BASH_REMATCH[1]}"
+                local cfg_count="${BASH_REMATCH[2]}"
+
+                # Convert challenge number to identifier format
+                if [[ "$cfg_challenge" =~ ^[0-9]+$ ]]; then
+                    cfg_id="ch-$cfg_challenge"
+                elif [[ "$cfg_challenge" == "hero" ]]; then
+                    cfg_id="hero"
+                elif [[ "$cfg_challenge" =~ ^ex([0-9]+)$ ]]; then
+                    cfg_id="ext-${BASH_REMATCH[1]}"
+                fi
+
+                if [ "$cfg_id" == "$id" ]; then
+                    count=$cfg_count
+                    break
+                fi
+            fi
+        done
+    fi
+
+    echo $count
 }
 
 # Function to check if done
 is_done() {
     local index=$1
-    [ $index -ge $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]
+    if [ $NUM_CHALLENGES -eq 0 ]; then
+        [ $index -ge $NUM_EXTENSIONS ]
+    else
+        [ $index -ge $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]
+    fi
 }
 
 # Function to print all counter states
 print_status() {
     local video_id=$(get_identifier $VIDEO_INDEX)
     local thumb_id=$(get_identifier $THUMBNAIL_INDEX)
-    local screenshot_id=$(get_identifier $SCREENSHOT_INDEX)
+    local screenshot_id=$(get_identifier $SCREENSHOT_INDEX $SCREENSHOT_SUB_INDEX)
     echo "Video: $video_id  Thumbnail: $thumb_id  Screenshot: $screenshot_id"
 }
 
-# Get current identifier
-CURRENT_ID=$(get_identifier $SCREENSHOT_INDEX)
+# Get current identifier (with sub-index)
+CURRENT_ID=$(get_identifier $SCREENSHOT_INDEX $SCREENSHOT_SUB_INDEX)
 
 # Check if we're done
 if is_done $SCREENSHOT_INDEX; then
@@ -79,23 +138,38 @@ grim -g "${SCRAMBLE_GEOM}" "${SCRAMBLE_OUT}"
 echo "Capturing complete -> ${COMPLETE_OUT}"
 grim -g "${COMPLETE_GEOM}" "${COMPLETE_OUT}"
 
-# Increment SCREENSHOT_INDEX
-NEW_INDEX=$((SCREENSHOT_INDEX + 1))
+# Increment logic: handle two-dimensional navigation
+MAX_COUNT=$(get_screenshot_count $SCREENSHOT_INDEX)
+
+if [ $SCREENSHOT_SUB_INDEX -lt $MAX_COUNT ]; then
+    # More screenshots for this challenge - increment sub-index only
+    NEW_SUB_INDEX=$((SCREENSHOT_SUB_INDEX + 1))
+    NEW_INDEX=$SCREENSHOT_INDEX
+else
+    # Finished all screenshots for this challenge - move to next challenge
+    NEW_INDEX=$((SCREENSHOT_INDEX + 1))
+    NEW_SUB_INDEX=1
+fi
 
 # Update state file
 sed -i "s/^SCREENSHOT_INDEX=.*/SCREENSHOT_INDEX=$NEW_INDEX/" "$STATE_FILE"
+sed -i "s/^SCREENSHOT_SUB_INDEX=.*/SCREENSHOT_SUB_INDEX=$NEW_SUB_INDEX/" "$STATE_FILE"
 sed -i "s/^LAST_MODIFIED=.*/LAST_MODIFIED=\"SCREENSHOT\"/" "$STATE_FILE"
 
 # Reload state to get updated values
 source "$STATE_FILE"
 
-# Get next identifier
-NEXT_ID=$(get_identifier $NEW_INDEX)
+# Get next identifier (with sub-index if applicable)
+if is_done $NEW_INDEX; then
+    NEXT_ID="DONE"
+else
+    NEXT_ID=$(get_identifier $NEW_INDEX $NEW_SUB_INDEX)
+fi
 
 echo "Captured scramble/complete-${NAME}-${CURRENT_ID}.png"
 print_status
 
-if is_done $NEW_INDEX; then
+if [ "$NEXT_ID" == "DONE" ]; then
     notify-send -u normal "Screenshots Complete" "Captured ${CURRENT_ID}\nAll screenshot captures finished!"
 else
     notify-send -u normal "Screenshots Captured" "Captured ${CURRENT_ID}\nNext screenshot: ${NEXT_ID}"

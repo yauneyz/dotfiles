@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 # record-lando-setup
 # Initialize recording session for Lando puzzles
-# Usage: record-lando-setup NAME NUM_CHALLENGES NUM_EXTENSIONS
-#    or: record-lando-setup GEOM SCRAMBLE_GEOM COMPLETE_GEOM NAME NUM_CHALLENGES NUM_EXTENSIONS
+# Usage: record-lando-setup NAME NUM_CHALLENGES NUM_EXTENSIONS [SCREENSHOTS_CONFIG]
+#    or: record-lando-setup GEOM SCRAMBLE_GEOM COMPLETE_GEOM NAME NUM_CHALLENGES NUM_EXTENSIONS [SCREENSHOTS_CONFIG]
 # Example: record-lando-setup "random-matching" 5 3
-# Example: record-lando-setup "1507,345 720x597" "2650,889 646x712" "3294,897 624x704" "random-matching" 5 3
+# Example: record-lando-setup "random-matching" 5 3 "4-2,5-3,hero-2,ex1-3"
+# Example: record-lando-setup "1507,345 720x597" "2650,889 646x712" "3294,897 624x704" "random-matching" 5 3 "4-2,hero-2"
 
 set -euo pipefail
 
@@ -17,7 +18,7 @@ DEFAULT_COMPLETE_GEOM="1821,602 522x577"
 DEFAULT_SCRAMBLE_GEOM="2343,606 506x585"
 
 # Parse arguments
-if [ $# -eq 3 ]; then
+if [ $# -eq 3 ] || [ $# -eq 4 ]; then
     # Use default geometries
     GEOM="$DEFAULT_GEOM"
     SCRAMBLE_GEOM="$DEFAULT_SCRAMBLE_GEOM"
@@ -25,7 +26,8 @@ if [ $# -eq 3 ]; then
     NAME="$1"
     NUM_CHALLENGES="$2"
     NUM_EXTENSIONS="$3"
-elif [ $# -eq 6 ]; then
+    SCREENSHOTS_CONFIG="${4:-}"
+elif [ $# -eq 6 ] || [ $# -eq 7 ]; then
     # Custom geometries provided
     GEOM="$1"
     SCRAMBLE_GEOM="$2"
@@ -33,12 +35,14 @@ elif [ $# -eq 6 ]; then
     NAME="$4"
     NUM_CHALLENGES="$5"
     NUM_EXTENSIONS="$6"
+    SCREENSHOTS_CONFIG="${7:-}"
 else
-    echo "Usage: $0 NAME NUM_CHALLENGES NUM_EXTENSIONS"
-    echo "   or: $0 GEOM SCRAMBLE_GEOM COMPLETE_GEOM NAME NUM_CHALLENGES NUM_EXTENSIONS"
+    echo "Usage: $0 NAME NUM_CHALLENGES NUM_EXTENSIONS [SCREENSHOTS_CONFIG]"
+    echo "   or: $0 GEOM SCRAMBLE_GEOM COMPLETE_GEOM NAME NUM_CHALLENGES NUM_EXTENSIONS [SCREENSHOTS_CONFIG]"
     echo ""
     echo "Examples:"
     echo "  $0 \"random-matching\" 5 3"
+    echo "  $0 \"random-matching\" 5 3 \"4-2,hero-2,ex1-3\""
     echo "  $0 \"1507,345 720x597\" \"2650,889 646x712\" \"3294,897 624x704\" \"random-matching\" 5 3"
     exit 1
 fi
@@ -63,6 +67,8 @@ NUM_EXTENSIONS=$NUM_EXTENSIONS
 VIDEO_INDEX=0
 THUMBNAIL_INDEX=0
 SCREENSHOT_INDEX=0
+SCREENSHOT_SUB_INDEX=1
+SCREENSHOTS_CONFIG="$SCREENSHOTS_CONFIG"
 LAST_MODIFIED="VIDEO"
 OUTPUT_DIR="$HOME/development/Lando/lando-video"
 PID_FILE="$CONFIG_DIR/recording.pid"
@@ -73,6 +79,17 @@ echo "Project: $NAME"
 echo "Geometry (video/thumbnail): $GEOM"
 echo "Geometry (scramble): $SCRAMBLE_GEOM"
 echo "Geometry (complete): $COMPLETE_GEOM"
-echo "Sequence: $NUM_CHALLENGES challenges → hero → $NUM_EXTENSIONS extensions"
+if [ "$NUM_CHALLENGES" -eq 0 ]; then
+    echo "Sequence: $NUM_EXTENSIONS extensions (no hero)"
+else
+    echo "Sequence: $NUM_CHALLENGES challenges → hero → $NUM_EXTENSIONS extensions"
+fi
+if [ -n "$SCREENSHOTS_CONFIG" ]; then
+    echo "Screenshots config: $SCREENSHOTS_CONFIG"
+fi
 echo ""
-echo "Video: ch-1  Thumbnail: ch-1  Screenshot: ch-1"
+if [ "$NUM_CHALLENGES" -eq 0 ]; then
+    echo "Video: ext-1  Thumbnail: ext-1  Screenshot: ext-1_1"
+else
+    echo "Video: ch-1  Thumbnail: ch-1  Screenshot: ch-1_1"
+fi

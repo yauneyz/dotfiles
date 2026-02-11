@@ -19,26 +19,49 @@ source "$STATE_FILE"
 # Function to convert index to identifier
 get_identifier() {
     local index=$1
+    local sub_index=${2:-0}
 
-    if [ $index -lt $NUM_CHALLENGES ]; then
-        echo "ch-$((index + 1))"
-    elif [ $index -eq $NUM_CHALLENGES ]; then
-        echo "hero"
-    elif [ $index -lt $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]; then
-        local ext_num=$((index - NUM_CHALLENGES))
-        echo "ext-$ext_num"
+    local base_id=""
+    if [ $NUM_CHALLENGES -eq 0 ]; then
+        # No challenges and no hero — extensions only
+        if [ $index -lt $NUM_EXTENSIONS ]; then
+            base_id="ext-$((index + 1))"
+        else
+            echo "DONE"
+            return
+        fi
     else
-        echo "DONE"
+        if [ $index -lt $NUM_CHALLENGES ]; then
+            base_id="ch-$((index + 1))"
+        elif [ $index -eq $NUM_CHALLENGES ]; then
+            base_id="hero"
+        elif [ $index -lt $((NUM_CHALLENGES + 1 + NUM_EXTENSIONS)) ]; then
+            local ext_num=$((index - NUM_CHALLENGES))
+            base_id="ext-$ext_num"
+        else
+            echo "DONE"
+            return
+        fi
+    fi
+
+    if [ $sub_index -gt 0 ]; then
+        echo "${base_id}_${sub_index}"
+    else
+        echo "$base_id"
     fi
 }
 
 # Calculate total
-TOTAL=$((NUM_CHALLENGES + 1 + NUM_EXTENSIONS))
+if [ $NUM_CHALLENGES -eq 0 ]; then
+    TOTAL=$NUM_EXTENSIONS
+else
+    TOTAL=$((NUM_CHALLENGES + 1 + NUM_EXTENSIONS))
+fi
 
 # Get identifiers for all counters
 VIDEO_ID=$(get_identifier $VIDEO_INDEX)
 THUMB_ID=$(get_identifier $THUMBNAIL_INDEX)
-SCREENSHOT_ID=$(get_identifier $SCREENSHOT_INDEX)
+SCREENSHOT_ID=$(get_identifier $SCREENSHOT_INDEX $SCREENSHOT_SUB_INDEX)
 
 # Check if recording
 RECORDING_STATUS="No"
@@ -49,7 +72,11 @@ fi
 # Display status
 echo "═══════════════════════════════════════"
 echo "Project: $NAME"
-echo "Sequence: $NUM_CHALLENGES challenges → hero → $NUM_EXTENSIONS extensions"
+if [ $NUM_CHALLENGES -eq 0 ]; then
+    echo "Sequence: $NUM_EXTENSIONS extensions (no hero)"
+else
+    echo "Sequence: $NUM_CHALLENGES challenges → hero → $NUM_EXTENSIONS extensions"
+fi
 echo "───────────────────────────────────────"
 echo "Video:      $VIDEO_ID ($VIDEO_INDEX/$TOTAL)"
 echo "Thumbnail:  $THUMB_ID ($THUMBNAIL_INDEX/$TOTAL)"

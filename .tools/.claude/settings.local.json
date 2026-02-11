@@ -11,7 +11,11 @@
       "Bash(then grep -E '(border_size|gaps_|decoration)' ~/.config/hypr/hyprland.conf)",
       "Bash(else echo \"No hyprland.conf found\")",
       "Bash(fi)",
-      "Bash(printf:*)"
+      "Bash(printf:*)",
+      "Bash(/data/zac/zac/dotfiles/.tools/record-lando-setup:*)",
+      "Bash(/data/zac/zac/dotfiles/.tools/record-lando-status)",
+      "Bash(/data/zac/zac/dotfiles/.tools/record-lando-next)",
+      "Bash(/data/zac/zac/dotfiles/.tools/record-lando-prev)"
     ],
     "deny": [],
     "ask": []

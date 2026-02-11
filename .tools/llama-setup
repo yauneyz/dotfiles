@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+  set -euo pipefail
+
+  # Set these to whatever you want right now.
+  export LLAMA_N_GPU_LAYERS="${LLAMA_N_GPU_LAYERS:-999}"
+  export LLAMA_CTX="${LLAMA_CTX:-262144}"
+
+  echo "LLAMA_N_GPU_LAYERS=$LLAMA_N_GPU_LAYERS"
+  echo "LLAMA_CTX=$LLAMA_CTX"
